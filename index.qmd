@@ -1,0 +1,44 @@
+---
+title: "Oceanus Folk: Then and Now"
+subtitle: "IS428 Visual Analytics Project | AY2025-2026 Term 2"
+date: "2026-03-17"
+date-modified: "2026-03-17"
+---
+
+::: {.callout-note appearance="minimal"}
+**Team:** Radim Soukal (<span class="missing-info">[STUDENT ID]</span>) &nbsp;·&nbsp; <span class="missing-info">[FULL NAME — Klara]</span> (<span class="missing-info">[STUDENT ID]</span>) &nbsp;·&nbsp; <span class="missing-info">[FULL NAME — Charles]</span> (<span class="missing-info">[STUDENT ID]</span>)
+:::
+
+## Context
+
+Oceanus is a small island nation whose economy and identity were built for generations around fishing and the sea. Culturally insular by geography, it developed its own distinctive musical tradition — Oceanus Folk — a genre rooted in maritime ballads, hand-crafted instrumentation, and storytelling passed down through coastal communities. For most of its history, Oceanus Folk remained unknown beyond the island's shores. That changed with the emergence of Sailor Shift, an Oceanus-born vocalist who would transform both the genre and the island's global standing. In 2023, Sailor joined the Ivy Echoes — an all-female Oceanus Folk ensemble comprising Maya Jensen (vocalist), Lila "Lilly" Hartman (guitarist), Jade Thompson (drummer), and Sophie Ramirez (bassist). The band dissolved by 2026, but Sailor's trajectory only accelerated. In 2028, a single she released went viral, becoming the first Oceanus Folk recording ever to top global charts. From that point forward, she released albums at a remarkable pace, each one deepening her global influence. By 2040, journalist Silas Reed is writing an in-depth feature — "Oceanus Folk: Then-and-Now" — tracing the full arc of Sailor's rise and the genre's transformation from a regional tradition into a worldwide force.
+
+To support his reporting, Silas has assembled a comprehensive knowledge graph connecting artists, songs, albums, record labels, and musical influences spanning nearly five decades of music history. This graph encodes 17,412 nodes across five entity types — Person, Song, Album, RecordLabel, and MusicalGroup — and 37,857 directed edges representing twelve distinct relationship types, from performer and composer credits to influence patterns such as stylistic imitation, interpolation, lyrical reference, direct sampling, and cover relationships. The raw structure of this graph, while rich in information, is impossible to interpret through direct inspection. Even tracing a single artist's second-degree connections manually would require hours of traversal. Purpose-built visual analytics tools are not a convenience — they are a necessity for extracting any coherent narrative from data at this scale.
+
+## Motivation & Objectives
+
+### Motivation
+
+The fundamental challenge Silas Reed faces is one of scale and relational complexity. A knowledge graph with nearly 18,000 nodes and 38,000 edges cannot be meaningfully explored through tabular tools or manual browsing. At this size, patterns that span dozens or hundreds of relationships — such as how an artist's stylistic choices propagated through a generation of subsequent musicians — are simply invisible without automated aggregation and visual encoding. The graph's five node types and twelve edge types create a multi-relational structure where the same artist node may participate simultaneously in performer, composer, lyricist, producer, and influence relationships, each of which carries different analytical weight depending on the question being asked.
+
+Beyond scale, the data has a temporal dimension that spans from 1993 to 2040 — nearly five decades — making longitudinal analysis essential. Musical influence is not static: artists who were obscure in one decade may become central nodes of influence in the next, and genres that once absorbed influence from Oceanus Folk may later feed inspiration back into it. Standard visualisation tools designed for snapshot data cannot capture this bidirectional, time-varying flow of influence. Finally, the multi-hop nature of influence propagation — where artist A shapes artist B, who in turn shapes artist C — requires graph traversal visualisation techniques that go beyond the capabilities of conventional business intelligence software. These three factors together make this project an ideal candidate for visual analytics.
+
+### Objectives
+
+1. **Task 1 — Sailor Shift Career Profile (Charles):** Profile Sailor Shift's career through interactive Tableau visualisations that map who influenced her and when, who she has collaborated with, and which artists she directly and indirectly shaped — tracing her impact on the broader Oceanus Folk community over time.
+
+2. **Task 2 — Oceanus Folk Genre Spread (Klara):** Trace the spread of Oceanus Folk as a genre by visualising how its influence expanded into adjacent genres such as Indie Folk, Dream Pop, Desert Rock, and Space Rock, whether that expansion was gradual or episodic, and how the genre has itself evolved by absorbing external influences in return since Sailor's breakthrough.
+
+3. **Task 3 — Rising Star Prediction (Radim):** Develop a data-driven profile of what characterises a breakout Oceanus Folk artist by examining the career trajectories of established rising stars, compare candidate artists against this benchmark, and name three evidence-based predictions for the next Oceanus Folk stars likely to emerge over the next five years.
+
+## Methodology
+
+This project translates the MC1 knowledge graph into a suite of interactive Tableau dashboards, one per task, integrated into a single combined workbook. The raw graph data (MC1_graph.json) was first converted into flat CSV tables — separating node types and edge types — suitable for Tableau's relational data model. Each sub-module then builds its visualisations on top of this prepared data.
+
+- **Task 1 (Charles):** Four interconnected dashboards — an influence timeline showing who shaped Sailor and when, a collaboration network graph centred on Sailor as the hub node, an indirect influence tree tracing second- and third-degree impacts, and a career tracker for her Ivy Echoes bandmates.
+- **Task 2 (Klara):** A Sankey-style genre flow diagram showing Oceanus Folk's outward influence over time, a genre influence timeline chart from 1993 to 2040, a ranked bar chart of top influenced artists, and a genre inspiration heatmap showing which external genres have fed back into Oceanus Folk.
+- **Task 3 (Radim):** A radar chart defining the rising star profile across multiple metrics, a multi-line career arc comparison for three benchmark artists, a ranked candidate list with visual supporting evidence, and a prediction dashboard comparing top candidates against the rising star benchmark.
+
+## Find Out More
+
+Read our full [Project Proposal](proposal.qmd) for detailed methodology, data description, and project timeline.

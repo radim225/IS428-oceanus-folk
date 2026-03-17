@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Oceanus Folk: Then and Now"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: proposal.qmd
+        text: Project Proposal
+      - href: methodology.qmd
+        text: Methodology
+      - href: results.qmd
+        text: Results & Discussion
+      - href: poster.qmd
+        text: Poster
+      - href: userguide.qmd
+        text: User Guide
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3

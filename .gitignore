@@ -1,0 +1,10 @@
+_site/
+.quarto/
+*.DS_Store
+.env
+__pycache__/
+*.pyc
+node_modules/
+
+/.quarto/
+**/*.quarto_ipynb

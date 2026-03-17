@@ -1,0 +1,21 @@
+---
+title: "About"
+---
+
+# About
+
+We are a group of three IS428 students from Singapore Management University (SMU), School of Computing and Information Systems.
+
+This website documents our Visual Analytics Project for AY2025-2026 Term 2, based on VAST Challenge 2025 Mini-Challenge 1. The project applies visual analytics techniques to a music knowledge graph to help journalist Silas Reed tell the story of Sailor Shift's rise and the spread of Oceanus Folk music.
+
+## Team Members
+
+| Name | Student ID | Role | Sub-module |
+|------|------------|------|------------|
+| Radim Soukal | <span class="missing-info">[STUDENT ID]</span> | Task 3 Lead, GitHub & Website | Rising Star Prediction |
+| <span class="missing-info">Klara [SURNAME]</span> | <span class="missing-info">[STUDENT ID]</span> | Task 2 Lead | Oceanus Folk Genre Spread |
+| <span class="missing-info">Charles [SURNAME]</span> | <span class="missing-info">[STUDENT ID]</span> | Task 1 Lead | Sailor Shift Career Profile |
+
+## Acknowledgements
+
+This project was completed under the guidance of Prof. Kam Tin Seong, Associate Professor of Information Systems (Practice), Singapore Management University. The dataset is sourced from the VAST Challenge 2025 Mini-Challenge 1, made available for academic use by the IEEE VAST Challenge organising committee.
