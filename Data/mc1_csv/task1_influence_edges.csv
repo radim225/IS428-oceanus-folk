@@ -1,0 +1,12 @@
+edge_type,source_id,source_name,source_type,source_genre,target_id,target_name,target_type,target_genre,direction
+InStyleOf,17022,Cassette Future,MusicalGroup,Unknown,17255,Sailor Shift,Person,Unknown,others_influenced_Sailor
+LyricalReferenceTo,17032,Silver Veil,MusicalGroup,Unknown,17255,Sailor Shift,Person,Unknown,others_influenced_Sailor
+InterpolatesFrom,17063,The Phantom Operators,MusicalGroup,Unknown,17255,Sailor Shift,Person,Unknown,others_influenced_Sailor
+InStyleOf,17110,The Hollow Monarchs,MusicalGroup,Unknown,17255,Sailor Shift,Person,Unknown,others_influenced_Sailor
+LyricalReferenceTo,17126,Cassian Storm,Person,Unknown,17255,Sailor Shift,Person,Unknown,others_influenced_Sailor
+InterpolatesFrom,17155,Claire Holmes,Person,Unknown,17255,Sailor Shift,Person,Unknown,others_influenced_Sailor
+DirectlySamples,17255,Sailor Shift,Person,Unknown,17260,Ivy Echos,MusicalGroup,Unknown,Sailor_influenced_others
+InStyleOf,17255,Sailor Shift,Person,Unknown,17299,The Saltwater Weavers,MusicalGroup,Unknown,Sailor_influenced_others
+LyricalReferenceTo,17255,Sailor Shift,Person,Unknown,17327,Drowned Harbor,MusicalGroup,Unknown,Sailor_influenced_others
+InStyleOf,17255,Sailor Shift,Person,Unknown,17192,The Fiddle & The Fjord,MusicalGroup,Unknown,Sailor_influenced_others
+DirectlySamples,17361,Copper Canyon Ghosts,MusicalGroup,Unknown,17255,Sailor Shift,Person,Unknown,others_influenced_Sailor
