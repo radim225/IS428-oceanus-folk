@@ -6,14 +6,15 @@ date-modified: "2026-03-17"
 ---
 
 ::: {.callout-note appearance="minimal"}
-**Team:** Radim Soukal (<span class="missing-info">[STUDENT ID]</span>) &nbsp;·&nbsp; <span class="missing-info">[FULL NAME — Klara]</span> (<span class="missing-info">[STUDENT ID]</span>) &nbsp;·&nbsp; <span class="missing-info">[FULL NAME — Charles]</span> (<span class="missing-info">[STUDENT ID]</span>)
+**Team:** Radim Šoukal (<span class="missing-info">[01550535]</span>) &nbsp;·&nbsp; <span class="missing-info">[Klara Kasparova]</span> (<span class="missing-info">[01550536]</span>) &nbsp;·&nbsp; <span class="missing-info">[Charles-Antoine Tremblay]</span> (<span class="missing-info">[01550160]</span>)
 :::
 
 ## Context
 
-Oceanus is a small island nation whose economy and identity were built for generations around fishing and the sea. Culturally insular by geography, it developed its own distinctive musical tradition — Oceanus Folk — a genre rooted in maritime ballads, hand-crafted instrumentation, and storytelling passed down through coastal communities. For most of its history, Oceanus Folk remained unknown beyond the island's shores. That changed with the emergence of Sailor Shift, an Oceanus-born vocalist who would transform both the genre and the island's global standing. In 2023, Sailor joined the Ivy Echoes — an all-female Oceanus Folk ensemble comprising Maya Jensen (vocalist), Lila "Lilly" Hartman (guitarist), Jade Thompson (drummer), and Sophie Ramirez (bassist). The band dissolved by 2026, but Sailor's trajectory only accelerated. In 2028, a single she released went viral, becoming the first Oceanus Folk recording ever to top global charts. From that point forward, she released albums at a remarkable pace, each one deepening her global influence. By 2040, journalist Silas Reed is writing an in-depth feature — "Oceanus Folk: Then-and-Now" — tracing the full arc of Sailor's rise and the genre's transformation from a regional tradition into a worldwide force.
+Oceanus, a small island nation once known primarily for its fishing communities, produced one of the most unlikely stories in modern music history. Sailor Shift — a vocalist who began her career in the niche Oceanus Folk genre — rose from regional obscurity to global recognition over the course of two decades. In 2023 she joined the Ivy Echoes, an all-female Oceanus Folk band, before her 2028 breakthrough single became the first Oceanus Folk song ever to top global charts. By 2040, journalist Silas Reed is writing a long-form article, "Oceanus Folk: Then and Now", tracing this transformation and its lasting impact on the music world. To support his reporting, he has assembled a knowledge graph of artists, songs, albums, labels, and the influence relationships between them — and he needs visual analytics tools to make sense of it.
 
-To support his reporting, Silas has assembled a comprehensive knowledge graph connecting artists, songs, albums, record labels, and musical influences spanning nearly five decades of music history. This graph encodes 17,412 nodes across five entity types — Person, Song, Album, RecordLabel, and MusicalGroup — and 37,857 directed edges representing twelve distinct relationship types, from performer and composer credits to influence patterns such as stylistic imitation, interpolation, lyrical reference, direct sampling, and cover relationships. The raw structure of this graph, while rich in information, is impossible to interpret through direct inspection. Even tracing a single artist's second-degree connections manually would require hours of traversal. Purpose-built visual analytics tools are not a convenience — they are a necessity for extracting any coherent narrative from data at this scale.
+The MC1 knowledge graph contains 17,412 nodes across five types (Person, Song, Album, RecordLabel, MusicalGroup) and 37,857 directed edges across twelve relationship types, spanning nearly five decades from 1993 to 2040. This scale and relational complexity makes the dataset impossible to interpret through manual exploration or conventional tabular analysis. Purpose-built interactive visualisations are essential to surface the patterns of influence, collaboration, and genre evolution that Silas needs for his article.
+
 
 ## Motivation & Objectives
 
@@ -27,7 +28,7 @@ Beyond scale, the data has a temporal dimension that spans from 1993 to 2040 —
 
 1. **Task 1 — Sailor Shift Career Profile (Charles):** Profile Sailor Shift's career through interactive Tableau visualisations that map who influenced her and when, who she has collaborated with, and which artists she directly and indirectly shaped — tracing her impact on the broader Oceanus Folk community over time.
 
-2. **Task 2 — Oceanus Folk Genre Spread (Klara):** Trace the spread of Oceanus Folk as a genre by visualising how its influence expanded into adjacent genres such as Indie Folk, Dream Pop, Desert Rock, and Space Rock, whether that expansion was gradual or episodic, and how the genre has itself evolved by absorbing external influences in return since Sailor's breakthrough.
+2. **Task 2 — Oceanus Folk Genre Spread (Klara):** Trace the spread of Oceanus Folk as a genre by visualising how its influence expanded into adjacent genres such as Indie Folk, Dream Pop, Desert Rock, and Space Rock, whether that expansion was gradual or episodic, and how the genre itself has evolved by absorbing external influences since Sailor's breakthrough.
 
 3. **Task 3 — Rising Star Prediction (Radim):** Develop a data-driven profile of what characterises a breakout Oceanus Folk artist by examining the career trajectories of established rising stars, compare candidate artists against this benchmark, and name three evidence-based predictions for the next Oceanus Folk stars likely to emerge over the next five years.
 
@@ -42,3 +43,5 @@ This project translates the MC1 knowledge graph into a suite of interactive Tabl
 ## Find Out More
 
 Read our full [Project Proposal](proposal.qmd) for detailed methodology, data description, and project timeline.
+
+

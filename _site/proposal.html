@@ -134,21 +134,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-proposal" id="toc-project-proposal" class="nav-link active" data-scroll-target="#project-proposal">Project Proposal</a>
-  <ul class="collapse">
-  <li><a href="#motivation-objectives" id="toc-motivation-objectives" class="nav-link" data-scroll-target="#motivation-objectives">Motivation &amp; Objectives</a>
+  <li><a href="#motivation-objectives" id="toc-motivation-objectives" class="nav-link active" data-scroll-target="#motivation-objectives">Motivation &amp; Objectives</a>
   <ul class="collapse">
   <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
   </ul></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a>
-  <ul class="collapse">
-  <li><a href="#node-types" id="toc-node-types" class="nav-link" data-scroll-target="#node-types">Node Types</a></li>
-  <li><a href="#edge-types" id="toc-edge-types" class="nav-link" data-scroll-target="#edge-types">Edge Types</a></li>
-  </ul></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#scope-of-work" id="toc-scope-of-work" class="nav-link" data-scroll-target="#scope-of-work">Scope of Work</a></li>
   <li><a href="#project-schedule" id="toc-project-schedule" class="nav-link" data-scroll-target="#project-schedule">Project Schedule</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -174,170 +167,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-proposal" class="level1">
-<h1>Project Proposal</h1>
 <section id="motivation-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="motivation-objectives">Motivation &amp; Objectives</h2>
 <section id="motivation" class="level3">
 <h3 class="anchored" data-anchor-id="motivation">Motivation</h3>
-<p>Journalist Silas Reed faces a data challenge that is emblematic of modern investigative work in the digital age: an extraordinarily rich dataset that is analytically impenetrable without the right tools. The MC1 knowledge graph contains 17,412 nodes and 37,857 directed edges spanning nearly five decades of music history from 1993 to 2040. Even for a data-literate researcher, manually traversing this graph to understand a single artist’s second-degree influence network — let alone comparing multiple artists across time — would take hours of tedious node-by-node exploration. The knowledge graph format, while powerful for storing relational data, is precisely the type of structure that becomes meaningful only when rendered as interactive visualisation. Without purpose-built visual analytics, Silas’s dataset is a collection of facts without a narrative.</p>
-<p>Musical influence is analytically complex because it does not behave like conventional business data. Influence relationships are multi-hop: artist A shapes artist B’s style, artist B collaborates with artist C and transmits those influences, and artist C goes on to inspire a new genre. These chains of influence — encoded in the graph as InStyleOf, InterpolatesFrom, CoverOf, LyricalReferenceTo, and DirectlySamples edges — cannot be meaningfully captured in a flat table. They require graph traversal logic combined with temporal context: influence that was strong in one decade may fade in another, and new influences may enter the Oceanus Folk ecosystem from entirely different genres. Furthermore, the relationship is bidirectional at the genre level — Oceanus Folk influenced Dream Pop and Indie Folk outward, but also absorbed influences from those genres in return. Standard tabular visualisation tools such as pivot tables or simple bar charts cannot encode this kind of relational complexity. Only purpose-designed interactive dashboards, built on a properly prepared graph-derived dataset, can make these patterns legible.</p>
-<p>Sailor Shift serves as the analytical anchor for this entire project because she represents a complete, well-documented arc of musical emergence and impact. The knowledge graph traces her trajectory from an obscure Oceanus Folk vocalist, through her 2023 membership in the Ivy Echoes, to her 2028 viral breakthrough — the first Oceanus Folk song to top global charts — and through to her sustained output of influential work over the following decade. Every stage of her rise is captured in the graph through performer, composer, lyricist, and influence edge relationships. This completeness makes her an ideal benchmark: by fully characterising her career pattern, we establish the template against which we can identify the next generation of rising stars in Task 3. The three tasks are therefore not independent analyses — they form one coherent analytical narrative, with Sailor Shift as the common reference point.</p>
+<p>Sailor Shift is an Oceanus Folk artist who co-founded the Ivy Echoes in 2023 before achieving a viral breakthrough in 2028 — the first Oceanus Folk artist to top global charts. Since then, she has released acclaimed albums annually, collaborated widely across genres, and actively mentored emerging artists, while her former bandmates have independently contributed to the spread of Oceanus Folk across the music world.</p>
+<p>Understanding this network of influence is the core challenge. Journalist Silas Reed has compiled a knowledge graph of 17,412 nodes and 37,857 edges spanning music history from 1993 to 2040. While this dataset contains all the answers needed for his article “Oceanus Folk: Then-and-Now”, raw graph data is unreadable without purpose-built visualisation. Tracing Sailor’s influences, measuring how Oceanus Folk spread into other genres, or identifying the next rising star cannot be done by browsing a JSON file.</p>
+<p>By transforming this knowledge graph into interactive Tableau dashboards, we turn a complex relational dataset into clear, navigable insights about how musical influence works and how stars are made.</p>
 </section>
 <section id="objectives" class="level3">
 <h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
 <ol type="1">
-<li><p><strong>Task 1 — Career Profile (Charles):</strong> Design interactive Tableau visualisations to map Sailor Shift’s influences, collaborations, and the direct and indirect impact she has had on other artists and on the broader Oceanus Folk community. This includes tracing who shaped her sound and when, identifying her key collaborators, and visualising the artists downstream of her influence chain.</p></li>
-<li><p><strong>Task 2 — Genre Spread (Klara):</strong> Develop visualisations showing how Oceanus Folk’s influence has spread across the music world since Sailor’s breakthrough, which genres it most affected (Indie Folk, Dream Pop, Desert Rock, Space Rock, Synthwave, and Americana chief among them), and how the genre itself has evolved by absorbing external influences — making visible the bidirectional flow between Oceanus Folk and the broader musical ecosystem.</p></li>
-<li><p><strong>Task 3 — Rising Star Prediction (Radim):</strong> Build a data-driven profile of what constitutes a breakout Oceanus Folk artist, compare the career trajectories of three benchmark artists, and provide three evidence-based predictions for the next stars likely to emerge over the next five years — drawing on the notable works and notoriety date data as the primary signal of an artist’s rising trajectory.</p></li>
+<li><p><strong>Task 1 — Career Profile:</strong> Design Tableau visualisations to map Sailor Shift’s influences, collaborations, and the direct and indirect impact she has had on other artists and on the Oceanus Folk community. This includes tracing who shaped her sound and when, identifying her key collaborators, and visualising the downstream influence chain.</p></li>
+<li><p><strong>Task 2 — Genre Spread:</strong> Develop visualisations showing how Oceanus Folk’s influence has spread across the music world since Sailor’s breakthrough, which genres it most affected (Indie Folk, Dream Pop, Desert Rock, Space Rock, Synthwave, etc.), and how the genre itself has evolved through external influences, making visible the flow between Oceanus Folk and the broader musical ecosystem.</p></li>
+<li><p><strong>Task 3 — Rising Star Prediction:</strong> Build a data-driven profile of what constitutes a breakout Oceanus Folk artist, compare the career trajectories of three benchmark artists, and provide three predictions for the next stars likely to emerge over the next five years, drawing on the notable works and notoriety date data as the primary signal of an artist’s rising trajectory.</p></li>
 </ol>
 </section>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>The dataset for this project is MC1_graph.json, provided as part of the VAST Challenge 2025 Mini-Challenge 1. It is a directed multigraph serialised in NetworkX node_link_data format — a JSON structure that encodes nodes as typed objects with attributes and edges as directed, typed connections between node IDs. The graph represents a curated knowledge base of the music industry in and around the island nation of Oceanus, spanning 1993 to 2040, and was assembled to support Silas Reed’s investigative journalism project. The dataset encompasses 17,412 nodes organised into five types and 37,857 edges across twelve relationship types, forming a connected but complex relational structure with 18 connected components.</p>
-<section id="node-types" class="level3">
-<h3 class="anchored" data-anchor-id="node-types">Node Types</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Node Type</th>
-<th>Count</th>
-<th>Key Attributes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Person</td>
-<td>11,361</td>
-<td>name, stage_name</td>
-</tr>
-<tr class="even">
-<td>Song</td>
-<td>3,615</td>
-<td>name, genre, release_date, notable, notoriety_date</td>
-</tr>
-<tr class="odd">
-<td>RecordLabel</td>
-<td>1,217</td>
-<td>name</td>
-</tr>
-<tr class="even">
-<td>Album</td>
-<td>996</td>
-<td>name, genre, release_date, notable, notoriety_date</td>
-</tr>
-<tr class="odd">
-<td>MusicalGroup</td>
-<td>223</td>
-<td>name</td>
-</tr>
-<tr class="even">
-<td><strong>Total</strong></td>
-<td><strong>17,412</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="edge-types" class="level3">
-<h3 class="anchored" data-anchor-id="edge-types">Edge Types</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 40%">
-<col style="width: 25%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Edge Type</th>
-<th>Count</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>PerformerOf</td>
-<td>13,587</td>
-<td>Person/Group performed Song/Album</td>
-</tr>
-<tr class="even">
-<td>RecordedBy</td>
-<td>3,798</td>
-<td>Song/Album recorded by RecordLabel</td>
-</tr>
-<tr class="odd">
-<td>ComposerOf</td>
-<td>3,290</td>
-<td>Person composed Song/Album</td>
-</tr>
-<tr class="even">
-<td>ProducerOf</td>
-<td>3,209</td>
-<td>Person/Label produced Song/Album/Person/Group</td>
-</tr>
-<tr class="odd">
-<td>DistributedBy</td>
-<td>3,013</td>
-<td>Song/Album distributed by RecordLabel</td>
-</tr>
-<tr class="even">
-<td>LyricistOf</td>
-<td>2,985</td>
-<td>Person wrote lyrics for Song/Album</td>
-</tr>
-<tr class="odd">
-<td>InStyleOf</td>
-<td>2,289</td>
-<td>Song/Album made in style of another work</td>
-</tr>
-<tr class="even">
-<td>InterpolatesFrom</td>
-<td>1,574</td>
-<td>Song/Album interpolated a melody from another</td>
-</tr>
-<tr class="odd">
-<td>LyricalReferenceTo</td>
-<td>1,496</td>
-<td>Song/Album references another lyrically</td>
-</tr>
-<tr class="even">
-<td>CoverOf</td>
-<td>1,429</td>
-<td>Song/Album is a cover of another</td>
-</tr>
-<tr class="odd">
-<td>DirectlySamples</td>
-<td>619</td>
-<td>Song/Album directly samples audio from another</td>
-</tr>
-<tr class="even">
-<td>MemberOf</td>
-<td>568</td>
-<td>Person is/was member of a MusicalGroup</td>
-</tr>
-<tr class="odd">
-<td><strong>Total</strong></td>
-<td><strong>37,857</strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Two fields on Song and Album nodes are particularly critical for Task 3’s rising star analysis. The <code>notable</code> field is a boolean that indicates whether a given work appeared on a recognised top record chart — making it the primary binary signal of commercial breakthrough. The <code>notoriety_date</code> field records the year in which a work first achieved that chart placement. Together, these two fields allow us to construct an artist’s “chart history” — tracking not just whether they have had notable works, but the timing and trajectory of their rise. With 516 notable songs and 133 notable albums in the dataset, and 34 artists having three or more notable works, these fields provide the quantitative foundation for comparing breakout trajectories and identifying the most plausible candidates for future stardom.</p>
-</section>
+<p>The datasets for this project are <code>mc1_nodes.csv</code> and <code>mc1_edges.csv</code>, derived from <code>MC1_graph.json</code> provided by VAST Challenge 2025 Mini-Challenge 1. They represent the music industry in and around Oceanus from 1993 to 2040, containing 17,412 nodes and 37,857 edges across five node types and twelve relationship types. Edge types capture creative relationships including performance, composition, production, and stylistic influence — with the influence category (InStyleOf, InterpolatesFrom, CoverOf, DirectlySamples) forming the primary analytical layer for tracing how musical ideas spread between artists and genres.</p>
+<p>Two fields are critical for Task 3. The <code>notable</code> boolean records whether a work charted, and <code>notoriety_date</code> records when — together allowing reconstruction of each artist’s breakthrough trajectory across 649 charted works.</p>
 </section>
 <section id="scope-of-work" class="level2">
 <h2 class="anchored" data-anchor-id="scope-of-work">Scope of Work</h2>
 <ul>
-<li>Data preparation: parsing MC1_graph.json and converting it into flat CSV tables — nodes_persons, nodes_songs, nodes_albums, edges_influence, edges_collaboration, and edges_membership — for direct import into Tableau’s data source layer</li>
-<li>Task 1 Tableau sub-module (Charles): influence timeline showing who shaped Sailor Shift and in which years; collaboration network graph with Sailor at the hub; indirect influence tree tracing second- and third-degree downstream artists; Ivy Echoes bandmate career tracker for Maya Jensen, Lila Hartman, Jade Thompson, and Sophie Ramirez</li>
-<li>Task 2 Tableau sub-module (Klara): Sankey-style genre flow diagram showing Oceanus Folk’s outward influence across the genre landscape over time; a genre influence timeline chart spanning 1993 to 2040; a ranked bar chart of top artists influenced by Oceanus Folk; a genre inspiration heatmap showing which external genres have fed back into Oceanus Folk</li>
-<li>Task 3 Tableau sub-module (Radim): a radar/spider chart defining the breakout artist profile across multiple metrics; a multi-line career arc comparison for three benchmark artists; a ranked breakout candidate list with visual evidence; a prediction dashboard comparing top candidates — Orla Seabloom, Beatrice Albright, Daniel O’Connell, Copper Canyon Ghosts, and Drowned Harbor — against the rising star benchmark</li>
-<li>Integration of all three sub-modules into a single combined .twbx file with cross-dashboard filter actions allowing users to select an artist in Task 1 and see them highlighted across Tasks 2 and 3</li>
-<li>Quarto website development, content writing, and Vercel deployment</li>
-<li>Screenshot capture and written analysis pages for each sub-module</li>
-<li>A1 poster design (ISO A1 format, 300 dpi JPEG) and submission to eLearn</li>
-<li>User guide documenting all Tableau dashboard interactions and filter behaviours</li>
+<li><strong>Data preparation:</strong> parsing <code>mc1_edges.csv</code> and <code>mc1_nodes.csv</code> into twelve task-specific CSVs via Python, with NA handling, date normalisation, and name resolution across source/target edge endpoints</li>
+<li><strong>Task 1 — Sailor Shift Career Profile (Charles):</strong> influence timeline, collaboration network graph, indirect influence tree, and Ivy Echoes bandmate career tracker in Tableau</li>
+<li><strong>Task 2 — Oceanus Folk Genre Spread (Klara):</strong> Sankey genre flow diagram, influence timeline chart, top influenced artists bar chart, and genre inspiration heatmap in Tableau</li>
+<li><strong>Task 3 — Rising Star Prediction (Radim):</strong> rising star radar chart, career arc comparison across three artists, and breakout candidate dashboard with three evidence-based predictions in Tableau</li>
+<li><strong>Integration:</strong> combining all sub-modules into a single <code>.twbx</code> file with cross-dashboard filter actions</li>
+<li><strong>Website:</strong> Quarto project website deployed via Vercel, with individual analysis pages and screenshots per sub-module</li>
+<li><strong>Poster:</strong> ISO A1 format (594 × 841mm, 300dpi JPEG) submitted to eLearn by 8 April 2026</li>
+<li><strong>User guide:</strong> step-by-step documentation of all Tableau dashboard interactions</li>
 </ul>
 </section>
 <section id="project-schedule" class="level2">
@@ -482,7 +344,6 @@ ul.task-list li input[type="checkbox"] {
 </table>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
