@@ -16,9 +16,10 @@ Output files:
 import pandas as pd
 import os
 
-OUT_DIR = 'Data/mc1_csv'
-NODES_PATH = 'Data/mc1_csv/mc1_nodes.csv'
-EDGES_PATH = 'Data/mc1_csv/mc1_edges.csv'
+RAW_DIR = 'Data/mc1_csv/raw'
+OUT_DIR = 'Data/mc1_csv/processed'
+NODES_PATH = 'Data/mc1_csv/raw/mc1_nodes.csv'
+EDGES_PATH = 'Data/mc1_csv/raw/mc1_edges.csv'
 
 SAILOR_ID = 17255
 BANDMATE_IDS = [17256, 17257, 17258, 17259]

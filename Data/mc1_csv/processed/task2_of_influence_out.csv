@@ -1,0 +1,372 @@
+edge_type,source_id,source_name,source_genre,source_release_date,source_notable,source_notoriety_date,target_id,target_name,target_genre,target_release_date,target_notable
+InStyleOf,8168,Heinäsirkat Soittaa (The Grasshoppers Play),Oceanus Folk,2000,True,2000,5887,The Price of Freedom,Doom Metal,1997,True
+DirectlySamples,17308,By the Stars,Oceanus Folk,2001,False,,8812,Tokyo Horizon,Synthwave,1995,True
+LyricalReferenceTo,17307,Albatross,Oceanus Folk,2001,False,,17200,Silver and Salt,Celtic Folk,1981,False
+InterpolatesFrom,17303,Tempest's Wake,Oceanus Folk,2001,True,,1088,Munzur'un Fısıltıları (Whispers of the Munzur),Synthpop,1991,True
+InStyleOf,16133,Devotion's Horizon,Oceanus Folk,2004,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+InStyleOf,17333,The Undertow Waltz,Oceanus Folk,2005,False,,4222,Whispers of the Woodland Brook,Dream Pop,1991,True
+InStyleOf,3501,Beyond Our Limitations,Oceanus Folk,2007,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+InStyleOf,15994,Mercy's Infinite Echo,Oceanus Folk,2007,True,,4348,Hysterical Revenge,Oceanus Folk,2004,True
+LyricalReferenceTo,15032,Wavelengths of Lingering Queries,Oceanus Folk,2009,True,,6368,Tender Embrace,Synthwave,1994,True
+InStyleOf,8148,Shadows in Sleep,Oceanus Folk,2009,False,,2691,Mythical Mane,Oceanus Folk,1992,True
+InterpolatesFrom,6752,Soft Collisions,Oceanus Folk,2010,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+CoverOf,10318,Roadside Memories,Oceanus Folk,2010,True,,13965,The Last Goodbye's Farewell,Oceanus Folk,2007,False
+InStyleOf,8233,Roots and Winds of Departure,Oceanus Folk,2010,True,,15994,Mercy's Infinite Echo,Oceanus Folk,2007,True
+CoverOf,7920,Manifest Destiny Blues,Oceanus Folk,2010,True,,2572,Echoes from Vasa's Forgotten Chronicles,Synthwave,2004,True
+CoverOf,6752,Soft Collisions,Oceanus Folk,2010,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+CoverOf,17330,Phantom Currents,Oceanus Folk,2010,True,,2500,The Margins of Possibility,Dream Pop,2008,True
+CoverOf,5100,Sylvan Bride's Lament,Oceanus Folk,2010,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+InterpolatesFrom,5100,Sylvan Bride's Lament,Oceanus Folk,2010,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+InStyleOf,7920,Manifest Destiny Blues,Oceanus Folk,2010,True,,11290,Perfect Harmony,Synthwave,2003,True
+CoverOf,5386,Reggae Spirit Rising,Oceanus Folk,2013,True,,12910,If Only For A Moment,Synthwave,2010,True
+InStyleOf,8079,Glance My Way,Oceanus Folk,2013,True,,12332,Whispers in Maria's Slumber,Oceanus Folk,2010,True
+InterpolatesFrom,17331,Lodestone & Lament,Oceanus Folk,2013,True,,14784,Labels Don't Matter,Synthwave,1999,True
+InStyleOf,15481,Whispers in the Silence,Oceanus Folk,2013,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,15481,Whispers in the Silence,Oceanus Folk,2013,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+LyricalReferenceTo,17331,Lodestone & Lament,Oceanus Folk,2013,True,,632,Brewing Heritage,Alternative Rock,2012,True
+InStyleOf,16734,Babel's Broken Tongue,Oceanus Folk,2013,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,17338,Vanishing Point,Oceanus Folk,2013,False,,3862,Peak Rhythm,Alternative Rock,1997,True
+LyricalReferenceTo,13431,Constellation of Us,Oceanus Folk,2013,True,,15646,Motherland's Golden Horizon,Oceanus Folk,2010,True
+DirectlySamples,14746,Scarlet Letter Sarah,Oceanus Folk,2013,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,17339,The Sompass Spins,Oceanus Folk,2013,False,,5840,Beyond Farewell's Shadow,Southern Gothic Rock,2012,True
+CoverOf,9158,The Timing is Now,Oceanus Folk,2013,True,,6752,Soft Collisions,Oceanus Folk,2010,True
+InterpolatesFrom,16524,Trembling Syringe,Oceanus Folk,2013,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,1863,Whispers of a Forgotten Melody,Oceanus Folk,2013,False,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,1863,Whispers of a Forgotten Melody,Oceanus Folk,2013,False,,9702,Echoes in My Mind,Synthwave,2013,True
+InterpolatesFrom,9158,The Timing is Now,Oceanus Folk,2013,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+DirectlySamples,9322,Wandering Spirit of Prague,Oceanus Folk,2013,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,1863,Whispers of a Forgotten Melody,Oceanus Folk,2013,False,,12678,The Last Horizon,Synthwave,2013,True
+CoverOf,12270,Shadows of a Forgotten Name,Oceanus Folk,2013,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+DirectlySamples,9685,Earthsong Eternal,Oceanus Folk,2013,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+InStyleOf,3730,First Breath of Desire,Oceanus Folk,2016,True,2019,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,13530,Fireworks and Freedom,Oceanus Folk,2017,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+LyricalReferenceTo,13521,Sacred Echoes,Oceanus Folk,2017,True,2017,9884,Golden Hour Reverie,Psychedelic Rock,2009,True
+DirectlySamples,9096,Grip and Grace,Oceanus Folk,2017,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,6994,Clocktower Cadence,Oceanus Folk,2017,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+InterpolatesFrom,5457,Six Feet From You,Oceanus Folk,2017,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+CoverOf,5457,Six Feet From You,Oceanus Folk,2017,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,5598,Whispers of an Unbound Horizon,Oceanus Folk,2017,False,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,6994,Clocktower Cadence,Oceanus Folk,2017,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+InterpolatesFrom,6417,Whispers from a Distant Refrain,Oceanus Folk,2017,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,0,Breaking These Chains,Oceanus Folk,2017,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,13530,Fireworks and Freedom,Oceanus Folk,2017,True,,6524,Tenement of Freedom,Oceanus Folk,2014,True
+LyricalReferenceTo,3194,Abundance Overflowing,Oceanus Folk,2017,True,,11836,Unwritten Lines Between Shadows,Oceanus Folk,2010,True
+CoverOf,13327,Harmonic Latitude 458,Oceanus Folk,2017,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,16137,Steadfast Kingdom,Oceanus Folk,2017,False,,9249,Twilight of Resilience,Indie Folk,2013,True
+DirectlySamples,12691,Winds of the Basque Shore,Oceanus Folk,2017,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,12691,Winds of the Basque Shore,Oceanus Folk,2017,True,,16524,Trembling Syringe,Oceanus Folk,2013,True
+LyricalReferenceTo,8655,Small Shadows,Oceanus Folk,2017,True,,9884,Golden Hour Reverie,Psychedelic Rock,2009,True
+LyricalReferenceTo,15441,Choreography of Forbidden Passion,Oceanus Folk,2017,True,,15071,Voices of the Frontier,Synthwave,2013,True
+InterpolatesFrom,15441,Choreography of Forbidden Passion,Oceanus Folk,2017,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,1859,Shadows of the Minor Scale,Oceanus Folk,2017,True,2017,3730,First Breath of Desire,Oceanus Folk,2016,True
+InterpolatesFrom,3025,Destiny's Call,Oceanus Folk,2017,False,,16524,Trembling Syringe,Oceanus Folk,2013,True
+DirectlySamples,3025,Destiny's Call,Oceanus Folk,2017,False,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,13438,Whispers of Forever,Oceanus Folk,2019,True,,6006,Mercy's Endless Tide,Doom Metal,2004,True
+InStyleOf,13438,Whispers of Forever,Oceanus Folk,2019,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+CoverOf,13438,Whispers of Forever,Oceanus Folk,2019,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,13438,Whispers of Forever,Oceanus Folk,2019,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+InStyleOf,8881,Shylock's Shadows,Oceanus Folk,2020,True,,10596,Roots Between Worlds,Indie Folk,2013,True
+CoverOf,8978,Springtime Whispers on the Seine,Oceanus Folk,2020,True,,15325,Birthright Anthem,Indie Folk,2013,True
+CoverOf,8881,Shylock's Shadows,Oceanus Folk,2020,True,,9096,Grip and Grace,Oceanus Folk,2017,True
+InterpolatesFrom,8458,Lawman's Last Breath,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,11797,Broker's Burden,Oceanus Folk,2020,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+InterpolatesFrom,8153,Restless Phantoms,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,12804,Dissonant Echoes,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,8881,Shylock's Shadows,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+DirectlySamples,8153,Restless Phantoms,Oceanus Folk,2020,True,,15441,Choreography of Forbidden Passion,Oceanus Folk,2017,True
+CoverOf,9144,Windows of Opportunity,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+DirectlySamples,14652,Alphabet Anarchy,Oceanus Folk,2020,True,,2691,Mythical Mane,Oceanus Folk,1992,True
+InStyleOf,16279,No Man's Territory,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,16276,Perimeter,Oceanus Folk,2020,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+InStyleOf,16276,Perimeter,Oceanus Folk,2020,True,,11485,Eternal Connection,Oceanus Folk,2010,True
+InStyleOf,15654,Rumors Spread Like Wildfire,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,3037,Visions Beyond the Horizon,Oceanus Folk,2020,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+CoverOf,3037,Visions Beyond the Horizon,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,3037,Visions Beyond the Horizon,Oceanus Folk,2020,True,,12150,Sing Song Swing,Indie Folk,2007,True
+DirectlySamples,3782,Echoes of Solitude,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,3909,Everything's Alright,Oceanus Folk,2020,True,,9096,Grip and Grace,Oceanus Folk,2017,True
+CoverOf,3909,Everything's Alright,Oceanus Folk,2020,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+InterpolatesFrom,3782,Echoes of Solitude,Oceanus Folk,2020,True,,14206,Distant Melodies,Synthpop,2013,True
+CoverOf,14652,Alphabet Anarchy,Oceanus Folk,2020,True,,8148,Shadows in Sleep,Oceanus Folk,2009,False
+InStyleOf,5883,Altar of Devotion,Oceanus Folk,2020,True,,12150,Sing Song Swing,Indie Folk,2007,True
+InStyleOf,4733,Golden Hour's Farewell,Oceanus Folk,2020,True,,15622,Whispers of Finality,Doom Metal,1997,True
+InStyleOf,4733,Golden Hour's Farewell,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,5883,Altar of Devotion,Oceanus Folk,2020,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,7525,Nishadpati's Lament,Oceanus Folk,2021,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+InStyleOf,16457,Manger's Midnight,Oceanus Folk,2021,True,,9685,Earthsong Eternal,Oceanus Folk,2013,True
+InStyleOf,13342,Unaccompanied Breath,Oceanus Folk,2021,True,,13591,Echoes of a Sylvan Daydream,Doom Metal,2010,True
+InterpolatesFrom,13342,Unaccompanied Breath,Oceanus Folk,2021,True,,10793,Miles From Where I Belong,Synthwave,2013,False
+InterpolatesFrom,16457,Manger's Midnight,Oceanus Folk,2021,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,7224,Postcards from Julianne's Heart,Oceanus Folk,2022,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+DirectlySamples,2662,Rhythm Revolution,Oceanus Folk,2022,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,5730,Wayward Journey,Oceanus Folk,2022,True,,9685,Earthsong Eternal,Oceanus Folk,2013,True
+CoverOf,14198,Timón de Esperanza,Oceanus Folk,2022,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,5730,Wayward Journey,Oceanus Folk,2022,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,5730,Wayward Journey,Oceanus Folk,2022,True,,11269,Dust and Determination,Indie Folk,2016,True
+InStyleOf,1253,Leather Skin Confession,Oceanus Folk,2022,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+InterpolatesFrom,15954,Inches Apart,Oceanus Folk,2023,True,2023,13563,Unique Frequencies,Synthpop,2017,True
+InterpolatesFrom,16400,Aquatic Rebirth (1983),Oceanus Folk,2023,True,2023,6994,Clocktower Cadence,Oceanus Folk,2017,True
+CoverOf,15954,Inches Apart,Oceanus Folk,2023,True,2023,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,15973,When Angels Breathe,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,15812,Elevation of Desire,Oceanus Folk,2023,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+InterpolatesFrom,9571,Echoes of the Sámi Horizon,Oceanus Folk,2023,True,,13563,Unique Frequencies,Synthpop,2017,True
+LyricalReferenceTo,16180,Siege of Barcelona's Twilight,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,16400,Aquatic Rebirth (1983),Oceanus Folk,2023,True,2023,12673,Whispers of Impermanence,Americana,2013,True
+InStyleOf,9571,Echoes of the Sámi Horizon,Oceanus Folk,2023,True,,9096,Grip and Grace,Oceanus Folk,2017,True
+InterpolatesFrom,15812,Elevation of Desire,Oceanus Folk,2023,True,,6752,Soft Collisions,Oceanus Folk,2010,True
+DirectlySamples,15954,Inches Apart,Oceanus Folk,2023,True,2023,16524,Trembling Syringe,Oceanus Folk,2013,True
+LyricalReferenceTo,15812,Elevation of Desire,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,11978,Sparks Unbound,Oceanus Folk,2023,True,,16524,Trembling Syringe,Oceanus Folk,2013,True
+DirectlySamples,11567,Wild Tonight,Oceanus Folk,2023,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+InterpolatesFrom,14720,Crimson Ledger of the Desert Riders,Oceanus Folk,2023,True,,16524,Trembling Syringe,Oceanus Folk,2013,True
+InStyleOf,16582,Drowning in Denial,Oceanus Folk,2023,True,,3194,Abundance Overflowing,Oceanus Folk,2017,True
+LyricalReferenceTo,15017,Echoes of the Puszta: Chamber Variations,Oceanus Folk,2023,True,,11378,Teenage Dream Machine,Indie Folk,2004,True
+InStyleOf,15017,Echoes of the Puszta: Chamber Variations,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,13173,Liturgical Whispers,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+DirectlySamples,12926,Tartan and Revenge,Oceanus Folk,2023,True,,15754,Identity Crisis,Indie Folk,2021,True
+CoverOf,15017,Echoes of the Puszta: Chamber Variations,Oceanus Folk,2023,True,,6994,Clocktower Cadence,Oceanus Folk,2017,True
+LyricalReferenceTo,15027,Fragments of Unresolved Dialogues,Oceanus Folk,2023,True,,6994,Clocktower Cadence,Oceanus Folk,2017,True
+InStyleOf,15027,Fragments of Unresolved Dialogues,Oceanus Folk,2023,True,,15646,Motherland's Golden Horizon,Oceanus Folk,2010,True
+LyricalReferenceTo,15415,Pale Light of Farewell,Oceanus Folk,2023,True,,13438,Whispers of Forever,Oceanus Folk,2019,True
+CoverOf,15415,Pale Light of Farewell,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,14720,Crimson Ledger of the Desert Riders,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,11978,Sparks Unbound,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,15571,The Ballad of Kristian's Heart,Oceanus Folk,2023,True,,16457,Manger's Midnight,Oceanus Folk,2021,True
+CoverOf,11567,Wild Tonight,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,10406,The Misplaced Heir,Oceanus Folk,2023,True,,13563,Unique Frequencies,Synthpop,2017,True
+LyricalReferenceTo,16582,Drowning in Denial,Oceanus Folk,2023,True,,13563,Unique Frequencies,Synthpop,2017,True
+InStyleOf,16400,Aquatic Rebirth (1983),Oceanus Folk,2023,True,2023,5854,Sunlight Whispers,Indie Folk,2017,True
+LyricalReferenceTo,7235,The Last Letter to Julianne,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+DirectlySamples,1489,Perfection's Reflection,Oceanus Folk,2023,True,,6611,Completely Crazy (About You),Oceanus Folk,2013,True
+CoverOf,1489,Perfection's Reflection,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,6170,Twilight's Gentle Whisper,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,6170,Twilight's Gentle Whisper,Oceanus Folk,2023,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+CoverOf,6170,Twilight's Gentle Whisper,Oceanus Folk,2023,True,,9685,Earthsong Eternal,Oceanus Folk,2013,True
+LyricalReferenceTo,6428,Echoes of Joy,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,757,Mirage of Memories,Oceanus Folk,2023,True,,6994,Clocktower Cadence,Oceanus Folk,2017,True
+InStyleOf,8557,Blank Slate Boulevard,Oceanus Folk,2023,True,,6524,Tenement of Freedom,Oceanus Folk,2014,True
+CoverOf,1435,Luminous Beam,Oceanus Folk,2023,True,,3520,Aerial Conquistadors,Oceanus Folk,2026,True
+LyricalReferenceTo,6941,Echoes of Devotion,Oceanus Folk,2023,True,,15032,Wavelengths of Lingering Queries,Oceanus Folk,2009,True
+InStyleOf,6941,Echoes of Devotion,Oceanus Folk,2023,True,,6524,Tenement of Freedom,Oceanus Folk,2014,True
+InStyleOf,7019,Counterpoint's Silent Serenade,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,7019,Counterpoint's Silent Serenade,Oceanus Folk,2023,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+InStyleOf,7180,Aviator's First Dance,Oceanus Folk,2023,True,2023,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,7180,Aviator's First Dance,Oceanus Folk,2023,True,2023,3025,Destiny's Call,Oceanus Folk,2017,False
+InterpolatesFrom,7235,The Last Letter to Julianne,Oceanus Folk,2023,True,,6994,Clocktower Cadence,Oceanus Folk,2017,True
+LyricalReferenceTo,6941,Echoes of Devotion,Oceanus Folk,2023,True,,4818,Unaccompanied Heart,Doom Metal,2018,True
+InStyleOf,8620,Kaleidoscope Eyes,Oceanus Folk,2023,True,,5826,Mirror of Affection,Desert Rock,2020,True
+InStyleOf,1489,Perfection's Reflection,Oceanus Folk,2023,True,,16457,Manger's Midnight,Oceanus Folk,2021,True
+InStyleOf,720,Ethereal Wanderer,Oceanus Folk,2023,True,2023,9709,Fragments of Consciousness,Oceanus Folk,2014,True
+InStyleOf,3367,Courage in Quiet Moments,Oceanus Folk,2023,True,,8888,Bonds of Ducats,Indie Rock,2010,True
+LyricalReferenceTo,3367,Courage in Quiet Moments,Oceanus Folk,2023,True,,6752,Soft Collisions,Oceanus Folk,2010,True
+InStyleOf,3956,Eternal Light Descends,Oceanus Folk,2023,True,,6006,Mercy's Endless Tide,Doom Metal,2004,True
+CoverOf,757,Mirage of Memories,Oceanus Folk,2023,True,,13563,Unique Frequencies,Synthpop,2017,True
+LyricalReferenceTo,3956,Eternal Light Descends,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+DirectlySamples,9062,Potato Fields Forever,Oceanus Folk,2023,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,3972,Infinite Incarnation,Oceanus Folk,2024,True,2037,13563,Unique Frequencies,Synthpop,2017,True
+InStyleOf,12362,Dust and Spurs,Oceanus Folk,2024,True,2040,1841,Ripples and Whispers,Indie Folk,2010,True
+DirectlySamples,7982,Twelve Months of You,Oceanus Folk,2024,True,,6524,Tenement of Freedom,Oceanus Folk,2014,True
+InStyleOf,7982,Twelve Months of You,Oceanus Folk,2024,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+InterpolatesFrom,13538,Summer of '76,Oceanus Folk,2024,True,,6818,Paradise Parallel,Oceanus Folk,2017,True
+InStyleOf,3711,Wings of the Southern Cross,Oceanus Folk,2024,True,,15973,When Angels Breathe,Oceanus Folk,2023,True
+CoverOf,3243,Desert Migrations,Oceanus Folk,2024,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,12362,Dust and Spurs,Oceanus Folk,2024,True,2040,12332,Whispers in Maria's Slumber,Oceanus Folk,2010,True
+CoverOf,13516,Rings and Revelations,Oceanus Folk,2024,True,,6762,Fragile Constellations,Symphonic Metal,2007,True
+CoverOf,13516,Rings and Revelations,Oceanus Folk,2024,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,13538,Summer of '76,Oceanus Folk,2024,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+DirectlySamples,17261,The Kelp Forest Canticles,Oceanus Folk,2024,True,,2197,Hallowed Transaction,Doom Metal,2017,True
+LyricalReferenceTo,12067,Fragments of Friendship,Oceanus Folk,2024,True,,9651,In The Chamber of My Heart,Indie Folk,2007,True
+CoverOf,17261,The Kelp Forest Canticles,Oceanus Folk,2024,True,,9223,Für uns alle zusammen,Alternative Rock,2017,True
+CoverOf,12067,Fragments of Friendship,Oceanus Folk,2024,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+InterpolatesFrom,12067,Fragments of Friendship,Oceanus Folk,2024,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+InterpolatesFrom,6272,Quartet in Shadowed Light,Oceanus Folk,2025,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,6447,Endless Mental Replay,Oceanus Folk,2025,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,14940,Faded Polaroids,Oceanus Folk,2025,True,2038,8888,Bonds of Ducats,Indie Rock,2010,True
+InterpolatesFrom,8714,Luminous Silence,Oceanus Folk,2025,True,,6611,Completely Crazy (About You),Oceanus Folk,2013,True
+InStyleOf,14940,Faded Polaroids,Oceanus Folk,2025,True,2038,8233,Roots and Winds of Departure,Oceanus Folk,2010,True
+LyricalReferenceTo,15384,Strings of Destiny,Oceanus Folk,2025,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,14940,Faded Polaroids,Oceanus Folk,2025,True,2038,3367,Courage in Quiet Moments,Oceanus Folk,2023,True
+CoverOf,8714,Luminous Silence,Oceanus Folk,2025,True,,2398,Numbers Between The Stars,Indie Folk,2023,True
+InStyleOf,8714,Luminous Silence,Oceanus Folk,2025,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,11515,Perfectly Plastic,Oceanus Folk,2025,True,,12270,Shadows of a Forgotten Name,Oceanus Folk,2013,True
+LyricalReferenceTo,8714,Luminous Silence,Oceanus Folk,2025,True,,16524,Trembling Syringe,Oceanus Folk,2013,True
+InStyleOf,9739,Wraith's Maritime Lament,Oceanus Folk,2025,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,11515,Perfectly Plastic,Oceanus Folk,2025,True,,4046,Sweet Katharina's Lament,Jazz Surf Rock,2018,True
+CoverOf,3828,Fragments of Flight,Oceanus Folk,2025,True,,16524,Trembling Syringe,Oceanus Folk,2013,True
+InterpolatesFrom,4023,Echoes of Bananal's Green,Oceanus Folk,2026,True,,6994,Clocktower Cadence,Oceanus Folk,2017,True
+InterpolatesFrom,3520,Aerial Conquistadors,Oceanus Folk,2026,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+InterpolatesFrom,4023,Echoes of Bananal's Green,Oceanus Folk,2026,True,,5854,Sunlight Whispers,Indie Folk,2017,True
+InterpolatesFrom,2169,Brake Lights and Broken Hearts,Oceanus Folk,2026,True,,6417,Whispers from a Distant Refrain,Oceanus Folk,2017,True
+LyricalReferenceTo,5761,No Redemption,Oceanus Folk,2026,True,,14086,Sunbeam Serenade,Doom Metal,2005,True
+LyricalReferenceTo,14220,Grip of Memory,Oceanus Folk,2026,False,,6994,Clocktower Cadence,Oceanus Folk,2017,True
+CoverOf,14220,Grip of Memory,Oceanus Folk,2026,False,,3367,Courage in Quiet Moments,Oceanus Folk,2023,True
+CoverOf,15316,Bloodline Legacy,Oceanus Folk,2026,True,,15889,Whispers in Shadows,Psychedelic Rock,2023,True
+CoverOf,14220,Grip of Memory,Oceanus Folk,2026,False,,16259,Twilight of the Weekly Cycle,Indie Folk,2023,True
+CoverOf,14220,Grip of Memory,Oceanus Folk,2026,False,,3688,Distant Farewell,Doom Metal,2026,True
+InStyleOf,14220,Grip of Memory,Oceanus Folk,2026,False,,15441,Choreography of Forbidden Passion,Oceanus Folk,2017,True
+LyricalReferenceTo,15316,Bloodline Legacy,Oceanus Folk,2026,True,,2779,Rhythmic Regiment,Psychedelic Rock,2026,True
+InStyleOf,15316,Bloodline Legacy,Oceanus Folk,2026,True,,6322,Montmartre Moonlight,Desert Rock,2013,True
+InterpolatesFrom,5761,No Redemption,Oceanus Folk,2026,True,,1977,Verdant Paths of Memory,Indie Folk,2000,True
+DirectlySamples,15316,Bloodline Legacy,Oceanus Folk,2026,True,,4534,Whispers Between Lines,Dream Pop,2023,True
+LyricalReferenceTo,1665,Savanna's Ugly Beauty,Oceanus Folk,2026,True,,3194,Abundance Overflowing,Oceanus Folk,2017,True
+InterpolatesFrom,14220,Grip of Memory,Oceanus Folk,2026,False,,16400,Aquatic Rebirth (1983),Oceanus Folk,2023,True
+InStyleOf,13027,Shadows Beneath the Palm,Oceanus Folk,2026,True,,8263,Neat and Twisted,Psychedelic Rock,2022,True
+DirectlySamples,16192,The Question That Lingers,Oceanus Folk,2026,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,17270,Salt-Kissed Rhymes,Oceanus Folk,2026,True,,11859,Caught in the Cricket Crease,Lo-Fi Electronica,2014,True
+DirectlySamples,8453,Bullets and Badges,Oceanus Folk,2026,True,,3520,Aerial Conquistadors,Oceanus Folk,2026,True
+InterpolatesFrom,8453,Bullets and Badges,Oceanus Folk,2026,True,,9214,Unsere gemeinsame Stimme,Desert Rock,2028,True
+LyricalReferenceTo,11679,Snapshot of Forever,Oceanus Folk,2026,True,,3991,Instrument Failure,Synthwave,2021,False
+CoverOf,11679,Snapshot of Forever,Oceanus Folk,2026,True,,16524,Trembling Syringe,Oceanus Folk,2013,True
+DirectlySamples,11655,Whispers Between Lovers,Oceanus Folk,2026,True,,6080,Starlit Chains,Doom Metal,2013,True
+InStyleOf,11655,Whispers Between Lovers,Oceanus Folk,2026,True,,16457,Manger's Midnight,Oceanus Folk,2021,True
+InStyleOf,11655,Whispers Between Lovers,Oceanus Folk,2026,True,,9702,Echoes in My Mind,Synthwave,2013,True
+InterpolatesFrom,11655,Whispers Between Lovers,Oceanus Folk,2026,True,,8952,Forest Echoes and Forgotten Dreams,Synthwave,2010,False
+CoverOf,16264,Ceremonial Footsteps,Oceanus Folk,2026,True,,13563,Unique Frequencies,Synthpop,2017,True
+LyricalReferenceTo,10426,Somewhere Between Somewhere,Oceanus Folk,2026,True,,16524,Trembling Syringe,Oceanus Folk,2013,True
+InStyleOf,10426,Somewhere Between Somewhere,Oceanus Folk,2026,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,10159,Synaptic Cereal Spoon,Oceanus Folk,2026,True,,14136,Sonnets of the Heart,Doom Metal,2013,True
+InterpolatesFrom,9912,Silent Eulogy at Your Feet,Oceanus Folk,2026,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,17270,Salt-Kissed Rhymes,Oceanus Folk,2026,True,,16209,The Void Inside,Dream Pop,2017,True
+InterpolatesFrom,16264,Ceremonial Footsteps,Oceanus Folk,2026,True,,9685,Earthsong Eternal,Oceanus Folk,2013,True
+DirectlySamples,16264,Ceremonial Footsteps,Oceanus Folk,2026,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,8858,Chromatic Reflections on a Theme,Oceanus Folk,2026,True,,16524,Trembling Syringe,Oceanus Folk,2013,True
+DirectlySamples,8858,Chromatic Reflections on a Theme,Oceanus Folk,2026,True,,12445,The Infinite Melody,Synthpop,2020,True
+CoverOf,16264,Ceremonial Footsteps,Oceanus Folk,2026,True,,16524,Trembling Syringe,Oceanus Folk,2013,True
+InStyleOf,10426,Somewhere Between Somewhere,Oceanus Folk,2026,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+LyricalReferenceTo,7687,Geologic Pulse,Oceanus Folk,2026,True,,13758,Whispers of the Shoreline,Indie Folk,2013,True
+InStyleOf,2169,Brake Lights and Broken Hearts,Oceanus Folk,2026,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+LyricalReferenceTo,8453,Bullets and Badges,Oceanus Folk,2026,True,,12691,Winds of the Basque Shore,Oceanus Folk,2017,True
+CoverOf,12259,Whispers of Manuela's Horizon,Oceanus Folk,2026,True,2026,15754,Identity Crisis,Indie Folk,2021,True
+InterpolatesFrom,13027,Shadows Beneath the Palm,Oceanus Folk,2026,True,,14223,Anchored Hearts,Psychedelic Rock,2024,True
+InStyleOf,12882,Cardiac Whispers,Oceanus Folk,2026,True,,2662,Rhythm Revolution,Oceanus Folk,2022,True
+InStyleOf,12882,Cardiac Whispers,Oceanus Folk,2026,True,,12332,Whispers in Maria's Slumber,Oceanus Folk,2010,True
+LyricalReferenceTo,13027,Shadows Beneath the Palm,Oceanus Folk,2026,True,,8233,Roots and Winds of Departure,Oceanus Folk,2010,True
+InterpolatesFrom,16192,The Question That Lingers,Oceanus Folk,2026,True,,6818,Paradise Parallel,Oceanus Folk,2017,True
+InterpolatesFrom,16192,The Question That Lingers,Oceanus Folk,2026,True,,12270,Shadows of a Forgotten Name,Oceanus Folk,2013,True
+InStyleOf,16192,The Question That Lingers,Oceanus Folk,2026,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+InStyleOf,12625,Whispers Between Dimensions,Oceanus Folk,2027,True,,14762,Heavenly Radiance,Oceanus Folk,2017,True
+LyricalReferenceTo,746,"Let Me Go, Let Me Rise",Oceanus Folk,2027,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,746,"Let Me Go, Let Me Rise",Oceanus Folk,2027,True,,15071,Voices of the Frontier,Synthwave,2013,True
+CoverOf,7876,Falling Without a Parachute,Oceanus Folk,2027,True,2027,6833,The Last Sweet Moment,Dream Pop,2023,True
+CoverOf,7876,Falling Without a Parachute,Oceanus Folk,2027,True,2027,15285,Harmonious Compromise,Dream Pop,2025,True
+CoverOf,13232,The Wisdom of Not Knowing,Oceanus Folk,2027,True,,6344,Uptown Swagger,Desert Rock,2024,True
+DirectlySamples,13232,The Wisdom of Not Knowing,Oceanus Folk,2027,True,,14762,Heavenly Radiance,Oceanus Folk,2017,True
+InStyleOf,13232,The Wisdom of Not Knowing,Oceanus Folk,2027,True,,6417,Whispers from a Distant Refrain,Oceanus Folk,2017,True
+CoverOf,13232,The Wisdom of Not Knowing,Oceanus Folk,2027,True,,3501,Beyond Our Limitations,Oceanus Folk,2007,True
+DirectlySamples,13232,The Wisdom of Not Knowing,Oceanus Folk,2027,True,,13324,Exile's Whisper,Oceanus Folk,2004,True
+InStyleOf,7876,Falling Without a Parachute,Oceanus Folk,2027,True,2027,13327,Harmonic Latitude 458,Oceanus Folk,2017,True
+CoverOf,7876,Falling Without a Parachute,Oceanus Folk,2027,True,2027,9096,Grip and Grace,Oceanus Folk,2017,True
+CoverOf,17238,Ocean Breeze,Oceanus Folk,2027,True,,9068,Sawtooth Serenade,Blues Rock,1998,True
+CoverOf,17238,Ocean Breeze,Oceanus Folk,2027,True,,7107,Traces of Yesterday,Dream Pop,2020,True
+InterpolatesFrom,7876,Falling Without a Parachute,Oceanus Folk,2027,True,2027,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,13232,The Wisdom of Not Knowing,Oceanus Folk,2027,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,7876,Falling Without a Parachute,Oceanus Folk,2027,True,2027,3025,Destiny's Call,Oceanus Folk,2017,False
+InStyleOf,9090,Palms of Passage,Oceanus Folk,2028,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,17244,Harbor Lights,Oceanus Folk,2028,False,,7097,Echoes of the Pasture,Americana,2023,True
+InStyleOf,9090,Palms of Passage,Oceanus Folk,2028,True,,886,Loud and Clear,Oceanus Folk,2023,True
+InStyleOf,9090,Palms of Passage,Oceanus Folk,2028,True,,5826,Mirror of Affection,Desert Rock,2020,True
+InStyleOf,9090,Palms of Passage,Oceanus Folk,2028,True,,1069,Behind the Picture Glass,Synthwave,2026,True
+InStyleOf,9090,Palms of Passage,Oceanus Folk,2028,True,,12362,Dust and Spurs,Oceanus Folk,2024,True
+InterpolatesFrom,9090,Palms of Passage,Oceanus Folk,2028,True,,6941,Echoes of Devotion,Oceanus Folk,2023,True
+CoverOf,17280,Electric Eel Love,Oceanus Folk,2028,True,,14933,The Crown We Wear,Indie Rock,2022,True
+InterpolatesFrom,17279,High Tide Heartbeat,Oceanus Folk,2028,False,,14658,Addicted to Your Heartache,Southern Gothic Rock,2004,True
+LyricalReferenceTo,17253,Shoreline,Oceanus Folk,2028,False,,10319,Campfire Chronicles,Psychedelic Rock,2014,True
+CoverOf,17251,Echos Below,Oceanus Folk,2028,True,,2082,Illuminated Moments,Synthwave,1997,True
+InStyleOf,17244,Harbor Lights,Oceanus Folk,2028,False,,7488,Cellular Goodbye,Doom Metal,2026,True
+InterpolatesFrom,4352,Laughter's Sharp EdgeQuesto Momento Fragile (This Fragile Moment),Oceanus Folk,2028,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,17280,Electric Eel Love,Oceanus Folk,2028,True,,10534,Twelve Bells of Augsburg,Psychedelic Rock,2026,True
+InterpolatesFrom,9090,Palms of Passage,Oceanus Folk,2028,True,,13161,Forgotten Lands of Sidböle,Desert Rock,2024,True
+InStyleOf,17231,Tides of Echos,Oceanus Folk,2029,True,,14296,The Long Way Home,Dream Pop,2023,True
+InterpolatesFrom,17231,Tides of Echos,Oceanus Folk,2029,True,,14352,Weathered Miles,Doom Metal,2023,True
+InStyleOf,16729,Battlefield Solitude,Oceanus Folk,2029,True,,7982,Twelve Months of You,Oceanus Folk,2024,True
+CoverOf,17342,Beneath the Whispering Waves,Oceanus Folk,2029,True,2029,9662,Lessons from Her Hands,Synthwave,2028,True
+InterpolatesFrom,17342,Beneath the Whispering Waves,Oceanus Folk,2029,True,2029,12867,Pulse of Desire,Indie Rock,2017,True
+InStyleOf,17347,The Shifting Sands,Oceanus Folk,2029,True,2029,10819,Thundering Percussion,Space Rock,2029,True
+CoverOf,17345,Tidal Journey,Oceanus Folk,2029,True,2029,11191,Behind Closed Lips,Americana,2022,True
+DirectlySamples,17344,Riding the Moon's Reflection,Oceanus Folk,2029,True,2029,14030,Echoes Between Water and Height,Indie Folk,2023,True
+InStyleOf,17344,Riding the Moon's Reflection,Oceanus Folk,2029,True,2029,4613,Dancing Between the Oompah Notes,Alternative Rock,2025,True
+InStyleOf,17233,Sunset Harmony,Oceanus Folk,2029,False,,4425,The Sweetest Citrus,Indie Folk,2010,True
+InStyleOf,17343,Seasheel Lullaby,Oceanus Folk,2029,True,2029,15911,Midnight in the Dormitory,Symphonic Metal,2023,True
+InStyleOf,12490,Celestial Praise,Oceanus Folk,2029,True,,9073,Gem State Sunset,Desert Rock,2020,True
+CoverOf,14666,Close Enough to Touch,Oceanus Folk,2029,True,,8233,Roots and Winds of Departure,Oceanus Folk,2010,True
+InStyleOf,9655,Echoes Within,Oceanus Folk,2029,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,9655,Echoes Within,Oceanus Folk,2029,True,,3956,Eternal Light Descends,Oceanus Folk,2023,True
+LyricalReferenceTo,14666,Close Enough to Touch,Oceanus Folk,2029,True,,8263,Neat and Twisted,Psychedelic Rock,2022,True
+CoverOf,9493,Heroes of Honor,Oceanus Folk,2029,True,,15512,Tropical Daydream in Frost,Dream Pop,2024,True
+DirectlySamples,9493,Heroes of Honor,Oceanus Folk,2029,True,,15325,Birthright Anthem,Indie Folk,2013,True
+CoverOf,9493,Heroes of Honor,Oceanus Folk,2029,True,,7224,Postcards from Julianne's Heart,Oceanus Folk,2022,True
+CoverOf,9493,Heroes of Honor,Oceanus Folk,2029,True,,3194,Abundance Overflowing,Oceanus Folk,2017,True
+LyricalReferenceTo,9493,Heroes of Honor,Oceanus Folk,2029,True,,9090,Palms of Passage,Oceanus Folk,2028,True
+InStyleOf,7147,Distant Horizons,Oceanus Folk,2029,False,,7224,Postcards from Julianne's Heart,Oceanus Folk,2022,True
+InStyleOf,12490,Celestial Praise,Oceanus Folk,2029,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InterpolatesFrom,7147,Distant Horizons,Oceanus Folk,2029,False,,4586,Survival Script,Indie Folk,2023,True
+InStyleOf,7147,Distant Horizons,Oceanus Folk,2029,False,,13516,Rings and Revelations,Oceanus Folk,2024,True
+InStyleOf,7147,Distant Horizons,Oceanus Folk,2029,False,,14720,Crimson Ledger of the Desert Riders,Oceanus Folk,2023,True
+InStyleOf,4393,Whispers from Below,Oceanus Folk,2029,True,2029,7224,Postcards from Julianne's Heart,Oceanus Folk,2022,True
+InterpolatesFrom,4393,Whispers from Below,Oceanus Folk,2029,True,2029,3194,Abundance Overflowing,Oceanus Folk,2017,True
+CoverOf,1823,Rebel Without a Pause,Oceanus Folk,2029,True,,9912,Silent Eulogy at Your Feet,Oceanus Folk,2026,True
+InStyleOf,1823,Rebel Without a Pause,Oceanus Folk,2029,True,,8153,Restless Phantoms,Oceanus Folk,2020,True
+InStyleOf,1823,Rebel Without a Pause,Oceanus Folk,2029,True,,15441,Choreography of Forbidden Passion,Oceanus Folk,2017,True
+InStyleOf,1823,Rebel Without a Pause,Oceanus Folk,2029,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+CoverOf,1823,Rebel Without a Pause,Oceanus Folk,2029,True,,6417,Whispers from a Distant Refrain,Oceanus Folk,2017,True
+DirectlySamples,7147,Distant Horizons,Oceanus Folk,2029,False,,2398,Numbers Between The Stars,Indie Folk,2023,True
+DirectlySamples,12490,Celestial Praise,Oceanus Folk,2029,True,,9096,Grip and Grace,Oceanus Folk,2017,True
+CoverOf,9655,Echoes Within,Oceanus Folk,2029,True,,7224,Postcards from Julianne's Heart,Oceanus Folk,2022,True
+DirectlySamples,12490,Celestial Praise,Oceanus Folk,2029,True,,6611,Completely Crazy (About You),Oceanus Folk,2013,True
+InStyleOf,14666,Close Enough to Touch,Oceanus Folk,2029,True,,14223,Anchored Hearts,Psychedelic Rock,2024,True
+CoverOf,14666,Close Enough to Touch,Oceanus Folk,2029,True,,13027,Shadows Beneath the Palm,Oceanus Folk,2026,True
+LyricalReferenceTo,13396,Waiting by the Phone,Oceanus Folk,2029,True,,15441,Choreography of Forbidden Passion,Oceanus Folk,2017,True
+InterpolatesFrom,13396,Waiting by the Phone,Oceanus Folk,2029,True,,12067,Fragments of Friendship,Oceanus Folk,2024,True
+CoverOf,13396,Waiting by the Phone,Oceanus Folk,2029,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,12490,Celestial Praise,Oceanus Folk,2029,True,,3909,Everything's Alright,Oceanus Folk,2020,True
+InStyleOf,12524,Reef Road Reverie,Oceanus Folk,2030,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+InStyleOf,17285,Driftwood Lullaby,Oceanus Folk,2030,False,,8207,Echoes of Forgotten Light,Alternative Rock,2004,True
+CoverOf,17273,Salty Dreams,Oceanus Folk,2030,True,,9848,Partisan's Lament,Indie Pop,2030,True
+LyricalReferenceTo,12524,Reef Road Reverie,Oceanus Folk,2030,True,,1841,Ripples and Whispers,Indie Folk,2010,True
+InStyleOf,17273,Salty Dreams,Oceanus Folk,2030,True,,3881,Susurros de Pasión,Synthwave,2004,True
+InStyleOf,12138,Unbreakable Divine Shelter,Oceanus Folk,2030,True,,8858,Chromatic Reflections on a Theme,Oceanus Folk,2026,True
+InStyleOf,12138,Unbreakable Divine Shelter,Oceanus Folk,2030,True,,11329,Crown and Conscience,Space Rock,2025,True
+LyricalReferenceTo,17247,Anchored Love,Oceanus Folk,2030,True,,14125,Precision and Chrome,Indie Folk,2017,True
+InStyleOf,17247,Anchored Love,Oceanus Folk,2030,True,,13179,Ecclesiastical Echoes,Dream Pop,2016,True
+LyricalReferenceTo,12138,Unbreakable Divine Shelter,Oceanus Folk,2030,True,,3025,Destiny's Call,Oceanus Folk,2017,False
+CoverOf,12138,Unbreakable Divine Shelter,Oceanus Folk,2030,True,,14767,Saturday's Last Light,Space Rock,2023,True
+InStyleOf,12138,Unbreakable Divine Shelter,Oceanus Folk,2030,True,,11749,The Memory of Xiao,Space Rock,2024,True
+CoverOf,17350,Tidesworn Ballads,Oceanus Folk,2031,True,,10016,Dreamscape of Judgment,Symphonic Metal,2023,True
+DirectlySamples,17351,The Siren's Sigh,Oceanus Folk,2031,True,2031,14505,Call It Out Loud,Southern Gothic Rock,2024,True
+InStyleOf,17352,Whispers on the Jetty Wind,Oceanus Folk,2031,True,2031,11485,Eternal Connection,Oceanus Folk,2010,True
+CoverOf,17352,Whispers on the Jetty Wind,Oceanus Folk,2031,True,2031,2963,Whispers of the Heart's Embrace,Post-Apocalyptic Folk,2020,True
+CoverOf,17353,Moonlit Kelp Forest Dance,Oceanus Folk,2031,True,2031,14890,Dawn's Early Whispers,Desert Rock,2017,True
+CoverOf,17354,Seven Fathoms Deep,Oceanus Folk,2031,True,2031,7180,Aviator's First Dance,Oceanus Folk,2023,True
+InterpolatesFrom,17237,Seafarer's Lullaby,Oceanus Folk,2031,True,,12623,Echoes of Consciousness,Dream Pop,2028,True
+CoverOf,17354,Seven Fathoms Deep,Oceanus Folk,2031,True,2031,1830,Trouble's Favorite Son,Post-Apocalyptic Folk,2029,True
+InStyleOf,17286,Saltwater Hymn,Oceanus Folk,2032,False,,10903,Parallel Memories,Dream Pop,2028,True
+InStyleOf,17232,Driftwood Dreams,Oceanus Folk,2032,True,,4985,Dancing Through the Drums,Indie Folk,2026,True
+LyricalReferenceTo,17232,Driftwood Dreams,Oceanus Folk,2032,True,,6279,Walk Away from Women,Alternative Rock,2028,True
+InterpolatesFrom,17411,Tidal Whisper,Oceanus Folk,2033,True,2033,9068,Sawtooth Serenade,Blues Rock,1998,True
+InStyleOf,17362,Tide-Worn Tales,Oceanus Folk,2034,True,,12858,Parade of Painted Spirits,Doom Metal,2023,True
+InterpolatesFrom,17362,Tide-Worn Tales,Oceanus Folk,2034,True,,11429,Echoes of What We Were,Dream Pop,2027,True
+LyricalReferenceTo,17364,Crimson Cliffs Awakening,Oceanus Folk,2034,True,2034,7441,Nothing Left Untried,Desert Rock,2030,True
+CoverOf,17275,Coral Beats,Oceanus Folk,2034,True,,16312,Harvest Dance at Ler Valley,Psychedelic Rock,2010,True
+InterpolatesFrom,17050,Star-Touched Tides,Oceanus Folk,2034,True,,13131,Midnight's Ritual,Alternative Rock,2023,True
+InStyleOf,17275,Coral Beats,Oceanus Folk,2034,True,,15855,Sacred Fragments,Synthwave,2003,True
+LyricalReferenceTo,17287,Moon Over the Tide,Oceanus Folk,2034,True,,13589,Silent Steps in the Forest's Embrace,Avant-Garde Folk,2023,True
+InterpolatesFrom,17287,Moon Over the Tide,Oceanus Folk,2034,True,,11254,Divergent Memories,Indie Folk,2017,True
+InStyleOf,17289,Barnacle Heart,Oceanus Folk,2034,False,,5574,Our Inevitable Path,Indie Folk,2017,True
+LyricalReferenceTo,17050,Star-Touched Tides,Oceanus Folk,2034,True,,11911,Time's Running Out,Blues Rock,2026,True
+InterpolatesFrom,17367,The Cartographer's Curse,Oceanus Folk,2035,True,2035,3520,Aerial Conquistadors,Oceanus Folk,2026,True
+InStyleOf,16990,The Bells Beneath the Waves,Oceanus Folk,2035,False,,9538,Embrace of the Honored Visitor,Indie Rock,2029,True
+CoverOf,17363,The Sunken Compass,Oceanus Folk,2035,True,,4609,Brass and Brass: A Polka Memoir,Avant-Garde Folk,1997,True
+DirectlySamples,17363,The Sunken Compass,Oceanus Folk,2035,True,,14191,Viento y Marea,Dream Pop,2026,True
+DirectlySamples,17368,Shadows in Smuggler's Cove,Oceanus Folk,2035,True,2035,4854,Echoes from the Vatican Walls,Southern Gothic Rock,2004,True
+InterpolatesFrom,17290,Fog & Fiddle,Oceanus Folk,2036,True,,12685,Coastal Whispers of Biscay,Alternative Rock,2031,True
+InStyleOf,17290,Fog & Fiddle,Oceanus Folk,2036,True,,12237,Provence Aria,Indie Rock,2023,True
+InStyleOf,17125,When the Tide Calls My Name,Oceanus Folk,2037,True,,17245,Cresting Waves,Oceanus Folk,2030,False
+CoverOf,17123,Sea Glass Memories,Oceanus Folk,2037,False,,11472,Footwork Philosophy,Dream Pop,2019,True
+InStyleOf,17123,Sea Glass Memories,Oceanus Folk,2037,False,,6251,Allegretto Aurora,Indie Folk,2020,True
+DirectlySamples,17122,Skin and Saltwater,Oceanus Folk,2037,False,,15889,Whispers in Shadows,Psychedelic Rock,2023,True
+DirectlySamples,17292,Stormsong,Oceanus Folk,2038,True,,13014,Exoskeleton Dissolve,Indie Rock,2020,True
+InStyleOf,17292,Stormsong,Oceanus Folk,2038,True,,6592,When the Bar Lights Go Up,Emo/Pop Punk,2000,True
+LyricalReferenceTo,17277,Oceanbound,Oceanus Folk,2038,True,,3986,Altitude of Mistakes,Americana,2015,True
+LyricalReferenceTo,17277,Oceanbound,Oceanus Folk,2038,True,,876,Bold Without Apology,Indie Rock,2010,True
+InStyleOf,17049,Electric Reverie,Oceanus Folk,2038,True,,14107,Folklore's Heartbeat,Blues Rock,2020,True
+InterpolatesFrom,17049,Electric Reverie,Oceanus Folk,2038,True,,7026,Reflejo Interior,Americana,1983,True

@@ -1,0 +1,118 @@
+source_genre,target_genre,edge_type,connection_count,direction
+Oceanus Folk,Alternative Rock,CoverOf,1,outbound
+Oceanus Folk,Alternative Rock,InStyleOf,2,outbound
+Oceanus Folk,Alternative Rock,InterpolatesFrom,2,outbound
+Oceanus Folk,Alternative Rock,LyricalReferenceTo,3,outbound
+Oceanus Folk,Americana,CoverOf,1,outbound
+Oceanus Folk,Americana,InterpolatesFrom,3,outbound
+Oceanus Folk,Americana,LyricalReferenceTo,1,outbound
+Oceanus Folk,Avant-Garde Folk,CoverOf,1,outbound
+Oceanus Folk,Avant-Garde Folk,LyricalReferenceTo,1,outbound
+Oceanus Folk,Blues Rock,CoverOf,1,outbound
+Oceanus Folk,Blues Rock,InStyleOf,1,outbound
+Oceanus Folk,Blues Rock,InterpolatesFrom,1,outbound
+Oceanus Folk,Blues Rock,LyricalReferenceTo,1,outbound
+Oceanus Folk,Celtic Folk,LyricalReferenceTo,1,outbound
+Oceanus Folk,Desert Rock,CoverOf,2,outbound
+Oceanus Folk,Desert Rock,InStyleOf,4,outbound
+Oceanus Folk,Desert Rock,InterpolatesFrom,2,outbound
+Oceanus Folk,Desert Rock,LyricalReferenceTo,1,outbound
+Oceanus Folk,Doom Metal,CoverOf,2,outbound
+Oceanus Folk,Doom Metal,DirectlySamples,2,outbound
+Oceanus Folk,Doom Metal,InStyleOf,7,outbound
+Oceanus Folk,Doom Metal,InterpolatesFrom,1,outbound
+Oceanus Folk,Doom Metal,LyricalReferenceTo,2,outbound
+Oceanus Folk,Dream Pop,CoverOf,6,outbound
+Oceanus Folk,Dream Pop,DirectlySamples,2,outbound
+Oceanus Folk,Dream Pop,InStyleOf,5,outbound
+Oceanus Folk,Dream Pop,InterpolatesFrom,2,outbound
+Oceanus Folk,Emo/Pop Punk,InStyleOf,1,outbound
+Oceanus Folk,Indie Folk,CoverOf,22,outbound
+Oceanus Folk,Indie Folk,DirectlySamples,14,outbound
+Oceanus Folk,Indie Folk,InStyleOf,28,outbound
+Oceanus Folk,Indie Folk,InterpolatesFrom,18,outbound
+Oceanus Folk,Indie Folk,LyricalReferenceTo,18,outbound
+Oceanus Folk,Indie Pop,CoverOf,1,outbound
+Oceanus Folk,Indie Rock,CoverOf,1,outbound
+Oceanus Folk,Indie Rock,DirectlySamples,1,outbound
+Oceanus Folk,Indie Rock,InStyleOf,3,outbound
+Oceanus Folk,Indie Rock,InterpolatesFrom,2,outbound
+Oceanus Folk,Indie Rock,LyricalReferenceTo,1,outbound
+Oceanus Folk,Jazz Surf Rock,LyricalReferenceTo,1,outbound
+Oceanus Folk,Lo-Fi Electronica,InterpolatesFrom,1,outbound
+Oceanus Folk,Post-Apocalyptic Folk,CoverOf,2,outbound
+Oceanus Folk,Psychedelic Rock,CoverOf,2,outbound
+Oceanus Folk,Psychedelic Rock,DirectlySamples,1,outbound
+Oceanus Folk,Psychedelic Rock,InStyleOf,3,outbound
+Oceanus Folk,Psychedelic Rock,InterpolatesFrom,1,outbound
+Oceanus Folk,Psychedelic Rock,LyricalReferenceTo,5,outbound
+Oceanus Folk,Southern Gothic Rock,DirectlySamples,2,outbound
+Oceanus Folk,Southern Gothic Rock,InterpolatesFrom,1,outbound
+Oceanus Folk,Southern Gothic Rock,LyricalReferenceTo,1,outbound
+Oceanus Folk,Space Rock,CoverOf,1,outbound
+Oceanus Folk,Space Rock,InStyleOf,3,outbound
+Oceanus Folk,Symphonic Metal,CoverOf,2,outbound
+Oceanus Folk,Symphonic Metal,InStyleOf,1,outbound
+Oceanus Folk,Synthpop,CoverOf,2,outbound
+Oceanus Folk,Synthpop,DirectlySamples,1,outbound
+Oceanus Folk,Synthpop,InterpolatesFrom,6,outbound
+Oceanus Folk,Synthpop,LyricalReferenceTo,1,outbound
+Oceanus Folk,Synthwave,CoverOf,5,outbound
+Oceanus Folk,Synthwave,DirectlySamples,1,outbound
+Oceanus Folk,Synthwave,InStyleOf,6,outbound
+Oceanus Folk,Synthwave,InterpolatesFrom,3,outbound
+Oceanus Folk,Synthwave,LyricalReferenceTo,4,outbound
+Alternative Rock,Oceanus Folk,InStyleOf,2,inbound
+Alternative Rock,Oceanus Folk,LyricalReferenceTo,1,inbound
+Americana,Oceanus Folk,CoverOf,5,inbound
+Americana,Oceanus Folk,DirectlySamples,1,inbound
+Americana,Oceanus Folk,InStyleOf,3,inbound
+Americana,Oceanus Folk,InterpolatesFrom,1,inbound
+Americana,Oceanus Folk,LyricalReferenceTo,1,inbound
+Darkwave,Oceanus Folk,CoverOf,1,inbound
+Darkwave,Oceanus Folk,InStyleOf,1,inbound
+Desert Rock,Oceanus Folk,CoverOf,9,inbound
+Desert Rock,Oceanus Folk,DirectlySamples,4,inbound
+Desert Rock,Oceanus Folk,InStyleOf,11,inbound
+Desert Rock,Oceanus Folk,InterpolatesFrom,16,inbound
+Desert Rock,Oceanus Folk,LyricalReferenceTo,10,inbound
+Doom Metal,Oceanus Folk,CoverOf,4,inbound
+Doom Metal,Oceanus Folk,DirectlySamples,1,inbound
+Doom Metal,Oceanus Folk,InStyleOf,1,inbound
+Doom Metal,Oceanus Folk,InterpolatesFrom,1,inbound
+Dream Pop,Oceanus Folk,CoverOf,6,inbound
+Dream Pop,Oceanus Folk,DirectlySamples,3,inbound
+Dream Pop,Oceanus Folk,InStyleOf,18,inbound
+Dream Pop,Oceanus Folk,InterpolatesFrom,8,inbound
+Dream Pop,Oceanus Folk,LyricalReferenceTo,7,inbound
+Emo/Pop Punk,Oceanus Folk,CoverOf,1,inbound
+Indie Folk,Oceanus Folk,CoverOf,6,inbound
+Indie Folk,Oceanus Folk,DirectlySamples,7,inbound
+Indie Folk,Oceanus Folk,InStyleOf,10,inbound
+Indie Folk,Oceanus Folk,InterpolatesFrom,8,inbound
+Indie Folk,Oceanus Folk,LyricalReferenceTo,11,inbound
+Indie Rock,Oceanus Folk,CoverOf,1,inbound
+Indie Rock,Oceanus Folk,InStyleOf,1,inbound
+Indie Rock,Oceanus Folk,InterpolatesFrom,1,inbound
+Jazz Surf Rock,Oceanus Folk,CoverOf,1,inbound
+Jazz Surf Rock,Oceanus Folk,DirectlySamples,1,inbound
+Jazz Surf Rock,Oceanus Folk,InStyleOf,3,inbound
+Jazz Surf Rock,Oceanus Folk,InterpolatesFrom,2,inbound
+Jazz Surf Rock,Oceanus Folk,LyricalReferenceTo,1,inbound
+Post-Apocalyptic Folk,Oceanus Folk,CoverOf,1,inbound
+Post-Apocalyptic Folk,Oceanus Folk,DirectlySamples,1,inbound
+Post-Apocalyptic Folk,Oceanus Folk,LyricalReferenceTo,1,inbound
+Space Rock,Oceanus Folk,CoverOf,4,inbound
+Space Rock,Oceanus Folk,DirectlySamples,6,inbound
+Space Rock,Oceanus Folk,InStyleOf,9,inbound
+Space Rock,Oceanus Folk,InterpolatesFrom,10,inbound
+Space Rock,Oceanus Folk,LyricalReferenceTo,6,inbound
+Speed Metal,Oceanus Folk,InStyleOf,1,inbound
+Symphonic Metal,Oceanus Folk,InStyleOf,2,inbound
+Synthpop,Oceanus Folk,InStyleOf,3,inbound
+Synthpop,Oceanus Folk,LyricalReferenceTo,1,inbound
+Synthwave,Oceanus Folk,CoverOf,4,inbound
+Synthwave,Oceanus Folk,DirectlySamples,4,inbound
+Synthwave,Oceanus Folk,InStyleOf,5,inbound
+Synthwave,Oceanus Folk,InterpolatesFrom,1,inbound
+Synthwave,Oceanus Folk,LyricalReferenceTo,2,inbound

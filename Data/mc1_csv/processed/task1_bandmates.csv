@@ -1,0 +1,21 @@
+bandmate_name,edge_type,source_id,source_name,source_type,target_id,target_name,target_type,target_genre,target_release_date,target_notable
+Maya Jensen,ComposerOf,17256,Maya Jensen,Person,17121,Ballads for the Low Tide,Album,Oceanus Folk,2037,True
+Maya Jensen,MemberOf,17256,Maya Jensen,Person,17260,Ivy Echos,MusicalGroup,Unknown,,False
+Maya Jensen,ComposerOf,17256,Maya Jensen,Person,17261,The Kelp Forest Canticles,Album,Oceanus Folk,2024,True
+Maya Jensen,ComposerOf,17256,Maya Jensen,Person,17262,Luminescent Tides,Album,Oceanus Folk,2025,True
+Maya Jensen,ComposerOf,17256,Maya Jensen,Person,17263,Shoreline Sonnets,Album,Oceanus Folk,2026,True
+Maya Jensen,PerformerOf,17256,Maya Jensen,Person,17411,Tidal Whisper,Song,Oceanus Folk,2033,True
+"Lila ""Lilly"" Hartman",MemberOf,17257,"Lila ""Lilly"" Hartman",Person,17260,Ivy Echos,MusicalGroup,Unknown,,False
+"Lila ""Lilly"" Hartman",ComposerOf,17257,"Lila ""Lilly"" Hartman",Person,17261,The Kelp Forest Canticles,Album,Oceanus Folk,2024,True
+"Lila ""Lilly"" Hartman",ComposerOf,17257,"Lila ""Lilly"" Hartman",Person,17262,Luminescent Tides,Album,Oceanus Folk,2025,True
+"Lila ""Lilly"" Hartman",ComposerOf,17257,"Lila ""Lilly"" Hartman",Person,17263,Shoreline Sonnets,Album,Oceanus Folk,2026,True
+Jade Thompson,MemberOf,17258,Jade Thompson,Person,17260,Ivy Echos,MusicalGroup,Unknown,,False
+Jade Thompson,ComposerOf,17258,Jade Thompson,Person,17261,The Kelp Forest Canticles,Album,Oceanus Folk,2024,True
+Jade Thompson,ComposerOf,17258,Jade Thompson,Person,17262,Luminescent Tides,Album,Oceanus Folk,2025,True
+Jade Thompson,ComposerOf,17258,Jade Thompson,Person,17263,Shoreline Sonnets,Album,Oceanus Folk,2026,True
+Sophie Ramirez,LyricistOf,17259,Sophie Ramirez,Person,16988,Songs from the Drowned World,Album,Oceanus Folk,2035,True
+Sophie Ramirez,MemberOf,17259,Sophie Ramirez,Person,17260,Ivy Echos,MusicalGroup,Unknown,,False
+Sophie Ramirez,LyricistOf,17259,Sophie Ramirez,Person,17261,The Kelp Forest Canticles,Album,Oceanus Folk,2024,True
+Sophie Ramirez,LyricistOf,17259,Sophie Ramirez,Person,17262,Luminescent Tides,Album,Oceanus Folk,2025,True
+Sophie Ramirez,LyricistOf,17259,Sophie Ramirez,Person,17263,Shoreline Sonnets,Album,Oceanus Folk,2026,True
+Sophie Ramirez,ProducerOf,17259,Sophie Ramirez,Person,17247,Anchored Love,Song,Oceanus Folk,2030,True
