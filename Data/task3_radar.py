@@ -92,6 +92,8 @@ TEXT_COL = "#e0e0e0"
 
 fig = plt.figure(figsize=(10, 8), dpi=150, facecolor=BG)
 ax  = fig.add_subplot(111, polar=True, facecolor=BG)
+ax.set_theta_zero_location("N")   # first axis at top (12 o'clock)
+ax.set_theta_direction(-1)        # clockwise, conventional radar layout
 
 # Grid styling
 ax.set_facecolor(BG)
@@ -117,10 +119,13 @@ for i, (_, row) in enumerate(of.iterrows()):
         mpatches.Patch(facecolor=colour, edgecolor=colour, label=row["performer_name"])
     )
 
-# Axis labels
+# Axis labels — placed manually so the top label clears the chart lines
 ax.set_xticks(angles[:-1])
-ax.set_xticklabels(LABELS, color=TEXT_COL, fontsize=10, fontfamily="sans-serif")
-ax.tick_params(axis="x", pad=14)
+ax.set_xticklabels([""] * N)           # hide default tick text
+for angle, label in zip(angles[:-1], LABELS):
+    ax.text(angle, 1.22, label,
+            ha="center", va="center",
+            color=TEXT_COL, fontsize=10, fontfamily="sans-serif")
 
 # Radial ticks
 ax.set_yticks([0.2, 0.4, 0.6, 0.8, 1.0])
