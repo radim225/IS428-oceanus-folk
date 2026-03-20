@@ -54,7 +54,21 @@ of["m_recent"]     = minmax(latest_yr)                   # later → higher
 
 of["m_diversity"]  = minmax(of["genre_diversity"])
 
+# ── Verification printout ──────────────────────────────────────────────────────
 METRICS = ["m_works", "m_quick", "m_early", "m_recent", "m_diversity"]
+COL_HEADERS = ["Works", "QuickBT", "EarlyBT", "RecentAct", "Diversity"]
+print("=== Ping Meng genres ===")
+pm = of[of["performer_name"] == "Ping Meng"].iloc[0]
+genres_list = [g.strip() for g in str(pm["genres"]).split(",")]
+print(f"  Raw   : {pm['genres']}")
+print(f"  Unique: {sorted(set(genres_list))}  count={len(set(genres_list))}")
+print()
+print(f"=== Normalised scores ({'  '.join(f'{h:>9}' for h in COL_HEADERS)}) ===")
+for _, row in of.iterrows():
+    scores = "  ".join(f"{row[m]:9.4f}" for m in METRICS)
+    print(f"  {row['performer_name']:30s}  {scores}")
+print()
+
 LABELS  = [
     "Total Notable\nWorks",
     "Quick\nBreakthrough",
