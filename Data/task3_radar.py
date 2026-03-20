@@ -39,27 +39,32 @@ def minmax(series):
     return (series - lo) / (hi - lo)
 
 # ── Build 5 normalised metrics ─────────────────────────────────────────────────
-of["m_works"]      = minmax(of["total_notable_works"])
-of["m_longevity"]  = minmax(of["years_active_span"])
+of["m_works"]     = minmax(of["total_notable_works"])
 
+# Quick Breakthrough: invert years_active_span — 0 yrs → score 1.0, 17 yrs → ~0
+span = of["years_active_span"].astype(float)
+of["m_quick"]     = minmax(span.max() - span)
+
+# Early Breakthrough: invert first_notoriety_date within this 5-artist range
 first_yr = of["first_notoriety_date"].astype(float)
-of["m_early"]      = minmax(first_yr.max() - first_yr)   # earlier → higher
+of["m_early"]     = minmax(first_yr.max() - first_yr)    # earlier → higher
 
 latest_yr = of["latest_notoriety_date"].astype(float)
 of["m_recent"]     = minmax(latest_yr)                   # later → higher
 
 of["m_diversity"]  = minmax(of["genre_diversity"])
 
-METRICS = ["m_works", "m_longevity", "m_early", "m_recent", "m_diversity"]
+METRICS = ["m_works", "m_quick", "m_early", "m_recent", "m_diversity"]
 LABELS  = [
     "Total Notable\nWorks",
-    "Career\nLongevity",
+    "Quick\nBreakthrough",
     "Early\nBreakthrough",
     "Recent\nActivity",
     "Genre\nDiversity",
 ]
 
-COLOURS = ["#4fc3f7", "#26c6da", "#d4ac0d", "#ef5350", "#66bb6a"]
+# Artist order after sort: Orla, Copper Canyon, Daniel, Beatrice, Ping Meng
+COLOURS = ["#FFD700", "#00CED1", "#7B68EE", "#FF6B6B", "#98FB98"]
 
 # ── Radar geometry ─────────────────────────────────────────────────────────────
 N      = len(METRICS)
@@ -92,8 +97,8 @@ legend_patches = []
 for i, (_, row) in enumerate(of.iterrows()):
     values = [row[m] for m in METRICS] + [row[METRICS[0]]]
     colour = COLOURS[i]
-    ax.plot(angles, values, color=colour, linewidth=2, zorder=3)
-    ax.fill(angles, values, color=colour, alpha=0.15)
+    ax.plot(angles, values, color=colour, linewidth=2.5, zorder=3)
+    ax.fill(angles, values, color=colour, alpha=0.2)
     legend_patches.append(
         mpatches.Patch(facecolor=colour, edgecolor=colour, label=row["performer_name"])
     )
