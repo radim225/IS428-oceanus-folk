@@ -1,0 +1,151 @@
+"""
+Task 3 — Rising Star Radar Chart
+Compares top 5 Oceanus Folk candidate artists across 5 dimensions.
+Output: images/task3/task3_radar_chart.png
+"""
+
+import os
+import numpy as np
+import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+# ── Paths (relative to project root) ──────────────────────────────────────────
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(SCRIPT_DIR)
+CSV_PATH = os.path.join(ROOT, "Data", "mc1_csv", "processed", "task3_artist_notoriety.csv")
+OUT_PATH = os.path.join(ROOT, "images", "task3", "task3_radar_chart.png")
+
+# ── Load & filter ──────────────────────────────────────────────────────────────
+df = pd.read_csv(CSV_PATH)
+df["is_oceanus_folk_artist"] = df["is_oceanus_folk_artist"].astype(str).str.strip().str.lower() == "true"
+of = df[df["is_oceanus_folk_artist"]].sort_values("total_notable_works", ascending=False).head(5).copy()
+
+# ── Genre diversity: count unique genres per artist ────────────────────────────
+def count_genres(genre_str):
+    if pd.isna(genre_str) or str(genre_str).strip() == "":
+        return 0
+    return len(set(g.strip() for g in str(genre_str).split(",")))
+
+of["genre_diversity"] = of["genres"].apply(count_genres)
+
+# ── Normalise helper ───────────────────────────────────────────────────────────
+def minmax(series):
+    lo, hi = series.min(), series.max()
+    if hi == lo:
+        return pd.Series([0.5] * len(series), index=series.index)
+    return (series - lo) / (hi - lo)
+
+# ── Build 5 normalised metrics ─────────────────────────────────────────────────
+of["m_works"]      = minmax(of["total_notable_works"])
+of["m_longevity"]  = minmax(of["years_active_span"])
+
+first_yr = of["first_notoriety_date"].astype(float)
+of["m_early"]      = minmax(first_yr.max() - first_yr)   # earlier → higher
+
+latest_yr = of["latest_notoriety_date"].astype(float)
+of["m_recent"]     = minmax(latest_yr)                   # later → higher
+
+of["m_diversity"]  = minmax(of["genre_diversity"])
+
+METRICS = ["m_works", "m_longevity", "m_early", "m_recent", "m_diversity"]
+LABELS  = [
+    "Total Notable\nWorks",
+    "Career\nLongevity",
+    "Early\nBreakthrough",
+    "Recent\nActivity",
+    "Genre\nDiversity",
+]
+
+COLOURS = ["#4fc3f7", "#26c6da", "#d4ac0d", "#ef5350", "#66bb6a"]
+
+# ── Radar geometry ─────────────────────────────────────────────────────────────
+N      = len(METRICS)
+angles = np.linspace(0, 2 * np.pi, N, endpoint=False).tolist()
+angles += angles[:1]   # close polygon
+
+# ── Plot ───────────────────────────────────────────────────────────────────────
+BG = "#0d1117"
+GRID_COL = "#3a3a3a"
+TEXT_COL = "#e0e0e0"
+
+fig = plt.figure(figsize=(10, 8), dpi=150, facecolor=BG)
+ax  = fig.add_subplot(111, polar=True, facecolor=BG)
+
+# Grid styling
+ax.set_facecolor(BG)
+ax.spines["polar"].set_color(GRID_COL)
+ax.grid(color=GRID_COL, linewidth=0.8, linestyle="--", alpha=0.6)
+
+# Draw concentric circles manually for cleaner control
+for r in [0.2, 0.4, 0.6, 0.8, 1.0]:
+    ax.plot(angles, [r] * (N + 1), color=GRID_COL, linewidth=0.6, linestyle="--")
+
+# Axis lines (spokes)
+for angle in angles[:-1]:
+    ax.plot([angle, angle], [0, 1], color=GRID_COL, linewidth=0.8)
+
+# Plot each artist
+legend_patches = []
+for i, (_, row) in enumerate(of.iterrows()):
+    values = [row[m] for m in METRICS] + [row[METRICS[0]]]
+    colour = COLOURS[i]
+    ax.plot(angles, values, color=colour, linewidth=2, zorder=3)
+    ax.fill(angles, values, color=colour, alpha=0.15)
+    legend_patches.append(
+        mpatches.Patch(facecolor=colour, edgecolor=colour, label=row["performer_name"])
+    )
+
+# Axis labels
+ax.set_xticks(angles[:-1])
+ax.set_xticklabels(LABELS, color=TEXT_COL, fontsize=10, fontfamily="sans-serif")
+ax.tick_params(axis="x", pad=14)
+
+# Radial ticks
+ax.set_yticks([0.2, 0.4, 0.6, 0.8, 1.0])
+ax.set_yticklabels(["0.2", "0.4", "0.6", "0.8", "1.0"],
+                   color="#888888", fontsize=7, fontfamily="sans-serif")
+ax.set_ylim(0, 1)
+
+# Title
+fig.text(
+    0.42, 0.97,
+    "Rising Star Profile — Oceanus Folk Candidates",
+    ha="center", va="top",
+    color=TEXT_COL, fontsize=13, fontweight="bold", fontfamily="sans-serif",
+)
+
+# Legend
+leg = fig.legend(
+    handles=legend_patches,
+    loc="center right",
+    bbox_to_anchor=(1.02, 0.5),
+    fontsize=9,
+    frameon=True,
+    framealpha=0.15,
+    edgecolor=GRID_COL,
+    labelcolor=TEXT_COL,
+    facecolor=BG,
+    title="Artists",
+    title_fontsize=9,
+)
+leg.get_title().set_color(TEXT_COL)
+
+plt.tight_layout(rect=[0, 0, 0.82, 0.95])
+
+# ── Save ───────────────────────────────────────────────────────────────────────
+os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
+fig.savefig(OUT_PATH, dpi=150, bbox_inches="tight", facecolor=BG)
+
+size_kb = os.path.getsize(OUT_PATH) / 1024
+print(f"Saved: {OUT_PATH}")
+print(f"Size:  {size_kb:.1f} KB")
+print("\nArtists plotted:")
+for _, row in of.iterrows():
+    print(f"  {row['performer_name']:30s}  works={row['total_notable_works']}  "
+          f"longevity={row['years_active_span']}yr  "
+          f"first={int(row['first_notoriety_date'])}  "
+          f"latest={int(row['latest_notoriety_date'])}  "
+          f"genres={row['genre_diversity']}")
