@@ -15,6 +15,9 @@
 - Klara owns: task2_analysis.qmd, images/task2/, tableau/task2_klara.twbx
 - Charles owns: task1_analysis.qmd, images/task1/, tableau/task1_charles.twbx
 
+## Live Site
+Production URL: https://is-428-oceanus-folk-cuky9crzr-radim225s-projects.vercel.app
+
 ## Key Dates
 - Proposal live on Vercel: 18 March 2026 (11:59pm SGT)
 - Poster upload to eLearn: 8 April 2026

@@ -41,6 +41,9 @@ The website does NOT embed or run Tableau.
 - After any change: remind Radim to git add . && git commit && git push
 - Vercel auto-deploys on every push to main
 
+## Live Site
+Production URL: https://is-428-oceanus-folk-cuky9crzr-radim225s-projects.vercel.app
+
 ## Deadlines
 - Proposal live on Vercel: 18 March 2026 (11:59pm SGT)
 - Poster to eLearn: 8 April 2026
