@@ -12,6 +12,12 @@ website:
         text: Project Proposal
       - href: methodology.qmd
         text: Methodology
+      - href: task1_analysis.qmd
+        text: "Task 1 — Career Profile"
+      - href: task2_analysis.qmd
+        text: "Task 2 — Genre Spread"
+      - href: task3_analysis.qmd
+        text: "Task 3 — Rising Stars"
       - href: results.qmd
         text: Results & Discussion
       - href: poster.qmd

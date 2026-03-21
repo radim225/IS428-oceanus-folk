@@ -64,9 +64,11 @@ ROLE_STYLE = {
 
 # ── Build pyvis network ────────────────────────────────────────────────────────
 net = Network(
-    height="750px", width="100%",
-    bgcolor="#0d1117", font_color="#e0e0e0",
+    height="700px", width="100%",
+    bgcolor="#0d1117", font_color="white",
     directed=False,
+    notebook=False,
+    cdn_resources="in_line",
 )
 net.toggle_physics(True)
 net.set_options("""{
