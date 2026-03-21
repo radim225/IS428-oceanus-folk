@@ -2,6 +2,22 @@
 title: "Results & Discussion"
 ---
 
-# Results & Discussion
+This page summarises the analytical findings from all three tasks of the VAST Challenge 2025 Mini-Challenge 1 investigation into the rise of Sailor Shift and Oceanus Folk music.
 
-This section is currently in progress and will be updated as the project develops. Check back closer to the submission date.
+---
+
+## Task 1 — Sailor Shift Career Profile
+
+{{< include task1_analysis.qmd >}}
+
+---
+
+## Task 2 — Oceanus Folk Genre Spread
+
+{{< include task2_analysis.qmd >}}
+
+---
+
+## Task 3 — Rising Star Prediction
+
+{{< include task3_analysis.qmd >}}
