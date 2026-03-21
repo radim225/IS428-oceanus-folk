@@ -122,7 +122,7 @@ title_html = (
     '<p style="color:#888;font-family:sans-serif;margin:4px 0 0;font-size:12px;">'
     '<span style="color:#FFD700;">&#9632;</span> Sailor Shift &nbsp;'
     '<span style="color:#4A90D9;">&#9632;</span> Direct Collaborator &nbsp;'
-    '<span style="color:#00CED1;">&#9632;</span> Ivy Echoes Member'
+    '<span style="color:#2ECC71;">&#9632;</span> Ivy Echoes Member'
     '</p></div>'
     '<div style="height:60px;"></div>'
 )

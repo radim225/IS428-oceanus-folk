@@ -116,7 +116,7 @@ title_html = (
     '<span style="color:#FFD700;">&#9733;</span> Sailor Shift &nbsp;'
     '<span style="color:#FFA500;">&#9632;</span> Sailor Works &nbsp;'
     '<span style="color:#4A90D9;">&#9632;</span> Direct Collaborator &nbsp;'
-    '<span style="color:#00CED1;">&#9632;</span> Ivy Echoes Member &nbsp;'
+    '<span style="color:#2ECC71;">&#9632;</span> Ivy Echoes Member &nbsp;'
     '<span style="color:#9B59B6;">&#9632;</span> Inspired By Sailor'
     '</p></div>'
     '<div style="height:65px;"></div>'
