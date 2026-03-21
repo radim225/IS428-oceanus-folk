@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-03-17">
 
-<title>Oceanus Folk: Then and Now</title>
+<title>Task 3 — Rising Star Prediction – Oceanus Folk: Then and Now</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -112,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Task 2 — Genre Spread</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./task3_analysis.html"> 
+    <a class="nav-link active" href="./task3_analysis.html" aria-current="page"> 
 <span class="menu-text">Task 3 — Rising Stars</span></a>
   </li>  
   <li class="nav-item">
@@ -147,14 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context">Context</a></li>
-  <li><a href="#motivation-objectives" id="toc-motivation-objectives" class="nav-link" data-scroll-target="#motivation-objectives">Motivation &amp; Objectives</a>
-  <ul class="collapse">
-  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  </ul></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
-  <li><a href="#find-out-more" id="toc-find-out-more" class="nav-link" data-scroll-target="#find-out-more">Find Out More</a></li>
+  <li><a href="#task-3-rising-star-prediction" id="toc-task-3-rising-star-prediction" class="nav-link active" data-scroll-target="#task-3-rising-star-prediction">Task 3 — Rising Star Prediction</a></li>
   </ul>
 </nav>
     </div>
@@ -163,8 +155,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Oceanus Folk: Then and Now</h1>
-<p class="subtitle lead">IS428 Visual Analytics Project | AY2025-2026 Term 2</p>
+<h1 class="title">Task 3 — Rising Star Prediction</h1>
 </div>
 
 
@@ -172,19 +163,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 17, 2026</p>
-    </div>
-  </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">March 17, 2026</p>
-    </div>
-  </div>
     
   </div>
   
@@ -193,49 +172,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Team:</strong> Radim Šoukal (<span class="missing-info">[01550535]</span>) &nbsp;·&nbsp; <span class="missing-info">[Klara Kasparova]</span> (<span class="missing-info">[01550536]</span>) &nbsp;·&nbsp; <span class="missing-info">[Charles-Antoine Tremblay]</span> (<span class="missing-info">[01550160]</span>)</p>
-</div>
-</div>
-</div>
-<section id="context" class="level2">
-<h2 class="anchored" data-anchor-id="context">Context</h2>
-<p>Oceanus, a small island nation once known primarily for its fishing communities, produced one of the most unlikely stories in modern music history. Sailor Shift — a vocalist who began her career in the niche Oceanus Folk genre — rose from regional obscurity to global recognition over the course of two decades. In 2023 she joined the Ivy Echoes, an all-female Oceanus Folk band, before her 2028 breakthrough single became the first Oceanus Folk song ever to top global charts. By 2040, journalist Silas Reed is writing a long-form article, “Oceanus Folk: Then and Now”, tracing this transformation and its lasting impact on the music world. To support his reporting, he has assembled a knowledge graph of artists, songs, albums, labels, and the influence relationships between them — and he needs visual analytics tools to make sense of it.</p>
-<p>The MC1 knowledge graph contains 17,412 nodes across five types (Person, Song, Album, RecordLabel, MusicalGroup) and 37,857 directed edges across twelve relationship types, spanning nearly five decades from 1993 to 2040. This scale and relational complexity makes the dataset impossible to interpret through manual exploration or conventional tabular analysis. Purpose-built interactive visualisations are essential to surface the patterns of influence, collaboration, and genre evolution that Silas needs for his article.</p>
-</section>
-<section id="motivation-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="motivation-objectives">Motivation &amp; Objectives</h2>
-<section id="motivation" class="level3">
-<h3 class="anchored" data-anchor-id="motivation">Motivation</h3>
-<p>The fundamental challenge Silas Reed faces is one of scale and relational complexity. A knowledge graph with nearly 18,000 nodes and 38,000 edges cannot be meaningfully explored through tabular tools or manual browsing. At this size, patterns that span dozens or hundreds of relationships — such as how an artist’s stylistic choices propagated through a generation of subsequent musicians — are simply invisible without automated aggregation and visual encoding. The graph’s five node types and twelve edge types create a multi-relational structure where the same artist node may participate simultaneously in performer, composer, lyricist, producer, and influence relationships, each of which carries different analytical weight depending on the question being asked.</p>
-<p>Beyond scale, the data has a temporal dimension that spans from 1993 to 2040 — nearly five decades — making longitudinal analysis essential. Musical influence is not static: artists who were obscure in one decade may become central nodes of influence in the next, and genres that once absorbed influence from Oceanus Folk may later feed inspiration back into it. Standard visualisation tools designed for snapshot data cannot capture this bidirectional, time-varying flow of influence. Finally, the multi-hop nature of influence propagation — where artist A shapes artist B, who in turn shapes artist C — requires graph traversal visualisation techniques that go beyond the capabilities of conventional business intelligence software. These three factors together make this project an ideal candidate for visual analytics.</p>
-</section>
-<section id="objectives" class="level3">
-<h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
-<ol type="1">
-<li><p><strong>Task 1 — Sailor Shift Career Profile (Charles):</strong> Profile Sailor Shift’s career through interactive Tableau visualisations that map who influenced her and when, who she has collaborated with, and which artists she directly and indirectly shaped — tracing her impact on the broader Oceanus Folk community over time.</p></li>
-<li><p><strong>Task 2 — Oceanus Folk Genre Spread (Klara):</strong> Trace the spread of Oceanus Folk as a genre by visualising how its influence expanded into adjacent genres such as Indie Folk, Dream Pop, Desert Rock, and Space Rock, whether that expansion was gradual or episodic, and how the genre itself has evolved by absorbing external influences since Sailor’s breakthrough.</p></li>
-<li><p><strong>Task 3 — Rising Star Prediction (Radim):</strong> Develop a data-driven profile of what characterises a breakout Oceanus Folk artist by examining the career trajectories of established rising stars, compare candidate artists against this benchmark, and name three evidence-based predictions for the next Oceanus Folk stars likely to emerge over the next five years.</p></li>
-</ol>
-</section>
-</section>
-<section id="methodology" class="level2">
-<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<p>This project translates the MC1 knowledge graph into a suite of interactive Tableau dashboards, one per task, integrated into a single combined workbook. The raw graph data (MC1_graph.json) was first converted into flat CSV tables — separating node types and edge types — suitable for Tableau’s relational data model. Each sub-module then builds its visualisations on top of this prepared data.</p>
-<ul>
-<li><strong>Task 1 (Charles):</strong> Four interconnected dashboards — an influence timeline showing who shaped Sailor and when, a collaboration network graph centred on Sailor as the hub node, an indirect influence tree tracing second- and third-degree impacts, and a career tracker for her Ivy Echoes bandmates.</li>
-<li><strong>Task 2 (Klara):</strong> A Sankey-style genre flow diagram showing Oceanus Folk’s outward influence over time, a genre influence timeline chart from 1993 to 2040, a ranked bar chart of top influenced artists, and a genre inspiration heatmap showing which external genres have fed back into Oceanus Folk.</li>
-<li><strong>Task 3 (Radim):</strong> A radar chart defining the rising star profile across multiple metrics, a multi-line career arc comparison for three benchmark artists, a ranked candidate list with visual supporting evidence, and a prediction dashboard comparing top candidates against the rising star benchmark.</li>
-</ul>
-</section>
-<section id="find-out-more" class="level2">
-<h2 class="anchored" data-anchor-id="find-out-more">Find Out More</h2>
-<p>Read our full <a href="./proposal.html">Project Proposal</a> for detailed methodology, data description, and project timeline.</p>
+<section id="task-3-rising-star-prediction" class="level1">
+<h1>Task 3 — Rising Star Prediction</h1>
+<p>This section is currently in progress and will be updated as the project develops.</p>
 
 
 </section>

@@ -56,39 +56,18 @@
     "text": "Proposal live on Vercel: 18 March 2026 (11:59pm SGT)\nPoster to eLearn: 8 April 2026\nPoster presentation: 13 April 2026\nFinal submission: 19 April 2026"
   },
   {
-    "objectID": "proposal.html",
-    "href": "proposal.html",
-    "title": "Project Proposal",
+    "objectID": "task3_analysis.html",
+    "href": "task3_analysis.html",
+    "title": "Task 3 — Rising Star Prediction",
     "section": "",
-    "text": "Sailor Shift is an Oceanus Folk artist who co-founded the Ivy Echoes in 2023 before achieving a viral breakthrough in 2028 — the first Oceanus Folk artist to top global charts. Since then, she has released acclaimed albums annually, collaborated widely across genres, and actively mentored emerging artists, while her former bandmates have independently contributed to the spread of Oceanus Folk across the music world.\nUnderstanding this network of influence is the core challenge. Journalist Silas Reed has compiled a knowledge graph of 17,412 nodes and 37,857 edges spanning music history from 1993 to 2040. While this dataset contains all the answers needed for his article “Oceanus Folk: Then-and-Now”, raw graph data is unreadable without purpose-built visualisation. Tracing Sailor’s influences, measuring how Oceanus Folk spread into other genres, or identifying the next rising star cannot be done by browsing a JSON file.\nBy transforming this knowledge graph into interactive Tableau dashboards, we turn a complex relational dataset into clear, navigable insights about how musical influence works and how stars are made.\n\n\n\n\nTask 1 — Career Profile: Design Tableau visualisations to map Sailor Shift’s influences, collaborations, and the direct and indirect impact she has had on other artists and on the Oceanus Folk community. This includes tracing who shaped her sound and when, identifying her key collaborators, and visualising the downstream influence chain.\nTask 2 — Genre Spread: Develop visualisations showing how Oceanus Folk’s influence has spread across the music world since Sailor’s breakthrough, which genres it most affected (Indie Folk, Dream Pop, Desert Rock, Space Rock, Synthwave, etc.), and how the genre itself has evolved through external influences, making visible the flow between Oceanus Folk and the broader musical ecosystem.\nTask 3 — Rising Star Prediction: Build a data-driven profile of what constitutes a breakout Oceanus Folk artist, compare the career trajectories of three benchmark artists, and provide three predictions for the next stars likely to emerge over the next five years, drawing on the notable works and notoriety date data as the primary signal of an artist’s rising trajectory."
+    "text": "Task 3 — Rising Star Prediction\nThis section is currently in progress and will be updated as the project develops."
   },
   {
-    "objectID": "proposal.html#motivation-objectives",
-    "href": "proposal.html#motivation-objectives",
-    "title": "Project Proposal",
+    "objectID": "task2_analysis.html",
+    "href": "task2_analysis.html",
+    "title": "Task 2 — Oceanus Folk Genre Spread",
     "section": "",
-    "text": "Sailor Shift is an Oceanus Folk artist who co-founded the Ivy Echoes in 2023 before achieving a viral breakthrough in 2028 — the first Oceanus Folk artist to top global charts. Since then, she has released acclaimed albums annually, collaborated widely across genres, and actively mentored emerging artists, while her former bandmates have independently contributed to the spread of Oceanus Folk across the music world.\nUnderstanding this network of influence is the core challenge. Journalist Silas Reed has compiled a knowledge graph of 17,412 nodes and 37,857 edges spanning music history from 1993 to 2040. While this dataset contains all the answers needed for his article “Oceanus Folk: Then-and-Now”, raw graph data is unreadable without purpose-built visualisation. Tracing Sailor’s influences, measuring how Oceanus Folk spread into other genres, or identifying the next rising star cannot be done by browsing a JSON file.\nBy transforming this knowledge graph into interactive Tableau dashboards, we turn a complex relational dataset into clear, navigable insights about how musical influence works and how stars are made.\n\n\n\n\nTask 1 — Career Profile: Design Tableau visualisations to map Sailor Shift’s influences, collaborations, and the direct and indirect impact she has had on other artists and on the Oceanus Folk community. This includes tracing who shaped her sound and when, identifying her key collaborators, and visualising the downstream influence chain.\nTask 2 — Genre Spread: Develop visualisations showing how Oceanus Folk’s influence has spread across the music world since Sailor’s breakthrough, which genres it most affected (Indie Folk, Dream Pop, Desert Rock, Space Rock, Synthwave, etc.), and how the genre itself has evolved through external influences, making visible the flow between Oceanus Folk and the broader musical ecosystem.\nTask 3 — Rising Star Prediction: Build a data-driven profile of what constitutes a breakout Oceanus Folk artist, compare the career trajectories of three benchmark artists, and provide three predictions for the next stars likely to emerge over the next five years, drawing on the notable works and notoriety date data as the primary signal of an artist’s rising trajectory."
-  },
-  {
-    "objectID": "proposal.html#data",
-    "href": "proposal.html#data",
-    "title": "Project Proposal",
-    "section": "Data",
-    "text": "Data\nThe datasets for this project are mc1_nodes.csv and mc1_edges.csv, derived from MC1_graph.json provided by VAST Challenge 2025 Mini-Challenge 1. They represent the music industry in and around Oceanus from 1993 to 2040, containing 17,412 nodes and 37,857 edges across five node types and twelve relationship types. Edge types capture creative relationships including performance, composition, production, and stylistic influence — with the influence category (InStyleOf, InterpolatesFrom, CoverOf, DirectlySamples) forming the primary analytical layer for tracing how musical ideas spread between artists and genres.\nTwo fields are critical for Task 3. The notable boolean records whether a work charted, and notoriety_date records when — together allowing reconstruction of each artist’s breakthrough trajectory across 649 charted works."
-  },
-  {
-    "objectID": "proposal.html#scope-of-work",
-    "href": "proposal.html#scope-of-work",
-    "title": "Project Proposal",
-    "section": "Scope of Work",
-    "text": "Scope of Work\n\nData preparation: parsing mc1_edges.csv and mc1_nodes.csv into twelve task-specific CSVs via Python, with NA handling, date normalisation, and name resolution across source/target edge endpoints\nTask 1 — Sailor Shift Career Profile (Charles): influence timeline, collaboration network graph, indirect influence tree, and Ivy Echoes bandmate career tracker in Tableau\nTask 2 — Oceanus Folk Genre Spread (Klara): Sankey genre flow diagram, influence timeline chart, top influenced artists bar chart, and genre inspiration heatmap in Tableau\nTask 3 — Rising Star Prediction (Radim): rising star radar chart, career arc comparison across three artists, and breakout candidate dashboard with three evidence-based predictions in Tableau\nIntegration: combining all sub-modules into a single .twbx file with cross-dashboard filter actions\nWebsite: Quarto project website deployed via Vercel, with individual analysis pages and screenshots per sub-module\nPoster: ISO A1 format (594 × 841mm, 300dpi JPEG) submitted to eLearn by 8 April 2026\nUser guide: step-by-step documentation of all Tableau dashboard interactions"
-  },
-  {
-    "objectID": "proposal.html#project-schedule",
-    "href": "proposal.html#project-schedule",
-    "title": "Project Proposal",
-    "section": "Project Schedule",
-    "text": "Project Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTask\nOwner\nBy 18 Mar\nBy 22 Mar\nBy 1 Apr\nBy 5 Apr\nBy 8 Apr\nBy 13 Apr\nBy 19 Apr\n\n\n\n\nQuarto site & proposal\nRadim\n✓\n\n\n\n\n\n\n\n\nData prep (JSON → CSV)\nAll\n✓\n\n\n\n\n\n\n\n\nTask 1 Tableau dashboards\nCharles\n\nongoing\n✓\n\n\n\n\n\n\nTask 2 Tableau dashboards\nKlara\n\nongoing\n\n✓\n\n\n\n\n\nTask 3 Tableau dashboards\nRadim\n\nongoing\n✓\n\n\n\n\n\n\nTableau integration (.twbx)\nRadim\n\n\n\n✓\n\n\n\n\n\nScreenshots & analysis pages\nAll\n\n\n\n✓\n✓\n\n\n\n\nPoster design\nCharles (lead)\n\n\n\n\n✓\n✓\n\n\n\nUser guide\nRadim\n\n\n\n\n\n\n✓\n\n\nFinal zip submission\nAll\n\n\n\n\n\n\n✓"
+    "text": "Task 2 — Oceanus Folk Genre Spread\nThis section is currently in progress and will be updated as the project develops."
   },
   {
     "objectID": "about.html",
@@ -114,9 +93,93 @@
   {
     "objectID": "results.html",
     "href": "results.html",
-    "title": "Results & Discussion",
+    "title": "Task 3 — Rising Star Prediction",
     "section": "",
-    "text": "Results & Discussion\nThis section is currently in progress and will be updated as the project develops. Check back closer to the submission date."
+    "text": "This page summarises the analytical findings from all three tasks of the VAST Challenge 2025 Mini-Challenge 1 investigation into the rise of Sailor Shift and Oceanus Folk music."
+  },
+  {
+    "objectID": "results.html#task-1-sailor-shift-career-profile",
+    "href": "results.html#task-1-sailor-shift-career-profile",
+    "title": "Task 3 — Rising Star Prediction",
+    "section": "Task 1 — Sailor Shift Career Profile",
+    "text": "Task 1 — Sailor Shift Career Profile"
+  },
+  {
+    "objectID": "results.html#overview",
+    "href": "results.html#overview",
+    "title": "Task 3 — Rising Star Prediction",
+    "section": "Overview",
+    "text": "Overview\nTask 1 investigates the career trajectory of Sailor Shift — the artist credited with bringing Oceanus Folk to global prominence. Using the VAST Challenge 2025 MC1 knowledge graph, we extracted three focused datasets (task1_sailor_works.csv, task1_all_collaborators.csv, task1_bandmates.csv) to answer three questions: who influenced her, who she collaborated with, and how she in turn influenced the broader Oceanus Folk community. The two interactive network graphs below visualise her direct collaboration circle and her indirect influence chain, constructed from 204 nodes and 362 edges in the full knowledge graph."
+  },
+  {
+    "objectID": "results.html#question-a-who-has-she-been-most-influenced-by",
+    "href": "results.html#question-a-who-has-she-been-most-influenced-by",
+    "title": "Task 3 — Rising Star Prediction",
+    "section": "Question A — Who Has She Been Most Influenced By?",
+    "text": "Question A — Who Has She Been Most Influenced By?\nSailor Shift’s knowledge graph entries reveal a rich tapestry of inbound influence. Edges of type InStyleOf, InterpolatesFrom, and DirectlySamples pointing toward her works trace stylistic debts to multiple genres — predominantly Indie Folk and Indie Pop, alongside early Oceanus Folk pioneers. Her earliest recorded works already show interpolation from established Oceanus Folk acts, suggesting she absorbed and synthesised the genre rather than inventing it in isolation. With 38 distinct works attributed to her in the graph, the breadth of these inbound influence edges signals an artist who consciously drew from a wide palette before developing her own signature sound. Notably, the density of these edges increases around her mid-career period, consistent with a period of intensive stylistic experimentation before her commercial breakthrough."
+  },
+  {
+    "objectID": "results.html#question-b-who-has-she-collaborated-with-and-influenced",
+    "href": "results.html#question-b-who-has-she-collaborated-with-and-influenced",
+    "title": "Task 3 — Rising Star Prediction",
+    "section": "Question B — Who Has She Collaborated With and Influenced?",
+    "text": "Question B — Who Has She Collaborated With and Influenced?\n\nDirect Collaborators\nSailor Shift has 43 direct collaborators recorded in the knowledge graph, spanning roles including composer, lyricist, performer, and producer. These collaborators co-created the 38 works attributed to her, with many individuals contributing in multiple capacities across several projects. This breadth is consistent with the journalistic accounts of Sailor actively seeking out lesser-known artists and providing them with a platform — her collaboration network is unusually wide for an artist of her career stage, with relatively few repeat collaborators, suggesting deliberate outreach rather than a tight inner circle. Her four Ivy Echoes bandmates (captured separately as Ivy Echoes Member nodes) form the densest sub-cluster within this network, having co-created her earliest and most genre-defining works.\n\n\nIndirect Influence\nBeyond direct collaboration, the knowledge graph captures 28 works made explicitly InStyleOf Sailor or her circle, connected to a further 22 nodes in the “Inspired By Sailor Circle” category. This second-degree influence chain extends outward from her direct works into the broader Oceanus Folk community and beyond — genres including Indie Rock, Synthwave, and Americana all show downstream influence edges originating from Sailor’s catalogue. The directed influence network below makes this chain navigable: follow any orange Sailor Work node outward to see which later works interpolated or stylistically referenced it, and which artists those works belong to.\n\n  Direct Collaborators Network\n  \n    Interactive — drag nodes to explore. Gold node = Sailor Shift.\n    Blue = direct collaborators. Teal = Ivy Echoes members.\n    Hover an edge to see the collaboration role (LyricistOf, ComposerOf, etc.).\n  \n  \n  \n\n\n\n  Direct and Indirect Influence Network\n  \n    Interactive — drag nodes to explore. Gold star = Sailor Shift.\n    Orange = her works. Blue = direct collaborators. Teal = Ivy Echoes members.\n    Purple = works inspired by her circle. Hover any node for genre and release year."
+  },
+  {
+    "objectID": "results.html#question-c-how-has-she-influenced-the-oceanus-folk-community",
+    "href": "results.html#question-c-how-has-she-influenced-the-oceanus-folk-community",
+    "title": "Task 3 — Rising Star Prediction",
+    "section": "Question C — How Has She Influenced the Oceanus Folk Community?",
+    "text": "Question C — How Has She Influenced the Oceanus Folk Community?\nSailor Shift’s four Ivy Echoes bandmates — Maya Jensen, Lila Hartman, Jade Thompson, and Sophie Ramirez — each continued active careers after the band’s dissolution, and each contributed independently to Oceanus Folk’s ongoing spread. Sophie Ramirez transitioned into music production, directly enabling a new cohort of artists to record and release within the Oceanus Folk tradition. The others continued as performers and songwriters, carrying the genre’s identifying harmonic and lyrical conventions into new collaborations. Taken together, the Ivy Echoes alumni function as a secondary diffusion layer: Sailor Shift’s influence does not terminate at her direct collaborators but propagates further through the bandmates’ own networks, accelerating the genre’s reach beyond what any single artist’s catalogue could achieve alone."
+  },
+  {
+    "objectID": "results.html#task-2-oceanus-folk-genre-spread",
+    "href": "results.html#task-2-oceanus-folk-genre-spread",
+    "title": "Task 3 — Rising Star Prediction",
+    "section": "Task 2 — Oceanus Folk Genre Spread",
+    "text": "Task 2 — Oceanus Folk Genre Spread"
+  },
+  {
+    "objectID": "results.html#task-3-rising-star-prediction",
+    "href": "results.html#task-3-rising-star-prediction",
+    "title": "Task 3 — Rising Star Prediction",
+    "section": "Task 3 — Rising Star Prediction",
+    "text": "Task 3 — Rising Star Prediction"
+  },
+  {
+    "objectID": "task1_analysis.html",
+    "href": "task1_analysis.html",
+    "title": "Task 1 — Sailor Shift Career Profile",
+    "section": "",
+    "text": "Task 1 investigates the career trajectory of Sailor Shift — the artist credited with bringing Oceanus Folk to global prominence. Using the VAST Challenge 2025 MC1 knowledge graph, we extracted three focused datasets (task1_sailor_works.csv, task1_all_collaborators.csv, task1_bandmates.csv) to answer three questions: who influenced her, who she collaborated with, and how she in turn influenced the broader Oceanus Folk community. The two interactive network graphs below visualise her direct collaboration circle and her indirect influence chain, constructed from 204 nodes and 362 edges in the full knowledge graph."
+  },
+  {
+    "objectID": "task1_analysis.html#overview",
+    "href": "task1_analysis.html#overview",
+    "title": "Task 1 — Sailor Shift Career Profile",
+    "section": "",
+    "text": "Task 1 investigates the career trajectory of Sailor Shift — the artist credited with bringing Oceanus Folk to global prominence. Using the VAST Challenge 2025 MC1 knowledge graph, we extracted three focused datasets (task1_sailor_works.csv, task1_all_collaborators.csv, task1_bandmates.csv) to answer three questions: who influenced her, who she collaborated with, and how she in turn influenced the broader Oceanus Folk community. The two interactive network graphs below visualise her direct collaboration circle and her indirect influence chain, constructed from 204 nodes and 362 edges in the full knowledge graph."
+  },
+  {
+    "objectID": "task1_analysis.html#question-a-who-has-she-been-most-influenced-by",
+    "href": "task1_analysis.html#question-a-who-has-she-been-most-influenced-by",
+    "title": "Task 1 — Sailor Shift Career Profile",
+    "section": "Question A — Who Has She Been Most Influenced By?",
+    "text": "Question A — Who Has She Been Most Influenced By?\nSailor Shift’s knowledge graph entries reveal a rich tapestry of inbound influence. Edges of type InStyleOf, InterpolatesFrom, and DirectlySamples pointing toward her works trace stylistic debts to multiple genres — predominantly Indie Folk and Indie Pop, alongside early Oceanus Folk pioneers. Her earliest recorded works already show interpolation from established Oceanus Folk acts, suggesting she absorbed and synthesised the genre rather than inventing it in isolation. With 38 distinct works attributed to her in the graph, the breadth of these inbound influence edges signals an artist who consciously drew from a wide palette before developing her own signature sound. Notably, the density of these edges increases around her mid-career period, consistent with a period of intensive stylistic experimentation before her commercial breakthrough."
+  },
+  {
+    "objectID": "task1_analysis.html#question-b-who-has-she-collaborated-with-and-influenced",
+    "href": "task1_analysis.html#question-b-who-has-she-collaborated-with-and-influenced",
+    "title": "Task 1 — Sailor Shift Career Profile",
+    "section": "Question B — Who Has She Collaborated With and Influenced?",
+    "text": "Question B — Who Has She Collaborated With and Influenced?\n\nDirect Collaborators\nSailor Shift has 43 direct collaborators recorded in the knowledge graph, spanning roles including composer, lyricist, performer, and producer. These collaborators co-created the 38 works attributed to her, with many individuals contributing in multiple capacities across several projects. This breadth is consistent with the journalistic accounts of Sailor actively seeking out lesser-known artists and providing them with a platform — her collaboration network is unusually wide for an artist of her career stage, with relatively few repeat collaborators, suggesting deliberate outreach rather than a tight inner circle. Her four Ivy Echoes bandmates (captured separately as Ivy Echoes Member nodes) form the densest sub-cluster within this network, having co-created her earliest and most genre-defining works.\n\n\nIndirect Influence\nBeyond direct collaboration, the knowledge graph captures 28 works made explicitly InStyleOf Sailor or her circle, connected to a further 22 nodes in the “Inspired By Sailor Circle” category. This second-degree influence chain extends outward from her direct works into the broader Oceanus Folk community and beyond — genres including Indie Rock, Synthwave, and Americana all show downstream influence edges originating from Sailor’s catalogue. The directed influence network below makes this chain navigable: follow any orange Sailor Work node outward to see which later works interpolated or stylistically referenced it, and which artists those works belong to.\n\n  Direct Collaborators Network\n  \n    Interactive — drag nodes to explore. Gold node = Sailor Shift.\n    Blue = direct collaborators. Teal = Ivy Echoes members.\n    Hover an edge to see the collaboration role (LyricistOf, ComposerOf, etc.).\n  \n  \n  \n\n\n\n  Direct and Indirect Influence Network\n  \n    Interactive — drag nodes to explore. Gold star = Sailor Shift.\n    Orange = her works. Blue = direct collaborators. Teal = Ivy Echoes members.\n    Purple = works inspired by her circle. Hover any node for genre and release year."
+  },
+  {
+    "objectID": "task1_analysis.html#question-c-how-has-she-influenced-the-oceanus-folk-community",
+    "href": "task1_analysis.html#question-c-how-has-she-influenced-the-oceanus-folk-community",
+    "title": "Task 1 — Sailor Shift Career Profile",
+    "section": "Question C — How Has She Influenced the Oceanus Folk Community?",
+    "text": "Question C — How Has She Influenced the Oceanus Folk Community?\nSailor Shift’s four Ivy Echoes bandmates — Maya Jensen, Lila Hartman, Jade Thompson, and Sophie Ramirez — each continued active careers after the band’s dissolution, and each contributed independently to Oceanus Folk’s ongoing spread. Sophie Ramirez transitioned into music production, directly enabling a new cohort of artists to record and release within the Oceanus Folk tradition. The others continued as performers and songwriters, carrying the genre’s identifying harmonic and lyrical conventions into new collaborations. Taken together, the Ivy Echoes alumni function as a secondary diffusion layer: Sailor Shift’s influence does not terminate at her direct collaborators but propagates further through the bandmates’ own networks, accelerating the genre’s reach beyond what any single artist’s catalogue could achieve alone."
   },
   {
     "objectID": "poster.html",
@@ -166,6 +229,41 @@
     "title": "User Guide",
     "section": "",
     "text": "User Guide\nThis section is currently in progress and will be updated as the project develops. Check back closer to the submission date."
+  },
+  {
+    "objectID": "proposal.html",
+    "href": "proposal.html",
+    "title": "Project Proposal",
+    "section": "",
+    "text": "Sailor Shift is an Oceanus Folk artist who co-founded the Ivy Echoes in 2023 before achieving a viral breakthrough in 2028 — the first Oceanus Folk artist to top global charts. Since then, she has released acclaimed albums annually, collaborated widely across genres, and actively mentored emerging artists, while her former bandmates have independently contributed to the spread of Oceanus Folk across the music world.\nUnderstanding this network of influence is the core challenge. Journalist Silas Reed has compiled a knowledge graph of 17,412 nodes and 37,857 edges spanning music history from 1993 to 2040. While this dataset contains all the answers needed for his article “Oceanus Folk: Then-and-Now”, raw graph data is unreadable without purpose-built visualisation. Tracing Sailor’s influences, measuring how Oceanus Folk spread into other genres, or identifying the next rising star cannot be done by browsing a JSON file.\nBy transforming this knowledge graph into interactive Tableau dashboards, we turn a complex relational dataset into clear, navigable insights about how musical influence works and how stars are made.\n\n\n\n\nTask 1 — Career Profile: Design Tableau visualisations to map Sailor Shift’s influences, collaborations, and the direct and indirect impact she has had on other artists and on the Oceanus Folk community. This includes tracing who shaped her sound and when, identifying her key collaborators, and visualising the downstream influence chain.\nTask 2 — Genre Spread: Develop visualisations showing how Oceanus Folk’s influence has spread across the music world since Sailor’s breakthrough, which genres it most affected (Indie Folk, Dream Pop, Desert Rock, Space Rock, Synthwave, etc.), and how the genre itself has evolved through external influences, making visible the flow between Oceanus Folk and the broader musical ecosystem.\nTask 3 — Rising Star Prediction: Build a data-driven profile of what constitutes a breakout Oceanus Folk artist, compare the career trajectories of three benchmark artists, and provide three predictions for the next stars likely to emerge over the next five years, drawing on the notable works and notoriety date data as the primary signal of an artist’s rising trajectory."
+  },
+  {
+    "objectID": "proposal.html#motivation-objectives",
+    "href": "proposal.html#motivation-objectives",
+    "title": "Project Proposal",
+    "section": "",
+    "text": "Sailor Shift is an Oceanus Folk artist who co-founded the Ivy Echoes in 2023 before achieving a viral breakthrough in 2028 — the first Oceanus Folk artist to top global charts. Since then, she has released acclaimed albums annually, collaborated widely across genres, and actively mentored emerging artists, while her former bandmates have independently contributed to the spread of Oceanus Folk across the music world.\nUnderstanding this network of influence is the core challenge. Journalist Silas Reed has compiled a knowledge graph of 17,412 nodes and 37,857 edges spanning music history from 1993 to 2040. While this dataset contains all the answers needed for his article “Oceanus Folk: Then-and-Now”, raw graph data is unreadable without purpose-built visualisation. Tracing Sailor’s influences, measuring how Oceanus Folk spread into other genres, or identifying the next rising star cannot be done by browsing a JSON file.\nBy transforming this knowledge graph into interactive Tableau dashboards, we turn a complex relational dataset into clear, navigable insights about how musical influence works and how stars are made.\n\n\n\n\nTask 1 — Career Profile: Design Tableau visualisations to map Sailor Shift’s influences, collaborations, and the direct and indirect impact she has had on other artists and on the Oceanus Folk community. This includes tracing who shaped her sound and when, identifying her key collaborators, and visualising the downstream influence chain.\nTask 2 — Genre Spread: Develop visualisations showing how Oceanus Folk’s influence has spread across the music world since Sailor’s breakthrough, which genres it most affected (Indie Folk, Dream Pop, Desert Rock, Space Rock, Synthwave, etc.), and how the genre itself has evolved through external influences, making visible the flow between Oceanus Folk and the broader musical ecosystem.\nTask 3 — Rising Star Prediction: Build a data-driven profile of what constitutes a breakout Oceanus Folk artist, compare the career trajectories of three benchmark artists, and provide three predictions for the next stars likely to emerge over the next five years, drawing on the notable works and notoriety date data as the primary signal of an artist’s rising trajectory."
+  },
+  {
+    "objectID": "proposal.html#data",
+    "href": "proposal.html#data",
+    "title": "Project Proposal",
+    "section": "Data",
+    "text": "Data\nThe datasets for this project are mc1_nodes.csv and mc1_edges.csv, derived from MC1_graph.json provided by VAST Challenge 2025 Mini-Challenge 1. They represent the music industry in and around Oceanus from 1993 to 2040, containing 17,412 nodes and 37,857 edges across five node types and twelve relationship types. Edge types capture creative relationships including performance, composition, production, and stylistic influence — with the influence category (InStyleOf, InterpolatesFrom, CoverOf, DirectlySamples) forming the primary analytical layer for tracing how musical ideas spread between artists and genres.\nTwo fields are critical for Task 3. The notable boolean records whether a work charted, and notoriety_date records when — together allowing reconstruction of each artist’s breakthrough trajectory across 649 charted works."
+  },
+  {
+    "objectID": "proposal.html#scope-of-work",
+    "href": "proposal.html#scope-of-work",
+    "title": "Project Proposal",
+    "section": "Scope of Work",
+    "text": "Scope of Work\n\nData preparation: parsing mc1_edges.csv and mc1_nodes.csv into twelve task-specific CSVs via Python, with NA handling, date normalisation, and name resolution across source/target edge endpoints\nTask 1 — Sailor Shift Career Profile (Charles): influence timeline, collaboration network graph, indirect influence tree, and Ivy Echoes bandmate career tracker in Tableau\nTask 2 — Oceanus Folk Genre Spread (Klara): Sankey genre flow diagram, influence timeline chart, top influenced artists bar chart, and genre inspiration heatmap in Tableau\nTask 3 — Rising Star Prediction (Radim): rising star radar chart, career arc comparison across three artists, and breakout candidate dashboard with three evidence-based predictions in Tableau\nIntegration: combining all sub-modules into a single .twbx file with cross-dashboard filter actions\nWebsite: Quarto project website deployed via Vercel, with individual analysis pages and screenshots per sub-module\nPoster: ISO A1 format (594 × 841mm, 300dpi JPEG) submitted to eLearn by 8 April 2026\nUser guide: step-by-step documentation of all Tableau dashboard interactions"
+  },
+  {
+    "objectID": "proposal.html#project-schedule",
+    "href": "proposal.html#project-schedule",
+    "title": "Project Proposal",
+    "section": "Project Schedule",
+    "text": "Project Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTask\nOwner\nBy 18 Mar\nBy 22 Mar\nBy 1 Apr\nBy 5 Apr\nBy 8 Apr\nBy 13 Apr\nBy 19 Apr\n\n\n\n\nQuarto site & proposal\nRadim\n✓\n\n\n\n\n\n\n\n\nData prep (JSON → CSV)\nAll\n✓\n\n\n\n\n\n\n\n\nTask 1 Tableau dashboards\nCharles\n\nongoing\n✓\n\n\n\n\n\n\nTask 2 Tableau dashboards\nKlara\n\nongoing\n\n✓\n\n\n\n\n\nTask 3 Tableau dashboards\nRadim\n\nongoing\n✓\n\n\n\n\n\n\nTableau integration (.twbx)\nRadim\n\n\n\n✓\n\n\n\n\n\nScreenshots & analysis pages\nAll\n\n\n\n✓\n✓\n\n\n\n\nPoster design\nCharles (lead)\n\n\n\n\n✓\n✓\n\n\n\nUser guide\nRadim\n\n\n\n\n\n\n✓\n\n\nFinal zip submission\nAll\n\n\n\n\n\n\n✓"
   },
   {
     "objectID": "methodology.html",
