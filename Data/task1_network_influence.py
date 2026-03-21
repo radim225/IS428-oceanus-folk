@@ -48,7 +48,7 @@ ROLE_STYLE = {
     "Sailor Shift":              {"color": "#FFD700", "size": 50, "shape": "star"},
     "Sailor Work":               {"color": "#FFA500", "size": 15, "shape": "dot"},
     "Direct Collaborator":       {"color": "#4A90D9", "size": 20, "shape": "dot"},
-    "Ivy Echoes Member":         {"color": "#00CED1", "size": 20, "shape": "dot"},
+    "Ivy Echoes Member":         {"color": "#2ECC71", "size": 20, "shape": "dot"},
     "Inspired Sailor":           {"color": "#9B59B6", "size": 15, "shape": "dot"},
     "Inspired By Sailor Circle": {"color": "#9B59B6", "size": 15, "shape": "dot"},
 }

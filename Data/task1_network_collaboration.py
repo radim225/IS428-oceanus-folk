@@ -59,7 +59,7 @@ print(f"\nCollaborators with shared Sailor works: {len(collab_connections)}")
 ROLE_STYLE = {
     "Sailor Shift":       {"color": "#FFD700", "size": 40},
     "Direct Collaborator":{"color": "#4A90D9", "size": 20},
-    "Ivy Echoes Member":  {"color": "#00CED1", "size": 25},
+    "Ivy Echoes Member":  {"color": "#2ECC71", "size": 25},
 }
 
 # ── Build pyvis network ────────────────────────────────────────────────────────
