@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #0d1117;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body><div style="position:fixed;top:0;left:0;right:0;z-index:999;background:#0d1117;padding:10px 0;text-align:center;"><h2 style="color:#e0e0e0;font-family:sans-serif;margin:0;font-size:18px;">Sailor Shift &#8212; Direct Collaborators Network</h2><p style="color:#888;font-family:sans-serif;margin:4px 0 0;font-size:12px;"><span style="color:#FFD700;">&#9632;</span> Sailor Shift &nbsp;<span style="color:#4A90D9;">&#9632;</span> Direct Collaborator &nbsp;<span style="color:#00CED1;">&#9632;</span> Ivy Echoes Member</p></div><div style="height:60px;"></div>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 16958, "label": "Zane Cruz", "shape": "dot", "size": 20, "title": "Zane Cruz\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 16959, "label": "Iris Moon", "shape": "dot", "size": 20, "title": "Iris Moon\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 16983, "label": "Sophie Bennett", "shape": "dot", "size": 20, "title": "Sophie Bennett\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 16984, "label": "Michael Harris", "shape": "dot", "size": 20, "title": "Michael Harris\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 16985, "label": "Kara Lee", "shape": "dot", "size": 20, "title": "Kara Lee\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 16986, "label": "Ethan Clarke", "shape": "dot", "size": 20, "title": "Ethan Clarke\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 16993, "label": "Olivia Carter", "shape": "dot", "size": 20, "title": "Olivia Carter\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 16994, "label": "Lucas Bennett", "shape": "dot", "size": 20, "title": "Lucas Bennett\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 16995, "label": "Maya Torres", "shape": "dot", "size": 20, "title": "Maya Torres\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17041, "label": "Arlo Sterling", "shape": "dot", "size": 20, "title": "Arlo Sterling\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17042, "label": "Lyra Blaze", "shape": "dot", "size": 20, "title": "Lyra Blaze\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17043, "label": "Orion Cruz", "shape": "dot", "size": 20, "title": "Orion Cruz\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17044, "label": "Elara May", "shape": "dot", "size": 20, "title": "Elara May\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17045, "label": "Cassian Rae", "shape": "dot", "size": 20, "title": "Cassian Rae\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17118, "label": "Zachary Cole", "shape": "dot", "size": 20, "title": "Zachary Cole\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17119, "label": "Lia Grant", "shape": "dot", "size": 20, "title": "Lia Grant\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17164, "label": "Rusty Riggins", "shape": "dot", "size": 20, "title": "Rusty Riggins\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17165, "label": "Finn McGraw", "shape": "dot", "size": 20, "title": "Finn McGraw\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17166, "label": "William Tidewell", "shape": "dot", "size": 20, "title": "William Tidewell\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17189, "label": "Ewan MacCrae", "shape": "dot", "size": 20, "title": "Ewan MacCrae\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17190, "label": "Astrid N\u00f8rgaard", "shape": "dot", "size": 20, "title": "Astrid N\u00f8rgaard\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17191, "label": "Freya Lindholm", "shape": "dot", "size": 20, "title": "Freya Lindholm\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17205, "label": "Liam O\u0027Sullivan", "shape": "dot", "size": 20, "title": "Liam O\u0027Sullivan\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17206, "label": "Fiona Mercer", "shape": "dot", "size": 20, "title": "Fiona Mercer\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17226, "label": "Kai Reynolds", "shape": "dot", "size": 20, "title": "Kai Reynolds\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17227, "label": "Aiden Harper", "shape": "dot", "size": 20, "title": "Aiden Harper\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17228, "label": "Finn Morgan", "shape": "dot", "size": 20, "title": "Finn Morgan\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17229, "label": "Skylar Brooks", "shape": "dot", "size": 20, "title": "Skylar Brooks\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17248, "label": "Mia Waters", "shape": "dot", "size": 20, "title": "Mia Waters\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17249, "label": "Lila Rivers", "shape": "dot", "size": 20, "title": "Lila Rivers\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#FFD700", "font": {"color": "#e0e0e0"}, "id": 17255, "label": "Sailor Shift", "shape": "dot", "size": 40, "title": "Sailor Shift\u003cbr\u003eRole: Sailor Shift"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#00CED1", "font": {"color": "#e0e0e0"}, "id": 17256, "label": "Maya Jensen", "shape": "dot", "size": 25, "title": "Maya Jensen\u003cbr\u003eRole: Ivy Echoes Member"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#00CED1", "font": {"color": "#e0e0e0"}, "id": 17257, "label": "Lila \"Lilly\" Hartman", "shape": "dot", "size": 25, "title": "Lila \"Lilly\" Hartman\u003cbr\u003eRole: Ivy Echoes Member"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#00CED1", "font": {"color": "#e0e0e0"}, "id": 17258, "label": "Jade Thompson", "shape": "dot", "size": 25, "title": "Jade Thompson\u003cbr\u003eRole: Ivy Echoes Member"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#00CED1", "font": {"color": "#e0e0e0"}, "id": 17259, "label": "Sophie Ramirez", "shape": "dot", "size": 25, "title": "Sophie Ramirez\u003cbr\u003eRole: Ivy Echoes Member"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17296, "label": "Coralia Bellweather", "shape": "dot", "size": 20, "title": "Coralia Bellweather\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17309, "label": "Levi Holloway", "shape": "dot", "size": 20, "title": "Levi Holloway\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17310, "label": "Marin Thorne", "shape": "dot", "size": 20, "title": "Marin Thorne\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17311, "label": "Jonah Calloway", "shape": "dot", "size": 20, "title": "Jonah Calloway\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17349, "label": "Beatrice Albright", "shape": "dot", "size": 20, "title": "Beatrice Albright\u003cbr\u003eRole: Direct Collaborator"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": "#4A90D9", "font": {"color": "#e0e0e0"}, "id": 17355, "label": "Daniel O\u0027Connell", "shape": "dot", "size": 20, "title": "Daniel O\u0027Connell\u003cbr\u003eRole: Direct Collaborator"}]);
+                  edges = new vis.DataSet([{"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 16958, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 16959, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 16983, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 16984, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 16985, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 16986, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 16993, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 16994, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 16995, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17041, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17042, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17043, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17044, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17045, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17118, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17119, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17164, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17165, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17166, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "2 roles", "title": "Collaborations:\u003cbr\u003e\u2022 MemberOf\u003cbr\u003e\u2022 LyricistOf", "to": 17189, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "2 roles", "title": "Collaborations:\u003cbr\u003e\u2022 MemberOf\u003cbr\u003e\u2022 ComposerOf", "to": 17190, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "2 roles", "title": "Collaborations:\u003cbr\u003e\u2022 MemberOf\u003cbr\u003e\u2022 ComposerOf", "to": 17191, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17205, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17206, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "2 roles", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf\u003cbr\u003e\u2022 PerformerOf", "to": 17226, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17227, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17228, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17229, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17248, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17249, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "2 roles", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf\u003cbr\u003e\u2022 MemberOf", "to": 17256, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "2 roles", "title": "Collaborations:\u003cbr\u003e\u2022 MemberOf\u003cbr\u003e\u2022 ComposerOf", "to": 17257, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "2 roles", "title": "Collaborations:\u003cbr\u003e\u2022 MemberOf\u003cbr\u003e\u2022 ComposerOf", "to": 17258, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "2 roles", "title": "Collaborations:\u003cbr\u003e\u2022 MemberOf\u003cbr\u003e\u2022 LyricistOf", "to": 17259, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "2 roles", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf\u003cbr\u003e\u2022 MemberOf", "to": 17296, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17309, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "ComposerOf", "title": "Collaborations:\u003cbr\u003e\u2022 ComposerOf", "to": 17310, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "LyricistOf", "title": "Collaborations:\u003cbr\u003e\u2022 LyricistOf", "to": 17311, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "5 roles", "title": "Collaborations:\u003cbr\u003e\u2022 PerformerOf\u003cbr\u003e\u2022 LyricistOf\u003cbr\u003e\u2022 InStyleOf\u003cbr\u003e\u2022 LyricalReferenceTo\u003cbr\u003e\u2022 MemberOf", "to": 17349, "width": 1.5}, {"color": {"color": "#444444", "highlight": "#888888"}, "font": {"color": "#888888", "size": 9}, "from": 17255, "label": "3 roles", "title": "Collaborations:\u003cbr\u003e\u2022 PerformerOf\u003cbr\u003e\u2022 ComposerOf\u003cbr\u003e\u2022 MemberOf", "to": 17355, "width": 1.5}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"physics": {"forceAtlas2Based": {"gravitationalConstant": -80, "centralGravity": 0.02, "springLength": 120, "springConstant": 0.08}, "solver": "forceAtlas2Based", "stabilization": {"iterations": 250}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
