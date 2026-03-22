@@ -92,9 +92,10 @@ GREY      = "#666666"
 
 # ── Figure: explicit axis positions ───────────────────────────────────────────
 fig = plt.figure(figsize=(14, 8), dpi=150, facecolor="white")
+fig.subplots_adjust(top=0.88)
 
 # Radar: [left, bottom, width, height] in figure fraction
-ax_radar = cast(PolarAxes, fig.add_axes([0.02, 0.05, 0.62, 0.88], polar=True))
+ax_radar = cast(PolarAxes, fig.add_axes([0.02, 0.12, 0.62, 0.81], polar=True))
 # Table: top-right corner
 ax_table = fig.add_axes([0.65, 0.45, 0.34, 0.50])
 
@@ -134,27 +135,29 @@ ax_radar.set_ylim(0, 1)
 ax_radar.set_yticks([])
 
 # Axis labels positioned outside ring with per-axis padding
-PADS = [1.45, 1.28, 1.28, 1.28, 1.28]   # top axis gets extra clearance
+PADS = [1.55, 1.28, 1.28, 1.28, 1.28]   # top axis gets extra clearance
 for i, (angle, label, pad) in enumerate(zip(angles[:-1], LABELS, PADS)):
     ax_radar.text(angle, pad, label,
                   ha="center", va="center",
                   color=TEXT_COL, fontsize=11, fontweight="bold",
                   linespacing=1.4)
 
-# Title & subtitle sit above the radar axes
-ax_radar.set_title(
-    "Rising Star Profile — Oceanus Folk Candidates\n"
-    "Each axis is min-max normalised within the top 5 candidates  "
-    "•  Larger shape = stronger overall profile",
-    pad=28, fontsize=12, color=TEXT_COL,
-    linespacing=1.8,
-)
+# Title & subtitle: left-aligned with radar axes left edge
+fig.text(0.02, 0.955,
+         "Rising Star Profile — Oceanus Folk Candidates",
+         ha="left", va="bottom",
+         color=TEXT_COL, fontsize=13, fontweight="bold")
+fig.text(0.02, 0.935,
+         "Each axis is min-max normalised within the top 5 candidates  "
+         "•  Larger shape = stronger overall profile",
+         ha="left", va="bottom",
+         color="#555555", fontsize=9)
 
 # ── Data table panel (top-right) ───────────────────────────────────────────────
 ax_table.axis("off")
 
 col_labels = ["Artist", "Works", "Quick BT", "Early BT", "Recent", "Genres"]
-COL_WIDTHS = [0.30, 0.10, 0.14, 0.14, 0.14, 0.12]
+COL_WIDTHS = [0.32, 0.10, 0.16, 0.14, 0.14, 0.12]
 ROW_HEIGHT = 0.12
 table_data   = []
 cell_colours = []
@@ -177,6 +180,7 @@ tbl = ax_table.table(
     cellLoc="center",
     loc="upper center",
     cellColours=cell_colours,
+    bbox=[0, 0, 1.05, 1.0],
 )
 tbl.auto_set_font_size(False)
 tbl.set_fontsize(10)
@@ -199,11 +203,11 @@ for i, (_, row) in enumerate(of.iterrows()):
 
 # ── Footnote ──────────────────────────────────────────────────────────────────
 fig.text(
-    0.5, 0.015,
+    0.5, 0.01,
     "BT = Breakthrough  •  Values shown are raw data  "
     "•  Radar axes are normalised 0–1 within this candidate pool",
     ha="center", va="bottom",
-    color=GREY, fontsize=8,
+    color=GREY, fontsize=7,
 )
 
 # ── Save ───────────────────────────────────────────────────────────────────────
