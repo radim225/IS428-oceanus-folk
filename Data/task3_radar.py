@@ -10,7 +10,6 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.gridspec import GridSpec
 from typing import cast
 from matplotlib.projections.polar import PolarAxes
 
@@ -91,12 +90,13 @@ SPOKE_COL = "#dddddd"
 TEXT_COL  = "#222222"
 GREY      = "#666666"
 
-# ── Figure: two-panel layout ───────────────────────────────────────────────────
+# ── Figure: explicit axis positions ───────────────────────────────────────────
 fig = plt.figure(figsize=(14, 8), dpi=150, facecolor="white")
-gs  = GridSpec(1, 2, figure=fig, width_ratios=[7, 3], wspace=0.05)
 
-ax_radar = cast(PolarAxes, fig.add_subplot(gs[0], polar=True))
-ax_table = fig.add_subplot(gs[1])
+# Radar: [left, bottom, width, height] in figure fraction
+ax_radar = cast(PolarAxes, fig.add_axes([0.02, 0.05, 0.62, 0.88], polar=True))
+# Table: top-right corner
+ax_table = fig.add_axes([0.65, 0.45, 0.34, 0.50])
 
 # ── Radar panel ────────────────────────────────────────────────────────────────
 ax_radar.set_facecolor("white")
@@ -141,31 +141,28 @@ for i, (angle, label, pad) in enumerate(zip(angles[:-1], LABELS, PADS)):
                   color=TEXT_COL, fontsize=11, fontweight="bold",
                   linespacing=1.4)
 
-# Title & subtitle (placed via fig.text so they sit above the polar axes)
-fig.text(0.36, 0.97,
-         "Rising Star Profile — Oceanus Folk Candidates",
-         ha="center", va="top",
-         color=TEXT_COL, fontsize=14, fontweight="bold")
-fig.text(0.36, 0.925,
-         "Each axis is min-max normalised within the top 5 candidates  "
-         "•  Larger shape = stronger overall profile",
-         ha="center", va="top",
-         color=GREY, fontsize=9)
+# Title & subtitle sit above the radar axes
+ax_radar.set_title(
+    "Rising Star Profile — Oceanus Folk Candidates\n"
+    "Each axis is min-max normalised within the top 5 candidates  "
+    "•  Larger shape = stronger overall profile",
+    pad=28, fontsize=12, color=TEXT_COL,
+    linespacing=1.8,
+)
 
-# ── Data table panel ───────────────────────────────────────────────────────────
+# ── Data table panel (top-right) ───────────────────────────────────────────────
 ax_table.axis("off")
 
 col_labels = ["Artist", "Works", "Quick BT", "Early BT", "Recent", "Genres"]
-table_data = []
+COL_WIDTHS = [0.30, 0.10, 0.14, 0.14, 0.14, 0.12]
+ROW_HEIGHT = 0.12
+table_data   = []
 cell_colours = []
 
 for i, (_, row) in enumerate(of.iterrows()):
-    name   = row["performer_name"]
-    colour = ARTIST_COLOURS.get(name, FALLBACK_COLOURS[i])
-    bg     = "white" if i % 2 == 0 else "#f5f5f5"
-
+    bg = "white" if i % 2 == 0 else "#f0f4f8"
     table_data.append([
-        name,
+        row["performer_name"],
         int(row["total_notable_works"]),
         f"{int(row['years_active_span'])} yr",
         int(row["first_notoriety_date"]),
@@ -178,29 +175,27 @@ tbl = ax_table.table(
     cellText=table_data,
     colLabels=col_labels,
     cellLoc="center",
-    loc="center",
+    loc="upper center",
     cellColours=cell_colours,
 )
 tbl.auto_set_font_size(False)
-tbl.set_fontsize(9)
+tbl.set_fontsize(10)
 
-# Column widths: artist name wider
-col_widths = [0.38, 0.12, 0.14, 0.14, 0.12, 0.10]
 for (row_idx, col_idx), cell in tbl.get_celld().items():
     cell.set_edgecolor("#dddddd")
     cell.set_linewidth(0.5)
+    cell.set_height(ROW_HEIGHT)
+    if col_idx < len(COL_WIDTHS):
+        cell.set_width(COL_WIDTHS[col_idx])
     if row_idx == 0:
-        cell.set_text_props(fontweight="bold", color="white")
+        cell.set_text_props(fontweight="bold", color="white", fontsize=10)
         cell.set_facecolor("#1a5276")
-    if col_idx < len(col_widths):
-        cell.set_width(col_widths[col_idx])
 
-# Colour dot in Artist column per artist row
+# Artist name in each row coloured to match radar
 for i, (_, row) in enumerate(of.iterrows()):
     name   = row["performer_name"]
     colour = ARTIST_COLOURS.get(name, FALLBACK_COLOURS[i])
-    cell   = tbl[i + 1, 0]
-    cell.set_text_props(color=colour, fontweight="bold")
+    tbl[i + 1, 0].set_text_props(color=colour, fontweight="bold")
 
 # ── Footnote ──────────────────────────────────────────────────────────────────
 fig.text(
