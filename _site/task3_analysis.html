@@ -146,7 +146,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#task-3-rising-star-prediction" id="toc-task-3-rising-star-prediction" class="nav-link active" data-scroll-target="#task-3-rising-star-prediction">Task 3 — Rising Star Prediction</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link active" data-scroll-target="#data-preparation">Data Preparation</a></li>
+  <li><a href="#visualisation-tableau" id="toc-visualisation-tableau" class="nav-link" data-scroll-target="#visualisation-tableau">Visualisation — Tableau</a></li>
+  <li><a href="#visualisation-python-radar-chart" id="toc-visualisation-python-radar-chart" class="nav-link" data-scroll-target="#visualisation-python-radar-chart">Visualisation — Python Radar Chart</a></li>
+  <li><a href="#dashboards" id="toc-dashboards" class="nav-link" data-scroll-target="#dashboards">Dashboards</a></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a>
+  <ul class="collapse">
+  <li><a href="#what-does-it-mean-to-be-a-rising-star" id="toc-what-does-it-mean-to-be-a-rising-star" class="nav-link" data-scroll-target="#what-does-it-mean-to-be-a-rising-star">What does it mean to be a rising star?</a></li>
+  <li><a href="#three-artist-comparison" id="toc-three-artist-comparison" class="nav-link" data-scroll-target="#three-artist-comparison">Three Artist Comparison</a></li>
+  <li><a href="#predictions-next-three-oceanus-folk-stars" id="toc-predictions-next-three-oceanus-folk-stars" class="nav-link" data-scroll-target="#predictions-next-three-oceanus-folk-stars">Predictions — Next Three Oceanus Folk Stars</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -172,11 +181,125 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="task-3-rising-star-prediction" class="level1">
-<h1>Task 3 — Rising Star Prediction</h1>
-<p>This section is currently in progress and will be updated as the project develops.</p>
+<section id="data-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
+<p>Three CSV files were derived from the master <code>mc1_nodes.csv</code> and <code>mc1_edges.csv</code> files using a Python preprocessing script (<code>Data/preprocess_mc1.py</code>).</p>
+<p><code>task3_notable_works.csv</code> (1,973 rows) was constructed by filtering all nodes where <code>notable = True</code> and <code>notoriety_date</code> is not empty, then joining <code>PerformerOf</code> edges to resolve the performing artist for each charted work. This produces one row per (work, performer) pair, retaining <code>genre</code>, <code>release_date</code>, <code>notoriety_date</code>, and <code>performer_type</code>.</p>
+<p><code>task3_artist_notoriety.csv</code> (1,664 rows) aggregates the above to one row per artist, computing four summary metrics: <code>total_notable_works</code> (count of charted works), <code>first_notoriety_date</code> (earliest chart appearance), <code>latest_notoriety_date</code> (most recent chart appearance), and <code>years_active_span</code> (difference between earliest and latest <code>release_date</code> across all their works). A boolean flag <code>is_oceanus_folk_artist</code> is set to <code>True</code> if any of the artist’s genres contain “Oceanus Folk”. Of the 1,664 artists, 56 are flagged as Oceanus Folk artists, and 14 of those have two or more notable works.</p>
+<p><code>task3_of_candidates.csv</code> (84 rows) filters <code>task3_notable_works</code> to Oceanus Folk artists only and joins the four summary metrics from <code>task3_artist_notoriety</code>. This file contains one row per notable work per Oceanus Folk artist, enabling both work-level and artist-level analysis within the same Tableau data source.</p>
+</section>
+<section id="visualisation-tableau" class="level2">
+<h2 class="anchored" data-anchor-id="visualisation-tableau">Visualisation — Tableau</h2>
+<p><strong>Sheet 1 — OF Artist Ranking</strong> uses <code>task3_artist_notoriety</code> as its data source, with <code>Performer Name</code> on Rows, <code>SUM(Total Notable Works)</code> on Columns, and two filters applied: <code>Is Oceanus Folk Artist = True</code> and <code>SUM(Total Notable Works) &gt;= 2</code>. This produces a horizontal bar chart ranking all 14 Oceanus Folk artists with two or more charted works, sorted in descending order by total works. The chart establishes the candidate pool for rising star prediction: Orla Seabloom leads with 7 notable works, followed by Copper Canyon Ghosts (5), Daniel O’Connell (4), Beatrice Albright (4), and Ping Meng (4). The remaining nine artists each have exactly 2 notable works.</p>
+<p><strong>Sheet 2 — Genre Mix by Candidate</strong> uses <code>task3_of_candidates</code> as its data source, with <code>Artist Name</code> on Rows, <code>CNT(Work Name)</code> on Columns, and <code>Genre</code> on the Colour mark. A filter on <code>CNT(Work Name)</code> restricts the view to the top five candidates with the highest work counts. This stacked bar chart reveals the genre composition of each candidate’s notable output. All top candidates produce exclusively Oceanus Folk, with the exception of Ping Meng who has two Lo-Fi Electronica works and one Dream Pop work alongside a single Oceanus Folk work — identifying her as a genre-diverse outlier rather than a pure Oceanus Folk rising star.</p>
+<p><strong>Sheet 3 — Notoriety Timeline</strong> uses <code>task3_of_candidates</code> as its data source, with <code>Notoriety Date</code> on Columns (treated as a continuous dimension), <code>Artist Name</code> on Rows, <code>Artist Name</code> on the Colour mark, and <code>Work Name</code> on the Detail mark to plot one dot per notable work. A filter on <code>SUM(Total Notable Works) &gt;= 2</code> retains the full 14-candidate pool. Rows are arranged so that artists with later career activity appear toward the top. This dot plot reveals the temporal distribution of each artist’s chart appearances — distinguishing between artists who achieved notoriety in a concentrated burst (Orla Seabloom with all 7 works charting in 2029, Beatrice Albright with 4 works in 2031) and those whose careers span many years (Ping Meng from 2011 to 2028, Tao Yin from 2013 to 2029).</p>
+<p><strong>Sheet 4 — Three Artist Comparison</strong> uses <code>task3_of_candidates</code> as its data source, with <code>Notoriety Date</code> on Columns (continuous), <code>Artist Name</code> and <code>Work Name</code> on Rows, and <code>Artist Name</code> on the Colour mark. An <code>Artist Name</code> filter selects only the three predicted rising stars: Copper Canyon Ghosts, Beatrice Albright, and Orla Seabloom. This sheet provides a detailed work-by-work comparison of each prediction’s career trajectory, showing the title and chart year of every notable work side by side.</p>
+<p><strong>Sheet 5 — Breakthrough Profile</strong> uses <code>task3_artist_notoriety</code> as its data source, with <code>Years Active Span</code> on Columns, <code>SUM(Total Notable Works)</code> on Rows, <code>Performer Name</code> on the Label mark, and a Circle mark type. Filters are <code>Is Oceanus Folk Artist = True</code> and <code>SUM(Total Notable Works) &gt;= 2</code>. The x-axis begins at 0. This scatter plot positions each of the 14 candidates by how long they were active before charting (x-axis) against how many works they have charted (y-axis). Artists in the top-left region — high output with a short active span — represent the ideal rising star profile. Orla Seabloom occupies this position most strongly (7 works, 0-year span), while Ping Meng sits as an extreme outlier in the top-right (4 works, 17-year span), indicating a long and slow career rather than a rapid breakout.</p>
+</section>
+<section id="visualisation-python-radar-chart" class="level2">
+<h2 class="anchored" data-anchor-id="visualisation-python-radar-chart">Visualisation — Python Radar Chart</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task3/task3_radar_chart.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Rising Star Profile — Oceanus Folk Candidates: radar chart comparing top 5 candidates across five normalised dimensions with companion data table</figcaption>
+</figure>
+</div>
+<p>A radar chart was generated in Python using <code>matplotlib</code> (<code>Data/task3_radar.py</code>) to compare the top five Oceanus Folk candidates across five normalised dimensions simultaneously — a multi-axis comparison that cannot be achieved natively in Tableau.</p>
+<p>The top five candidates by <code>total_notable_works</code> were selected from <code>task3_artist_notoriety</code>: Orla Seabloom (7), Copper Canyon Ghosts (5), Daniel O’Connell (4), Beatrice Albright (4), and Ping Meng (4).</p>
+<p>Five metrics were defined and min–max normalised within this five-artist pool:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 26%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Field</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Total Notable Works</td>
+<td><code>total_notable_works</code></td>
+<td>Higher = better</td>
+</tr>
+<tr class="even">
+<td>Quick Breakthrough</td>
+<td><code>years_active_span</code> (inverted)</td>
+<td>Lower span = higher score</td>
+</tr>
+<tr class="odd">
+<td>Early Breakthrough</td>
+<td><code>first_notoriety_date</code> (inverted)</td>
+<td>Earlier year = higher score</td>
+</tr>
+<tr class="even">
+<td>Recent Activity</td>
+<td><code>latest_notoriety_date</code></td>
+<td>Later year = higher score</td>
+</tr>
+<tr class="odd">
+<td>Genre Diversity</td>
+<td>Count of unique genres in <code>genres</code> field</td>
+<td>More genres = higher score</td>
+</tr>
+</tbody>
+</table>
+<p>Normalisation was scoped to the five-candidate pool rather than the full dataset, so each radar axis represents relative standing among the top candidates. The chart was saved as a PNG at 150 dpi and embedded as a static image in the Tableau dashboard alongside a companion data table showing the raw values.</p>
+</section>
+<section id="dashboards" class="level2">
+<h2 class="anchored" data-anchor-id="dashboards">Dashboards</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task3/task3_Who_are_the_candidates_.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Dashboard 1 — “Who are the Candidates?”: OF Artist Ranking (top-left), Genre Mix by Candidate (top-right), Breakthrough Profile scatter plot (bottom)</figcaption>
+</figure>
+</div>
+<p><strong>Dashboard 1 — “Who are the Candidates?”</strong> combines three sheets in a tiled layout: the OF Artist Ranking bar chart (top-left), the Genre Mix by Candidate stacked bar (top-right), and the Breakthrough Profile scatter plot (bottom, spanning full width). Together, these three views answer the question of which Oceanus Folk artists form the candidate pool and how they compare on output volume, genre focus, and breakthrough speed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task3/task3_whos_next_dashboard_2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Dashboard 2 — “Who’s Next?”: Three Artist Comparison (top-left), Notoriety Timeline (bottom-left), radar chart and data table (right)</figcaption>
+</figure>
+</div>
+<p><strong>Dashboard 2 — “Who’s Next?”</strong> combines the Three Artist Comparison dot plot (top-left), the Notoriety Timeline (bottom-left), and the radar chart image (right). This dashboard presents the final predictions. The Three Artist Comparison provides a detailed work-by-work timeline for the three predicted stars, the Notoriety Timeline provides broader context by showing all 14 candidates, and the radar chart synthesises the five key metrics into a single comparative profile for the top five.</p>
+</section>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">Results and Discussion</h2>
+<section id="what-does-it-mean-to-be-a-rising-star" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-it-mean-to-be-a-rising-star">What does it mean to be a rising star?</h3>
+<p>Based on the visualisations above, a rising star in the Oceanus Folk music scene is characterised by five attributes:</p>
+<ol type="1">
+<li><p><strong>High notable output</strong> — the artist has multiple works that achieved chart notoriety, not just a single hit. Among the 56 Oceanus Folk artists in the dataset, only 14 produced two or more notable works, and the strongest candidates produced four or more.</p></li>
+<li><p><strong>Rapid breakthrough</strong> — the time between the artist’s first release and their first chart appearance is short. Orla Seabloom and Beatrice Albright both have a years-active span of zero, meaning their works charted in the same year they were released. Copper Canyon Ghosts achieved a span of just one year. By contrast, Ping Meng’s 17-year span and Tao Yin’s 16-year span suggest established careers rather than breakout trajectories.</p></li>
+<li><p><strong>Concentrated momentum</strong> — rising stars tend to chart multiple works within a narrow time window rather than sporadically over many years. Orla Seabloom charted all 7 works in 2029; Beatrice Albright charted all 4 in 2031. This burst pattern signals a career inflection point — the hallmark of a rising star.</p></li>
+<li><p><strong>Genre commitment</strong> — the strongest Oceanus Folk candidates produce almost exclusively within the genre. Ping Meng, despite having 4 notable works, splits across Lo-Fi Electronica, Dream Pop, and Oceanus Folk — making her more of a genre-crossing veteran than a rising Oceanus Folk star.</p></li>
+<li><p><strong>Recency</strong> — artists whose chart activity is more recent are more likely to represent the next wave. Copper Canyon Ghosts’ notoriety dates (2034–2035) are the most recent in the candidate pool, placing them at the frontier of the genre’s evolution.</p></li>
+</ol>
+<p>The Breakthrough Profile scatter plot captures attributes 1 and 2 directly: ideal candidates cluster in the top-left (high works, low span). The Notoriety Timeline captures attribute 3 visually through dot clustering. The Genre Mix chart captures attribute 4 through colour segmentation. The radar chart synthesises all five attributes into a single comparative shape — a larger, more balanced polygon indicates a stronger overall rising star profile.</p>
+</section>
+<section id="three-artist-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="three-artist-comparison">Three Artist Comparison</h3>
+<p>The three artists selected for detailed comparison are Orla Seabloom, Beatrice Albright, and Copper Canyon Ghosts. Each represents a distinct breakout pattern:</p>
+<p><strong>Orla Seabloom</strong> had the most explosive debut in the candidate pool — all 7 of her notable works (<em>Beneath the Whispering Waves</em>, <em>Ebbing Heart</em>, <em>Riding the Moon’s Reflection</em>, <em>Seasheel Lullaby</em>, <em>The Shifting Sands</em>, <em>The Song of Forgotten Shores</em>, and <em>Tidal Journey</em>) charted in a single year (2029). Her radar profile is the largest overall shape, dominating the Total Notable Works axis and scoring maximally on Quick Breakthrough. However, because all works charted in the same year, her Recent Activity score is moderate — her last chart appearance was 2029, earlier than the other two predictions.</p>
+<p><strong>Beatrice Albright</strong> followed a similar concentrated pattern, charting 4 works (<em>Moonlit Kelp Forest Dance</em>, <em>Seven Fathoms Deep</em>, <em>The Siren’s Sigh</em>, <em>Whispers on the Jetty Wind</em>) in 2031, all in Oceanus Folk. Her years-active span is also zero, giving her a strong Quick Breakthrough score. Her profile closely mirrors Orla Seabloom’s shape on the radar chart, albeit smaller due to fewer total works.</p>
+<p><strong>Copper Canyon Ghosts</strong> charted 5 works across 2034–2035 (<em>Canyon Echoes, Ocean Dreams</em>; <em>Crimson Cliffs Awakening</em>; <em>Salt-Stained Letters</em>; <em>Shadows in Smuggler’s Cove</em>; <em>The Cartographer’s Curse</em>), all in Oceanus Folk. With only a 1-year span and the most recent notoriety dates in the entire candidate pool, Copper Canyon Ghosts score highest on Recent Activity. Their radar profile is the most balanced of the three, with strong scores across all axes except Early Breakthrough (since their career began later).</p>
+</section>
+<section id="predictions-next-three-oceanus-folk-stars" class="level3">
+<h3 class="anchored" data-anchor-id="predictions-next-three-oceanus-folk-stars">Predictions — Next Three Oceanus Folk Stars</h3>
+<p>Based on the rising star profile defined above, the three artists predicted to be the next Oceanus Folk breakout stars over the next five years are:</p>
+<ol type="1">
+<li><p><strong>Orla Seabloom</strong> — With 7 notable works and an instant breakthrough in 2029, she has the highest volume and fastest rise of any Oceanus Folk candidate. Her concentrated output suggests an artist at the peak of a career inflection, and her exclusive focus on Oceanus Folk makes her the genre’s most prolific emerging voice.</p></li>
+<li><p><strong>Copper Canyon Ghosts</strong> — Their 5 notable works between 2034 and 2035, combined with a 1-year active span and pure Oceanus Folk output, place them as the most recent breakout act in the candidate pool. Their recency gives them the strongest forward momentum heading into the next five years.</p></li>
+<li><p><strong>Beatrice Albright</strong> — With 4 works charting simultaneously in 2031 and zero years-active span, she demonstrates the same explosive breakout pattern as Orla Seabloom. Her exclusively Oceanus Folk catalogue and rapid rise make her a strong candidate to sustain chart presence in the coming years.</p></li>
+</ol>
+<p>These three were chosen over Daniel O’Connell (who matches Beatrice Albright’s numbers but shares the same 2031 burst, making them interchangeable on the available metrics) and Ping Meng (whose 17-year span and multi-genre output disqualify her from the rising star profile despite having 4 notable works).</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

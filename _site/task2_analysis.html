@@ -146,7 +146,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#task-2-oceanus-folk-genre-spread" id="toc-task-2-oceanus-folk-genre-spread" class="nav-link active" data-scroll-target="#task-2-oceanus-folk-genre-spread">Task 2 — Oceanus Folk Genre Spread</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link active" data-scroll-target="#data-preparation">Data Preparation</a></li>
+  <li><a href="#genre-influence-flow" id="toc-genre-influence-flow" class="nav-link" data-scroll-target="#genre-influence-flow">Genre Influence Flow</a>
+  <ul class="collapse">
+  <li><a href="#left-chart-genres-most-influenced-by-oceanus-folk" id="toc-left-chart-genres-most-influenced-by-oceanus-folk" class="nav-link" data-scroll-target="#left-chart-genres-most-influenced-by-oceanus-folk">Left chart — Genres Most Influenced by Oceanus Folk</a></li>
+  <li><a href="#right-chart-genres-that-inspire-oceanus-folk" id="toc-right-chart-genres-that-inspire-oceanus-folk" class="nav-link" data-scroll-target="#right-chart-genres-that-inspire-oceanus-folk">Right chart — Genres That Inspire Oceanus Folk</a></li>
+  </ul></li>
+  <li><a href="#influence-through-time" id="toc-influence-through-time" class="nav-link" data-scroll-target="#influence-through-time">Influence Through Time</a>
+  <ul class="collapse">
+  <li><a href="#top-chart-oceanus-folk-outward-influence-over-time" id="toc-top-chart-oceanus-folk-outward-influence-over-time" class="nav-link" data-scroll-target="#top-chart-oceanus-folk-outward-influence-over-time">Top chart — Oceanus Folk Outward Influence Over Time</a></li>
+  <li><a href="#bottom-chart-other-genres-drawing-from-oceanus-folk-over-time" id="toc-bottom-chart-other-genres-drawing-from-oceanus-folk-over-time" class="nav-link" data-scroll-target="#bottom-chart-other-genres-drawing-from-oceanus-folk-over-time">Bottom chart — Other Genres Drawing from Oceanus Folk Over Time</a></li>
+  </ul></li>
+  <li><a href="#top-influenced-artists" id="toc-top-influenced-artists" class="nav-link" data-scroll-target="#top-influenced-artists">Top Influenced Artists</a></li>
+  <li><a href="#bidirectional-genre-flow-sankey-diagram" id="toc-bidirectional-genre-flow-sankey-diagram" class="nav-link" data-scroll-target="#bidirectional-genre-flow-sankey-diagram">Bidirectional Genre Flow (Sankey Diagram)</a></li>
+  <li><a href="#key-analytical-findings" id="toc-key-analytical-findings" class="nav-link" data-scroll-target="#key-analytical-findings">Key Analytical Findings</a></li>
   </ul>
 </nav>
     </div>
@@ -172,9 +185,149 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="task-2-oceanus-folk-genre-spread" class="level1">
-<h1>Task 2 — Oceanus Folk Genre Spread</h1>
-<p>This section is currently in progress and will be updated as the project develops.</p>
+<section id="data-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
+<p>The analysis is built on four CSV files derived from the MC1 knowledge graph using a Python preprocessing pipeline:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Description</th>
+<th>Rows</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>task2_genre_summary.csv</code></td>
+<td>Aggregated connection counts between genre pairs, with direction (inbound/outbound) and edge type</td>
+<td>117</td>
+</tr>
+<tr class="even">
+<td><code>task2_of_influence_out.csv</code></td>
+<td>Song-level edges where Oceanus Folk works reference works in other genres</td>
+<td>371</td>
+</tr>
+<tr class="odd">
+<td><code>task2_of_influence_in.csv</code></td>
+<td>Song-level edges where works from other genres reference Oceanus Folk works</td>
+<td>377</td>
+</tr>
+<tr class="even">
+<td><code>task2_top_artists_influenced.csv</code></td>
+<td>Artist-level aggregation of top 30 artists most influenced by Oceanus Folk</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>This file was generated using a Python script operating on <code>lookup_nodes_clean.csv</code> and <code>lookup_edges_clean.csv</code>. The script:</p>
+<ol type="1">
+<li>Identified all Oceanus Folk song and album node IDs</li>
+<li>Found all songs/albums from other genres that referenced Oceanus Folk works via InStyleOf, CoverOf, DirectlySamples, InterpolatesFrom or LyricalReferenceTo edges</li>
+<li>Traced the PerformerOf edges to find the artist behind each influenced song</li>
+<li>Aggregated the count of influenced works per artist</li>
+<li>Assigned each artist a primary genre based on whichever genre appeared most frequently in their influenced works</li>
+<li>Exported the top 30 artists with fields: artist_name, influenced_works_count, notable_works_count, primary_genre</li>
+</ol>
+</section>
+<section id="genre-influence-flow" class="level2">
+<h2 class="anchored" data-anchor-id="genre-influence-flow">Genre Influence Flow</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task2/task2_Genre Influence.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Genres Most Influenced by Oceanus Folk (left) and Genres That Inspire Oceanus Folk (right) — horizontal stacked bar charts coloured by edge type</figcaption>
+</figure>
+</div>
+<section id="left-chart-genres-most-influenced-by-oceanus-folk" class="level3">
+<h3 class="anchored" data-anchor-id="left-chart-genres-most-influenced-by-oceanus-folk">Left chart — Genres Most Influenced by Oceanus Folk</h3>
+<p>A horizontal stacked bar chart showing target genres ranked by total connection count. Each color segment represents a different type of musical influence. Longer bar = stronger influence from Oceanus Folk on that genre. Each segment shows how the influence was expressed: CoverOf (Oceanus Folk songs were covered by this genre), DirectlySamples (Oceanus Folk audio was directly sampled), InStyleOf (works were created in the style of Oceanus Folk), InterpolatesFrom (melodies were borrowed from Oceanus Folk), LyricalReferenceTo (lyrics referenced Oceanus Folk works). The genres are sorted from most to least influenced — Indie Folk at the top is the most influenced genre.</p>
+</section>
+<section id="right-chart-genres-that-inspire-oceanus-folk" class="level3">
+<h3 class="anchored" data-anchor-id="right-chart-genres-that-inspire-oceanus-folk">Right chart — Genres That Inspire Oceanus Folk</h3>
+<p>Same chart structure but showing which genres feed INTO Oceanus Folk. If a genre appears prominently on both sides it means there is a two-way musical exchange with Oceanus Folk. Desert Rock, Dream Pop and Indie Folk appearing on both sides confirms they have a bidirectional relationship with Oceanus Folk.</p>
+</section>
+</section>
+<section id="influence-through-time" class="level2">
+<h2 class="anchored" data-anchor-id="influence-through-time">Influence Through Time</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task2/task2_Influence Through time.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Oceanus Folk Outward Influence Over Time (top) and Other Genres Drawing from Oceanus Folk Over Time (bottom) — both annotated with Sailor’s career milestones</figcaption>
+</figure>
+</div>
+<section id="top-chart-oceanus-folk-outward-influence-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="top-chart-oceanus-folk-outward-influence-over-time">Top chart — Oceanus Folk Outward Influence Over Time</h3>
+<p>A line chart where each point represents the number of influence connections made by Oceanus Folk works in that year. Higher points mean more Oceanus Folk works were influencing other genres that year. Two key events are marked directly on the chart: “Sailor joins Ivy Echoes” (2023) — marks the dramatic spike in outward influence; “Sailor’s global breakthrough” (2028) — marks the second wave of sustained influence. The overall pattern shows influence was low and scattered before 2020, then triggered by Sailor’s career milestones.</p>
+</section>
+<section id="bottom-chart-other-genres-drawing-from-oceanus-folk-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="bottom-chart-other-genres-drawing-from-oceanus-folk-over-time">Bottom chart — Other Genres Drawing from Oceanus Folk Over Time</h3>
+<p>Same structure but showing when OTHER genres started drawing from Oceanus Folk. The top chart shows when Oceanus Folk influenced others, the bottom shows when others started recognising and drawing back from Oceanus Folk. The start date difference is notable — the top chart starts from 2000 but the bottom starts from 2007, showing a 7-year lag before external genres began referencing Oceanus Folk. The 2028 peak on the bottom chart is even more pronounced than on the top — confirming Sailor’s breakthrough was the key trigger for external recognition.</p>
+</section>
+</section>
+<section id="top-influenced-artists" class="level2">
+<h2 class="anchored" data-anchor-id="top-influenced-artists">Top Influenced Artists</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task2/task2_Top Influenced Artists.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Top 15 artists most influenced by Oceanus Folk, ranked by number of influenced works and coloured by primary genre</figcaption>
+</figure>
+</div>
+<p>A horizontal bar chart of the top 15 artists whose works were most influenced by Oceanus Folk, colored by their primary genre. Longer bar = more works influenced by Oceanus Folk. Each color represents the artist’s primary genre, showing which genre communities were most receptive to Oceanus Folk’s influence. The even bar lengths — most artists have 2–3 influenced works — confirm that Oceanus Folk’s impact was broadly distributed across many artists rather than concentrated on a few. Dream Pop and Desert Rock dominate the top 15, consistent with the genre-level findings in the Genre Influence Flow dashboard.</p>
+</section>
+<section id="bidirectional-genre-flow-sankey-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="bidirectional-genre-flow-sankey-diagram">Bidirectional Genre Flow (Sankey Diagram)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task2/task2_sankey_genre_flow_python.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Oceanus Folk: Bidirectional Genre Influence Flow — Sankey diagram with outward (blue) and inward (purple) flows; orange nodes indicate bidirectional genres</figcaption>
+</figure>
+</div>
+<p>A flow diagram showing the two-way musical influence between Oceanus Folk and other genres simultaneously. Left blue node (Oceanus Folk → Outward) represents Oceanus Folk sending influence to other genres. Right purple node (Inward → Oceanus Folk) represents other genres sending influence back to Oceanus Folk. Middle nodes are individual genres positioned between the two anchor nodes. Band thickness indicates strength — thicker bands = stronger influence relationship. Orange nodes indicate genres with two-way exchange (both receiving and giving influence). Light blue nodes are genres that only receive influence from Oceanus Folk. Red/pink nodes are genres that only give influence to Oceanus Folk.</p>
+</section>
+<section id="key-analytical-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-analytical-findings">Key Analytical Findings</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Was influence gradual or intermittent?</td>
+<td>Triggered — spiked dramatically in 2023 and 2028 aligned with Sailor’s career milestones</td>
+</tr>
+<tr class="even">
+<td>Which genres were most influenced?</td>
+<td>Indie Folk (~100 connections), followed by Synthwave, Dream Pop and Doom Metal</td>
+</tr>
+<tr class="odd">
+<td>Which artists were most influenced?</td>
+<td>Influence broadly distributed across 483 artists — no single dominant recipient</td>
+</tr>
+<tr class="even">
+<td>What inspires Oceanus Folk?</td>
+<td>Desert Rock, Dream Pop, Indie Folk and Space Rock are the strongest inbound influences</td>
+</tr>
+<tr class="odd">
+<td>Is the exchange bidirectional?</td>
+<td>Yes — Indie Folk, Desert Rock, Dream Pop and Space Rock all show two-way exchange</td>
+</tr>
+<tr class="even">
+<td>When did external recognition begin?</td>
+<td>2007 — seven years after Oceanus Folk began referencing other genres in 2000</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
