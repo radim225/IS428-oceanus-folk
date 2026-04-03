@@ -12,9 +12,9 @@ This website documents our Visual Analytics Project for AY2025-2026 Term 2, base
 
 | Name | Student ID | Role | Sub-module |
 |------|------------|------|------------|
-| Radim Soukal | <span class="missing-info">[STUDENT ID]</span> | Task 3 Lead, GitHub & Website | Rising Star Prediction |
-| <span class="missing-info">Klara [SURNAME]</span> | <span class="missing-info">[STUDENT ID]</span> | Task 2 Lead | Oceanus Folk Genre Spread |
-| <span class="missing-info">Charles [SURNAME]</span> | <span class="missing-info">[STUDENT ID]</span> | Task 1 Lead | Sailor Shift Career Profile |
+| Radim Soukal | 01550535 | Task 3 Lead, GitHub & Website | Rising Star Prediction |
+| Klara Kasparova | 01550536 | Task 2 Lead | Oceanus Folk Genre Spread |
+| Charles-Antoine Tremblay | 01550160 | Task 1 Lead | Sailor Shift Career Profile |
 
 ## Acknowledgements
 

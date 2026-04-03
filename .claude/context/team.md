@@ -4,9 +4,9 @@
 
 | Role | Name | Student ID | Sub-module |
 |------|------|------------|------------|
-| Task 3 Lead + GitHub & Website Owner | Radim Soukal | [STUDENT_ID] | Rising Star Prediction |
-| Task 2 Lead | Klara | [STUDENT_ID] | Oceanus Folk Genre Spread |
-| Task 1 Lead | Charles | [STUDENT_ID] | Sailor Shift Career Profile |
+| Task 3 Lead + GitHub & Website Owner | Radim Soukal | 01550535 | Rising Star Prediction |
+| Task 2 Lead | Klara Kasparova | 01550536 | Oceanus Folk Genre Spread |
+| Task 1 Lead | Charles-Antoine Tremblay | 01550160 | Sailor Shift Career Profile |
 
 ## File Ownership
 - Radim owns: index.qmd, proposal.qmd, _quarto.yml, CLAUDE.md, styles.css,
