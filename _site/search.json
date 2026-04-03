@@ -4,7 +4,7 @@
     "href": "CLAUDE.html",
     "title": "CLAUDE.md — IS428 Visual Analytics Project",
     "section": "",
-    "text": "This file is automatically read by Claude Code at every session start. Always read it and all files in .claude/context/ before making changes.\n\n\nIS428 Visual Analytics, AY2025-2026 Term 2, Singapore Management University. Topic: VAST Challenge 2025 Mini-Challenge 1 — Music Knowledge Graph. We are building a Tableau application and a Quarto project website to help journalist Silas Reed analyse the rise of Sailor Shift and the spread of Oceanus Folk music.\n\n\n\n\nQuarto website (this repo) — deployed via Vercel — documents the project\nTableau application (.twbx) — built separately — answers MC1 questions The website shows screenshots of Tableau dashboards and written analysis. The website does NOT embed or run Tableau.\n\n\n\n\n\nRadim Soukal: Task 3 (Rising Star Prediction) + GitHub & website owner\nKlara: Task 2 (Oceanus Folk Genre Spread)\nCharles: Task 1 (Sailor Shift Career Profile)\n\n\n\n\n\n.claude/context/team.md\n.claude/context/MC1_task_details.md\n.claude/context/dataset_schema.md\n.claude/context/design_theme.md\n\n\n\n\n\nRadim: index.qmd, proposal.qmd, _quarto.yml, CLAUDE.md, styles.css, task3_analysis.qmd, userguide.qmd, poster.qmd, images/task3/\nKlara: task2_analysis.qmd, images/task2/\nCharles: task1_analysis.qmd, images/task1/\n\n\n\n\n\nNever use placeholder text\nNo spaces in image filenames\nAlways use relative image paths (never starting with /)\nAfter structural changes: quarto render\nAfter any change: remind Radim to git add . && git commit && git push\nVercel auto-deploys on every push to main\n\n\n\n\nProduction URL: https://is-428-oceanus-folk-cuky9crzr-radim225s-projects.vercel.app\n\n\n\n\nProposal live on Vercel: 18 March 2026 (11:59pm SGT)\nPoster to eLearn: 8 April 2026\nPoster presentation: 13 April 2026\nFinal submission: 19 April 2026"
+    "text": "This file is automatically read by Claude Code at every session start. Always read it and all files in .claude/context/ before making changes.\n\n\nIS428 Visual Analytics, AY2025-2026 Term 2, Singapore Management University. Topic: VAST Challenge 2025 Mini-Challenge 1 — Music Knowledge Graph. We are building a Tableau application and a Quarto project website to help journalist Silas Reed analyse the rise of Sailor Shift and the spread of Oceanus Folk music.\n\n\n\n\nQuarto website (this repo) — deployed via Vercel — documents the project\nTableau application (.twbx) — built separately — answers MC1 questions\n\nThe website shows screenshots of Tableau dashboards and written analysis. The website does NOT embed or run Tableau.\n\n\n\n\nRadim Soukal: Task 3 (Rising Star Prediction) + GitHub & website owner\nKlara: Task 2 (Oceanus Folk Genre Spread)\nCharles: Task 1 (Sailor Shift Career Profile)\n\n\n\n\n\n.claude/context/team.md\n.claude/context/MC1_task_details.md\n.claude/context/dataset_schema.md\n.claude/context/design_theme.md\n\n\n\n\n\nRadim: index.qmd, proposal.qmd, methodology.qmd, results.qmd, _quarto.yml, CLAUDE.md, styles.css, task3_analysis.qmd, userguide.qmd, poster.qmd, about.qmd, images/task3/\nKlara: task2_analysis.qmd, images/task2/\nCharles: task1_analysis.qmd, images/task1/\n\n\n\n\nAll images live in images/ with task-specific subfolders: - images/task1/ — Task 1 screenshots + interactive HTML network graphs - images/task2/ — Task 2 screenshots + Sankey diagram - images/task3/ — Task 3 screenshots + radar chart\nAlways use relative paths (e.g. images/task1/filename.png), never absolute. Do NOT move, rename, or modify any existing image files.\n\n\n\n\nNever use placeholder text\nNo spaces in image filenames\nAlways use relative image paths (never starting with /)\nAfter structural changes: quarto render\nAfter any change: remind Radim to git add . && git commit && git push\nVercel auto-deploys on every push to main\n\n\n\n\nProduction URL: https://is-428-oceanus-folk.vercel.app\n\n\n\n\nProposal live on Vercel: 18 March 2026 (11:59pm SGT)\nPoster to eLearn: 8 April 2026\nPoster presentation: 13 April 2026\nFinal submission: 19 April 2026"
   },
   {
     "objectID": "CLAUDE.html#what-this-project-is",
@@ -18,7 +18,7 @@
     "href": "CLAUDE.html#two-separate-deliverables",
     "title": "CLAUDE.md — IS428 Visual Analytics Project",
     "section": "",
-    "text": "Quarto website (this repo) — deployed via Vercel — documents the project\nTableau application (.twbx) — built separately — answers MC1 questions The website shows screenshots of Tableau dashboards and written analysis. The website does NOT embed or run Tableau."
+    "text": "Quarto website (this repo) — deployed via Vercel — documents the project\nTableau application (.twbx) — built separately — answers MC1 questions\n\nThe website shows screenshots of Tableau dashboards and written analysis. The website does NOT embed or run Tableau."
   },
   {
     "objectID": "CLAUDE.html#team",
@@ -39,7 +39,14 @@
     "href": "CLAUDE.html#file-ownership-never-edit-another-members-files",
     "title": "CLAUDE.md — IS428 Visual Analytics Project",
     "section": "",
-    "text": "Radim: index.qmd, proposal.qmd, _quarto.yml, CLAUDE.md, styles.css, task3_analysis.qmd, userguide.qmd, poster.qmd, images/task3/\nKlara: task2_analysis.qmd, images/task2/\nCharles: task1_analysis.qmd, images/task1/"
+    "text": "Radim: index.qmd, proposal.qmd, methodology.qmd, results.qmd, _quarto.yml, CLAUDE.md, styles.css, task3_analysis.qmd, userguide.qmd, poster.qmd, about.qmd, images/task3/\nKlara: task2_analysis.qmd, images/task2/\nCharles: task1_analysis.qmd, images/task1/"
+  },
+  {
+    "objectID": "CLAUDE.html#image-assets",
+    "href": "CLAUDE.html#image-assets",
+    "title": "CLAUDE.md — IS428 Visual Analytics Project",
+    "section": "",
+    "text": "All images live in images/ with task-specific subfolders: - images/task1/ — Task 1 screenshots + interactive HTML network graphs - images/task2/ — Task 2 screenshots + Sankey diagram - images/task3/ — Task 3 screenshots + radar chart\nAlways use relative paths (e.g. images/task1/filename.png), never absolute. Do NOT move, rename, or modify any existing image files."
   },
   {
     "objectID": "CLAUDE.html#rules",
@@ -53,7 +60,7 @@
     "href": "CLAUDE.html#live-site",
     "title": "CLAUDE.md — IS428 Visual Analytics Project",
     "section": "",
-    "text": "Production URL: https://is-428-oceanus-folk-cuky9crzr-radim225s-projects.vercel.app"
+    "text": "Production URL: https://is-428-oceanus-folk.vercel.app"
   },
   {
     "objectID": "CLAUDE.html#deadlines",
@@ -158,14 +165,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "We are a group of three IS428 students from Singapore Management University (SMU), School of Computing and Information Systems.\nThis website documents our Visual Analytics Project for AY2025-2026 Term 2, based on VAST Challenge 2025 Mini-Challenge 1. The project applies visual analytics techniques to a music knowledge graph to help journalist Silas Reed tell the story of Sailor Shift’s rise and the spread of Oceanus Folk music.\n\n\n\n\n\n\n\n\n\n\n\nName\nStudent ID\nRole\nSub-module\n\n\n\n\nRadim Soukal\n[STUDENT ID]\nTask 3 Lead, GitHub & Website\nRising Star Prediction\n\n\nKlara [SURNAME]\n[STUDENT ID]\nTask 2 Lead\nOceanus Folk Genre Spread\n\n\nCharles [SURNAME]\n[STUDENT ID]\nTask 1 Lead\nSailor Shift Career Profile\n\n\n\n\n\n\nThis project was completed under the guidance of Prof. Kam Tin Seong, Associate Professor of Information Systems (Practice), Singapore Management University. The dataset is sourced from the VAST Challenge 2025 Mini-Challenge 1, made available for academic use by the IEEE VAST Challenge organising committee."
+    "text": "We are a group of three IS428 students from Singapore Management University (SMU), School of Computing and Information Systems.\nThis website documents our Visual Analytics Project for AY2025-2026 Term 2, based on VAST Challenge 2025 Mini-Challenge 1. The project applies visual analytics techniques to a music knowledge graph to help journalist Silas Reed tell the story of Sailor Shift’s rise and the spread of Oceanus Folk music.\n\n\n\n\n\n\n\n\n\n\n\nName\nStudent ID\nRole\nSub-module\n\n\n\n\nRadim Soukal\n01550535\nTask 3 Lead, GitHub & Website\nRising Star Prediction\n\n\nKlara Kasparova\n01550536\nTask 2 Lead\nOceanus Folk Genre Spread\n\n\nCharles-Antoine Tremblay\n01550160\nTask 1 Lead\nSailor Shift Career Profile\n\n\n\n\n\n\nThis project was completed under the guidance of Prof. Kam Tin Seong, Associate Professor of Information Systems (Practice), Singapore Management University. The dataset is sourced from the VAST Challenge 2025 Mini-Challenge 1, made available for academic use by the IEEE VAST Challenge organising committee."
   },
   {
     "objectID": "about.html#team-members",
     "href": "about.html#team-members",
     "title": "About",
     "section": "",
-    "text": "Name\nStudent ID\nRole\nSub-module\n\n\n\n\nRadim Soukal\n[STUDENT ID]\nTask 3 Lead, GitHub & Website\nRising Star Prediction\n\n\nKlara [SURNAME]\n[STUDENT ID]\nTask 2 Lead\nOceanus Folk Genre Spread\n\n\nCharles [SURNAME]\n[STUDENT ID]\nTask 1 Lead\nSailor Shift Career Profile"
+    "text": "Name\nStudent ID\nRole\nSub-module\n\n\n\n\nRadim Soukal\n01550535\nTask 3 Lead, GitHub & Website\nRising Star Prediction\n\n\nKlara Kasparova\n01550536\nTask 2 Lead\nOceanus Folk Genre Spread\n\n\nCharles-Antoine Tremblay\n01550160\nTask 1 Lead\nSailor Shift Career Profile"
   },
   {
     "objectID": "about.html#acknowledgements",
@@ -340,7 +347,7 @@
     "href": "index.html",
     "title": "Oceanus Folk: Then and Now",
     "section": "",
-    "text": "Team: Radim Šoukal ([01550535])  ·  [Klara Kasparova] ([01550536])  ·  [Charles-Antoine Tremblay] ([01550160])"
+    "text": "Team: Radim Šoukal (01550535)  ·  Klara Kasparova (01550536)  ·  Charles-Antoine Tremblay (01550160)"
   },
   {
     "objectID": "index.html#context",

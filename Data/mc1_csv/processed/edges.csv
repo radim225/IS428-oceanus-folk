@@ -1,0 +1,363 @@
+Source,Target,edge_type,edge_category,source_name,source_node_type,source_genre,source_release_year,target_name,target_node_type,target_genre,target_release_year,involves_sailor,involves_ivy,source_genre_display,target_genre_display
+10534,16312,InterpolatesFrom,Influence,Twelve Bells of Augsburg,Song,Psychedelic Rock,2026.0,Harvest Dance at Ler Valley,Song,Psychedelic Rock,2010.0,0,0,Psychedelic Rock,Psychedelic Rock
+16952,17299,InterpolatesFrom,Influence,Rust & Reverie,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Indie Folk,Oceanus Folk
+16958,16960,MemberOf,Membership,Zane Cruz,Person,,,Violet Engines,MusicalGroup,,,0,0,Synthwave,Synthwave
+16958,16961,LyricistOf,Collaboration,Zane Cruz,Person,,,Neon Heartbeat,Album,Synthwave,2031.0,0,0,Synthwave,Synthwave
+16958,16962,LyricistOf,Collaboration,Zane Cruz,Person,,,Cosmic Lullabies,Album,Synthwave,2035.0,0,0,Synthwave,Synthwave
+16959,16960,MemberOf,Membership,Iris Moon,Person,,,Violet Engines,MusicalGroup,,,0,0,Synthwave,Synthwave
+16959,16961,ComposerOf,Collaboration,Iris Moon,Person,,,Neon Heartbeat,Album,Synthwave,2031.0,0,0,Synthwave,Synthwave
+16959,16962,ComposerOf,Collaboration,Iris Moon,Person,,,Cosmic Lullabies,Album,Synthwave,2035.0,0,0,Synthwave,Synthwave
+16960,16961,PerformerOf,Collaboration,Violet Engines,MusicalGroup,,,Neon Heartbeat,Album,Synthwave,2031.0,0,0,Synthwave,Synthwave
+16960,16962,PerformerOf,Collaboration,Violet Engines,MusicalGroup,,,Cosmic Lullabies,Album,Synthwave,2035.0,0,0,Synthwave,Synthwave
+16960,16963,PerformerOf,Collaboration,Violet Engines,MusicalGroup,,,Highway Lights,Song,Synthwave,2031.0,0,0,Synthwave,Synthwave
+16960,16964,PerformerOf,Collaboration,Violet Engines,MusicalGroup,,,The Ghost in the Drive,Song,Synthwave,2031.0,0,0,Synthwave,Synthwave
+16960,16965,PerformerOf,Collaboration,Violet Engines,MusicalGroup,,,Hologram Love,Song,Synthwave,2035.0,0,0,Synthwave,Synthwave
+16960,17260,InStyleOf,Influence,Violet Engines,MusicalGroup,,,Ivy Echos,MusicalGroup,,,0,0,Synthwave,Oceanus Folk
+16971,17260,InStyleOf,Influence,Jasper Quinn,Person,,,Ivy Echos,MusicalGroup,,,0,0,Alternative Rock,Oceanus Folk
+16977,17299,InterpolatesFrom,Influence,Mira Everly,Person,,,The Saltwater Weavers,MusicalGroup,,,0,0,Southern Gothic Rock,Oceanus Folk
+16983,16987,MemberOf,Membership,Sophie Bennett,Person,,,Tidal Reverie,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+16983,16988,ComposerOf,Collaboration,Sophie Bennett,Person,,,Songs from the Drowned World,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+16983,16989,ComposerOf,Collaboration,Sophie Bennett,Person,,,Ballads for the End of Time,Album,Oceanus Folk,2033.0,0,0,Oceanus Folk,Oceanus Folk
+16984,16987,MemberOf,Membership,Michael Harris,Person,,,Tidal Reverie,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+16984,16988,LyricistOf,Collaboration,Michael Harris,Person,,,Songs from the Drowned World,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+16984,16989,LyricistOf,Collaboration,Michael Harris,Person,,,Ballads for the End of Time,Album,Oceanus Folk,2033.0,0,0,Oceanus Folk,Oceanus Folk
+16985,16987,MemberOf,Membership,Kara Lee,Person,,,Tidal Reverie,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+16985,16988,LyricistOf,Collaboration,Kara Lee,Person,,,Songs from the Drowned World,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+16985,16989,LyricistOf,Collaboration,Kara Lee,Person,,,Ballads for the End of Time,Album,Oceanus Folk,2033.0,0,0,Oceanus Folk,Oceanus Folk
+16986,16987,MemberOf,Membership,Ethan Clarke,Person,,,Tidal Reverie,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+16986,16988,ComposerOf,Collaboration,Ethan Clarke,Person,,,Songs from the Drowned World,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+16986,16989,ComposerOf,Collaboration,Ethan Clarke,Person,,,Ballads for the End of Time,Album,Oceanus Folk,2033.0,0,0,Oceanus Folk,Oceanus Folk
+16987,16988,PerformerOf,Collaboration,Tidal Reverie,MusicalGroup,,,Songs from the Drowned World,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+16987,16989,PerformerOf,Collaboration,Tidal Reverie,MusicalGroup,,,Ballads for the End of Time,Album,Oceanus Folk,2033.0,0,0,Oceanus Folk,Oceanus Folk
+16987,16990,PerformerOf,Collaboration,Tidal Reverie,MusicalGroup,,,The Bells Beneath the Waves,Song,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+16987,16991,PerformerOf,Collaboration,Tidal Reverie,MusicalGroup,,,Forgotten Harbors,Song,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+16987,16992,PerformerOf,Collaboration,Tidal Reverie,MusicalGroup,,,Beneath the Coral Veil,Song,Oceanus Folk,2033.0,0,0,Oceanus Folk,Oceanus Folk
+16987,17299,CoverOf,Influence,Tidal Reverie,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+16993,16996,MemberOf,Membership,Olivia Carter,Person,,,Crimson Carriage,MusicalGroup,,,0,0,Americana,Americana
+16993,16997,ComposerOf,Collaboration,Olivia Carter,Person,,,Rust & Ruin,Album,Americana,2030.0,0,0,Americana,Americana
+16993,16998,ComposerOf,Collaboration,Olivia Carter,Person,,,Glitches in the Rain,Album,Americana,2035.0,0,0,Americana,Americana
+16993,16999,ComposerOf,Collaboration,Olivia Carter,Person,,,Melancholy Circuitry,Album,Americana,2033.0,0,0,Americana,Americana
+16994,16996,MemberOf,Membership,Lucas Bennett,Person,,,Crimson Carriage,MusicalGroup,,,0,0,Americana,Americana
+16994,16997,ComposerOf,Collaboration,Lucas Bennett,Person,,,Rust & Ruin,Album,Americana,2030.0,0,0,Americana,Americana
+16994,16998,ComposerOf,Collaboration,Lucas Bennett,Person,,,Glitches in the Rain,Album,Americana,2035.0,0,0,Americana,Americana
+16994,16999,ComposerOf,Collaboration,Lucas Bennett,Person,,,Melancholy Circuitry,Album,Americana,2033.0,0,0,Americana,Americana
+16995,16996,MemberOf,Membership,Maya Torres,Person,,,Crimson Carriage,MusicalGroup,,,0,0,Americana,Americana
+16995,16997,ComposerOf,Collaboration,Maya Torres,Person,,,Rust & Ruin,Album,Americana,2030.0,0,0,Americana,Americana
+16995,16998,ComposerOf,Collaboration,Maya Torres,Person,,,Glitches in the Rain,Album,Americana,2035.0,0,0,Americana,Americana
+16995,16999,ComposerOf,Collaboration,Maya Torres,Person,,,Melancholy Circuitry,Album,Americana,2033.0,0,0,Americana,Americana
+16996,16997,PerformerOf,Collaboration,Crimson Carriage,MusicalGroup,,,Rust & Ruin,Album,Americana,2030.0,0,0,Americana,Americana
+16996,16998,PerformerOf,Collaboration,Crimson Carriage,MusicalGroup,,,Glitches in the Rain,Album,Americana,2035.0,0,0,Americana,Americana
+16996,16999,PerformerOf,Collaboration,Crimson Carriage,MusicalGroup,,,Melancholy Circuitry,Album,Americana,2033.0,0,0,Americana,Americana
+16996,17000,PerformerOf,Collaboration,Crimson Carriage,MusicalGroup,,,Dust and Whiskey,Song,Americana,2030.0,0,0,Americana,Americana
+16996,17001,PerformerOf,Collaboration,Crimson Carriage,MusicalGroup,,,Last Train to Nowhere,Song,Americana,2035.0,0,0,Americana,Americana
+16996,17002,PerformerOf,Collaboration,Crimson Carriage,MusicalGroup,,,Under a Dying Sun,Song,Americana,2035.0,0,0,Americana,Americana
+16996,17003,PerformerOf,Collaboration,Crimson Carriage,MusicalGroup,,,The Road Calls Again,Song,Americana,2033.0,0,0,Americana,Americana
+16996,17260,LyricalReferenceTo,Influence,Crimson Carriage,MusicalGroup,,,Ivy Echos,MusicalGroup,,,0,0,Americana,Oceanus Folk
+16996,17299,InStyleOf,Influence,Crimson Carriage,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Americana,Oceanus Folk
+16999,14893,CoverOf,Influence,Melancholy Circuitry,Album,Americana,2033.0,Twilight's Threshold,Song,Synthwave,2007.0,0,0,Americana,Synthwave
+17004,17299,LyricalReferenceTo,Influence,Willow Sage,Person,,,The Saltwater Weavers,MusicalGroup,,,0,0,Psychedelic Rock,Oceanus Folk
+17004,17327,InStyleOf,Influence,Willow Sage,Person,,,Drowned Harbor,MusicalGroup,,,0,0,Psychedelic Rock,Oceanus Folk
+17012,17299,InStyleOf,Influence,Sienna Fox,Person,,,The Saltwater Weavers,MusicalGroup,,,0,0,Indie Rock,Oceanus Folk
+17022,17260,LyricalReferenceTo,Influence,Cassette Future,MusicalGroup,,,Ivy Echos,MusicalGroup,,,0,0,Lo-Fi Electronica,Oceanus Folk
+17022,17255,InStyleOf,Influence,Cassette Future,MusicalGroup,,,Sailor Shift,Person,,,1,1,Lo-Fi Electronica,Oceanus Folk
+17032,17327,InterpolatesFrom,Influence,Silver Veil,MusicalGroup,,,Drowned Harbor,MusicalGroup,,,0,0,Indie Pop,Oceanus Folk
+17032,17255,LyricalReferenceTo,Influence,Silver Veil,MusicalGroup,,,Sailor Shift,Person,,,1,1,Indie Pop,Oceanus Folk
+17041,17046,MemberOf,Membership,Arlo Sterling,Person,,,The Brine Choir,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17041,17047,LyricistOf,Collaboration,Arlo Sterling,Person,,,Drifting Between the Stars and the Sea,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17041,17048,LyricistOf,Collaboration,Arlo Sterling,Person,,,Artificial Sunsets,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17041,17049,LyricistOf,Collaboration,Arlo Sterling,Person,,,Electric Reverie,Album,Oceanus Folk,2038.0,0,0,Oceanus Folk,Oceanus Folk
+17042,17046,MemberOf,Membership,Lyra Blaze,Person,,,The Brine Choir,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17042,17047,ComposerOf,Collaboration,Lyra Blaze,Person,,,Drifting Between the Stars and the Sea,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17042,17048,ComposerOf,Collaboration,Lyra Blaze,Person,,,Artificial Sunsets,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17042,17049,ComposerOf,Collaboration,Lyra Blaze,Person,,,Electric Reverie,Album,Oceanus Folk,2038.0,0,0,Oceanus Folk,Oceanus Folk
+17043,17046,MemberOf,Membership,Orion Cruz,Person,,,The Brine Choir,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17043,17047,ComposerOf,Collaboration,Orion Cruz,Person,,,Drifting Between the Stars and the Sea,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17043,17048,ComposerOf,Collaboration,Orion Cruz,Person,,,Artificial Sunsets,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17043,17049,ComposerOf,Collaboration,Orion Cruz,Person,,,Electric Reverie,Album,Oceanus Folk,2038.0,0,0,Oceanus Folk,Oceanus Folk
+17044,17046,MemberOf,Membership,Elara May,Person,,,The Brine Choir,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17044,17047,ComposerOf,Collaboration,Elara May,Person,,,Drifting Between the Stars and the Sea,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17044,17048,ComposerOf,Collaboration,Elara May,Person,,,Artificial Sunsets,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17044,17049,ComposerOf,Collaboration,Elara May,Person,,,Electric Reverie,Album,Oceanus Folk,2038.0,0,0,Oceanus Folk,Oceanus Folk
+17045,17046,MemberOf,Membership,Cassian Rae,Person,,,The Brine Choir,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17045,17047,ComposerOf,Collaboration,Cassian Rae,Person,,,Drifting Between the Stars and the Sea,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17045,17048,ComposerOf,Collaboration,Cassian Rae,Person,,,Artificial Sunsets,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17045,17049,ComposerOf,Collaboration,Cassian Rae,Person,,,Electric Reverie,Album,Oceanus Folk,2038.0,0,0,Oceanus Folk,Oceanus Folk
+17046,17047,PerformerOf,Collaboration,The Brine Choir,MusicalGroup,,,Drifting Between the Stars and the Sea,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17046,17048,PerformerOf,Collaboration,The Brine Choir,MusicalGroup,,,Artificial Sunsets,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17046,17049,PerformerOf,Collaboration,The Brine Choir,MusicalGroup,,,Electric Reverie,Album,Oceanus Folk,2038.0,0,0,Oceanus Folk,Oceanus Folk
+17046,17050,PerformerOf,Collaboration,The Brine Choir,MusicalGroup,,,Star-Touched Tides,Song,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17046,17051,PerformerOf,Collaboration,The Brine Choir,MusicalGroup,,,Echoes in a Seashell,Song,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17046,17052,PerformerOf,Collaboration,The Brine Choir,MusicalGroup,,,Beneath the Celestial Wake,Song,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17046,17053,PerformerOf,Collaboration,The Brine Choir,MusicalGroup,,,Driftwood and Stardust,Song,Oceanus Folk,2038.0,0,0,Oceanus Folk,Oceanus Folk
+17046,17299,LyricistOf,Collaboration,The Brine Choir,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17046,17327,DirectlySamples,Influence,The Brine Choir,MusicalGroup,,,Drowned Harbor,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17049,14107,InStyleOf,Influence,Electric Reverie,Album,Oceanus Folk,2038.0,Folklore's Heartbeat,Song,Blues Rock,2020.0,0,0,Oceanus Folk,Blues Rock
+17049,7026,InterpolatesFrom,Influence,Electric Reverie,Album,Oceanus Folk,2038.0,Reflejo Interior,Song,Americana,1983.0,0,0,Oceanus Folk,Americana
+17057,17299,InStyleOf,Influence,Desert Echoes,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Desert Rock,Oceanus Folk
+17063,17299,InStyleOf,Influence,The Phantom Operators,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Jazz Surf Rock,Oceanus Folk
+17063,17255,InterpolatesFrom,Influence,The Phantom Operators,MusicalGroup,,,Sailor Shift,Person,,,1,1,Jazz Surf Rock,Oceanus Folk
+17071,17299,InStyleOf,Influence,Cosmic Reverberation,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Space Rock,Oceanus Folk
+17091,17327,InterpolatesFrom,Influence,Turbo Kill,MusicalGroup,,,Drowned Harbor,MusicalGroup,,,0,0,Speed Metal,Oceanus Folk
+17091,17299,LyricalReferenceTo,Influence,Turbo Kill,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Speed Metal,Oceanus Folk
+17100,17260,LyricalReferenceTo,Influence,Rainfall Fiction,MusicalGroup,,,Ivy Echos,MusicalGroup,,,0,0,Emo/Pop Punk,Oceanus Folk
+17100,17327,InterpolatesFrom,Influence,Rainfall Fiction,MusicalGroup,,,Drowned Harbor,MusicalGroup,,,0,0,Emo/Pop Punk,Oceanus Folk
+17110,17112,PerformerOf,Collaboration,The Hollow Monarchs,MusicalGroup,,,Embers & Echoes,Album,Post-Apocalyptic Folk,2031.0,0,0,Post-Apocalyptic Folk,Post-Apocalyptic Folk
+17110,17255,InStyleOf,Influence,The Hollow Monarchs,MusicalGroup,,,Sailor Shift,Person,,,1,1,Post-Apocalyptic Folk,Oceanus Folk
+17110,17260,InterpolatesFrom,Influence,The Hollow Monarchs,MusicalGroup,,,Ivy Echos,MusicalGroup,,,0,0,Post-Apocalyptic Folk,Oceanus Folk
+17112,17268,DirectlySamples,Influence,Embers & Echoes,Album,Post-Apocalyptic Folk,2031.0,Deepsea Fireflies,Song,Oceanus Folk,2025.0,0,0,Post-Apocalyptic Folk,Oceanus Folk
+17118,17120,MemberOf,Membership,Zachary Cole,Person,,,Selkie's Hollow,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17118,17121,LyricistOf,Collaboration,Zachary Cole,Person,,,Ballads for the Low Tide,Album,Oceanus Folk,2037.0,0,0,Oceanus Folk,Oceanus Folk
+17119,17120,MemberOf,Membership,Lia Grant,Person,,,Selkie's Hollow,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17119,17121,LyricistOf,Collaboration,Lia Grant,Person,,,Ballads for the Low Tide,Album,Oceanus Folk,2037.0,0,0,Oceanus Folk,Oceanus Folk
+17120,17121,PerformerOf,Collaboration,Selkie's Hollow,MusicalGroup,,,Ballads for the Low Tide,Album,Oceanus Folk,2037.0,0,0,Oceanus Folk,Oceanus Folk
+17120,17122,PerformerOf,Collaboration,Selkie's Hollow,MusicalGroup,,,Skin and Saltwater,Song,Oceanus Folk,2037.0,0,0,Oceanus Folk,Oceanus Folk
+17120,17123,PerformerOf,Collaboration,Selkie's Hollow,MusicalGroup,,,Sea Glass Memories,Song,Oceanus Folk,2037.0,0,0,Oceanus Folk,Oceanus Folk
+17120,17124,PerformerOf,Collaboration,Selkie's Hollow,MusicalGroup,,,Vanished with the Current,Song,Oceanus Folk,2037.0,0,0,Oceanus Folk,Oceanus Folk
+17120,17125,PerformerOf,Collaboration,Selkie's Hollow,MusicalGroup,,,When the Tide Calls My Name,Song,Oceanus Folk,2037.0,0,0,Oceanus Folk,Oceanus Folk
+17120,17260,LyricalReferenceTo,Influence,Selkie's Hollow,MusicalGroup,,,Ivy Echos,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17126,17255,LyricalReferenceTo,Influence,Cassian Storm,Person,,,Sailor Shift,Person,,,1,1,Avant-Garde Folk,Oceanus Folk
+17138,17299,LyricalReferenceTo,Influence,Iron Cathedral,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Symphonic Metal,Oceanus Folk
+17146,17260,InStyleOf,Influence,Julia Carter,Person,,,Ivy Echos,MusicalGroup,,,0,0,Indie Rock,Oceanus Folk
+17155,17327,InterpolatesFrom,Influence,Claire Holmes,Person,,,Drowned Harbor,MusicalGroup,,,0,0,Synthpop,Oceanus Folk
+17155,17255,InterpolatesFrom,Influence,Claire Holmes,Person,,,Sailor Shift,Person,,,1,1,Synthpop,Oceanus Folk
+17164,17168,LyricistOf,Collaboration,Rusty Riggins,Person,,,Tales from the Briny Deep,Album,Sea Shanties,1975.0,0,0,Sea Shanties,Sea Shanties
+17164,17169,LyricistOf,Collaboration,Rusty Riggins,Person,,,Rum & Reckoning,Album,Sea Shanties,1977.0,0,0,Sea Shanties,Sea Shanties
+17164,17170,LyricistOf,Collaboration,Rusty Riggins,Person,,,Sailors & Ghosts,Album,Sea Shanties,1979.0,0,0,Sea Shanties,Sea Shanties
+17164,17171,LyricistOf,Collaboration,Rusty Riggins,Person,,,Blackwater Ballads,Album,Sea Shanties,1981.0,0,0,Sea Shanties,Sea Shanties
+17164,17261,LyricistOf,Collaboration,Rusty Riggins,Person,,,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,0,0,Sea Shanties,Oceanus Folk
+17164,17263,LyricistOf,Collaboration,Rusty Riggins,Person,,,Shoreline Sonnets,Album,Oceanus Folk,2026.0,0,0,Sea Shanties,Oceanus Folk
+17165,17168,ComposerOf,Collaboration,Finn McGraw,Person,,,Tales from the Briny Deep,Album,Sea Shanties,1975.0,0,0,Sea Shanties,Sea Shanties
+17165,17169,ComposerOf,Collaboration,Finn McGraw,Person,,,Rum & Reckoning,Album,Sea Shanties,1977.0,0,0,Sea Shanties,Sea Shanties
+17165,17170,ComposerOf,Collaboration,Finn McGraw,Person,,,Sailors & Ghosts,Album,Sea Shanties,1979.0,0,0,Sea Shanties,Sea Shanties
+17165,17171,ComposerOf,Collaboration,Finn McGraw,Person,,,Blackwater Ballads,Album,Sea Shanties,1981.0,0,0,Sea Shanties,Sea Shanties
+17165,17261,ComposerOf,Collaboration,Finn McGraw,Person,,,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,0,0,Sea Shanties,Oceanus Folk
+17166,17168,ComposerOf,Collaboration,William Tidewell,Person,,,Tales from the Briny Deep,Album,Sea Shanties,1975.0,0,0,Sea Shanties,Sea Shanties
+17166,17169,ComposerOf,Collaboration,William Tidewell,Person,,,Rum & Reckoning,Album,Sea Shanties,1977.0,0,0,Sea Shanties,Sea Shanties
+17166,17170,ComposerOf,Collaboration,William Tidewell,Person,,,Sailors & Ghosts,Album,Sea Shanties,1979.0,0,0,Sea Shanties,Sea Shanties
+17166,17171,ComposerOf,Collaboration,William Tidewell,Person,,,Blackwater Ballads,Album,Sea Shanties,1981.0,0,0,Sea Shanties,Sea Shanties
+17166,17261,ComposerOf,Collaboration,William Tidewell,Person,,,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,0,0,Sea Shanties,Oceanus Folk
+17189,17192,MemberOf,Membership,Ewan MacCrae,Person,,,The Fiddle & The Fjord,MusicalGroup,,,0,0,Celtic Folk,Celtic Folk
+17189,17193,LyricistOf,Collaboration,Ewan MacCrae,Person,,,Echoes of the Old Way,Album,Celtic Folk,1980.0,0,0,Celtic Folk,Celtic Folk
+17189,17194,LyricistOf,Collaboration,Ewan MacCrae,Person,,,Runes & Reverie,Album,Celtic Folk,1981.0,0,0,Celtic Folk,Celtic Folk
+17189,17195,LyricistOf,Collaboration,Ewan MacCrae,Person,,,Blood & Heather,Album,Celtic Folk,1982.0,0,0,Celtic Folk,Celtic Folk
+17189,17275,LyricistOf,Collaboration,Ewan MacCrae,Person,,,Coral Beats,Album,Oceanus Folk,2034.0,0,0,Celtic Folk,Oceanus Folk
+17189,17277,LyricistOf,Collaboration,Ewan MacCrae,Person,,,Oceanbound,Album,Oceanus Folk,2038.0,0,0,Celtic Folk,Oceanus Folk
+17190,17192,MemberOf,Membership,Astrid Nørgaard,Person,,,The Fiddle & The Fjord,MusicalGroup,,,0,0,Celtic Folk,Celtic Folk
+17190,17193,ComposerOf,Collaboration,Astrid Nørgaard,Person,,,Echoes of the Old Way,Album,Celtic Folk,1980.0,0,0,Celtic Folk,Celtic Folk
+17190,17194,ComposerOf,Collaboration,Astrid Nørgaard,Person,,,Runes & Reverie,Album,Celtic Folk,1981.0,0,0,Celtic Folk,Celtic Folk
+17190,17195,ComposerOf,Collaboration,Astrid Nørgaard,Person,,,Blood & Heather,Album,Celtic Folk,1982.0,0,0,Celtic Folk,Celtic Folk
+17190,17275,ComposerOf,Collaboration,Astrid Nørgaard,Person,,,Coral Beats,Album,Oceanus Folk,2034.0,0,0,Celtic Folk,Oceanus Folk
+17191,17192,MemberOf,Membership,Freya Lindholm,Person,,,The Fiddle & The Fjord,MusicalGroup,,,0,0,Celtic Folk,Celtic Folk
+17191,17193,ComposerOf,Collaboration,Freya Lindholm,Person,,,Echoes of the Old Way,Album,Celtic Folk,1980.0,0,0,Celtic Folk,Celtic Folk
+17191,17194,ComposerOf,Collaboration,Freya Lindholm,Person,,,Runes & Reverie,Album,Celtic Folk,1981.0,0,0,Celtic Folk,Celtic Folk
+17191,17195,ComposerOf,Collaboration,Freya Lindholm,Person,,,Blood & Heather,Album,Celtic Folk,1982.0,0,0,Celtic Folk,Celtic Folk
+17191,17275,ComposerOf,Collaboration,Freya Lindholm,Person,,,Coral Beats,Album,Oceanus Folk,2034.0,0,0,Celtic Folk,Oceanus Folk
+17191,17277,ComposerOf,Collaboration,Freya Lindholm,Person,,,Oceanbound,Album,Oceanus Folk,2038.0,0,0,Celtic Folk,Oceanus Folk
+17192,17193,PerformerOf,Collaboration,The Fiddle & The Fjord,MusicalGroup,,,Echoes of the Old Way,Album,Celtic Folk,1980.0,0,0,Celtic Folk,Celtic Folk
+17192,17194,PerformerOf,Collaboration,The Fiddle & The Fjord,MusicalGroup,,,Runes & Reverie,Album,Celtic Folk,1981.0,0,0,Celtic Folk,Celtic Folk
+17192,17195,PerformerOf,Collaboration,The Fiddle & The Fjord,MusicalGroup,,,Blood & Heather,Album,Celtic Folk,1982.0,0,0,Celtic Folk,Celtic Folk
+17205,17208,ComposerOf,Collaboration,Liam O'Sullivan,Person,,,Miles & Moments,Album,Acoustic Folk,1984.0,0,0,Acoustic Folk,Acoustic Folk
+17205,17209,ComposerOf,Collaboration,Liam O'Sullivan,Person,,,Echoes and Embers,Album,Acoustic Folk,1987.0,0,0,Acoustic Folk,Acoustic Folk
+17205,17210,ComposerOf,Collaboration,Liam O'Sullivan,Person,,,The Road & The Reckoning,Album,Acoustic Folk,1989.0,0,0,Acoustic Folk,Acoustic Folk
+17205,17211,ComposerOf,Collaboration,Liam O'Sullivan,Person,,,Homeward Winds,Album,Acoustic Folk,1991.0,0,0,Acoustic Folk,Acoustic Folk
+17205,17272,ComposerOf,Collaboration,Liam O'Sullivan,Person,,,Tidal Pop Waves,Album,Oceanus Folk,2028.0,0,0,Acoustic Folk,Oceanus Folk
+17206,17208,ComposerOf,Collaboration,Fiona Mercer,Person,,,Miles & Moments,Album,Acoustic Folk,1984.0,0,0,Acoustic Folk,Acoustic Folk
+17206,17209,ComposerOf,Collaboration,Fiona Mercer,Person,,,Echoes and Embers,Album,Acoustic Folk,1987.0,0,0,Acoustic Folk,Acoustic Folk
+17206,17210,ComposerOf,Collaboration,Fiona Mercer,Person,,,The Road & The Reckoning,Album,Acoustic Folk,1989.0,0,0,Acoustic Folk,Acoustic Folk
+17206,17211,ComposerOf,Collaboration,Fiona Mercer,Person,,,Homeward Winds,Album,Acoustic Folk,1991.0,0,0,Acoustic Folk,Acoustic Folk
+17206,17272,ComposerOf,Collaboration,Fiona Mercer,Person,,,Tidal Pop Waves,Album,Oceanus Folk,2028.0,0,0,Acoustic Folk,Oceanus Folk
+17226,17230,MemberOf,Membership,Kai Reynolds,Person,,,The Wave Riders,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17226,17231,LyricistOf,Collaboration,Kai Reynolds,Person,,,Tides of Echos,Album,Oceanus Folk,2029.0,0,0,Oceanus Folk,Oceanus Folk
+17226,17232,LyricistOf,Collaboration,Kai Reynolds,Person,,,Driftwood Dreams,Album,Oceanus Folk,2032.0,0,0,Oceanus Folk,Oceanus Folk
+17226,17410,PerformerOf,Collaboration,Kai Reynolds,Person,,,Seashell Serenade,Song,Oceanus Folk,2030.0,0,0,Oceanus Folk,Oceanus Folk
+17227,17230,MemberOf,Membership,Aiden Harper,Person,,,The Wave Riders,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17227,17231,LyricistOf,Collaboration,Aiden Harper,Person,,,Tides of Echos,Album,Oceanus Folk,2029.0,0,0,Oceanus Folk,Oceanus Folk
+17227,17232,LyricistOf,Collaboration,Aiden Harper,Person,,,Driftwood Dreams,Album,Oceanus Folk,2032.0,0,0,Oceanus Folk,Oceanus Folk
+17228,17230,MemberOf,Membership,Finn Morgan,Person,,,The Wave Riders,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17228,17231,LyricistOf,Collaboration,Finn Morgan,Person,,,Tides of Echos,Album,Oceanus Folk,2029.0,0,0,Oceanus Folk,Oceanus Folk
+17228,17232,LyricistOf,Collaboration,Finn Morgan,Person,,,Driftwood Dreams,Album,Oceanus Folk,2032.0,0,0,Oceanus Folk,Oceanus Folk
+17229,17230,MemberOf,Membership,Skylar Brooks,Person,,,The Wave Riders,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17229,17231,LyricistOf,Collaboration,Skylar Brooks,Person,,,Tides of Echos,Album,Oceanus Folk,2029.0,0,0,Oceanus Folk,Oceanus Folk
+17229,17232,LyricistOf,Collaboration,Skylar Brooks,Person,,,Driftwood Dreams,Album,Oceanus Folk,2032.0,0,0,Oceanus Folk,Oceanus Folk
+17230,17231,PerformerOf,Collaboration,The Wave Riders,MusicalGroup,,,Tides of Echos,Album,Oceanus Folk,2029.0,0,0,Oceanus Folk,Oceanus Folk
+17230,17232,PerformerOf,Collaboration,The Wave Riders,MusicalGroup,,,Driftwood Dreams,Album,Oceanus Folk,2032.0,0,0,Oceanus Folk,Oceanus Folk
+17230,17233,PerformerOf,Collaboration,The Wave Riders,MusicalGroup,,,Sunset Harmony,Song,Oceanus Folk,2029.0,0,0,Oceanus Folk,Oceanus Folk
+17230,17234,PerformerOf,Collaboration,The Wave Riders,MusicalGroup,,,Whispering Waves,Song,Oceanus Folk,2032.0,0,0,Oceanus Folk,Oceanus Folk
+17230,17327,InterpolatesFrom,Influence,The Wave Riders,MusicalGroup,,,Drowned Harbor,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17231,14352,InterpolatesFrom,Influence,Tides of Echos,Album,Oceanus Folk,2029.0,Weathered Miles,Song,Doom Metal,2023.0,0,0,Oceanus Folk,Doom Metal
+17231,14296,InStyleOf,Influence,Tides of Echos,Album,Oceanus Folk,2029.0,The Long Way Home,Album,Dream Pop,2023.0,0,0,Oceanus Folk,Dream Pop
+17235,17260,InStyleOf,Influence,Genevieve Bell,Person,,,Ivy Echos,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17243,17247,PerformerOf,Collaboration,Mariner's Refrain,MusicalGroup,,,Anchored Love,Song,Oceanus Folk,2030.0,0,0,Oceanus Folk,Oceanus Folk
+17243,17299,LyricalReferenceTo,Influence,Mariner's Refrain,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17243,17260,InterpolatesFrom,Influence,Mariner's Refrain,MusicalGroup,,,Ivy Echos,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17248,17250,MemberOf,Membership,Mia Waters,Person,,,Siren's Call,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17248,17251,LyricistOf,Collaboration,Mia Waters,Person,,,Echos Below,Album,Oceanus Folk,2028.0,0,0,Oceanus Folk,Oceanus Folk
+17248,17252,LyricistOf,Collaboration,Mia Waters,Person,,,Hidden Depths,Album,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17249,17250,MemberOf,Membership,Lila Rivers,Person,,,Siren's Call,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17249,17251,ComposerOf,Collaboration,Lila Rivers,Person,,,Echos Below,Album,Oceanus Folk,2028.0,0,0,Oceanus Folk,Oceanus Folk
+17249,17252,ComposerOf,Collaboration,Lila Rivers,Person,,,Hidden Depths,Album,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17250,17251,PerformerOf,Collaboration,Siren's Call,MusicalGroup,,,Echos Below,Album,Oceanus Folk,2028.0,0,0,Oceanus Folk,Oceanus Folk
+17250,17252,PerformerOf,Collaboration,Siren's Call,MusicalGroup,,,Hidden Depths,Album,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17250,17253,PerformerOf,Collaboration,Siren's Call,MusicalGroup,,,Shoreline,Song,Oceanus Folk,2028.0,0,0,Oceanus Folk,Oceanus Folk
+17250,17254,PerformerOf,Collaboration,Siren's Call,MusicalGroup,,,Moonlit Tide,Song,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17250,17327,DirectlySamples,Influence,Siren's Call,MusicalGroup,,,Drowned Harbor,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17255,16961,LyricistOf,Collaboration,Sailor Shift,Person,,,Neon Heartbeat,Album,Synthwave,2031.0,1,1,Oceanus Folk,Synthwave
+17255,16989,LyricistOf,Collaboration,Sailor Shift,Person,,,Ballads for the End of Time,Album,Oceanus Folk,2033.0,1,1,Oceanus Folk,Oceanus Folk
+17255,16999,LyricistOf,Collaboration,Sailor Shift,Person,,,Melancholy Circuitry,Album,Americana,2033.0,1,1,Oceanus Folk,Americana
+17255,17047,LyricistOf,Collaboration,Sailor Shift,Person,,,Drifting Between the Stars and the Sea,Album,Oceanus Folk,2034.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17048,LyricistOf,Collaboration,Sailor Shift,Person,,,Artificial Sunsets,Album,Oceanus Folk,2035.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17049,LyricistOf,Collaboration,Sailor Shift,Person,,,Electric Reverie,Album,Oceanus Folk,2038.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17121,LyricistOf,Collaboration,Sailor Shift,Person,,,Ballads for the Low Tide,Album,Oceanus Folk,2037.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17231,LyricistOf,Collaboration,Sailor Shift,Person,,,Tides of Echos,Album,Oceanus Folk,2029.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17252,LyricistOf,Collaboration,Sailor Shift,Person,,,Hidden Depths,Album,Oceanus Folk,2031.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17260,MemberOf,Membership,Sailor Shift,Person,,,Ivy Echos,MusicalGroup,,,1,1,Oceanus Folk,Oceanus Folk
+17255,17260,DirectlySamples,Influence,Sailor Shift,Person,,,Ivy Echos,MusicalGroup,,,1,1,Oceanus Folk,Oceanus Folk
+17255,17261,LyricistOf,Collaboration,Sailor Shift,Person,,,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17262,LyricistOf,Collaboration,Sailor Shift,Person,,,Luminescent Tides,Album,Oceanus Folk,2025.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17263,LyricistOf,Collaboration,Sailor Shift,Person,,,Shoreline Sonnets,Album,Oceanus Folk,2026.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17272,PerformerOf,Collaboration,Sailor Shift,Person,,,Tidal Pop Waves,Album,Oceanus Folk,2028.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17272,LyricistOf,Collaboration,Sailor Shift,Person,,,Tidal Pop Waves,Album,Oceanus Folk,2028.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17273,PerformerOf,Collaboration,Sailor Shift,Person,,,Salty Dreams,Album,Oceanus Folk,2030.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17273,LyricistOf,Collaboration,Sailor Shift,Person,,,Salty Dreams,Album,Oceanus Folk,2030.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17274,PerformerOf,Collaboration,Sailor Shift,Person,,,The Current & The Chord,Album,Oceanus Folk,2032.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17274,LyricistOf,Collaboration,Sailor Shift,Person,,,The Current & The Chord,Album,Oceanus Folk,2032.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17275,PerformerOf,Collaboration,Sailor Shift,Person,,,Coral Beats,Album,Oceanus Folk,2034.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17275,LyricistOf,Collaboration,Sailor Shift,Person,,,Coral Beats,Album,Oceanus Folk,2034.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17276,PerformerOf,Collaboration,Sailor Shift,Person,,,Tides & Ballads,Album,Oceanus Folk,2036.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17276,LyricistOf,Collaboration,Sailor Shift,Person,,,Tides & Ballads,Album,Oceanus Folk,2036.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17277,PerformerOf,Collaboration,Sailor Shift,Person,,,Oceanbound,Album,Oceanus Folk,2038.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17277,LyricistOf,Collaboration,Sailor Shift,Person,,,Oceanbound,Album,Oceanus Folk,2038.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17278,PerformerOf,Collaboration,Sailor Shift,Person,,,Echoes of the Deep,Album,Oceanus Folk,2040.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17278,LyricistOf,Collaboration,Sailor Shift,Person,,,Echoes of the Deep,Album,Oceanus Folk,2040.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17279,PerformerOf,Collaboration,Sailor Shift,Person,,,High Tide Heartbeat,Song,Oceanus Folk,2028.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17280,PerformerOf,Collaboration,Sailor Shift,Person,,,Electric Eel Love,Song,Oceanus Folk,2028.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17281,PerformerOf,Collaboration,Sailor Shift,Person,,,Sun-Drenched Daydream,Song,Oceanus Folk,2028.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17282,PerformerOf,Collaboration,Sailor Shift,Person,,,Chord of the Deep,Song,Oceanus Folk,2028.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17283,PerformerOf,Collaboration,Sailor Shift,Person,,,Heart of the Habitat,Song,Oceanus Folk,2030.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17284,PerformerOf,Collaboration,Sailor Shift,Person,,,Reef Rhythm,Song,Oceanus Folk,2030.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17285,PerformerOf,Collaboration,Sailor Shift,Person,,,Driftwood Lullaby,Song,Oceanus Folk,2030.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17286,PerformerOf,Collaboration,Sailor Shift,Person,,,Saltwater Hymn,Song,Oceanus Folk,2032.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17287,PerformerOf,Collaboration,Sailor Shift,Person,,,Moon Over the Tide,Song,Oceanus Folk,2034.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17288,PerformerOf,Collaboration,Sailor Shift,Person,,,Into the Current,Song,Oceanus Folk,2034.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17289,PerformerOf,Collaboration,Sailor Shift,Person,,,Barnacle Heart,Song,Oceanus Folk,2034.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17290,PerformerOf,Collaboration,Sailor Shift,Person,,,Fog & Fiddle,Song,Oceanus Folk,2036.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17291,PerformerOf,Collaboration,Sailor Shift,Person,,,The Fisherman's Prayer,Song,Oceanus Folk,2036.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17292,PerformerOf,Collaboration,Sailor Shift,Person,,,Stormsong,Song,Oceanus Folk,2038.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17293,PerformerOf,Collaboration,Sailor Shift,Person,,,Salt in My Veins,Song,Oceanus Folk,2040.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17294,PerformerOf,Collaboration,Sailor Shift,Person,,,The Last Mariner,Song,Oceanus Folk,2040.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17299,InStyleOf,Influence,Sailor Shift,Person,,,The Saltwater Weavers,MusicalGroup,,,1,1,Oceanus Folk,Oceanus Folk
+17255,17327,LyricalReferenceTo,Influence,Sailor Shift,Person,,,Drowned Harbor,MusicalGroup,,,1,1,Oceanus Folk,Oceanus Folk
+17255,17192,InStyleOf,Influence,Sailor Shift,Person,,,The Fiddle & The Fjord,MusicalGroup,,,1,1,Oceanus Folk,Celtic Folk
+17255,17350,LyricistOf,Collaboration,Sailor Shift,Person,,,Tidesworn Ballads,Album,Oceanus Folk,2031.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17350,PerformerOf,Collaboration,Sailor Shift,Person,,,Tidesworn Ballads,Album,Oceanus Folk,2031.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17356,LyricistOf,Collaboration,Sailor Shift,Person,,,Submerged Sonatas,Album,Oceanus Folk,2031.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17356,PerformerOf,Collaboration,Sailor Shift,Person,,,Submerged Sonatas,Album,Oceanus Folk,2031.0,1,1,Oceanus Folk,Oceanus Folk
+17255,17410,PerformerOf,Collaboration,Sailor Shift,Person,,,Seashell Serenade,Song,Oceanus Folk,2030.0,1,1,Oceanus Folk,Oceanus Folk
+17256,17121,ComposerOf,Collaboration,Maya Jensen,Person,,,Ballads for the Low Tide,Album,Oceanus Folk,2037.0,0,1,Oceanus Folk,Oceanus Folk
+17256,17260,MemberOf,Membership,Maya Jensen,Person,,,Ivy Echos,MusicalGroup,,,0,1,Oceanus Folk,Oceanus Folk
+17256,17261,ComposerOf,Collaboration,Maya Jensen,Person,,,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,0,1,Oceanus Folk,Oceanus Folk
+17256,17262,ComposerOf,Collaboration,Maya Jensen,Person,,,Luminescent Tides,Album,Oceanus Folk,2025.0,0,1,Oceanus Folk,Oceanus Folk
+17256,17263,ComposerOf,Collaboration,Maya Jensen,Person,,,Shoreline Sonnets,Album,Oceanus Folk,2026.0,0,1,Oceanus Folk,Oceanus Folk
+17256,17411,PerformerOf,Collaboration,Maya Jensen,Person,,,Tidal Whisper,Song,Oceanus Folk,2033.0,0,1,Oceanus Folk,Oceanus Folk
+17257,17260,MemberOf,Membership,"Lila ""Lilly"" Hartman",Person,,,Ivy Echos,MusicalGroup,,,0,1,Oceanus Folk,Oceanus Folk
+17257,17261,ComposerOf,Collaboration,"Lila ""Lilly"" Hartman",Person,,,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,0,1,Oceanus Folk,Oceanus Folk
+17257,17262,ComposerOf,Collaboration,"Lila ""Lilly"" Hartman",Person,,,Luminescent Tides,Album,Oceanus Folk,2025.0,0,1,Oceanus Folk,Oceanus Folk
+17257,17263,ComposerOf,Collaboration,"Lila ""Lilly"" Hartman",Person,,,Shoreline Sonnets,Album,Oceanus Folk,2026.0,0,1,Oceanus Folk,Oceanus Folk
+17258,17260,MemberOf,Membership,Jade Thompson,Person,,,Ivy Echos,MusicalGroup,,,0,1,Oceanus Folk,Oceanus Folk
+17258,17261,ComposerOf,Collaboration,Jade Thompson,Person,,,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,0,1,Oceanus Folk,Oceanus Folk
+17258,17262,ComposerOf,Collaboration,Jade Thompson,Person,,,Luminescent Tides,Album,Oceanus Folk,2025.0,0,1,Oceanus Folk,Oceanus Folk
+17258,17263,ComposerOf,Collaboration,Jade Thompson,Person,,,Shoreline Sonnets,Album,Oceanus Folk,2026.0,0,1,Oceanus Folk,Oceanus Folk
+17259,16988,LyricistOf,Collaboration,Sophie Ramirez,Person,,,Songs from the Drowned World,Album,Oceanus Folk,2035.0,0,1,Oceanus Folk,Oceanus Folk
+17259,17260,MemberOf,Membership,Sophie Ramirez,Person,,,Ivy Echos,MusicalGroup,,,0,1,Oceanus Folk,Oceanus Folk
+17259,17261,LyricistOf,Collaboration,Sophie Ramirez,Person,,,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,0,1,Oceanus Folk,Oceanus Folk
+17259,17262,LyricistOf,Collaboration,Sophie Ramirez,Person,,,Luminescent Tides,Album,Oceanus Folk,2025.0,0,1,Oceanus Folk,Oceanus Folk
+17259,17263,LyricistOf,Collaboration,Sophie Ramirez,Person,,,Shoreline Sonnets,Album,Oceanus Folk,2026.0,0,1,Oceanus Folk,Oceanus Folk
+17259,17247,ProducerOf,Collaboration,Sophie Ramirez,Person,,,Anchored Love,Song,Oceanus Folk,2030.0,0,1,Oceanus Folk,Oceanus Folk
+17260,17261,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17262,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,Luminescent Tides,Album,Oceanus Folk,2025.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17263,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,Shoreline Sonnets,Album,Oceanus Folk,2026.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17264,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,Sunken Bell Song,Song,Oceanus Folk,2024.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17265,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,Dancer of the Dappled Light,Song,Oceanus Folk,2024.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17266,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,Whispers in the Fronds,Song,Oceanus Folk,2024.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17267,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,The Angler's Lantern,Song,Oceanus Folk,2025.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17268,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,Deepsea Fireflies,Song,Oceanus Folk,2025.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17269,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,Sandpiper's Serenade,Song,Oceanus Folk,2026.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17270,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,Salt-Kissed Rhymes,Song,Oceanus Folk,2026.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17271,PerformerOf,Collaboration,Ivy Echos,MusicalGroup,,,Tidepool Epigrams,Song,Oceanus Folk,2026.0,0,0,Oceanus Folk,Oceanus Folk
+17260,17299,LyricalReferenceTo,Influence,Ivy Echos,MusicalGroup,,,The Saltwater Weavers,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17260,17192,InterpolatesFrom,Influence,Ivy Echos,MusicalGroup,,,The Fiddle & The Fjord,MusicalGroup,,,0,0,Oceanus Folk,Celtic Folk
+17261,2197,DirectlySamples,Influence,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,Hallowed Transaction,Album,Doom Metal,2017.0,0,0,Oceanus Folk,Doom Metal
+17261,9223,CoverOf,Influence,The Kelp Forest Canticles,Album,Oceanus Folk,2024.0,Für uns alle zusammen,Song,Alternative Rock,2017.0,0,0,Oceanus Folk,Alternative Rock
+17273,3881,InStyleOf,Influence,Salty Dreams,Album,Oceanus Folk,2030.0,Susurros de Pasión,Song,Synthwave,2004.0,0,0,Oceanus Folk,Synthwave
+17273,9848,CoverOf,Influence,Salty Dreams,Album,Oceanus Folk,2030.0,Partisan's Lament,Song,Indie Pop,2030.0,0,0,Oceanus Folk,Indie Pop
+17275,16312,CoverOf,Influence,Coral Beats,Album,Oceanus Folk,2034.0,Harvest Dance at Ler Valley,Song,Psychedelic Rock,2010.0,0,0,Oceanus Folk,Psychedelic Rock
+17275,15855,InStyleOf,Influence,Coral Beats,Album,Oceanus Folk,2034.0,Sacred Fragments,Song,Synthwave,2003.0,0,0,Oceanus Folk,Synthwave
+17277,876,LyricalReferenceTo,Influence,Oceanbound,Album,Oceanus Folk,2038.0,Bold Without Apology,Song,Indie Rock,2010.0,0,0,Oceanus Folk,Indie Rock
+17277,3986,LyricalReferenceTo,Influence,Oceanbound,Album,Oceanus Folk,2038.0,Altitude of Mistakes,Song,Americana,2015.0,0,0,Oceanus Folk,Americana
+17279,14658,InterpolatesFrom,Influence,High Tide Heartbeat,Song,Oceanus Folk,2028.0,Addicted to Your Heartache,Album,Southern Gothic Rock,2004.0,0,0,Oceanus Folk,Southern Gothic Rock
+17280,14933,CoverOf,Influence,Electric Eel Love,Song,Oceanus Folk,2028.0,The Crown We Wear,Song,Indie Rock,2022.0,0,0,Oceanus Folk,Indie Rock
+17280,10534,InStyleOf,Influence,Electric Eel Love,Song,Oceanus Folk,2028.0,Twelve Bells of Augsburg,Song,Psychedelic Rock,2026.0,0,0,Oceanus Folk,Psychedelic Rock
+17285,8207,InStyleOf,Influence,Driftwood Lullaby,Song,Oceanus Folk,2030.0,Echoes of Forgotten Light,Song,Alternative Rock,2004.0,0,0,Oceanus Folk,Alternative Rock
+17286,10903,InStyleOf,Influence,Saltwater Hymn,Song,Oceanus Folk,2032.0,Parallel Memories,Song,Dream Pop,2028.0,0,0,Oceanus Folk,Dream Pop
+17287,13589,LyricalReferenceTo,Influence,Moon Over the Tide,Song,Oceanus Folk,2034.0,Silent Steps in the Forest's Embrace,Song,Avant-Garde Folk,2023.0,0,0,Oceanus Folk,Avant-Garde Folk
+17287,11254,InterpolatesFrom,Influence,Moon Over the Tide,Song,Oceanus Folk,2034.0,Divergent Memories,Song,Indie Folk,2017.0,0,0,Oceanus Folk,Indie Folk
+17289,5574,InStyleOf,Influence,Barnacle Heart,Song,Oceanus Folk,2034.0,Our Inevitable Path,Song,Indie Folk,2017.0,0,0,Oceanus Folk,Indie Folk
+17290,12685,InterpolatesFrom,Influence,Fog & Fiddle,Song,Oceanus Folk,2036.0,Coastal Whispers of Biscay,Song,Alternative Rock,2031.0,0,0,Oceanus Folk,Alternative Rock
+17290,12237,InStyleOf,Influence,Fog & Fiddle,Song,Oceanus Folk,2036.0,Provence Aria,Song,Indie Rock,2023.0,0,0,Oceanus Folk,Indie Rock
+17292,13014,DirectlySamples,Influence,Stormsong,Song,Oceanus Folk,2038.0,Exoskeleton Dissolve,Song,Indie Rock,2020.0,0,0,Oceanus Folk,Indie Rock
+17292,6592,InStyleOf,Influence,Stormsong,Song,Oceanus Folk,2038.0,When the Bar Lights Go Up,Song,Emo/Pop Punk,2000.0,0,0,Oceanus Folk,Emo/Pop Punk
+17296,17276,ComposerOf,Collaboration,Coralia Bellweather,Person,,,Tides & Ballads,Album,Oceanus Folk,2036.0,0,0,Oceanus Folk,Oceanus Folk
+17296,17299,MemberOf,Membership,Coralia Bellweather,Person,,,The Saltwater Weavers,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17296,17300,ComposerOf,Collaboration,Coralia Bellweather,Person,,,Beneath the Coral Moon,Album,Oceanus Folk,1995.0,0,0,Oceanus Folk,Oceanus Folk
+17296,17301,ComposerOf,Collaboration,Coralia Bellweather,Person,,,Salt-Stained Chronicles,Album,Oceanus Folk,1997.0,0,0,Oceanus Folk,Oceanus Folk
+17296,17302,ComposerOf,Collaboration,Coralia Bellweather,Person,,,The Kelp Forest Ballads,Album,Oceanus Folk,1999.0,0,0,Oceanus Folk,Oceanus Folk
+17296,17303,ComposerOf,Collaboration,Coralia Bellweather,Person,,,Tempest's Wake,Album,Oceanus Folk,2001.0,0,0,Oceanus Folk,Oceanus Folk
+17299,17300,PerformerOf,Collaboration,The Saltwater Weavers,MusicalGroup,,,Beneath the Coral Moon,Album,Oceanus Folk,1995.0,0,0,Oceanus Folk,Oceanus Folk
+17299,17301,PerformerOf,Collaboration,The Saltwater Weavers,MusicalGroup,,,Salt-Stained Chronicles,Album,Oceanus Folk,1997.0,0,0,Oceanus Folk,Oceanus Folk
+17299,17302,PerformerOf,Collaboration,The Saltwater Weavers,MusicalGroup,,,The Kelp Forest Ballads,Album,Oceanus Folk,1999.0,0,0,Oceanus Folk,Oceanus Folk
+17299,17303,PerformerOf,Collaboration,The Saltwater Weavers,MusicalGroup,,,Tempest's Wake,Album,Oceanus Folk,2001.0,0,0,Oceanus Folk,Oceanus Folk
+17309,17276,LyricistOf,Collaboration,Levi Holloway,Person,,,Tides & Ballads,Album,Oceanus Folk,2036.0,0,0,Oceanus Folk,Oceanus Folk
+17309,17315,LyricistOf,Collaboration,Levi Holloway,Person,,,Ghostlights & Galleons,Album,Oceanus Folk,1993.0,0,0,Oceanus Folk,Oceanus Folk
+17309,17316,LyricistOf,Collaboration,Levi Holloway,Person,,,Currents & Curses,Album,Oceanus Folk,1994.0,0,0,Oceanus Folk,Oceanus Folk
+17309,17317,LyricistOf,Collaboration,Levi Holloway,Person,,,The Quiet of the Deep,Album,Oceanus Folk,1995.0,0,0,Oceanus Folk,Oceanus Folk
+17310,17278,ComposerOf,Collaboration,Marin Thorne,Person,,,Echoes of the Deep,Album,Oceanus Folk,2040.0,0,0,Oceanus Folk,Oceanus Folk
+17310,17315,ComposerOf,Collaboration,Marin Thorne,Person,,,Ghostlights & Galleons,Album,Oceanus Folk,1993.0,0,0,Oceanus Folk,Oceanus Folk
+17310,17316,ComposerOf,Collaboration,Marin Thorne,Person,,,Currents & Curses,Album,Oceanus Folk,1994.0,0,0,Oceanus Folk,Oceanus Folk
+17310,17317,ComposerOf,Collaboration,Marin Thorne,Person,,,The Quiet of the Deep,Album,Oceanus Folk,1995.0,0,0,Oceanus Folk,Oceanus Folk
+17311,17278,LyricistOf,Collaboration,Jonah Calloway,Person,,,Echoes of the Deep,Album,Oceanus Folk,2040.0,0,0,Oceanus Folk,Oceanus Folk
+17311,17315,LyricistOf,Collaboration,Jonah Calloway,Person,,,Ghostlights & Galleons,Album,Oceanus Folk,1993.0,0,0,Oceanus Folk,Oceanus Folk
+17311,17316,LyricistOf,Collaboration,Jonah Calloway,Person,,,Currents & Curses,Album,Oceanus Folk,1994.0,0,0,Oceanus Folk,Oceanus Folk
+17311,17317,LyricistOf,Collaboration,Jonah Calloway,Person,,,The Quiet of the Deep,Album,Oceanus Folk,1995.0,0,0,Oceanus Folk,Oceanus Folk
+17340,17192,InStyleOf,Influence,Orla Seabloom,Person,,,The Fiddle & The Fjord,MusicalGroup,,,0,0,Oceanus Folk,Celtic Folk
+17340,17299,LyricalReferenceTo,Influence,Orla Seabloom,Person,,,The Saltwater Weavers,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17349,17350,PerformerOf,Collaboration,Beatrice Albright,Person,,,Tidesworn Ballads,Album,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17350,LyricistOf,Collaboration,Beatrice Albright,Person,,,Tidesworn Ballads,Album,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17350,PerformerOf,Collaboration,Beatrice Albright,Person,,,Tidesworn Ballads,Album,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17351,PerformerOf,Collaboration,Beatrice Albright,Person,,,The Siren's Sigh,Song,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17352,PerformerOf,Collaboration,Beatrice Albright,Person,,,Whispers on the Jetty Wind,Song,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17353,PerformerOf,Collaboration,Beatrice Albright,Person,,,Moonlit Kelp Forest Dance,Song,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17354,PerformerOf,Collaboration,Beatrice Albright,Person,,,Seven Fathoms Deep,Song,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17260,InStyleOf,Influence,Beatrice Albright,Person,,,Ivy Echos,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17349,17327,LyricalReferenceTo,Influence,Beatrice Albright,Person,,,Drowned Harbor,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17349,17361,MemberOf,Membership,Beatrice Albright,Person,,,Copper Canyon Ghosts,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17349,17362,LyricistOf,Collaboration,Beatrice Albright,Person,,,Tide-Worn Tales,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17362,PerformerOf,Collaboration,Beatrice Albright,Person,,,Tide-Worn Tales,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17363,LyricistOf,Collaboration,Beatrice Albright,Person,,,The Sunken Compass,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17349,17363,PerformerOf,Collaboration,Beatrice Albright,Person,,,The Sunken Compass,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17350,10016,CoverOf,Influence,Tidesworn Ballads,Album,Oceanus Folk,2031.0,Dreamscape of Judgment,Song,Symphonic Metal,2023.0,0,0,Oceanus Folk,Symphonic Metal
+17355,17356,PerformerOf,Collaboration,Daniel O'Connell,Person,,,Submerged Sonatas,Album,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17356,ComposerOf,Collaboration,Daniel O'Connell,Person,,,Submerged Sonatas,Album,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17356,PerformerOf,Collaboration,Daniel O'Connell,Person,,,Submerged Sonatas,Album,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17357,PerformerOf,Collaboration,Daniel O'Connell,Person,,,The Language of the Tides,Song,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17358,PerformerOf,Collaboration,Daniel O'Connell,Person,,,Coral Bloom Energy,Song,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17359,PerformerOf,Collaboration,Daniel O'Connell,Person,,,Song of the Wandering Whale,Song,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17360,PerformerOf,Collaboration,Daniel O'Connell,Person,,,Deep Sea Reverie,Song,Oceanus Folk,2031.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17361,MemberOf,Membership,Daniel O'Connell,Person,,,Copper Canyon Ghosts,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk
+17355,17362,ComposerOf,Collaboration,Daniel O'Connell,Person,,,Tide-Worn Tales,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17362,PerformerOf,Collaboration,Daniel O'Connell,Person,,,Tide-Worn Tales,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17363,ComposerOf,Collaboration,Daniel O'Connell,Person,,,The Sunken Compass,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17355,17363,PerformerOf,Collaboration,Daniel O'Connell,Person,,,The Sunken Compass,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17361,17362,PerformerOf,Collaboration,Copper Canyon Ghosts,MusicalGroup,,,Tide-Worn Tales,Album,Oceanus Folk,2034.0,0,0,Oceanus Folk,Oceanus Folk
+17361,17363,PerformerOf,Collaboration,Copper Canyon Ghosts,MusicalGroup,,,The Sunken Compass,Album,Oceanus Folk,2035.0,0,0,Oceanus Folk,Oceanus Folk
+17361,17255,DirectlySamples,Influence,Copper Canyon Ghosts,MusicalGroup,,,Sailor Shift,Person,,,1,1,Oceanus Folk,Oceanus Folk
+17361,17260,InStyleOf,Influence,Copper Canyon Ghosts,MusicalGroup,,,Ivy Echos,MusicalGroup,,,0,0,Oceanus Folk,Oceanus Folk

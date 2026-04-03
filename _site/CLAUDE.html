@@ -153,7 +153,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#team" id="toc-team" class="nav-link" data-scroll-target="#team">Team</a></li>
   <li><a href="#context-files-always-read-before-any-task" id="toc-context-files-always-read-before-any-task" class="nav-link" data-scroll-target="#context-files-always-read-before-any-task">Context Files — Always Read Before Any Task</a></li>
   <li><a href="#file-ownership-never-edit-another-members-files" id="toc-file-ownership-never-edit-another-members-files" class="nav-link" data-scroll-target="#file-ownership-never-edit-another-members-files">File Ownership — Never Edit Another Member’s Files</a></li>
+  <li><a href="#image-assets" id="toc-image-assets" class="nav-link" data-scroll-target="#image-assets">Image Assets</a></li>
   <li><a href="#rules" id="toc-rules" class="nav-link" data-scroll-target="#rules">Rules</a></li>
+  <li><a href="#live-site" id="toc-live-site" class="nav-link" data-scroll-target="#live-site">Live Site</a></li>
   <li><a href="#deadlines" id="toc-deadlines" class="nav-link" data-scroll-target="#deadlines">Deadlines</a></li>
   </ul></li>
   </ul>
@@ -176,8 +178,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="two-separate-deliverables">Two Separate Deliverables</h2>
 <ol type="1">
 <li>Quarto website (this repo) — deployed via Vercel — documents the project</li>
-<li>Tableau application (.twbx) — built separately — answers MC1 questions The website shows screenshots of Tableau dashboards and written analysis. The website does NOT embed or run Tableau.</li>
+<li>Tableau application (.twbx) — built separately — answers MC1 questions</li>
 </ol>
+<p>The website shows screenshots of Tableau dashboards and written analysis. The website does NOT embed or run Tableau.</p>
 </section>
 <section id="team" class="level2">
 <h2 class="anchored" data-anchor-id="team">Team</h2>
@@ -199,10 +202,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="file-ownership-never-edit-another-members-files" class="level2">
 <h2 class="anchored" data-anchor-id="file-ownership-never-edit-another-members-files">File Ownership — Never Edit Another Member’s Files</h2>
 <ul>
-<li>Radim: index.qmd, proposal.qmd, _quarto.yml, CLAUDE.md, styles.css, task3_analysis.qmd, userguide.qmd, poster.qmd, images/task3/</li>
+<li>Radim: index.qmd, proposal.qmd, methodology.qmd, results.qmd, _quarto.yml, CLAUDE.md, styles.css, task3_analysis.qmd, userguide.qmd, poster.qmd, about.qmd, images/task3/</li>
 <li>Klara: task2_analysis.qmd, images/task2/</li>
 <li>Charles: task1_analysis.qmd, images/task1/</li>
 </ul>
+</section>
+<section id="image-assets" class="level2">
+<h2 class="anchored" data-anchor-id="image-assets">Image Assets</h2>
+<p>All images live in <code>images/</code> with task-specific subfolders: - <code>images/task1/</code> — Task 1 screenshots + interactive HTML network graphs - <code>images/task2/</code> — Task 2 screenshots + Sankey diagram - <code>images/task3/</code> — Task 3 screenshots + radar chart</p>
+<p>Always use relative paths (e.g.&nbsp;<code>images/task1/filename.png</code>), never absolute. Do NOT move, rename, or modify any existing image files.</p>
 </section>
 <section id="rules" class="level2">
 <h2 class="anchored" data-anchor-id="rules">Rules</h2>
@@ -214,6 +222,10 @@ ul.task-list li input[type="checkbox"] {
 <li>After any change: remind Radim to git add . &amp;&amp; git commit &amp;&amp; git push</li>
 <li>Vercel auto-deploys on every push to main</li>
 </ul>
+</section>
+<section id="live-site" class="level2">
+<h2 class="anchored" data-anchor-id="live-site">Live Site</h2>
+<p>Production URL: https://is-428-oceanus-folk.vercel.app</p>
 </section>
 <section id="deadlines" class="level2">
 <h2 class="anchored" data-anchor-id="deadlines">Deadlines</h2>

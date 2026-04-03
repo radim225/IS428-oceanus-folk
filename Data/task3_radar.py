@@ -1,7 +1,5 @@
 """
-Task 3 — Rising Star Radar Chart
-Compares top 5 Oceanus Folk candidate artists across 5 dimensions.
-Output: images/task3/task3_radar_chart.png
+Task 3 — Rising Star Radar Chart (Optimised Layout)
 """
 
 import os
@@ -10,21 +8,28 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from typing import cast
+import matplotlib.patheffects as pe
 from matplotlib.projections.polar import PolarAxes
+from typing import cast
 
-# ── Paths (relative to project root) ──────────────────────────────────────────
+# ── Paths ──────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT       = os.path.dirname(SCRIPT_DIR)
-CSV_PATH   = os.path.join(ROOT, "Data", "mc1_csv", "processed", "task3_artist_notoriety.csv")
+CSV_PATH   = os.path.join(ROOT, "Data", "mc1_csv", "processed",
+             "task3_artist_notoriety.csv")
 OUT_PATH   = os.path.join(ROOT, "images", "task3", "task3_radar_chart.png")
 
-# ── Load & filter ──────────────────────────────────────────────────────────────
+# ── Load from CSV ──────────────────────────────────────────────────────────────
 df = pd.read_csv(CSV_PATH)
-df["is_oceanus_folk_artist"] = df["is_oceanus_folk_artist"].astype(str).str.strip().str.lower() == "true"
-of = df[df["is_oceanus_folk_artist"]].sort_values("total_notable_works", ascending=False).head(5).copy()
+df["is_oceanus_folk_artist"] = (
+    df["is_oceanus_folk_artist"].astype(str).str.strip().str.lower() == "true"
+)
+of = df[df["is_oceanus_folk_artist"]].sort_values(
+    "total_notable_works", ascending=False
+).head(5).copy()
+of = of.reset_index(drop=True)
 
-# ── Genre diversity: count unique genres per artist ────────────────────────────
+# ── Genre diversity ────────────────────────────────────────────────────────────
 def count_genres(genre_str):
     if pd.isna(genre_str) or str(genre_str).strip() == "":
         return 0
@@ -32,46 +37,33 @@ def count_genres(genre_str):
 
 of["genre_diversity"] = of["genres"].apply(count_genres)
 
-# ── Normalise helper ───────────────────────────────────────────────────────────
+# ── Normalisation ──────────────────────────────────────────────────────────────
 def minmax(series):
     lo, hi = series.min(), series.max()
     if hi == lo:
         return pd.Series([0.5] * len(series), index=series.index)
     return (series - lo) / (hi - lo)
 
-# ── Build 5 normalised metrics ─────────────────────────────────────────────────
-of["m_works"]    = minmax(of["total_notable_works"])
-
-span             = of["years_active_span"].astype(float)
-of["m_quick"]    = minmax(span.max() - span)          # fewer years → higher score
-
-first_yr         = of["first_notoriety_date"].astype(float)
-of["m_early"]    = minmax(first_yr.max() - first_yr)  # earlier → higher
-
-latest_yr        = of["latest_notoriety_date"].astype(float)
-of["m_recent"]   = minmax(latest_yr)                  # later → higher
-
+of["m_works"]     = minmax(of["total_notable_works"])
+span              = of["years_active_span"].astype(float)
+of["m_quick"]     = minmax(span.max() - span)
+first_yr          = of["first_notoriety_date"].astype(float)
+of["m_early"]     = minmax(first_yr.max() - first_yr)
+latest_yr         = of["latest_notoriety_date"].astype(float)
+of["m_recent"]    = minmax(latest_yr)
 of["m_diversity"] = minmax(of["genre_diversity"])
 
-# ── Verification printout ──────────────────────────────────────────────────────
-METRICS     = ["m_works", "m_quick", "m_early", "m_recent", "m_diversity"]
-COL_HEADERS = ["Works", "QuickBT", "EarlyBT", "RecentAct", "Diversity"]
-print(f"=== Normalised scores ({'  '.join(f'{h:>9}' for h in COL_HEADERS)}) ===")
-for _, row in of.iterrows():
-    scores = "  ".join(f"{row[m]:9.4f}" for m in METRICS)
-    print(f"  {row['performer_name']:30s}  {scores}")
-print()
+METRICS = ["m_works", "m_quick", "m_early", "m_recent", "m_diversity"]
 
-# ── Design constants ───────────────────────────────────────────────────────────
+# ── Style constants ────────────────────────────────────────────────────────────
 ARTIST_COLOURS = {
-    "Orla Seabloom":        "#E6A817",
-    "Copper Canyon Ghosts": "#2196A8",
+    "Orla Seabloom":        "#D4A017",
+    "Copper Canyon Ghosts": "#1B8A9A",
     "Daniel O'Connell":     "#6B4FBB",
-    "Beatrice Albright":    "#D94F3D",
-    "Ping Meng":            "#3DAD6E",
+    "Beatrice Albright":    "#C94432",
+    "Ping Meng":            "#2E9B5E",
 }
-# Fallback order if artist names differ
-FALLBACK_COLOURS = ["#E6A817", "#2196A8", "#6B4FBB", "#D94F3D", "#3DAD6E"]
+ARTIST_ORDER = list(ARTIST_COLOURS.keys())
 
 LABELS = [
     "Total Notable\nWorks",
@@ -83,88 +75,123 @@ LABELS = [
 
 N      = len(METRICS)
 angles = np.linspace(0, 2 * np.pi, N, endpoint=False).tolist()
-angles += angles[:1]   # close polygon
+angles += angles[:1]
 
-GRID_COL = "#cccccc"
-SPOKE_COL = "#dddddd"
-TEXT_COL  = "#222222"
-GREY      = "#666666"
+BG         = "#FAFBFC"
+CARD_BG    = "#FFFFFF"
+GRID       = "#D5DAE0"
+SPOKE      = "#E0E4E8"
+BLACK      = "#1A1D23"
+DARK_GREY  = "#3B3F46"
+MID_GREY   = "#6B7280"
+LIGHT_GREY = "#9CA3AF"
+HEADER_BG  = "#1E3A52"
+ROW_ALT    = "#F4F7FA"
 
-# ── Figure: explicit axis positions ───────────────────────────────────────────
-fig = plt.figure(figsize=(14, 8), dpi=150, facecolor="white")
-fig.subplots_adjust(top=0.88)
+plt.rcParams.update({
+    "font.family": "sans-serif",
+    "font.sans-serif": ["Helvetica Neue", "Helvetica", "Arial", "DejaVu Sans"],
+    "text.color": DARK_GREY,
+})
 
-# Radar: [left, bottom, width, height] in figure fraction
-ax_radar = cast(PolarAxes, fig.add_axes([0.02, 0.12, 0.62, 0.81], polar=True))
-# Table: top-right corner
-ax_table = fig.add_axes([0.65, 0.45, 0.34, 0.50])
+# ── Figure ─────────────────────────────────────────────────────────────────────
+fig = plt.figure(figsize=(16, 9.5), dpi=150, facecolor=BG)
 
-# ── Radar panel ────────────────────────────────────────────────────────────────
-ax_radar.set_facecolor("white")
-ax_radar.set_theta_zero_location("N")
-ax_radar.set_theta_direction(-1)
-ax_radar.spines["polar"].set_color(GRID_COL)
+# ── Title block ────────────────────────────────────────────────────────────────
+fig.text(0.04, 0.96,
+         "Rising Star Profile",
+         ha="left", va="top",
+         fontsize=22, fontweight="bold", color=BLACK,
+         fontfamily="sans-serif")
+fig.text(0.04, 0.925,
+         "Oceanus Folk Candidates",
+         ha="left", va="top",
+         fontsize=14, fontweight="normal", color=MID_GREY)
+fig.text(0.04, 0.895,
+         "Each axis is min–max normalised within the top 5 candidates.  Larger shape = stronger overall profile.",
+         ha="left", va="top",
+         fontsize=11, fontweight="normal", color=LIGHT_GREY)
 
-# Suppress default grid; draw manually
-ax_radar.grid(False)
-ax_radar.set_yticklabels([])
+from matplotlib.lines import Line2D
+sep = Line2D([0.04, 0.96], [0.878, 0.878], transform=fig.transFigure,
+             color="#E5E7EB", linewidth=0.8, zorder=0)
+fig.add_artist(sep)
 
-# Concentric circles
-for r in [0.25, 0.5, 0.75, 1.0]:
-    ax_radar.plot(angles, [r] * (N + 1), color=GRID_COL,
-                  linewidth=0.7, linestyle="--", zorder=1)
-    ax_radar.text(float(np.pi * 1.32), r, f"{r:.2f}",
-                  ha="center", va="center", color=GREY, fontsize=7)
+# ── Radar axes ─────────────────────────────────────────────────────────────────
+ax = cast(PolarAxes, fig.add_axes([0.04, 0.10, 0.52, 0.72], polar=True))
+ax.set_facecolor(BG)
+ax.set_theta_zero_location("N")
+ax.set_theta_direction(-1)
+ax.spines["polar"].set_visible(False)
+ax.grid(False)
+ax.set_yticklabels([])
+ax.set_yticks([])
+ax.set_ylim(0, 1.08)
 
-# Spoke lines
+for r in [0.25, 0.50, 0.75, 1.0]:
+    ax.plot(angles, [r] * (N + 1), color=GRID, linewidth=0.6,
+            linestyle="-", alpha=0.55, zorder=1)
+
+for r, lbl in zip([0.25, 0.50, 0.75], [".25", ".50", ".75"]):
+    ax.text(float(np.radians(198)), r + 0.04, lbl,
+            ha="center", va="center", color=LIGHT_GREY, fontsize=11,
+            zorder=5,
+            path_effects=[pe.withStroke(linewidth=2.5, foreground=BG)])
+
 for angle in angles[:-1]:
-    ax_radar.plot([angle, angle], [0, 1], color=SPOKE_COL, linewidth=0.9, zorder=1)
+    ax.plot([angle, angle], [0, 1.0], color=SPOKE, linewidth=0.7, zorder=1)
 
-# Plot each artist
-for i, (_, row) in enumerate(of.iterrows()):
+for i in range(len(of) - 1, -1, -1):
+    row    = of.iloc[i]
     name   = row["performer_name"]
-    colour = ARTIST_COLOURS.get(name, FALLBACK_COLOURS[i])
-    values = [row[m] for m in METRICS] + [row[METRICS[0]]]
-    ax_radar.plot(angles, values, color=colour, linewidth=2.5, zorder=3)
-    ax_radar.fill(angles, values, color=colour, alpha=0.15, zorder=2)
+    colour = ARTIST_COLOURS.get(name, "#888888")
+    vals   = [row[m] for m in METRICS] + [row[METRICS[0]]]
+    lw     = 2.8 if i == 0 else 2.0
+    ax.fill(angles, vals, color=colour, alpha=0.10, zorder=2 + i)
+    ax.plot(angles, vals, color=colour, linewidth=lw, zorder=7 + i,
+            solid_capstyle="round")
+    for a, v in zip(angles[:-1], vals[:-1]):
+        ax.plot(a, v, "o", color=colour, markersize=4, zorder=12 + i,
+                markeredgecolor="white", markeredgewidth=0.6)
 
-# Axis tick labels (hide defaults, place manually)
-ax_radar.set_xticks(angles[:-1])
-ax_radar.set_xticklabels([""] * N)
-ax_radar.set_ylim(0, 1)
-ax_radar.set_yticks([])
+ax.set_xticks(angles[:-1])
+ax.set_xticklabels([""] * N)
 
-# Axis labels positioned outside ring with per-axis padding
-PADS = [1.55, 1.28, 1.28, 1.28, 1.28]   # top axis gets extra clearance
-for i, (angle, label, pad) in enumerate(zip(angles[:-1], LABELS, PADS)):
-    ax_radar.text(angle, pad, label,
-                  ha="center", va="center",
-                  color=TEXT_COL, fontsize=11, fontweight="bold",
-                  linespacing=1.4)
+PADS = [1.16, 1.18, 1.20, 1.20, 1.18]
+for angle, label, pad in zip(angles[:-1], LABELS, PADS):
+    ax.text(angle, pad, label,
+            ha="center", va="center",
+            color=DARK_GREY, fontsize=11, fontweight="semibold",
+            linespacing=1.35)
 
-# Title & subtitle: left-aligned with radar axes left edge
-fig.text(0.02, 0.955,
-         "Rising Star Profile — Oceanus Folk Candidates",
-         ha="left", va="bottom",
-         color=TEXT_COL, fontsize=13, fontweight="bold")
-fig.text(0.02, 0.935,
-         "Each axis is min-max normalised within the top 5 candidates  "
-         "•  Larger shape = stronger overall profile",
-         ha="left", va="bottom",
-         color="#555555", fontsize=9)
+# ── Legend ─────────────────────────────────────────────────────────────────────
+legend_y     = 0.07
+legend_x     = 0.06
+spacing      = 0.175
+for idx, name in enumerate(ARTIST_ORDER):
+    x      = legend_x + idx * spacing
+    colour = ARTIST_COLOURS[name]
+    fig.patches.append(plt.Circle((x, legend_y), 0.006,
+                                  transform=fig.transFigure,
+                                  facecolor=colour, edgecolor="none",
+                                  zorder=10))
+    fig.text(x + 0.012, legend_y, name,
+             ha="left", va="center",
+             fontsize=11, color=DARK_GREY,
+             transform=fig.transFigure)
 
-# ── Data table panel (top-right) ───────────────────────────────────────────────
-ax_table.axis("off")
+# ── Table panel ────────────────────────────────────────────────────────────────
+ax_t = fig.add_axes([0.58, 0.22, 0.40, 0.62])
+ax_t.axis("off")
 
-col_labels = ["Artist", "Works", "Quick BT", "Early BT", "Recent", "Genres"]
-COL_WIDTHS = [0.32, 0.10, 0.16, 0.14, 0.14, 0.12]
-ROW_HEIGHT = 0.12
-table_data   = []
-cell_colours = []
+col_labels = ["Artist", "Works", "Span", "First\nNotable", "Latest\nNotable", "Genres"]
+COL_W      = [0.30, 0.10, 0.12, 0.16, 0.16, 0.12]
+ROW_H      = 0.125
 
+rows, cell_bg = [], []
 for i, (_, row) in enumerate(of.iterrows()):
-    bg = "white" if i % 2 == 0 else "#f0f4f8"
-    table_data.append([
+    bg = CARD_BG if i % 2 == 0 else ROW_ALT
+    rows.append([
         row["performer_name"],
         int(row["total_notable_works"]),
         f"{int(row['years_active_span'])} yr",
@@ -172,55 +199,56 @@ for i, (_, row) in enumerate(of.iterrows()):
         int(row["latest_notoriety_date"]),
         int(row["genre_diversity"]),
     ])
-    cell_colours.append([bg] * 6)
+    cell_bg.append([bg] * 6)
 
-tbl = ax_table.table(
-    cellText=table_data,
+tbl = ax_t.table(
+    cellText=rows,
     colLabels=col_labels,
     cellLoc="center",
     loc="upper center",
-    cellColours=cell_colours,
-    bbox=[0, 0, 1.05, 1.0],
+    cellColours=cell_bg,
+    bbox=[0.0, 0.0, 0.97, 1.0],
 )
 tbl.auto_set_font_size(False)
 tbl.set_fontsize(10)
 
-for (row_idx, col_idx), cell in tbl.get_celld().items():
-    cell.set_edgecolor("#dddddd")
-    cell.set_linewidth(0.5)
-    cell.set_height(ROW_HEIGHT)
-    if col_idx < len(COL_WIDTHS):
-        cell.set_width(COL_WIDTHS[col_idx])
-    if row_idx == 0:
-        cell.set_text_props(fontweight="bold", color="white", fontsize=10)
-        cell.set_facecolor("#1a5276")
+for (r, c), cell in tbl.get_celld().items():
+    cell.set_edgecolor("#E5E7EB")
+    cell.set_linewidth(0.4)
+    cell.set_height(ROW_H)
+    if c < len(COL_W):
+        cell.set_width(COL_W[c])
+    if r == 0:
+        cell.set_text_props(fontweight="bold", color="white", fontsize=11)
+        cell.set_facecolor(HEADER_BG)
+        cell.set_edgecolor(HEADER_BG)
+        cell.set_height(ROW_H * 1.15)
+    else:
+        cell.set_text_props(fontsize=11, color=DARK_GREY)
 
-# Artist name in each row coloured to match radar
-for i, (_, row) in enumerate(of.iterrows()):
-    name   = row["performer_name"]
-    colour = ARTIST_COLOURS.get(name, FALLBACK_COLOURS[i])
-    tbl[i + 1, 0].set_text_props(color=colour, fontweight="bold")
+for i in range(len(of)):
+    name   = of.iloc[i]["performer_name"]
+    colour = ARTIST_COLOURS.get(name, "#888888")
+    tbl[i + 1, 0].set_text_props(color=colour, fontweight="bold", fontsize=11)
 
-# ── Footnote ──────────────────────────────────────────────────────────────────
-fig.text(
-    0.5, 0.01,
-    "BT = Breakthrough  •  Values shown are raw data  "
-    "•  Radar axes are normalised 0–1 within this candidate pool",
-    ha="center", va="bottom",
-    color=GREY, fontsize=7,
-)
+fig.text(0.58, 0.87,
+         "Raw Data — Top 5 Candidates",
+         ha="left", va="bottom",
+         fontsize=11, fontweight="bold", color=DARK_GREY)
+fig.text(0.58, 0.852,
+         "Sorted by total notable works (descending)",
+         ha="left", va="top",
+         fontsize=11, color=LIGHT_GREY)
+
+# ── Footnote ───────────────────────────────────────────────────────────────────
+fig.text(0.96, 0.018,
+         "Span = years between first and latest notable work  •  "
+         "Radar axes are normalised 0–1 within this candidate pool",
+         ha="right", va="bottom", color=LIGHT_GREY, fontsize=11,
+         fontstyle="italic")
 
 # ── Save ───────────────────────────────────────────────────────────────────────
 os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
-fig.savefig(OUT_PATH, dpi=150, bbox_inches="tight", facecolor="white")
-
-size_kb = os.path.getsize(OUT_PATH) / 1024
-print(f"Saved : {OUT_PATH}")
-print(f"Size  : {size_kb:.1f} KB")
-print("\nArtists plotted:")
-for _, row in of.iterrows():
-    print(f"  {row['performer_name']:30s}  works={row['total_notable_works']}  "
-          f"span={row['years_active_span']}yr  "
-          f"first={int(row['first_notoriety_date'])}  "
-          f"latest={int(row['latest_notoriety_date'])}  "
-          f"genres={row['genre_diversity']}")
+fig.savefig(OUT_PATH, dpi=150, bbox_inches="tight", facecolor=BG)
+plt.close(fig)
+print(f"Saved: {OUT_PATH}  ({os.path.getsize(OUT_PATH)/1024:.1f} KB)")

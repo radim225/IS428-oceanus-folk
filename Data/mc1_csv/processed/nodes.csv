@@ -1,0 +1,205 @@
+Id,Label,node_type,role,genre,release_date,written_date,notoriety_date,notable,single,stage_name,is_sailor,is_ivy_member,genre_inferred,genre_display
+876,Bold Without Apology,Song,Inspired Sailor,Indie Rock,2010.0,,,True,False,,0,0,,Indie Rock
+2197,Hallowed Transaction,Album,Inspired Sailor,Doom Metal,2017.0,,,True,,,0,0,,Doom Metal
+3881,Susurros de Pasión,Song,Inspired Sailor,Synthwave,2004.0,,2004.0,True,True,,0,0,,Synthwave
+3986,Altitude of Mistakes,Song,Inspired Sailor,Americana,2015.0,,2015.0,True,True,,0,0,,Americana
+5574,Our Inevitable Path,Song,Inspired Sailor,Indie Folk,2017.0,2017.0,,True,True,,0,0,,Indie Folk
+6592,When the Bar Lights Go Up,Song,Inspired Sailor,Emo/Pop Punk,2000.0,,,True,False,,0,0,,Emo/Pop Punk
+7026,Reflejo Interior,Song,Inspired Sailor,Americana,1983.0,1983.0,,True,False,,0,0,,Americana
+8207,Echoes of Forgotten Light,Song,Inspired Sailor,Alternative Rock,2004.0,,,True,True,,0,0,,Alternative Rock
+9223,Für uns alle zusammen,Song,Inspired Sailor,Alternative Rock,2017.0,2017.0,,True,True,,0,0,,Alternative Rock
+9848,Partisan's Lament,Song,Inspired Sailor,Indie Pop,2030.0,,,True,True,,0,0,,Indie Pop
+10016,Dreamscape of Judgment,Song,Inspired Sailor,Symphonic Metal,2023.0,,,True,True,,0,0,,Symphonic Metal
+10534,Twelve Bells of Augsburg,Song,Inspired Sailor,Psychedelic Rock,2026.0,,,True,True,,0,0,,Psychedelic Rock
+10903,Parallel Memories,Song,Inspired Sailor,Dream Pop,2028.0,,,True,False,,0,0,,Dream Pop
+11254,Divergent Memories,Song,Inspired Sailor,Indie Folk,2017.0,,2017.0,True,True,,0,0,,Indie Folk
+12237,Provence Aria,Song,Inspired Sailor,Indie Rock,2023.0,,,True,True,,0,0,,Indie Rock
+12685,Coastal Whispers of Biscay,Song,Inspired Sailor,Alternative Rock,2031.0,,,True,True,,0,0,,Alternative Rock
+13014,Exoskeleton Dissolve,Song,Inspired Sailor,Indie Rock,2020.0,,2020.0,True,True,,0,0,,Indie Rock
+13589,Silent Steps in the Forest's Embrace,Song,Inspired Sailor,Avant-Garde Folk,2023.0,2023.0,2023.0,True,True,,0,0,,Avant-Garde Folk
+14107,Folklore's Heartbeat,Song,Inspired Sailor,Blues Rock,2020.0,,2033.0,True,True,,0,0,,Blues Rock
+14296,The Long Way Home,Album,Inspired Sailor,Dream Pop,2023.0,,,True,,,0,0,,Dream Pop
+14352,Weathered Miles,Song,Inspired Sailor,Doom Metal,2023.0,,,True,True,,0,0,,Doom Metal
+14658,Addicted to Your Heartache,Album,Inspired Sailor,Southern Gothic Rock,2004.0,2000.0,,True,,,0,0,,Southern Gothic Rock
+14893,Twilight's Threshold,Song,Inspired Sailor,Synthwave,2007.0,2007.0,2007.0,True,True,,0,0,,Synthwave
+14933,The Crown We Wear,Song,Inspired Sailor,Indie Rock,2022.0,,,True,True,,0,0,,Indie Rock
+15855,Sacred Fragments,Song,Inspired Sailor,Synthwave,2003.0,,2003.0,True,True,,0,0,,Synthwave
+16312,Harvest Dance at Ler Valley,Song,Inspired Sailor,Psychedelic Rock,2010.0,,,True,True,,0,0,,Psychedelic Rock
+16952,Rust & Reverie,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Indie Folk,Indie Folk
+16958,Zane Cruz,Person,Direct Collaborator,,,,,False,,,0,0,Synthwave,Synthwave
+16959,Iris Moon,Person,Direct Collaborator,,,,,False,,,0,0,Synthwave,Synthwave
+16960,Violet Engines,MusicalGroup,Direct Collaborator,,,,,False,,,0,0,Synthwave,Synthwave
+16961,Neon Heartbeat,Album,Sailor Work,Synthwave,2031.0,2030.0,,False,,,0,0,,Synthwave
+16962,Cosmic Lullabies,Album,Collaborator Work,Synthwave,2035.0,2034.0,,True,,,0,0,,Synthwave
+16963,Highway Lights,Song,Collaborator Work,Synthwave,2031.0,,,False,False,,0,0,,Synthwave
+16964,The Ghost in the Drive,Song,Collaborator Work,Synthwave,2031.0,,,True,False,,0,0,,Synthwave
+16965,Hologram Love,Song,Collaborator Work,Synthwave,2035.0,,,False,False,,0,0,,Synthwave
+16971,Jasper Quinn,Person,Inspired By Sailor Circle,,,,,False,,,0,0,Alternative Rock,Alternative Rock
+16977,Mira Everly,Person,Inspired By Sailor Circle,,,,,False,,Ivy Lux,0,0,Southern Gothic Rock,Southern Gothic Rock
+16983,Sophie Bennett,Person,Direct Collaborator,,,,,False,,Luna Vibe,0,0,Oceanus Folk,Oceanus Folk
+16984,Michael Harris,Person,Direct Collaborator,,,,,False,,Axel Blaze,0,0,Oceanus Folk,Oceanus Folk
+16985,Kara Lee,Person,Direct Collaborator,,,,,False,,Jade Sky,0,0,Oceanus Folk,Oceanus Folk
+16986,Ethan Clarke,Person,Direct Collaborator,,,,,False,,Maverick Storm,0,0,Oceanus Folk,Oceanus Folk
+16987,Tidal Reverie,MusicalGroup,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+16988,Songs from the Drowned World,Album,Ivy Echoes Work,Oceanus Folk,2035.0,2034.0,,True,,,0,0,,Oceanus Folk
+16989,Ballads for the End of Time,Album,Sailor Work,Oceanus Folk,2033.0,2032.0,,True,,,0,0,,Oceanus Folk
+16990,The Bells Beneath the Waves,Song,Collaborator Work,Oceanus Folk,2035.0,,,False,True,,0,0,,Oceanus Folk
+16991,Forgotten Harbors,Song,Collaborator Work,Oceanus Folk,2035.0,,,False,False,,0,0,,Oceanus Folk
+16992,Beneath the Coral Veil,Song,Collaborator Work,Oceanus Folk,2033.0,,,False,True,,0,0,,Oceanus Folk
+16993,Olivia Carter,Person,Direct Collaborator,,,,,False,,Echo Wilde,0,0,Americana,Americana
+16994,Lucas Bennett,Person,Direct Collaborator,,,,,False,,,0,0,Americana,Americana
+16995,Maya Torres,Person,Direct Collaborator,,,,,False,,Selene Noir,0,0,Americana,Americana
+16996,Crimson Carriage,MusicalGroup,Direct Collaborator,,,,,False,,,0,0,Americana,Americana
+16997,Rust & Ruin,Album,Collaborator Work,Americana,2030.0,2029.0,,False,,,0,0,,Americana
+16998,Glitches in the Rain,Album,Collaborator Work,Americana,2035.0,2034.0,,False,,,0,0,,Americana
+16999,Melancholy Circuitry,Album,Sailor Work,Americana,2033.0,2032.0,,True,,,0,0,,Americana
+17000,Dust and Whiskey,Song,Collaborator Work,Americana,2030.0,,,False,True,,0,0,,Americana
+17001,Last Train to Nowhere,Song,Collaborator Work,Americana,2035.0,,,False,True,,0,0,,Americana
+17002,Under a Dying Sun,Song,Collaborator Work,Americana,2035.0,,,True,False,,0,0,,Americana
+17003,The Road Calls Again,Song,Collaborator Work,Americana,2033.0,,,False,True,,0,0,,Americana
+17004,Willow Sage,Person,Inspired By Sailor Circle,,,,,False,,Horizon Fable,0,0,Psychedelic Rock,Psychedelic Rock
+17012,Sienna Fox,Person,Inspired By Sailor Circle,,,,,False,,,0,0,Indie Rock,Indie Rock
+17022,Cassette Future,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Lo-Fi Electronica,Lo-Fi Electronica
+17032,Silver Veil,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Indie Pop,Indie Pop
+17041,Arlo Sterling,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17042,Lyra Blaze,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17043,Orion Cruz,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17044,Elara May,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17045,Cassian Rae,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17046,The Brine Choir,MusicalGroup,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17047,Drifting Between the Stars and the Sea,Album,Sailor Work,Oceanus Folk,2034.0,2033.0,,True,,,0,0,,Oceanus Folk
+17048,Artificial Sunsets,Album,Sailor Work,Oceanus Folk,2035.0,2034.0,,True,,,0,0,,Oceanus Folk
+17049,Electric Reverie,Album,Sailor Work,Oceanus Folk,2038.0,2037.0,,True,,,0,0,,Oceanus Folk
+17050,Star-Touched Tides,Song,Collaborator Work,Oceanus Folk,2034.0,,,True,True,,0,0,,Oceanus Folk
+17051,Echoes in a Seashell,Song,Collaborator Work,Oceanus Folk,2034.0,,,False,False,,0,0,,Oceanus Folk
+17052,Beneath the Celestial Wake,Song,Collaborator Work,Oceanus Folk,2035.0,,,False,True,,0,0,,Oceanus Folk
+17053,Driftwood and Stardust,Song,Collaborator Work,Oceanus Folk,2038.0,,,False,True,,0,0,,Oceanus Folk
+17057,Desert Echoes,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Desert Rock,Desert Rock
+17063,The Phantom Operators,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Jazz Surf Rock,Jazz Surf Rock
+17071,Cosmic Reverberation,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Space Rock,Space Rock
+17091,Turbo Kill,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Speed Metal,Speed Metal
+17100,Rainfall Fiction,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Emo/Pop Punk,Emo/Pop Punk
+17110,The Hollow Monarchs,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Post-Apocalyptic Folk,Post-Apocalyptic Folk
+17112,Embers & Echoes,Album,Inspired By Sailor Circle,Post-Apocalyptic Folk,2031.0,2030.0,,True,,,0,0,,Post-Apocalyptic Folk
+17118,Zachary Cole,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17119,Lia Grant,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17120,Selkie's Hollow,MusicalGroup,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17121,Ballads for the Low Tide,Album,Sailor Work,Oceanus Folk,2037.0,2036.0,,True,,,0,0,,Oceanus Folk
+17122,Skin and Saltwater,Song,Collaborator Work,Oceanus Folk,2037.0,,,False,False,,0,0,,Oceanus Folk
+17123,Sea Glass Memories,Song,Collaborator Work,Oceanus Folk,2037.0,,,False,True,,0,0,,Oceanus Folk
+17124,Vanished with the Current,Song,Collaborator Work,Oceanus Folk,2037.0,,,False,True,,0,0,,Oceanus Folk
+17125,When the Tide Calls My Name,Song,Collaborator Work,Oceanus Folk,2037.0,,,True,False,,0,0,,Oceanus Folk
+17126,Cassian Storm,Person,Inspired By Sailor Circle,,,,,False,,Seraphina Vale,0,0,Avant-Garde Folk,Avant-Garde Folk
+17138,Iron Cathedral,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Symphonic Metal,Symphonic Metal
+17146,Julia Carter,Person,Inspired By Sailor Circle,,,,,False,,Jude Rivers,0,0,Indie Rock,Indie Rock
+17155,Claire Holmes,Person,Inspired By Sailor Circle,,,,,False,,Jaye Finch,0,0,Synthpop,Synthpop
+17164,Rusty Riggins,Person,Direct Collaborator,,,,,False,,,0,0,Sea Shanties,Sea Shanties
+17165,Finn McGraw,Person,Direct Collaborator,,,,,False,,,0,0,Sea Shanties,Sea Shanties
+17166,William Tidewell,Person,Direct Collaborator,,,,,False,,,0,0,Sea Shanties,Sea Shanties
+17168,Tales from the Briny Deep,Album,Collaborator Work,Sea Shanties,1975.0,1975.0,,True,,,0,0,,Sea Shanties
+17169,Rum & Reckoning,Album,Collaborator Work,Sea Shanties,1977.0,1976.0,,True,,,0,0,,Sea Shanties
+17170,Sailors & Ghosts,Album,Collaborator Work,Sea Shanties,1979.0,1978.0,,True,,,0,0,,Sea Shanties
+17171,Blackwater Ballads,Album,Collaborator Work,Sea Shanties,1981.0,1980.0,,True,,,0,0,,Sea Shanties
+17189,Ewan MacCrae,Person,Direct Collaborator,,,,,False,,,0,0,Celtic Folk,Celtic Folk
+17190,Astrid Nørgaard,Person,Direct Collaborator,,,,,False,,,0,0,Celtic Folk,Celtic Folk
+17191,Freya Lindholm,Person,Direct Collaborator,,,,,False,,,0,0,Celtic Folk,Celtic Folk
+17192,The Fiddle & The Fjord,MusicalGroup,Inspired Sailor,,,,,False,,,0,0,Celtic Folk,Celtic Folk
+17193,Echoes of the Old Way,Album,Collaborator Work,Celtic Folk,1980.0,1979.0,,True,,,0,0,,Celtic Folk
+17194,Runes & Reverie,Album,Collaborator Work,Celtic Folk,1981.0,1980.0,,True,,,0,0,,Celtic Folk
+17195,Blood & Heather,Album,Collaborator Work,Celtic Folk,1982.0,1981.0,,True,,,0,0,,Celtic Folk
+17205,Liam O'Sullivan,Person,Direct Collaborator,,,,,False,,,0,0,Acoustic Folk,Acoustic Folk
+17206,Fiona Mercer,Person,Direct Collaborator,,,,,False,,,0,0,Acoustic Folk,Acoustic Folk
+17208,Miles & Moments,Album,Collaborator Work,Acoustic Folk,1984.0,1983.0,,True,,,0,0,,Acoustic Folk
+17209,Echoes and Embers,Album,Collaborator Work,Acoustic Folk,1987.0,1986.0,,True,,,0,0,,Acoustic Folk
+17210,The Road & The Reckoning,Album,Collaborator Work,Acoustic Folk,1989.0,1988.0,,True,,,0,0,,Acoustic Folk
+17211,Homeward Winds,Album,Collaborator Work,Acoustic Folk,1991.0,1990.0,,True,,,0,0,,Acoustic Folk
+17226,Kai Reynolds,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17227,Aiden Harper,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17228,Finn Morgan,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17229,Skylar Brooks,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17230,The Wave Riders,MusicalGroup,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17231,Tides of Echos,Album,Sailor Work,Oceanus Folk,2029.0,2028.0,,True,,,0,0,,Oceanus Folk
+17232,Driftwood Dreams,Album,Collaborator Work,Oceanus Folk,2032.0,2031.0,,True,,,0,0,,Oceanus Folk
+17233,Sunset Harmony,Song,Collaborator Work,Oceanus Folk,2029.0,,,False,True,,0,0,,Oceanus Folk
+17234,Whispering Waves,Song,Collaborator Work,Oceanus Folk,2032.0,,,False,True,,0,0,,Oceanus Folk
+17235,Genevieve Bell,Person,Inspired By Sailor Circle,,,,,False,,Lux Ravenna,0,0,Oceanus Folk,Oceanus Folk
+17243,Mariner's Refrain,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17247,Anchored Love,Song,Ivy Echoes Work,Oceanus Folk,2030.0,,,True,True,,0,0,,Oceanus Folk
+17248,Mia Waters,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17249,Lila Rivers,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17250,Siren's Call,MusicalGroup,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17251,Echos Below,Album,Collaborator Work,Oceanus Folk,2028.0,2027.0,,True,,,0,0,,Oceanus Folk
+17252,Hidden Depths,Album,Sailor Work,Oceanus Folk,2031.0,2030.0,,True,,,0,0,,Oceanus Folk
+17253,Shoreline,Song,Collaborator Work,Oceanus Folk,2028.0,,,False,False,,0,0,,Oceanus Folk
+17254,Moonlit Tide,Song,Collaborator Work,Oceanus Folk,2031.0,,,False,False,,0,0,,Oceanus Folk
+17255,Sailor Shift,Person,Sailor Shift,,,,,False,,,1,1,Oceanus Folk,Oceanus Folk
+17256,Maya Jensen,Person,Ivy Echoes Member,,,,,False,,,0,1,Oceanus Folk,Oceanus Folk
+17257,"Lila ""Lilly"" Hartman",Person,Ivy Echoes Member,,,,,False,,,0,1,Oceanus Folk,Oceanus Folk
+17258,Jade Thompson,Person,Ivy Echoes Member,,,,,False,,,0,1,Oceanus Folk,Oceanus Folk
+17259,Sophie Ramirez,Person,Ivy Echoes Member,,,,,False,,,0,1,Oceanus Folk,Oceanus Folk
+17260,Ivy Echos,MusicalGroup,Ivy Echoes (Group),,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17261,The Kelp Forest Canticles,Album,Sailor Work,Oceanus Folk,2024.0,2023.0,,True,,,0,0,,Oceanus Folk
+17262,Luminescent Tides,Album,Sailor Work,Oceanus Folk,2025.0,2024.0,,True,,,0,0,,Oceanus Folk
+17263,Shoreline Sonnets,Album,Sailor Work,Oceanus Folk,2026.0,2025.0,,True,,,0,0,,Oceanus Folk
+17264,Sunken Bell Song,Song,Collaborator Work,Oceanus Folk,2024.0,,,False,True,,0,0,,Oceanus Folk
+17265,Dancer of the Dappled Light,Song,Collaborator Work,Oceanus Folk,2024.0,,,False,False,,0,0,,Oceanus Folk
+17266,Whispers in the Fronds,Song,Collaborator Work,Oceanus Folk,2024.0,,,False,False,,0,0,,Oceanus Folk
+17267,The Angler's Lantern,Song,Collaborator Work,Oceanus Folk,2025.0,,,False,True,,0,0,,Oceanus Folk
+17268,Deepsea Fireflies,Song,Collaborator Work,Oceanus Folk,2025.0,,,False,False,,0,0,,Oceanus Folk
+17269,Sandpiper's Serenade,Song,Collaborator Work,Oceanus Folk,2026.0,,,False,False,,0,0,,Oceanus Folk
+17270,Salt-Kissed Rhymes,Song,Collaborator Work,Oceanus Folk,2026.0,,,True,True,,0,0,,Oceanus Folk
+17271,Tidepool Epigrams,Song,Collaborator Work,Oceanus Folk,2026.0,,,False,False,,0,0,,Oceanus Folk
+17272,Tidal Pop Waves,Album,Sailor Work,Oceanus Folk,2028.0,2027.0,,True,,,0,0,,Oceanus Folk
+17273,Salty Dreams,Album,Sailor Work,Oceanus Folk,2030.0,2029.0,,True,,,0,0,,Oceanus Folk
+17274,The Current & The Chord,Album,Sailor Work,Oceanus Folk,2032.0,2031.0,,True,,,0,0,,Oceanus Folk
+17275,Coral Beats,Album,Sailor Work,Oceanus Folk,2034.0,2033.0,,True,,,0,0,,Oceanus Folk
+17276,Tides & Ballads,Album,Sailor Work,Oceanus Folk,2036.0,2035.0,,True,,,0,0,,Oceanus Folk
+17277,Oceanbound,Album,Sailor Work,Oceanus Folk,2038.0,2037.0,,True,,,0,0,,Oceanus Folk
+17278,Echoes of the Deep,Album,Sailor Work,Oceanus Folk,2040.0,2039.0,,True,,,0,0,,Oceanus Folk
+17279,High Tide Heartbeat,Song,Sailor Work,Oceanus Folk,2028.0,,,False,True,,0,0,,Oceanus Folk
+17280,Electric Eel Love,Song,Sailor Work,Oceanus Folk,2028.0,,,True,False,,0,0,,Oceanus Folk
+17281,Sun-Drenched Daydream,Song,Sailor Work,Oceanus Folk,2028.0,,,False,False,,0,0,,Oceanus Folk
+17282,Chord of the Deep,Song,Sailor Work,Oceanus Folk,2028.0,,,False,False,,0,0,,Oceanus Folk
+17283,Heart of the Habitat,Song,Sailor Work,Oceanus Folk,2030.0,,,False,True,,0,0,,Oceanus Folk
+17284,Reef Rhythm,Song,Sailor Work,Oceanus Folk,2030.0,,,False,False,,0,0,,Oceanus Folk
+17285,Driftwood Lullaby,Song,Sailor Work,Oceanus Folk,2030.0,,,False,False,,0,0,,Oceanus Folk
+17286,Saltwater Hymn,Song,Sailor Work,Oceanus Folk,2032.0,,,False,False,,0,0,,Oceanus Folk
+17287,Moon Over the Tide,Song,Sailor Work,Oceanus Folk,2034.0,,,True,False,,0,0,,Oceanus Folk
+17288,Into the Current,Song,Sailor Work,Oceanus Folk,2034.0,,,False,True,,0,0,,Oceanus Folk
+17289,Barnacle Heart,Song,Sailor Work,Oceanus Folk,2034.0,,,False,False,,0,0,,Oceanus Folk
+17290,Fog & Fiddle,Song,Sailor Work,Oceanus Folk,2036.0,,,True,False,,0,0,,Oceanus Folk
+17291,The Fisherman's Prayer,Song,Sailor Work,Oceanus Folk,2036.0,,,False,True,,0,0,,Oceanus Folk
+17292,Stormsong,Song,Sailor Work,Oceanus Folk,2038.0,,,True,True,,0,0,,Oceanus Folk
+17293,Salt in My Veins,Song,Sailor Work,Oceanus Folk,2040.0,,,False,False,,0,0,,Oceanus Folk
+17294,The Last Mariner,Song,Sailor Work,Oceanus Folk,2040.0,,,False,False,,0,0,,Oceanus Folk
+17296,Coralia Bellweather,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17299,The Saltwater Weavers,MusicalGroup,Collaborator Work,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17300,Beneath the Coral Moon,Album,Collaborator Work,Oceanus Folk,1995.0,1994.0,,True,,,0,0,,Oceanus Folk
+17301,Salt-Stained Chronicles,Album,Collaborator Work,Oceanus Folk,1997.0,1996.0,,True,,,0,0,,Oceanus Folk
+17302,The Kelp Forest Ballads,Album,Collaborator Work,Oceanus Folk,1999.0,1998.0,,True,,,0,0,,Oceanus Folk
+17303,Tempest's Wake,Album,Collaborator Work,Oceanus Folk,2001.0,2000.0,,True,,,0,0,,Oceanus Folk
+17309,Levi Holloway,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17310,Marin Thorne,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17311,Jonah Calloway,Person,Direct Collaborator,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17315,Ghostlights & Galleons,Album,Collaborator Work,Oceanus Folk,1993.0,1992.0,,True,,,0,0,,Oceanus Folk
+17316,Currents & Curses,Album,Collaborator Work,Oceanus Folk,1994.0,1993.0,,True,,,0,0,,Oceanus Folk
+17317,The Quiet of the Deep,Album,Collaborator Work,Oceanus Folk,1995.0,1994.0,,True,,,0,0,,Oceanus Folk
+17327,Drowned Harbor,MusicalGroup,Inspired Sailor,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17340,Orla Seabloom,Person,Inspired By Sailor Circle,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17349,Beatrice Albright,Person,Direct Collaborator,,,,,False,,Bea Azure,0,0,Oceanus Folk,Oceanus Folk
+17350,Tidesworn Ballads,Album,Sailor Work,Oceanus Folk,2031.0,2030.0,,True,,,0,0,,Oceanus Folk
+17351,The Siren's Sigh,Song,Collaborator Work,Oceanus Folk,2031.0,,2031.0,True,False,,0,0,,Oceanus Folk
+17352,Whispers on the Jetty Wind,Song,Collaborator Work,Oceanus Folk,2031.0,,2031.0,True,True,,0,0,,Oceanus Folk
+17353,Moonlit Kelp Forest Dance,Song,Collaborator Work,Oceanus Folk,2031.0,,2031.0,True,False,,0,0,,Oceanus Folk
+17354,Seven Fathoms Deep,Song,Collaborator Work,Oceanus Folk,2031.0,,2031.0,True,False,,0,0,,Oceanus Folk
+17355,Daniel O'Connell,Person,Direct Collaborator,,,,,False,,Kael Storm,0,0,Oceanus Folk,Oceanus Folk
+17356,Submerged Sonatas,Album,Sailor Work,Oceanus Folk,2031.0,2030.0,,True,,,0,0,,Oceanus Folk
+17357,The Language of the Tides,Song,Collaborator Work,Oceanus Folk,2031.0,,2031.0,True,False,,0,0,,Oceanus Folk
+17358,Coral Bloom Energy,Song,Collaborator Work,Oceanus Folk,2031.0,,2031.0,True,False,,0,0,,Oceanus Folk
+17359,Song of the Wandering Whale,Song,Collaborator Work,Oceanus Folk,2031.0,,2031.0,True,True,,0,0,,Oceanus Folk
+17360,Deep Sea Reverie,Song,Collaborator Work,Oceanus Folk,2031.0,,2031.0,True,False,,0,0,,Oceanus Folk
+17361,Copper Canyon Ghosts,MusicalGroup,Inspired By Sailor Circle,,,,,False,,,0,0,Oceanus Folk,Oceanus Folk
+17362,Tide-Worn Tales,Album,Collaborator Work,Oceanus Folk,2034.0,2033.0,,True,,,0,0,,Oceanus Folk
+17363,The Sunken Compass,Album,Collaborator Work,Oceanus Folk,2035.0,2034.0,,True,,,0,0,,Oceanus Folk
+17410,Seashell Serenade,Song,Sailor Work,Oceanus Folk,2030.0,,2030.0,True,True,,0,0,,Oceanus Folk
+17411,Tidal Whisper,Song,Ivy Echoes Work,Oceanus Folk,2033.0,,2033.0,True,True,,0,0,,Oceanus Folk
