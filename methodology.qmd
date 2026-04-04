@@ -47,44 +47,17 @@ The source dataset is `MC1_graph.json`, a directed multigraph serialised in Netw
 
 Two fields are critical for the analysis. The boolean `notable` records whether a song or album appeared on a top chart. The string field `notoriety_date` records the year of that first chart appearance. Together these allow reconstruction of each artist's breakthrough trajectory across 649 charted works.
 
-### Cleaning
+### Data Preparation
 
-A single Python script (`Data/preprocess_mc1.py`) transforms the raw node and edge CSVs into task-specific files stored in `Data/mc1_csv/processed/`. All node records were cleaned as follows:
+A single Python script (`Data/preprocess_mc1.py`) transforms the raw node and edge CSVs into 14 task-specific files stored in `Data/mc1_csv/processed/`. The script begins by loading `mc1_nodes.csv` (17,412 rows) and `mc1_edges.csv` (37,857 rows) and applying a uniform cleaning pass: `notable` and `single` fields have NaN values filled as `False` and are cast to boolean; `release_date`, `notoriety_date`, and `written_date` are converted from float to integer-year strings with missing values stored as empty strings; `genre` is filled as `"Unknown"` where missing; `stage_name` is filled as empty string; `name` is whitespace-stripped; and all ID columns (`id`, `source`, `target`) are cast to integer for reliable merge keys. Twelve edge types are partitioned into two semantic groups used throughout the pipeline: five *influence* types (`InStyleOf`, `InterpolatesFrom`, `CoverOf`, `DirectlySamples`, `LyricalReferenceTo`) and four *collaboration* types (`PerformerOf`, `ComposerOf`, `LyricistOf`, `ProducerOf`). A helper function computes each artist's *main genre* as the most frequent genre among all works they are connected to via collaboration edges; this derived attribute is reused across multiple output files.
 
-- `notable` and `single`: NaN values filled as `False`, cast to boolean
-- `release_date`, `notoriety_date`, `written_date`: converted from float to integer-year strings (e.g. `"2028"`), with missing values stored as empty strings
-- `genre`: missing values filled as `"Unknown"`
-- `stage_name`: missing values filled as empty strings
-- `name`: whitespace stripped from all entries
-- `id`, `source`, `target`: cast to integer for consistent merge keys
+For Task 1, the script identifies Sailor Shift by node ID 17255 and her Ivy Echoes bandmates by IDs 17256–17259 (Maya Jensen, Lila Hartman, Jade Thompson, Sophie Ramirez), with the Ivy Echoes group entity at ID 17260. `task1_a_who_inspired_sailor.csv` (30 rows) captures all influence edges originating from Sailor's 38 works and from Sailor as a person, with targets representing the songs, albums, or groups that inspired her; edge type codes are mapped to human-readable names (e.g. `InStyleOf` → `Inspired by Style`) and a `Source Is Person` flag distinguishes whether the influence link originated from a specific work or from Sailor directly. `task1_b_sailor_collaborations.csv` (126 rows) collects every collaboration edge on Sailor's 38 works — not just Sailor's own edges but all persons and groups who performed, composed, wrote lyrics for, or produced those works — enriched with each person's computed main genre and binary flags for Ivy Echoes membership and Sailor identity. `task1_c_oceanus_impact_timeline.csv` (215 rows) focuses on Sailor's local Oceanus Folk network: it takes a curated set of 81 OF works connected to Sailor's circle, identifies all artists on those works whose main genre falls within the OF-related family (Oceanus Folk, Celtic Folk, Sea Shanties, Acoustic Folk), and labels each collaboration with an `Era` column based on whether the work was released before, during, or after Sailor's breakthrough year of 2028. All three Task 1 files are saved as UTF-16 tab-separated CSVs to match the format expected by the existing Tableau workbook.
 
-Five edge types were classified as influence relationships for Tasks 2 and 3: `InStyleOf`, `InterpolatesFrom`, `CoverOf`, `DirectlySamples`, and `LyricalReferenceTo`. Four edge types were classified as collaboration relationships for Task 1: `PerformerOf`, `ComposerOf`, `LyricistOf`, and `ProducerOf`.
+For Task 2, the script collects all Oceanus Folk song and album node IDs, then extracts two directional influence sets. `task2_of_influence_out.csv` (371 rows) captures all influence edges where the source is an OF work, joined with source and target node metadata (name, genre, release date, notable status, notoriety date). `task2_of_influence_in.csv` (377 rows) captures the reverse — influence edges where the target is an OF work. `task2_genre_summary.csv` (117 rows) aggregates both sets by `(source_genre, target_genre, edge_type)` with a `direction` column (`outbound` or `inbound`), excluding internal OF-to-OF flows. `task2_top_artists_influenced.csv` (30 rows) traces `PerformerOf` edges from the non-OF works that appear as targets in the outbound influence set back to their performing artists, aggregates per artist the count of influenced works and notable works among them, assigns a primary genre based on the most frequent genre among the artist's influenced works, and exports the top 30 artists ranked by influenced work count.
 
-### Preprocessed CSV Files
+For Task 3, `task3_notable_works.csv` (1,973 rows) filters all nodes where `notable = True` and `notoriety_date` is not empty, then joins `PerformerOf` edges to associate each charted work with its performing artist. `task3_artist_notoriety.csv` (1,664 rows) aggregates to one row per performer with four summary metrics — `total_notable_works`, `first_notoriety_date`, `latest_notoriety_date`, and `years_active_span` (difference between earliest and latest release dates) — plus a comma-separated `genres` field and a boolean `is_oceanus_folk_artist` flag set to True if any of the artist's notable works are Oceanus Folk. `task3_of_candidates.csv` (84 rows) filters to OF artists only and joins the four summary metrics from the notoriety table, enabling both work-level and artist-level analysis within a single Tableau data source.
 
-All 13 output files are located in `Data/mc1_csv/processed/`.
-
-| File | Rows | Task | Description |
-|------|-----:|------|-------------|
-| `task1_sailor_works.csv` | 47 | Task 1 | Sailor's songs/albums with role |
-| `task1_influence_edges.csv` | 11 | Task 1 | Influence edges involving Sailor |
-| `task1_all_collaborators.csv` | 60 | Task 1 | All nodes connected to Sailor |
-| `task1_bandmates.csv` | 20 | Task 1 | Edges involving Ivy Echoes members |
-| `task2_of_influence_out.csv` | 371 | Task 2 | OF works influencing other genres |
-| `task2_of_influence_in.csv` | 377 | Task 2 | Other genres influencing OF works |
-| `task2_genre_summary.csv` | 117 | Task 2 | Aggregated genre-pair connection counts |
-| `task2_top_artists_influenced.csv` | 30 | Task 2 | Top 30 artists influenced by OF |
-| `task3_notable_works.csv` | 1,973 | Task 3 | All charted works with performers |
-| `task3_artist_notoriety.csv` | 1,664 | Task 3 | Artist-level notoriety summary |
-| `task3_of_candidates.csv` | 84 | Task 3 | OF artist notable works (expanded) |
-| `lookup_nodes_clean.csv` | 17,412 | Shared | Master cleaned node table |
-| `lookup_edges_clean.csv` | 37,857 | Shared | Master cleaned edge table |
-
-**Task 1 files:** Sailor Shift was identified by node ID 17255, and her Ivy Echoes bandmates by IDs 17256 (Maya Jensen), 17257 (Lila Hartman), 17258 (Jade Thompson), and 17259 (Sophie Ramirez). `task1_sailor_works.csv` filters all edges where `source = 17255` and the edge type is a collaboration type. `task1_influence_edges.csv` filters all edges where either source or target is Sailor and the edge type is an influence type, adding a `direction` column. `task1_all_collaborators.csv` captures all edges with Sailor as source or target (self-loops excluded). `task1_bandmates.csv` captures all edges involving any of the four bandmate IDs.
-
-**Task 2 files:** `task2_of_influence_out.csv` captures all influence edges where the source node is an Oceanus Folk song or album. `task2_of_influence_in.csv` captures all influence edges where the target node is an Oceanus Folk song or album. `task2_genre_summary.csv` aggregates these by `(source_genre, target_genre, edge_type)` with a `direction` column; internal Oceanus Folk–to–Oceanus Folk flows were removed. `task2_top_artists_influenced.csv` was generated by a separate script that traced `PerformerOf` edges from influenced songs back to performing artists, then exported the top 30 by influenced work count.
-
-**Task 3 files:** `task3_notable_works.csv` filters all nodes where `notable = True` and `notoriety_date` is not empty, then joins `PerformerOf` edges. `task3_artist_notoriety.csv` aggregates to one row per artist with four summary metrics (`total_notable_works`, `first_notoriety_date`, `latest_notoriety_date`, `years_active_span`) and a boolean `is_oceanus_folk_artist` flag. `task3_of_candidates.csv` filters to Oceanus Folk artists only and joins the four summary metrics, enabling both work-level and artist-level analysis within a single Tableau data source.
+Finally, two shared lookup files are produced: `lookup_nodes_clean.csv` (17,412 rows) exports the full cleaned node table, and `lookup_edges_clean.csv` (37,857 rows) exports the full edge table enriched with source and target node names and types. Two additional files — `nodes.csv` (193 rows) and `edges.csv` (340 rows) — provide a curated subgraph of Sailor Shift's local network used as input by the Python network visualisation scripts; nodes are classified into roles (Sailor Shift, Ivy Echoes Member, Direct Collaborator, Sailor Work, Inspired Sailor, Inspired By Sailor Circle) and edges carry an `edge_category` label and involvement flags.
 
 ## Tools
 

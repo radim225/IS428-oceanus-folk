@@ -35,7 +35,8 @@ for _, r in sailor_edges.iterrows():
 # ── Filter person nodes ────────────────────────────────────────────────────────
 PERSON_ROLES = {"Sailor Shift", "Direct Collaborator", "Ivy Echoes Member"}
 persons = nodes[
-    nodes["role"].isin(PERSON_ROLES) & (nodes["node_type"] == "Person")
+    nodes["role"].isin(PERSON_ROLES) &
+    nodes["node_type"].isin(["Person", "MusicalGroup"])
 ].copy()
 person_ids = set(persons["Id"].astype(int))
 
