@@ -1,0 +1,200 @@
+================================================================================
+CALCULATED FIELDS (all datasources)
+================================================================================
+  (none found)
+
+================================================================================
+WORKSHEETS (21 total)
+================================================================================
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 1A
+────────────────────────────────────────────────────────────
+  Mark type: Circle
+  ROWS: [federated.1fwc78s0unvrl619u7c9r0qooo8s].[none:inspiration_genre:nk]
+  COLS: [federated.1fwc78s0unvrl619u7c9r0qooo8s].[none:sailor_work_release_year:qk]
+  FILTERS (1):
+    - [federated.1fwc78s0unvrl619u7c9r0qooo8s].[none:sailor_work_release_year:qk] [quantitative]
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 1A (2)
+────────────────────────────────────────────────────────────
+  Mark type: Circle
+  ROWS: [federated.1fwc78s0unvrl619u7c9r0qooo8s (copy)].[none:inspiration_genre:nk]
+  COLS: [federated.1fwc78s0unvrl619u7c9r0qooo8s (copy)].[none:sailor_work_release_year:qk]
+  FILTERS (1):
+    - [federated.1fwc78s0unvrl619u7c9r0qooo8s (copy)].[none:sailor_work_release_year:qk] [quantitative]
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 2A
+────────────────────────────────────────────────────────────
+  Mark type: Square
+  ROWS: [federated.14n81701l5kkc8115ot0y0ec0bpf].[none:person_name:nk]
+  COLS: [federated.14n81701l5kkc8115ot0y0ec0bpf].[none:work_release_year:qk]
+  FILTERS (2):
+    - [federated.14n81701l5kkc8115ot0y0ec0bpf].[min:is_ivy_member:qk] [quantitative]
+    - [federated.14n81701l5kkc8115ot0y0ec0bpf].[none:person_name:nk] [categorical]: groupfilter function=union
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 2A (2)
+────────────────────────────────────────────────────────────
+  Mark type: Square
+  ROWS: [federated.14n81701l5kkc8115ot0y0ec0bpf (copy)].[none:person_name:nk]
+  COLS: [federated.14n81701l5kkc8115ot0y0ec0bpf (copy)].[none:work_release_year:qk]
+  FILTERS (2):
+    - [federated.14n81701l5kkc8115ot0y0ec0bpf (copy)].[min:is_ivy_member:qk] [quantitative]
+    - [federated.14n81701l5kkc8115ot0y0ec0bpf (copy)].[none:person_name:nk] [categorical]: groupfilter function=union
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 2B
+────────────────────────────────────────────────────────────
+  Mark type: Bar
+  ROWS: [federated.1o6a04n0jvc3s31evw57z1ly9e5w].[none:influenced_entity_name:nk]
+  COLS: [federated.1o6a04n0jvc3s31evw57z1ly9e5w].[cnt:influenced_entity_id:qk]
+  FILTERS: (none)
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 2B (2)
+────────────────────────────────────────────────────────────
+  Mark type: Bar
+  ROWS: [federated.1o6a04n0jvc3s31evw57z1ly9e5w (copy)].[none:influenced_entity_name:nk]
+  COLS: [federated.1o6a04n0jvc3s31evw57z1ly9e5w (copy)].[cnt:influenced_entity_id:qk]
+  FILTERS: (none)
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 3A
+────────────────────────────────────────────────────────────
+  Mark type: Bar
+  ROWS: [federated.0i10fy71nphwgs0znebh11orhwjz].[ctd:work_id:qk]
+  COLS: [federated.0i10fy71nphwgs0znebh11orhwjz].[none:work_release_year:qk]
+  FILTERS: (none)
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 3A (2)
+────────────────────────────────────────────────────────────
+  Mark type: Bar
+  ROWS: [federated.0i10fy71nphwgs0znebh11orhwjz (copy)].[ctd:work_id:qk]
+  COLS: [federated.0i10fy71nphwgs0znebh11orhwjz (copy)].[none:work_release_year:qk]
+  FILTERS: (none)
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 3B
+────────────────────────────────────────────────────────────
+  Mark type: Automatic
+  ROWS: [federated.0i10fy71nphwgs0znebh11orhwjz].[none:artist_name:nk]
+  COLS: [federated.0i10fy71nphwgs0znebh11orhwjz].[ctd:work_id:qk]
+  FILTERS (2):
+    - [federated.0i10fy71nphwgs0znebh11orhwjz].[none:artist_name:nk] [categorical]: groupfilter function=except
+    - [federated.0i10fy71nphwgs0znebh11orhwjz].[none:era:nk] [categorical]: groupfilter function=member
+
+────────────────────────────────────────────────────────────
+WORKSHEET: 3B (2)
+────────────────────────────────────────────────────────────
+  Mark type: Automatic
+  ROWS: [federated.0i10fy71nphwgs0znebh11orhwjz (copy)].[none:artist_name:nk]
+  COLS: [federated.0i10fy71nphwgs0znebh11orhwjz (copy)].[ctd:work_id:qk]
+  FILTERS (2):
+    - [federated.0i10fy71nphwgs0znebh11orhwjz (copy)].[none:artist_name:nk] [categorical]: groupfilter function=except
+    - [federated.0i10fy71nphwgs0znebh11orhwjz (copy)].[none:era:nk] [categorical]: groupfilter function=member
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Breakthrough profile
+────────────────────────────────────────────────────────────
+  Mark type: Circle
+  ROWS: [federated.1sr5x1x1vql2eo14injgt1bwq193].[sum:total_notable_works:qk]
+  COLS: [federated.1sr5x1x1vql2eo14injgt1bwq193].[none:years_active_span:qk]
+  FILTERS (2):
+    - [federated.1sr5x1x1vql2eo14injgt1bwq193].[none:is_oceanus_folk_artist:nk] [categorical]: groupfilter function=member
+    - [federated.1sr5x1x1vql2eo14injgt1bwq193].[sum:total_notable_works:qk] [quantitative]
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Genre mix by candidate
+────────────────────────────────────────────────────────────
+  Mark type: Bar
+  ROWS: [federated.1vocm9a1cybf84178hqos0loovly].[none:artist_name:nk]
+  COLS: [federated.1vocm9a1cybf84178hqos0loovly].[cnt:work_name:qk]
+  FILTERS (1):
+    - [federated.1vocm9a1cybf84178hqos0loovly].[cnt:work_name:qk] [quantitative]
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Inbound Genre Influence
+────────────────────────────────────────────────────────────
+  Mark type: Automatic
+  ROWS: [federated.1u9v0ce0ny5vkw17s8k8i0i66tue].[none:source_genre:nk]
+  COLS: [federated.1u9v0ce0ny5vkw17s8k8i0i66tue].[sum:connection_count:qk]
+  FILTERS (2):
+    - [federated.1u9v0ce0ny5vkw17s8k8i0i66tue].[none:direction:nk] [categorical]: groupfilter function=member
+    - [federated.1u9v0ce0ny5vkw17s8k8i0i66tue].[none:source_genre:nk] [categorical]: groupfilter function=union
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Influenced Artists
+────────────────────────────────────────────────────────────
+  Mark type: Bar
+  ROWS: [federated.1k9giug16ymh0917uemv4127d5tj].[none:artist_name:nk]
+  COLS: [federated.1k9giug16ymh0917uemv4127d5tj].[sum:influenced_works_count:qk]
+  FILTERS (1):
+    - [federated.1k9giug16ymh0917uemv4127d5tj].[none:artist_name:nk] [categorical]: groupfilter function=end
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Inward Influence Trend
+────────────────────────────────────────────────────────────
+  Mark type: Line
+  ROWS: [federated.1q9blzm1qdhdwz1gtuxg2029ju5k].[cnt:source_name:qk]
+  COLS: [federated.1q9blzm1qdhdwz1gtuxg2029ju5k].[none:source_release_date:nk]
+  FILTERS (1):
+    - [federated.1q9blzm1qdhdwz1gtuxg2029ju5k].[none:source_genre:nk] [categorical]: groupfilter function=union
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Notoriety timeline
+────────────────────────────────────────────────────────────
+  Mark type: Circle
+  ROWS: [federated.1vocm9a1cybf84178hqos0loovly].[none:artist_name:nk]
+  COLS: [federated.1vocm9a1cybf84178hqos0loovly].[none:notoriety_date:qk]
+  FILTERS (1):
+    - [federated.1vocm9a1cybf84178hqos0loovly].[sum:total_notable_works:qk] [quantitative]
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Oceanus folk artist ranking
+────────────────────────────────────────────────────────────
+  Mark type: Automatic
+  ROWS: [federated.1sr5x1x1vql2eo14injgt1bwq193].[none:performer_name:nk]
+  COLS: [federated.1sr5x1x1vql2eo14injgt1bwq193].[sum:total_notable_works:qk]
+  FILTERS (2):
+    - [federated.1sr5x1x1vql2eo14injgt1bwq193].[none:is_oceanus_folk_artist:nk] [categorical]: groupfilter function=member
+    - [federated.1sr5x1x1vql2eo14injgt1bwq193].[sum:total_notable_works:qk] [quantitative]
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Outbound Genre Influence
+────────────────────────────────────────────────────────────
+  Mark type: Automatic
+  ROWS: [federated.1u9v0ce0ny5vkw17s8k8i0i66tue].[none:target_genre:nk]
+  COLS: [federated.1u9v0ce0ny5vkw17s8k8i0i66tue].[sum:connection_count:qk]
+  FILTERS (2):
+    - [federated.1u9v0ce0ny5vkw17s8k8i0i66tue].[none:direction:nk] [categorical]: groupfilter function=member
+    - [federated.1u9v0ce0ny5vkw17s8k8i0i66tue].[none:target_genre:nk] [categorical]: groupfilter function=union
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Outward Influence Trend
+────────────────────────────────────────────────────────────
+  Mark type: Line
+  ROWS: [federated.09sxm4d1rn22kf19oziz807jyyar].[cnt:source_name:qk]
+  COLS: [federated.09sxm4d1rn22kf19oziz807jyyar].[none:source_release_date:ok]
+  FILTERS (1):
+    - [federated.09sxm4d1rn22kf19oziz807jyyar].[none:target_genre:nk] [categorical]: groupfilter function=union
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Three Artist Comparison
+────────────────────────────────────────────────────────────
+  Mark type: Circle
+  ROWS: ([federated.1vocm9a1cybf84178hqos0loovly].[none:artist_name:nk] / [federated.1vocm9a1cybf84178hqos0loovly].[none:work_name:nk])
+  COLS: [federated.1vocm9a1cybf84178hqos0loovly].[none:notoriety_date:qk]
+  FILTERS (1):
+    - [federated.1vocm9a1cybf84178hqos0loovly].[none:artist_name:nk] [categorical]: groupfilter function=union
+
+────────────────────────────────────────────────────────────
+WORKSHEET: Genre mix by candidate
+────────────────────────────────────────────────────────────
+  Mark type: (not found)
+  ROWS: (empty)
+  COLS: (empty)
+  FILTERS: (none)

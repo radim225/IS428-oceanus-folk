@@ -103,16 +103,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Methodology</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./task1_analysis.html"> 
-<span class="menu-text">Task 1 — Career Profile</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./task2_analysis.html"> 
-<span class="menu-text">Task 2 — Genre Spread</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./task3_analysis.html" aria-current="page"> 
-<span class="menu-text">Task 3 — Rising Stars</span></a>
+    <a class="nav-link" href="./writeup.html"> 
+<span class="menu-text">Write-up</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./results.html"> 
@@ -146,8 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link active" data-scroll-target="#data-preparation">Data Preparation</a></li>
-  <li><a href="#visualisation-tableau" id="toc-visualisation-tableau" class="nav-link" data-scroll-target="#visualisation-tableau">Visualisation — Tableau</a></li>
+  <li><a href="#visualisation-tableau" id="toc-visualisation-tableau" class="nav-link active" data-scroll-target="#visualisation-tableau">Visualisation — Tableau</a></li>
   <li><a href="#visualisation-python-radar-chart" id="toc-visualisation-python-radar-chart" class="nav-link" data-scroll-target="#visualisation-python-radar-chart">Visualisation — Python Radar Chart</a></li>
   <li><a href="#dashboards" id="toc-dashboards" class="nav-link" data-scroll-target="#dashboards">Dashboards</a></li>
   <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a>
@@ -181,13 +172,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="data-preparation" class="level2">
-<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
-<p>Three CSV files were derived from the master <code>mc1_nodes.csv</code> and <code>mc1_edges.csv</code> files using a Python preprocessing script (<code>Data/preprocess_mc1.py</code>).</p>
-<p><code>task3_notable_works.csv</code> (1,973 rows) was constructed by filtering all nodes where <code>notable = True</code> and <code>notoriety_date</code> is not empty, then joining <code>PerformerOf</code> edges to resolve the performing artist for each charted work. This produces one row per (work, performer) pair, retaining <code>genre</code>, <code>release_date</code>, <code>notoriety_date</code>, and <code>performer_type</code>.</p>
-<p><code>task3_artist_notoriety.csv</code> (1,664 rows) aggregates the above to one row per artist, computing four summary metrics: <code>total_notable_works</code> (count of charted works), <code>first_notoriety_date</code> (earliest chart appearance), <code>latest_notoriety_date</code> (most recent chart appearance), and <code>years_active_span</code> (difference between earliest and latest <code>release_date</code> across all their works). A boolean flag <code>is_oceanus_folk_artist</code> is set to <code>True</code> if any of the artist’s genres contain “Oceanus Folk”. Of the 1,664 artists, 56 are flagged as Oceanus Folk artists, and 14 of those have two or more notable works.</p>
-<p><code>task3_of_candidates.csv</code> (84 rows) filters <code>task3_notable_works</code> to Oceanus Folk artists only and joins the four summary metrics from <code>task3_artist_notoriety</code>. This file contains one row per notable work per Oceanus Folk artist, enabling both work-level and artist-level analysis within the same Tableau data source.</p>
-</section>
+<blockquote class="blockquote">
+<p>See <a href="./methodology.html">Methodology</a> for data preparation details.</p>
+</blockquote>
 <section id="visualisation-tableau" class="level2">
 <h2 class="anchored" data-anchor-id="visualisation-tableau">Visualisation — Tableau</h2>
 <p><strong>Sheet 1 — OF Artist Ranking</strong> uses <code>task3_artist_notoriety</code> as its data source, with <code>Performer Name</code> on Rows, <code>SUM(Total Notable Works)</code> on Columns, and two filters applied: <code>Is Oceanus Folk Artist = True</code> and <code>SUM(Total Notable Works) &gt;= 2</code>. This produces a horizontal bar chart ranking all 14 Oceanus Folk artists with two or more charted works, sorted in descending order by total works. The chart establishes the candidate pool for rising star prediction: Orla Seabloom leads with 7 notable works, followed by Copper Canyon Ghosts (5), Daniel O’Connell (4), Beatrice Albright (4), and Ping Meng (4). The remaining nine artists each have exactly 2 notable works.</p>
@@ -254,14 +241,14 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="dashboards">Dashboards</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/task3/task3_Who_are_the_candidates_.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="images/task3/task3_Who_are_candidates_dashboard_2.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Dashboard 1 — “Who are the Candidates?”: OF Artist Ranking (top-left), Genre Mix by Candidate (top-right), Breakthrough Profile scatter plot (bottom)</figcaption>
 </figure>
 </div>
 <p><strong>Dashboard 1 — “Who are the Candidates?”</strong> combines three sheets in a tiled layout: the OF Artist Ranking bar chart (top-left), the Genre Mix by Candidate stacked bar (top-right), and the Breakthrough Profile scatter plot (bottom, spanning full width). Together, these three views answer the question of which Oceanus Folk artists form the candidate pool and how they compare on output volume, genre focus, and breakthrough speed.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/task3/task3_whos_next_dashboard_2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="images/task3/task3_Whos_next_dashboard2.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Dashboard 2 — “Who’s Next?”: Three Artist Comparison (top-left), Notoriety Timeline (bottom-left), radar chart and data table (right)</figcaption>
 </figure>
 </div>

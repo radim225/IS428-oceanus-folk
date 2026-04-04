@@ -103,16 +103,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Methodology</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./task1_analysis.html"> 
-<span class="menu-text">Task 1 — Career Profile</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./task2_analysis.html" aria-current="page"> 
-<span class="menu-text">Task 2 — Genre Spread</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./task3_analysis.html"> 
-<span class="menu-text">Task 3 — Rising Stars</span></a>
+    <a class="nav-link" href="./writeup.html"> 
+<span class="menu-text">Write-up</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./results.html"> 
@@ -146,8 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link active" data-scroll-target="#data-preparation">Data Preparation</a></li>
-  <li><a href="#genre-influence-flow" id="toc-genre-influence-flow" class="nav-link" data-scroll-target="#genre-influence-flow">Genre Influence Flow</a>
+  <li><a href="#genre-influence-flow" id="toc-genre-influence-flow" class="nav-link active" data-scroll-target="#genre-influence-flow">Genre Influence Flow</a>
   <ul class="collapse">
   <li><a href="#left-chart-genres-most-influenced-by-oceanus-folk" id="toc-left-chart-genres-most-influenced-by-oceanus-folk" class="nav-link" data-scroll-target="#left-chart-genres-most-influenced-by-oceanus-folk">Left chart — Genres Most Influenced by Oceanus Folk</a></li>
   <li><a href="#right-chart-genres-that-inspire-oceanus-folk" id="toc-right-chart-genres-that-inspire-oceanus-folk" class="nav-link" data-scroll-target="#right-chart-genres-that-inspire-oceanus-folk">Right chart — Genres That Inspire Oceanus Folk</a></li>
@@ -185,60 +176,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="data-preparation" class="level2">
-<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
-<p>The analysis is built on four CSV files derived from the MC1 knowledge graph using a Python preprocessing pipeline:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>File</th>
-<th>Description</th>
-<th>Rows</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>task2_genre_summary.csv</code></td>
-<td>Aggregated connection counts between genre pairs, with direction (inbound/outbound) and edge type</td>
-<td>117</td>
-</tr>
-<tr class="even">
-<td><code>task2_of_influence_out.csv</code></td>
-<td>Song-level edges where Oceanus Folk works reference works in other genres</td>
-<td>371</td>
-</tr>
-<tr class="odd">
-<td><code>task2_of_influence_in.csv</code></td>
-<td>Song-level edges where works from other genres reference Oceanus Folk works</td>
-<td>377</td>
-</tr>
-<tr class="even">
-<td><code>task2_top_artists_influenced.csv</code></td>
-<td>Artist-level aggregation of top 30 artists most influenced by Oceanus Folk</td>
-<td>30</td>
-</tr>
-</tbody>
-</table>
-<p>This file was generated using a Python script operating on <code>lookup_nodes_clean.csv</code> and <code>lookup_edges_clean.csv</code>. The script:</p>
-<ol type="1">
-<li>Identified all Oceanus Folk song and album node IDs</li>
-<li>Found all songs/albums from other genres that referenced Oceanus Folk works via InStyleOf, CoverOf, DirectlySamples, InterpolatesFrom or LyricalReferenceTo edges</li>
-<li>Traced the PerformerOf edges to find the artist behind each influenced song</li>
-<li>Aggregated the count of influenced works per artist</li>
-<li>Assigned each artist a primary genre based on whichever genre appeared most frequently in their influenced works</li>
-<li>Exported the top 30 artists with fields: artist_name, influenced_works_count, notable_works_count, primary_genre</li>
-</ol>
-</section>
+<blockquote class="blockquote">
+<p>See <a href="./methodology.html">Methodology</a> for data preparation details.</p>
+</blockquote>
 <section id="genre-influence-flow" class="level2">
 <h2 class="anchored" data-anchor-id="genre-influence-flow">Genre Influence Flow</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/task2/task2_Genre Influence.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="images/task2/task2_OF_genre_influence_flow.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Genres Most Influenced by Oceanus Folk (left) and Genres That Inspire Oceanus Folk (right) — horizontal stacked bar charts coloured by edge type</figcaption>
 </figure>
 </div>
@@ -255,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="influence-through-time">Influence Through Time</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/task2/task2_Influence Through time.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="images/task2/task2_OF_Influence_through_time.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Oceanus Folk Outward Influence Over Time (top) and Other Genres Drawing from Oceanus Folk Over Time (bottom) — both annotated with Sailor’s career milestones</figcaption>
 </figure>
 </div>
@@ -272,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="top-influenced-artists">Top Influenced Artists</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/task2/task2_Top Influenced Artists.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="images/task2/task2_OF_Influence_artists.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Top 15 artists most influenced by Oceanus Folk, ranked by number of influenced works and coloured by primary genre</figcaption>
 </figure>
 </div>

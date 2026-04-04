@@ -2,29 +2,11 @@
 title: "Task 2 — Oceanus Folk Genre Spread"
 ---
 
-## Data Preparation
-
-The analysis is built on four CSV files derived from the MC1 knowledge graph using a Python preprocessing pipeline:
-
-| File | Description | Rows |
-|---|---|---|
-| `task2_genre_summary.csv` | Aggregated connection counts between genre pairs, with direction (inbound/outbound) and edge type | 117 |
-| `task2_of_influence_out.csv` | Song-level edges where Oceanus Folk works reference works in other genres | 371 |
-| `task2_of_influence_in.csv` | Song-level edges where works from other genres reference Oceanus Folk works | 377 |
-| `task2_top_artists_influenced.csv` | Artist-level aggregation of top 30 artists most influenced by Oceanus Folk | 30 |
-
-This file was generated using a Python script operating on `lookup_nodes_clean.csv` and `lookup_edges_clean.csv`. The script:
-
-1. Identified all Oceanus Folk song and album node IDs
-2. Found all songs/albums from other genres that referenced Oceanus Folk works via InStyleOf, CoverOf, DirectlySamples, InterpolatesFrom or LyricalReferenceTo edges
-3. Traced the PerformerOf edges to find the artist behind each influenced song
-4. Aggregated the count of influenced works per artist
-5. Assigned each artist a primary genre based on whichever genre appeared most frequently in their influenced works
-6. Exported the top 30 artists with fields: artist_name, influenced_works_count, notable_works_count, primary_genre
+> See [Methodology](methodology.qmd) for data preparation details.
 
 ## Genre Influence Flow
 
-![Genres Most Influenced by Oceanus Folk (left) and Genres That Inspire Oceanus Folk (right) — horizontal stacked bar charts coloured by edge type](images/task2/task2_Genre Influence.png){width=100%}
+![Genres Most Influenced by Oceanus Folk (left) and Genres That Inspire Oceanus Folk (right) — horizontal stacked bar charts coloured by edge type](images/task2/task2_OF_genre_influence_flow.png){width=100%}
 
 ### Left chart — Genres Most Influenced by Oceanus Folk
 
@@ -36,7 +18,7 @@ Same chart structure but showing which genres feed INTO Oceanus Folk. If a genre
 
 ## Influence Through Time
 
-![Oceanus Folk Outward Influence Over Time (top) and Other Genres Drawing from Oceanus Folk Over Time (bottom) — both annotated with Sailor's career milestones](images/task2/task2_Influence Through time.png){width=100%}
+![Oceanus Folk Outward Influence Over Time (top) and Other Genres Drawing from Oceanus Folk Over Time (bottom) — both annotated with Sailor's career milestones](images/task2/task2_OF_Influence_through_time.png){width=100%}
 
 ### Top chart — Oceanus Folk Outward Influence Over Time
 
@@ -48,7 +30,7 @@ Same structure but showing when OTHER genres started drawing from Oceanus Folk. 
 
 ## Top Influenced Artists
 
-![Top 15 artists most influenced by Oceanus Folk, ranked by number of influenced works and coloured by primary genre](images/task2/task2_Top Influenced Artists.png){width=100%}
+![Top 15 artists most influenced by Oceanus Folk, ranked by number of influenced works and coloured by primary genre](images/task2/task2_OF_Influence_artists.png){width=100%}
 
 A horizontal bar chart of the top 15 artists whose works were most influenced by Oceanus Folk, colored by their primary genre. Longer bar = more works influenced by Oceanus Folk. Each color represents the artist's primary genre, showing which genre communities were most receptive to Oceanus Folk's influence. The even bar lengths — most artists have 2–3 influenced works — confirm that Oceanus Folk's impact was broadly distributed across many artists rather than concentrated on a few. Dream Pop and Desert Rock dominate the top 15, consistent with the genre-level findings in the Genre Influence Flow dashboard.
 

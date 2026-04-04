@@ -2,6 +2,166 @@
 title: "Methodology"
 ---
 
-# Methodology
+## Overview
 
-This section is currently in progress and will be updated as the project develops. Check back closer to the submission date.
+This project combines two deliverables — a Tableau application and this Quarto website — to address the three tasks of VAST Challenge 2025 Mini-Challenge 1. The raw source data (`MC1_graph.json`) was transformed into task-specific CSV files using a Python preprocessing pipeline (`Data/preprocess_mc1.py`), which were then loaded into Tableau for interactive dashboard construction; three supplementary chart types not natively supported by Tableau (network graphs, Sankey diagram, radar chart) were produced in Python and embedded in the website.
+
+## Data
+
+### Source Dataset
+
+The source dataset is `MC1_graph.json`, a directed multigraph serialised in NetworkX `node_link_data` format. It represents the music industry in and around the fictional island nation of Oceanus from 1993 to 2040.
+
+| Dimension | Count |
+|-----------|------:|
+| Nodes | 17,412 |
+| Edges | 37,857 |
+| Connected components | 18 |
+
+**Node types (5):**
+
+| Type | Count | Key Fields |
+|------|------:|------------|
+| Person | 11,361 | `name`, `stage_name` |
+| Song | 3,615 | `name`, `genre`, `release_date`, `written_date`, `single`, `notable`, `notoriety_date` |
+| RecordLabel | 1,217 | `name` |
+| Album | 996 | `name`, `genre`, `release_date`, `written_date`, `notable`, `notoriety_date` |
+| MusicalGroup | 223 | `name` |
+
+**Edge types (12):**
+
+| Type | Count | Meaning |
+|------|------:|---------|
+| PerformerOf | 13,587 | Person/Group performed Song/Album |
+| RecordedBy | 3,798 | Song/Album recorded by RecordLabel |
+| ComposerOf | 3,290 | Person composed Song/Album |
+| ProducerOf | 3,209 | Person/Label produced Song/Album/Person/Group |
+| DistributedBy | 3,013 | Song/Album distributed by RecordLabel |
+| LyricistOf | 2,985 | Person wrote lyrics for Song/Album |
+| InStyleOf | 2,289 | Song/Album made in style of another Song/Album/Person/Group |
+| InterpolatesFrom | 1,574 | Song/Album interpolated melody from another |
+| LyricalReferenceTo | 1,496 | Song/Album makes lyrical reference to another |
+| CoverOf | 1,429 | Song/Album is a cover of another |
+| DirectlySamples | 619 | Song/Album directly samples audio from another |
+| MemberOf | 568 | Person is/was member of MusicalGroup |
+
+Two fields are critical for the analysis. The boolean `notable` records whether a song or album appeared on a top chart. The string field `notoriety_date` records the year of that first chart appearance. Together these allow reconstruction of each artist's breakthrough trajectory across 649 charted works.
+
+### Cleaning
+
+A single Python script (`Data/preprocess_mc1.py`) transforms the raw node and edge CSVs into task-specific files stored in `Data/mc1_csv/processed/`. All node records were cleaned as follows:
+
+- `notable` and `single`: NaN values filled as `False`, cast to boolean
+- `release_date`, `notoriety_date`, `written_date`: converted from float to integer-year strings (e.g. `"2028"`), with missing values stored as empty strings
+- `genre`: missing values filled as `"Unknown"`
+- `stage_name`: missing values filled as empty strings
+- `name`: whitespace stripped from all entries
+- `id`, `source`, `target`: cast to integer for consistent merge keys
+
+Five edge types were classified as influence relationships for Tasks 2 and 3: `InStyleOf`, `InterpolatesFrom`, `CoverOf`, `DirectlySamples`, and `LyricalReferenceTo`. Four edge types were classified as collaboration relationships for Task 1: `PerformerOf`, `ComposerOf`, `LyricistOf`, and `ProducerOf`.
+
+### Preprocessed CSV Files
+
+All 13 output files are located in `Data/mc1_csv/processed/`.
+
+| File | Rows | Task | Description |
+|------|-----:|------|-------------|
+| `task1_sailor_works.csv` | 47 | Task 1 | Sailor's songs/albums with role |
+| `task1_influence_edges.csv` | 11 | Task 1 | Influence edges involving Sailor |
+| `task1_all_collaborators.csv` | 60 | Task 1 | All nodes connected to Sailor |
+| `task1_bandmates.csv` | 20 | Task 1 | Edges involving Ivy Echoes members |
+| `task2_of_influence_out.csv` | 371 | Task 2 | OF works influencing other genres |
+| `task2_of_influence_in.csv` | 377 | Task 2 | Other genres influencing OF works |
+| `task2_genre_summary.csv` | 117 | Task 2 | Aggregated genre-pair connection counts |
+| `task2_top_artists_influenced.csv` | 30 | Task 2 | Top 30 artists influenced by OF |
+| `task3_notable_works.csv` | 1,973 | Task 3 | All charted works with performers |
+| `task3_artist_notoriety.csv` | 1,664 | Task 3 | Artist-level notoriety summary |
+| `task3_of_candidates.csv` | 84 | Task 3 | OF artist notable works (expanded) |
+| `lookup_nodes_clean.csv` | 17,412 | Shared | Master cleaned node table |
+| `lookup_edges_clean.csv` | 37,857 | Shared | Master cleaned edge table |
+
+**Task 1 files:** Sailor Shift was identified by node ID 17255, and her Ivy Echoes bandmates by IDs 17256 (Maya Jensen), 17257 (Lila Hartman), 17258 (Jade Thompson), and 17259 (Sophie Ramirez). `task1_sailor_works.csv` filters all edges where `source = 17255` and the edge type is a collaboration type. `task1_influence_edges.csv` filters all edges where either source or target is Sailor and the edge type is an influence type, adding a `direction` column. `task1_all_collaborators.csv` captures all edges with Sailor as source or target (self-loops excluded). `task1_bandmates.csv` captures all edges involving any of the four bandmate IDs.
+
+**Task 2 files:** `task2_of_influence_out.csv` captures all influence edges where the source node is an Oceanus Folk song or album. `task2_of_influence_in.csv` captures all influence edges where the target node is an Oceanus Folk song or album. `task2_genre_summary.csv` aggregates these by `(source_genre, target_genre, edge_type)` with a `direction` column; internal Oceanus Folk–to–Oceanus Folk flows were removed. `task2_top_artists_influenced.csv` was generated by a separate script that traced `PerformerOf` edges from influenced songs back to performing artists, then exported the top 30 by influenced work count.
+
+**Task 3 files:** `task3_notable_works.csv` filters all nodes where `notable = True` and `notoriety_date` is not empty, then joins `PerformerOf` edges. `task3_artist_notoriety.csv` aggregates to one row per artist with four summary metrics (`total_notable_works`, `first_notoriety_date`, `latest_notoriety_date`, `years_active_span`) and a boolean `is_oceanus_folk_artist` flag. `task3_of_candidates.csv` filters to Oceanus Folk artists only and joins the four summary metrics, enabling both work-level and artist-level analysis within a single Tableau data source.
+
+## Tools
+
+**Tableau** handles all standard chart types: horizontal and stacked bar charts, scatter plots, dot plots, line charts, and highlight tables. Every interactive dashboard was built in Tableau and exported as a combined `.twbx` workbook. All CSV files were loaded as separate data connections within a single workbook — no cross-source joins or unions were performed to avoid row multiplication and direction mixing. Each sheet uses only one data source at a time.
+
+**Python** was used for three chart types that Tableau does not natively support:
+
+- **Network graphs** (Task 1): Built using `pyvis` (a Python wrapper around vis.js). Two interactive HTML network visualisations — a collaboration network and an influence network — were generated and embedded in the Quarto website via `<iframe>` elements. Pyvis was selected because it produces self-contained HTML files with built-in pan, zoom, and hover interactions, which can be embedded directly in a static website without a server backend.
+- **Sankey diagram** (Task 2): Built using `plotly` to show bidirectional genre influence flows. Plotly's Sankey trace type was selected because it handles variable-width flow bands with hover tooltips and node repositioning out of the box. The output was saved as both interactive HTML and a static PNG for embedding.
+- **Radar chart** (Task 3): Built using `matplotlib` to compare five normalised metrics across the top five Oceanus Folk candidates simultaneously. Matplotlib's polar projection was used because it provides precise control over grid lines, label positioning, and overlapping polygon fills — features that Plotly's Scatterpolar lacks at equivalent visual polish. The output was saved as a static PNG at 150 dpi and embedded as an image in the Tableau dashboard.
+
+**Quarto + Vercel** powers this website. Source files are `.qmd` documents rendered to HTML by Quarto and auto-deployed to production on every push to the `main` branch via Vercel.
+
+## Tableau Application
+
+The combined `.twbx` workbook contains 15 worksheets grouped across the three tasks. Field names below are translated from the internal Tableau federated IDs to human-readable names.
+
+### Task 1 — Sailor Shift Career Profile
+
+| Worksheet | Mark Type | Rows | Columns | Key Filters |
+|---|---|---|---|---|
+| Collaborations Over Time | Square | Person Name | Work Release Year | Is Ivy Member, Person Name |
+| Genre Influences Over Time | Circle | Inspiration Genre | Sailor Work Release Year | Sailor Work Release Year |
+| Direct & Indirect Influence | Bar | Influenced Entity Name | Count of Influenced Entity ID | — |
+| OF Production Over Time | Bar | Count of Work ID | Work Release Year | — |
+| Top Contributors After 2028 | Bar | Artist Name | Count of Work ID | Artist Name, Era |
+
+Dashboard 1 combines Collaborations Over Time (top), Genre Influences Over Time (bottom-left), and Direct & Indirect Influence (bottom-right). Dashboard 2 combines OF Production Over Time (left) and Top Contributors After 2028 (right).
+
+### Task 2 — Oceanus Folk Genre Spread
+
+| Worksheet | Mark Type | Rows | Columns | Key Filters |
+|---|---|---|---|---|
+| Outbound Genre Influence | Bar | Target Genre | Sum of Connection Count | Direction = outbound, Target Genre ≠ Oceanus Folk |
+| Inbound Genre Influence | Bar | Source Genre | Sum of Connection Count | Direction = inbound, Source Genre ≠ Oceanus Folk |
+| Outward Influence Trend | Line | Count of Source Name | Source Release Date | Target Genre ≠ Oceanus Folk |
+| Inward Influence Trend | Line | Count of Source Name | Source Release Date | Source Genre ≠ Oceanus Folk |
+| Influenced Artists | Bar | Artist Name | Sum of Influenced Works Count | Top 15 by Artist Name |
+
+Dashboard 1 places Outbound Genre Influence and Inbound Genre Influence side by side. Dashboard 2 stacks Outward Influence Trend and Inward Influence Trend vertically, both annotated at 2023 and 2028 with Sailor's career milestones. Dashboard 3 shows Influenced Artists alone.
+
+### Task 3 — Rising Star Prediction
+
+| Worksheet | Mark Type | Rows | Columns | Key Filters |
+|---|---|---|---|---|
+| Oceanus Folk Artist Ranking | Bar | Performer Name | Sum of Total Notable Works | Is Oceanus Folk Artist = True, Sum ≥ 2 |
+| Genre Mix by Candidate | Bar | Artist Name | Count of Work Name | Top 5 by Count of Work Name |
+| Notoriety Timeline | Circle | Artist Name | Notoriety Date | Sum of Total Notable Works ≥ 2 |
+| Three Artist Comparison | Circle | Artist Name / Work Name | Notoriety Date | Artist Name = 3 selected stars |
+| Breakthrough Profile | Circle | Sum of Total Notable Works | Years Active Span | Is Oceanus Folk Artist = True, Sum ≥ 2 |
+
+Dashboard 1 ("Who are the Candidates?") tiles Oceanus Folk Artist Ranking (top-left), Genre Mix by Candidate (top-right), and Breakthrough Profile (bottom, full width). Dashboard 2 ("Who's Next?") tiles Three Artist Comparison (top-left), Notoriety Timeline (bottom-left), and the Python-generated radar chart PNG (right panel).
+
+## Python Visualisation — Task 1 Network Graphs
+
+Two interactive network graphs were generated using `pyvis` (Python) and embedded in the Quarto website as HTML `<iframe>` elements.
+
+**Collaboration Network** (`Data/task1_network_collaboration.py`): The script loads the processed node and edge CSVs, identifies all Person nodes with roles "Sailor Shift", "Direct Collaborator", or "Ivy Echoes Member", then constructs derived edges by finding collaborators who share work nodes with Sailor. For each collaborator, the edge types (e.g. `PerformerOf`, `ComposerOf`) are aggregated into a tooltip. The network uses a ForceAtlas2 physics layout with gravitational constant −80, spring length 120, and 250 stabilisation iterations. Node colours distinguish Sailor (gold, size 40), Ivy Echoes members (emerald green, size 25), and other collaborators (blue, size 20). A fixed title bar and colour legend were injected into the output HTML.
+
+**Influence Network** (`Data/task1_network_influence.py`): The script includes six node roles: Sailor Shift, Sailor's works, direct collaborators, Ivy Echoes members, artists inspired by Sailor, and artists inspired by Sailor's circle. Directed edges preserve the original edge types. The layout uses ForceAtlas2 with gravitational constant −60, spring length 150, and 300 stabilisation iterations. Sailor is rendered as a gold star (size 50), her works as orange dots, collaborators as blue dots, Ivy Echoes members as green dots, and inspired artists as purple dots.
+
+## Python Visualisation — Task 2 Sankey Diagram
+
+A bidirectional Sankey diagram was generated using `plotly` to show the flow of influence between Oceanus Folk and other genres simultaneously. The script loads `task2_genre_summary.csv`, removes internal Oceanus Folk flows and connections with fewer than 3 occurrences, then creates two virtual anchor nodes: "Oceanus Folk → Outward" (left, blue) and "Inward → Oceanus Folk" (right, purple). Genre nodes are positioned between the anchors and colour-coded: orange for bidirectional genres (those appearing on both outbound and inbound sides), light blue for outbound-only, and red/pink for inbound-only. The output was saved as both an interactive HTML file and a static PNG.
+
+## Python Visualisation — Task 3 Radar Chart
+
+A radar chart (`Data/task3_radar.py`) compares the top five Oceanus Folk candidates across five normalised dimensions. The script loads `task3_artist_notoriety.csv`, filters to Oceanus Folk artists, selects the top five by `total_notable_works`, and computes a genre diversity count from the comma-separated `genres` field.
+
+Five metrics are defined and min–max normalised within the five-candidate pool:
+
+| Metric | Source Field | Direction |
+|--------|-------------|-----------|
+| Total Notable Works | `total_notable_works` | Higher = better |
+| Quick Breakthrough | `years_active_span` (inverted) | Lower span = higher score |
+| Early Breakthrough | `first_notoriety_date` (inverted) | Earlier year = higher score |
+| Recent Activity | `latest_notoriety_date` | Later year = higher score |
+| Genre Diversity | Count of unique genres in `genres` | More genres = higher score |
+
+Normalisation is scoped to the five-candidate pool rather than the full dataset, so each radar axis represents relative standing among the top candidates only. The chart uses matplotlib's polar projection with a white background, five concentric grid rings (0.25, 0.50, 0.75, 1.00), spoke lines, and semi-transparent filled polygons for each artist. A companion data table showing raw values is rendered alongside the radar using matplotlib's table function. Specific colours were assigned to each artist for consistency with the Tableau dashboards. The figure was saved at 150 dpi as a PNG and embedded in the Tableau workbook as a static image.

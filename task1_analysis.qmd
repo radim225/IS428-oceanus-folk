@@ -2,7 +2,9 @@
 title: "Task 1 — Sailor Shift Career Profile"
 ---
 
-![Sailor Shift's Collaborations Over Time, Genre Influences, and Direct & Indirect Influence — three-chart Tableau dashboard overview](images/task1/task1_Sailor_shift_Collab.png){width=100%}
+> See [Methodology](methodology.qmd) for data preparation details.
+
+![Sailor Shift's Collaborations Over Time, Genre Influences, and Direct & Indirect Influence — three-chart Tableau dashboard overview](images/task1/task1_Sailor_Inf_Collab.png){width=100%}
 
 ## Sub-question 1: Who has she been most influenced by over time?
 
@@ -50,7 +52,7 @@ Click any node to highlight its neighbourhood. Hover over nodes for labels and r
 
 ## Sub-question 3: How has she influenced collaborators of the broader Oceanus Folk community?
 
-![Oceanus Folk Production in Sailor Shift's Circle Over Time (left) and Top Oceanus Folk Contributors in Sailor's Circle After 2028 (right)](images/task1/task1_Sailor_impact_OF.png){width=100%}
+![Oceanus Folk Production in Sailor Shift's Circle Over Time (left) and Top Oceanus Folk Contributors in Sailor's Circle After 2028 (right)](images/task1/task1_Sailor_Imp_OF.png){width=100%}
 
 ### Left chart — Oceanus Folk Production Over Time
 
