@@ -1,5 +1,13 @@
 /* Oceanus Folk: Then and Now — IS428 Custom Styles */
 
+body {
+  background-color: #ffffff;
+}
+
+.quarto-container, .page-layout-article, #quarto-content {
+  background-color: #ffffff;
+}
+
 .missing-info {
   color: #e74c3c;
   font-weight: bold;
