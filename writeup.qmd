@@ -88,7 +88,7 @@ A horizontal stacked bar chart showing target genres ranked by total connection 
 
 ### Right chart — Genres That Inspire Oceanus Folk
 
-Same chart structure but showing which genres feed INTO Oceanus Folk. If a genre appears prominently on both sides it means there is a two-way musical exchange with Oceanus Folk. Desert Rock, Dream Pop and Indie Folk appearing on both sides confirms they have a bidirectional relationship with Oceanus Folk.
+Same chart structure but showing which genres feed into Oceanus Folk. If a genre appears prominently on both sides it means there is a two-way musical exchange with Oceanus Folk. Desert Rock, Dream Pop and Indie Folk appearing on both sides confirms they have a bidirectional relationship with Oceanus Folk.
 
 ## Influence Through Time
 
@@ -100,7 +100,7 @@ A line chart where each point represents the number of influence connections mad
 
 ### Bottom chart — Other Genres Drawing from Oceanus Folk Over Time
 
-Same structure but showing when OTHER genres started drawing from Oceanus Folk. The top chart shows when Oceanus Folk influenced others, the bottom shows when others started recognising and drawing back from Oceanus Folk. The start date difference is notable — the top chart starts from 2000 but the bottom starts from 2007, showing a 7-year lag before external genres began referencing Oceanus Folk. The 2028 peak on the bottom chart is even more pronounced than on the top — confirming Sailor's breakthrough was the key trigger for external recognition.
+Same structure but showing when other genres started drawing from Oceanus Folk. The top chart shows when Oceanus Folk influenced others, the bottom shows when others started recognising and drawing back from Oceanus Folk. The 2028 peak on the bottom chart is even more pronounced than on the top — confirming Sailor's breakthrough was the key trigger for external recognition.
 
 ## Top Influenced Artists
 
