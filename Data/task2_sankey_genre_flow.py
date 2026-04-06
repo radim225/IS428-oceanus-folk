@@ -181,7 +181,7 @@ fig.update_layout(
     font=dict(size=12, family="Helvetica Neue, Helvetica, Arial, sans-serif"),
     width=1100,
     height=700,
-    paper_bgcolor="#FAFBFC",
+    paper_bgcolor="white",
     annotations=[
         dict(
             text=(
