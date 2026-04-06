@@ -41,13 +41,13 @@ The scale of influence is limited to what is formally documented, many other art
 Click any node to highlight its neighbourhood. Hover over nodes for labels and relationship details.
 
 ```{=html}
-<iframe src="images/task1/task1_collaboration_network.html" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="images/task1/task1_collaboration_network.html" width="100%" height="750px" frameborder="0"></iframe>
 ```
 
 Click any node to highlight its neighbourhood. Hover over nodes for labels and relationship details.
 
 ```{=html}
-<iframe src="images/task1/task1_influence_network.html" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="images/task1/task1_influence_network.html" width="100%" height="750px" frameborder="0"></iframe>
 ```
 
 ## Sub-question 3: How has she influenced collaborators of the broader Oceanus Folk community?

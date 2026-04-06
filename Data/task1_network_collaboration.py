@@ -66,7 +66,7 @@ ROLE_STYLE = {
 # ── Build pyvis network ────────────────────────────────────────────────────────
 net = Network(
     height="700px", width="100%",
-    bgcolor="#0d1117", font_color="white",
+    bgcolor="white", font_color="#1f2937",
     directed=False,
     notebook=False,
     cdn_resources="in_line",
@@ -117,10 +117,10 @@ net.save_graph(OUT_PATH)
 
 title_html = (
     '<div style="position:fixed;top:0;left:0;right:0;z-index:999;'
-    'background:#0d1117;padding:10px 0;text-align:center;">'
-    '<h2 style="color:#e0e0e0;font-family:sans-serif;margin:0;font-size:18px;">'
+    'background:white;padding:10px 0;text-align:center;border-bottom:1px solid #e5e7eb;">'
+    '<h2 style="color:#1f2937;font-family:sans-serif;margin:0;font-size:18px;">'
     'Sailor Shift &#8212; Direct Collaborators Network</h2>'
-    '<p style="color:#888;font-family:sans-serif;margin:4px 0 0;font-size:12px;">'
+    '<p style="color:#6b7280;font-family:sans-serif;margin:4px 0 0;font-size:12px;">'
     '<span style="color:#FFD700;">&#9632;</span> Sailor Shift &nbsp;'
     '<span style="color:#4A90D9;">&#9632;</span> Direct Collaborator &nbsp;'
     '<span style="color:#2ECC71;">&#9632;</span> Ivy Echoes Member'
