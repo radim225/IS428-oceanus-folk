@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: _site
+  pre-render: _clean.py
   resources:
     - "images/**"
 
