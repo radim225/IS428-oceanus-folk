@@ -1,5 +1,5 @@
 <html>
-    <head>
+    <head><style>html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden; }#mynetwork { width:100% !important; height:calc(100vh - 60px) !important; }</style>
         <meta charset="utf-8">
         
             <script>function neighbourhoodHighlight(params) {
@@ -247,7 +247,7 @@ function highlightFilter(filter) {
 
              #mynetwork {
                  width: 100%;
-                 height: 700px;
+                 height: 100vh;
                  background-color: white;
                  border: 1px solid lightgray;
                  position: relative;
@@ -260,7 +260,7 @@ function highlightFilter(filter) {
                  top:0px;
                  left:0px;
                  width: 100%;
-                 height: 700px;
+                 height: 100vh;
                  background-color:rgba(200,200,200,0.8);
                  -webkit-transition: all 0.5s ease;
                  -moz-transition: all 0.5s ease;
@@ -332,7 +332,7 @@ function highlightFilter(filter) {
     </head>
 
 
-    <body><div style="position:fixed;top:0;left:0;right:0;z-index:999;background:white;padding:10px 0;text-align:center;border-bottom:1px solid #e5e7eb;"><h2 style="color:#1f2937;font-family:sans-serif;margin:0;font-size:18px;">Sailor Shift &#8212; Direct and Indirect Influence Network</h2><p style="color:#6b7280;font-family:sans-serif;margin:4px 0 0;font-size:12px;"><span style="color:#FFD700;">&#9733;</span> Sailor Shift &nbsp;<span style="color:#FFA500;">&#9632;</span> Sailor Works &nbsp;<span style="color:#4A90D9;">&#9632;</span> Direct Collaborator &nbsp;<span style="color:#2ECC71;">&#9632;</span> Ivy Echoes Member &nbsp;<span style="color:#9B59B6;">&#9632;</span> Inspired By Sailor</p></div><div style="height:65px;"></div>
+    <body><div style="width:100%;z-index:999;background:white;padding:10px 0;text-align:center;border-bottom:1px solid #e5e7eb;"><h2 style="color:#1f2937;font-family:sans-serif;margin:0;font-size:18px;">Sailor Shift &#8212; Direct and Indirect Influence Network</h2><p style="color:#6b7280;font-family:sans-serif;margin:4px 0 0;font-size:12px;"><span style="color:#FFD700;">&#9733;</span> Sailor Shift &nbsp;<span style="color:#FFA500;">&#9632;</span> Sailor Works &nbsp;<span style="color:#4A90D9;">&#9632;</span> Direct Collaborator &nbsp;<span style="color:#2ECC71;">&#9632;</span> Ivy Echoes Member &nbsp;<span style="color:#9B59B6;">&#9632;</span> Inspired By Sailor</p></div>
         <div class="card" style="width: 100%">
             
             
@@ -392,7 +392,7 @@ function highlightFilter(filter) {
                   // adding nodes and edges to the graph
                   data = {nodes: nodes, edges: edges};
 
-                  var options = {"physics": {"forceAtlas2Based": {"gravitationalConstant": -60, "centralGravity": 0.005, "springLength": 150, "springConstant": 0.05}, "solver": "forceAtlas2Based", "stabilization": {"iterations": 300}}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "smooth": {"type": "continuous"}}};
+                  var options = {"physics": {"forceAtlas2Based": {"gravitationalConstant": -50, "centralGravity": 0.01, "springLength": 120, "springConstant": 0.06, "damping": 0.9}, "solver": "forceAtlas2Based", "stabilization": {"iterations": 600}, "maxVelocity": 50, "minVelocity": 0.1}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}, "smooth": {"type": "continuous"}}};
 
                   
 
@@ -432,5 +432,47 @@ function highlightFilter(filter) {
               }
               drawGraph();
         </script>
-    </body>
+    
+<script>
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    if (typeof network !== 'undefined') {
+      network.setOptions({
+        physics: {
+          enabled: true,
+          forceAtlas2Based: {"gravitationalConstant": -50, "centralGravity": 0.01, "springLength": 120, "springConstant": 0.06, "damping": 0.9},
+          solver: "forceAtlas2Based",
+          stabilization: { enabled: false }
+        }
+      });
+      // Spread nodes horizontally to use full width
+      network.once('stabilized', function() {
+        var positions = network.getPositions();
+        var nodeIds = Object.keys(positions);
+        if (nodeIds.length === 0) return;
+        // Find current bounding box
+        var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        nodeIds.forEach(function(id) {
+          if (positions[id].x < minX) minX = positions[id].x;
+          if (positions[id].x > maxX) maxX = positions[id].x;
+          if (positions[id].y < minY) minY = positions[id].y;
+          if (positions[id].y > maxY) maxY = positions[id].y;
+        });
+        // Stretch X by 1.8x, compress Y by 0.7x to favor width
+        var cx = (minX + maxX) / 2;
+        var cy = (minY + maxY) / 2;
+        nodeIds.forEach(function(id) {
+          network.moveNode(id,
+            cx + (positions[id].x - cx) * 1.8,
+            cy + (positions[id].y - cy) * 0.7
+          );
+        });
+        // Fit to screen
+        network.fit({ animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+      });
+    }
+  }, 100);
+});
+</script>
+</body>
 </html>

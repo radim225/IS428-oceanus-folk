@@ -2,11 +2,17 @@
 title: "User Guide"
 ---
 
-This guide explains how to interact with each Tableau dashboard and Python-generated visualisation on this website. Each section covers what the chart shows, how to read it, and what interactions are available.
+This guide explains how to interact with each Tableau dashboard and Python-generated visualisation on this website. Each section opens with a screenshot of the dashboard followed by a walk-through of what the chart shows, how to read it, and what interactions are available.
 
 ## Task 1 — Sailor Shift Career Profile
 
 ### Dashboard 1 — Sailor's Influence & Collaborations
+
+![Task 1 Dashboard 1 — Sailor's Influence & Collaborations](images/task1/task1_Sailor_Inf_Collab.png){width=100%}
+
+::: {.callout-warning}
+**TODO — Klara:** Replace this screenshot after Tableau graph titles and colours are updated.
+:::
 
 This dashboard combines three charts: Collaborations Over Time (top), Genre Influences (bottom-left), and Direct & Indirect Influence (bottom-right).
 
@@ -18,17 +24,21 @@ This dashboard combines three charts: Collaborations Over Time (top), Genre Infl
 
 ### Dashboard 2 — Sailor's Impact on Oceanus Folk
 
+![Task 1 Dashboard 2 — Sailor's Impact on Oceanus Folk](images/task1/task1_Sailor_Imp_OF.png){width=100%}
+
+::: {.callout-warning}
+**TODO — Klara:** Replace this screenshot after Tableau graph titles and colours are updated.
+:::
+
 This dashboard combines two charts: Oceanus Folk Production Over Time (left) and Top Contributors After 2028 (right).
 
 **Left chart — Oceanus Folk Production in Sailor Shift's Circle Over Time.** Each bar represents the number of distinct Oceanus Folk works released that year within Sailor's collaborative network. The vertical dashed line marks 2028 (her breakthrough). Colours distinguish three eras: Before Breakthrough (blue), Breakthrough Year (orange), and After Breakthrough (dark grey). Hover over any bar for the exact count and year.
 
 **Right chart — Top Oceanus Folk Contributors in Sailor's Circle After 2028.** A horizontal bar chart ranking artists by the number of OF works they produced after 2028. Colour distinguishes Ivy Echoes members (purple) from other collaborators (grey). The **Era** filter is pre-set to "After Breakthrough" — this filter controls both charts, so changing it will update the left chart as well. The **Artist Name** filter restricts which artists appear.
 
-### Interactive Network Graphs (Python)
+### Interactive Influence Network (Python)
 
-Two interactive HTML network graphs are embedded below the Tableau dashboards on the Task 1 analysis page.
-
-**Collaboration Network.** An undirected graph showing Sailor Shift (gold node) at the centre, connected to her direct collaborators (blue nodes) and Ivy Echoes members (green nodes). Each edge represents a shared work — hover over an edge to see the collaboration types. Click any node to highlight only its immediate connections. Drag nodes to rearrange the layout. The graph uses a force-directed physics simulation that stabilises automatically.
+An interactive HTML influence network graph is embedded below the Tableau dashboards on the Task 1 analysis page.
 
 **Influence Network.** A directed graph showing the full influence chain: Sailor (gold star), her works (orange dots), collaborators (blue), Ivy Echoes members (green), and artists inspired by Sailor or her circle (purple). Arrows indicate the direction of influence. Click any node to highlight its neighbourhood. Hover for details including genre and release year.
 
@@ -38,6 +48,12 @@ Two interactive HTML network graphs are embedded below the Tableau dashboards on
 
 ### Dashboard 1 — Genre Influence Flow
 
+![Task 2 Dashboard 1 — Genre Influence Flow](images/task2/task2_OF_genre_influence_flow.png){width=100%}
+
+::: {.callout-warning}
+**TODO — Klara:** Replace this screenshot after Tableau graph titles and colours are updated.
+:::
+
 This dashboard shows which genres Oceanus Folk most influenced (left chart) and which genres most inspired Oceanus Folk (right chart).
 
 **Left chart — Genres Most Influenced by Oceanus Folk.** A horizontal stacked bar chart showing target genres ranked by total connection count. Each colour segment represents a different type of musical influence: CoverOf, DirectlySamples, InStyleOf, InterpolatesFrom, and LyricalReferenceTo. Longer bar = stronger influence from Oceanus Folk on that genre. Hover over any bar segment to see the exact connection count for that edge type and genre. The genres are sorted from most to least influenced.
@@ -45,6 +61,12 @@ This dashboard shows which genres Oceanus Folk most influenced (left chart) and 
 **Right chart — Genres That Inspire Oceanus Folk.** Same chart structure but showing which genres feed into Oceanus Folk. Compare left vs right — if a genre appears prominently on both sides it means there is a two-way musical exchange with Oceanus Folk.
 
 ### Dashboard 2 — Influence Through Time
+
+![Task 2 Dashboard 2 — Influence Through Time](images/task2/task2_OF_Influence_through_time.png){width=100%}
+
+::: {.callout-warning}
+**TODO — Klara:** Replace this screenshot after Tableau graph titles and colours are updated.
+:::
 
 This dashboard shows how Oceanus Folk's influence evolved over time — both outward and inward.
 
@@ -54,9 +76,21 @@ This dashboard shows how Oceanus Folk's influence evolved over time — both out
 
 ### Dashboard 3 — Top Influenced Artists
 
+![Task 2 Dashboard 3 — Top Influenced Artists](images/task2/task2_OF_Influence_artists.png){width=100%}
+
+::: {.callout-warning}
+**TODO — Klara:** Replace this screenshot after Tableau graph titles and colours are updated.
+:::
+
 **Chart — Top Artists Influenced by Oceanus Folk.** A horizontal bar chart of the top 15 artists whose works were most influenced by Oceanus Folk, coloured by their primary genre. Longer bar = more works influenced by Oceanus Folk. Hover over any bar to see the artist name, exact influenced works count, and primary genre. The **Artist Name** filter at the top restricts which artists appear.
 
 ### Sankey Diagram (Python)
+
+![Task 2 Sankey Diagram — Genre Flow](images/task2/task2_sankey_genre_flow_python.png){width=100%}
+
+::: {.callout-warning}
+**TODO — Klara:** Replace this screenshot after Tableau graph titles and colours are updated.
+:::
 
 An interactive HTML version of the Sankey diagram is available at `images/task2/task2_sankey_genre_flow_python.html` — open it in any web browser. A static PNG is embedded on the analysis page.
 
@@ -70,6 +104,12 @@ An interactive HTML version of the Sankey diagram is available at `images/task2/
 
 ### Dashboard 1 — Who are the Candidates?
 
+![Task 3 Dashboard 1 — Who are the Candidates?](images/task3/task3_Who_are_candidates_dashboard_2.png){width=100%}
+
+::: {.callout-warning}
+**TODO — Klara:** Replace this screenshot after Tableau graph titles and colours are updated.
+:::
+
 This dashboard combines three charts: OF Artist Ranking (top-left), Genre Mix by Candidate (top-right), and Breakthrough Profile scatter plot (bottom).
 
 **Top-left — Oceanus Folk Artist Ranking.** A horizontal bar chart ranking all 14 Oceanus Folk artists with two or more charted works, sorted by total notable works. This establishes the candidate pool. Hover over any bar for the exact count.
@@ -80,10 +120,24 @@ This dashboard combines three charts: OF Artist Ranking (top-left), Genre Mix by
 
 ### Dashboard 2 — Who's Next?
 
+![Task 3 Dashboard 2 — Who's Next?](images/task3/task3_Whos_next_tableau.png){width=100%}
+
+::: {.callout-warning}
+**TODO — Klara:** Replace this screenshot after Tableau graph titles and colours are updated.
+:::
+
 This dashboard presents the final predictions: Three Artist Comparison (top-left), Notoriety Timeline (bottom-left), and the radar chart (right).
 
 **Top-left — Three Artist Comparison.** A dot plot showing the three predicted rising stars — Copper Canyon Ghosts, Orla Seabloom, and Beatrice Albright — with one dot per notable work, positioned by notoriety date (X-axis). Each row shows the artist name and work title. This provides a detailed work-by-work timeline for each prediction. The **Artist Name** filter controls which artists appear.
 
 **Bottom-left — Notoriety Timeline.** Same dot-plot structure but showing all 14 candidates for broader context. Each colour represents a different artist. This chart distinguishes between concentrated bursts (clusters of dots in one year) and long careers (dots spread across many years).
+
+### Radar Chart (Python)
+
+![Task 3 Radar Chart — Rising Star Profile](images/task3/task3_radar_chart.png){width=100%}
+
+::: {.callout-warning}
+**TODO — Klara:** Replace this screenshot after Tableau graph titles and colours are updated.
+:::
 
 **Right — Rising Star Profile (Radar Chart).** A Python-generated radar chart comparing the top five candidates across five normalised dimensions: Total Notable Works, Quick Breakthrough, Early Breakthrough, Recent Activity, and Genre Diversity. A larger polygon indicates a stronger overall profile. The companion data table shows the raw values. Each artist is colour-coded consistently between the radar chart and the Tableau dashboards.

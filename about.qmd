@@ -2,8 +2,6 @@
 title: "About"
 ---
 
-# About
-
 We are a group of three IS428 students from Singapore Management University (SMU), School of Computing and Information Systems.
 
 This website documents our Visual Analytics Project for AY2025-2026 Term 2, based on VAST Challenge 2025 Mini-Challenge 1. The project applies visual analytics techniques to a music knowledge graph to help journalist Silas Reed tell the story of Sailor Shift's rise and the spread of Oceanus Folk music.

@@ -36,9 +36,9 @@ Beyond scale, the data has a temporal dimension that spans from 1993 to 2040 —
 
 This project translates the MC1 knowledge graph into a suite of interactive Tableau dashboards, one per task, integrated into a single combined workbook. The raw graph data (MC1_graph.json) was first converted into flat CSV tables — separating node types and edge types — suitable for Tableau's relational data model. Each sub-module then builds its visualisations on top of this prepared data.
 
-- **Task 1 (Charles):** Four interconnected dashboards — an influence timeline showing who shaped Sailor and when, a collaboration network graph centred on Sailor as the hub node, an indirect influence tree tracing second- and third-degree impacts, and a career tracker for her Ivy Echoes bandmates.
-- **Task 2 (Klara):** A Sankey-style genre flow diagram showing Oceanus Folk's outward influence over time, a genre influence timeline chart from 1993 to 2040, a ranked bar chart of top influenced artists, and a genre inspiration heatmap showing which external genres have fed back into Oceanus Folk.
-- **Task 3 (Radim):** A radar chart defining the rising star profile across multiple metrics, a multi-line career arc comparison for three benchmark artists, a ranked candidate list with visual supporting evidence, and a prediction dashboard comparing top candidates against the rising star benchmark.
+- **Task 1 (Charles):** Two Tableau dashboards — *Sailor's Influence & Collaborations* (collaboration timeline, genre influences, and direct/indirect influence) and *Sailor's Impact on Oceanus Folk* (OF production over time within her circle, and top post-2028 contributors) — accompanied by a Python-generated interactive influence network graph.
+- **Task 2 (Klara):** Three Tableau dashboards — *Genre Influence Flow* (outward vs. inward genre influence), *Influence Through Time* (OF's genre influence year by year), and *Top Influenced Artists* (ranked bar chart of artists most shaped by OF) — accompanied by a Python-generated Sankey diagram of bidirectional genre flow.
+- **Task 3 (Radim):** Two Tableau dashboards — *Who are the Candidates?* (OF artist ranking, genre mix, and breakthrough profile scatter) and *Who's Next?* (three-artist comparison and notoriety timeline for all 14 candidates) — accompanied by a Python-generated radar chart comparing the top five candidates across five normalised rising-star dimensions.
 
 ## Find Out More
 

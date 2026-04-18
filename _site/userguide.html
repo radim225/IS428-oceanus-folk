@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#dashboard-1-sailors-influence-collaborations" id="toc-dashboard-1-sailors-influence-collaborations" class="nav-link" data-scroll-target="#dashboard-1-sailors-influence-collaborations">Dashboard 1 — Sailor’s Influence &amp; Collaborations</a></li>
   <li><a href="#dashboard-2-sailors-impact-on-oceanus-folk" id="toc-dashboard-2-sailors-impact-on-oceanus-folk" class="nav-link" data-scroll-target="#dashboard-2-sailors-impact-on-oceanus-folk">Dashboard 2 — Sailor’s Impact on Oceanus Folk</a></li>
-  <li><a href="#interactive-network-graphs-python" id="toc-interactive-network-graphs-python" class="nav-link" data-scroll-target="#interactive-network-graphs-python">Interactive Network Graphs (Python)</a></li>
+  <li><a href="#interactive-influence-network-python" id="toc-interactive-influence-network-python" class="nav-link" data-scroll-target="#interactive-influence-network-python">Interactive Influence Network (Python)</a></li>
   </ul></li>
   <li><a href="#task-2-oceanus-folk-genre-spread" id="toc-task-2-oceanus-folk-genre-spread" class="nav-link" data-scroll-target="#task-2-oceanus-folk-genre-spread">Task 2 — Oceanus Folk Genre Spread</a>
   <ul class="collapse">
@@ -155,6 +155,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#dashboard-1-who-are-the-candidates" id="toc-dashboard-1-who-are-the-candidates" class="nav-link" data-scroll-target="#dashboard-1-who-are-the-candidates">Dashboard 1 — Who are the Candidates?</a></li>
   <li><a href="#dashboard-2-whos-next" id="toc-dashboard-2-whos-next" class="nav-link" data-scroll-target="#dashboard-2-whos-next">Dashboard 2 — Who’s Next?</a></li>
+  <li><a href="#radar-chart-python" id="toc-radar-chart-python" class="nav-link" data-scroll-target="#radar-chart-python">Radar Chart (Python)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -181,11 +182,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This guide explains how to interact with each Tableau dashboard and Python-generated visualisation on this website. Each section covers what the chart shows, how to read it, and what interactions are available.</p>
+<p>This guide explains how to interact with each Tableau dashboard and Python-generated visualisation on this website. Each section opens with a screenshot of the dashboard followed by a walk-through of what the chart shows, how to read it, and what interactions are available.</p>
 <section id="task-1-sailor-shift-career-profile" class="level2">
 <h2 class="anchored" data-anchor-id="task-1-sailor-shift-career-profile">Task 1 — Sailor Shift Career Profile</h2>
 <section id="dashboard-1-sailors-influence-collaborations" class="level3">
 <h3 class="anchored" data-anchor-id="dashboard-1-sailors-influence-collaborations">Dashboard 1 — Sailor’s Influence &amp; Collaborations</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task1/task1_Sailor_Inf_Collab.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Task 1 Dashboard 1 — Sailor’s Influence &amp; Collaborations</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO — Klara:</strong> Replace this screenshot after Tableau graph titles and colours are updated.</p>
+</div>
+</div>
 <p>This dashboard combines three charts: Collaborations Over Time (top), Genre Influences (bottom-left), and Direct &amp; Indirect Influence (bottom-right).</p>
 <p><strong>Top chart — Sailor Shift’s Collaborations Over Time.</strong> Each row is a collaborator, each square is the year of a collaboration, and the colour indicates the collaboration type (Composer, Lyricist, Performer, Producer). Multiple squares on the same row mean the collaborator worked with Sailor more than once. Hover over any square to see the collaborator name, work title, and release year. Use the <strong>Ivy Echoes Members</strong> filter on the right to isolate only Ivy Echoes bandmates and compare their activity against the broader collaborator pool. The Ivy filter toggles between 0 (non-members) and 1 (members).</p>
 <p><strong>Bottom-left chart — What Genres Has Influenced Sailor Shift The Most?</strong> Each dot represents one influence relationship between a Sailor work (X-axis = release year) and its source genre (Y-axis). Colour indicates the influence type: Cover, Direct Sample, Inspired by Style, Lyrical Reference, or Melody Interpolation. Hover over any dot for the exact work name and genre. The filter on <code>Sailor Work Release Year</code> lets you narrow the time range.</p>
@@ -193,14 +213,32 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="dashboard-2-sailors-impact-on-oceanus-folk" class="level3">
 <h3 class="anchored" data-anchor-id="dashboard-2-sailors-impact-on-oceanus-folk">Dashboard 2 — Sailor’s Impact on Oceanus Folk</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task1/task1_Sailor_Imp_OF.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Task 1 Dashboard 2 — Sailor’s Impact on Oceanus Folk</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO — Klara:</strong> Replace this screenshot after Tableau graph titles and colours are updated.</p>
+</div>
+</div>
 <p>This dashboard combines two charts: Oceanus Folk Production Over Time (left) and Top Contributors After 2028 (right).</p>
 <p><strong>Left chart — Oceanus Folk Production in Sailor Shift’s Circle Over Time.</strong> Each bar represents the number of distinct Oceanus Folk works released that year within Sailor’s collaborative network. The vertical dashed line marks 2028 (her breakthrough). Colours distinguish three eras: Before Breakthrough (blue), Breakthrough Year (orange), and After Breakthrough (dark grey). Hover over any bar for the exact count and year.</p>
 <p><strong>Right chart — Top Oceanus Folk Contributors in Sailor’s Circle After 2028.</strong> A horizontal bar chart ranking artists by the number of OF works they produced after 2028. Colour distinguishes Ivy Echoes members (purple) from other collaborators (grey). The <strong>Era</strong> filter is pre-set to “After Breakthrough” — this filter controls both charts, so changing it will update the left chart as well. The <strong>Artist Name</strong> filter restricts which artists appear.</p>
 </section>
-<section id="interactive-network-graphs-python" class="level3">
-<h3 class="anchored" data-anchor-id="interactive-network-graphs-python">Interactive Network Graphs (Python)</h3>
-<p>Two interactive HTML network graphs are embedded below the Tableau dashboards on the Task 1 analysis page.</p>
-<p><strong>Collaboration Network.</strong> An undirected graph showing Sailor Shift (gold node) at the centre, connected to her direct collaborators (blue nodes) and Ivy Echoes members (green nodes). Each edge represents a shared work — hover over an edge to see the collaboration types. Click any node to highlight only its immediate connections. Drag nodes to rearrange the layout. The graph uses a force-directed physics simulation that stabilises automatically.</p>
+<section id="interactive-influence-network-python" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-influence-network-python">Interactive Influence Network (Python)</h3>
+<p>An interactive HTML influence network graph is embedded below the Tableau dashboards on the Task 1 analysis page.</p>
 <p><strong>Influence Network.</strong> A directed graph showing the full influence chain: Sailor (gold star), her works (orange dots), collaborators (blue), Ivy Echoes members (green), and artists inspired by Sailor or her circle (purple). Arrows indicate the direction of influence. Click any node to highlight its neighbourhood. Hover for details including genre and release year.</p>
 <hr>
 </section>
@@ -209,22 +247,98 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="task-2-oceanus-folk-genre-spread">Task 2 — Oceanus Folk Genre Spread</h2>
 <section id="dashboard-1-genre-influence-flow" class="level3">
 <h3 class="anchored" data-anchor-id="dashboard-1-genre-influence-flow">Dashboard 1 — Genre Influence Flow</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task2/task2_OF_genre_influence_flow.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Task 2 Dashboard 1 — Genre Influence Flow</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO — Klara:</strong> Replace this screenshot after Tableau graph titles and colours are updated.</p>
+</div>
+</div>
 <p>This dashboard shows which genres Oceanus Folk most influenced (left chart) and which genres most inspired Oceanus Folk (right chart).</p>
 <p><strong>Left chart — Genres Most Influenced by Oceanus Folk.</strong> A horizontal stacked bar chart showing target genres ranked by total connection count. Each colour segment represents a different type of musical influence: CoverOf, DirectlySamples, InStyleOf, InterpolatesFrom, and LyricalReferenceTo. Longer bar = stronger influence from Oceanus Folk on that genre. Hover over any bar segment to see the exact connection count for that edge type and genre. The genres are sorted from most to least influenced.</p>
 <p><strong>Right chart — Genres That Inspire Oceanus Folk.</strong> Same chart structure but showing which genres feed into Oceanus Folk. Compare left vs right — if a genre appears prominently on both sides it means there is a two-way musical exchange with Oceanus Folk.</p>
 </section>
 <section id="dashboard-2-influence-through-time" class="level3">
 <h3 class="anchored" data-anchor-id="dashboard-2-influence-through-time">Dashboard 2 — Influence Through Time</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task2/task2_OF_Influence_through_time.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Task 2 Dashboard 2 — Influence Through Time</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO — Klara:</strong> Replace this screenshot after Tableau graph titles and colours are updated.</p>
+</div>
+</div>
 <p>This dashboard shows how Oceanus Folk’s influence evolved over time — both outward and inward.</p>
 <p><strong>Top chart — By how many genres was Oceanus Folk influenced over time.</strong> A line chart where each point represents the number of influence connections made by Oceanus Folk works in that year. Higher points mean more Oceanus Folk works were influencing other genres that year. Two key events are annotated on the chart: “Sailor joins Ivy Echoes” (2023) and “Sailor’s global breakthrough” (2028). Hover over any data point to see the exact year and connection count.</p>
 <p><strong>Bottom chart — How many genres were influenced by Oceanus Folk over time.</strong> Same structure but showing when other genres started drawing from Oceanus Folk. Compare with the top chart to see the temporal lag between Oceanus Folk producing influence and other genres responding.</p>
 </section>
 <section id="dashboard-3-top-influenced-artists" class="level3">
 <h3 class="anchored" data-anchor-id="dashboard-3-top-influenced-artists">Dashboard 3 — Top Influenced Artists</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task2/task2_OF_Influence_artists.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Task 2 Dashboard 3 — Top Influenced Artists</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO — Klara:</strong> Replace this screenshot after Tableau graph titles and colours are updated.</p>
+</div>
+</div>
 <p><strong>Chart — Top Artists Influenced by Oceanus Folk.</strong> A horizontal bar chart of the top 15 artists whose works were most influenced by Oceanus Folk, coloured by their primary genre. Longer bar = more works influenced by Oceanus Folk. Hover over any bar to see the artist name, exact influenced works count, and primary genre. The <strong>Artist Name</strong> filter at the top restricts which artists appear.</p>
 </section>
 <section id="sankey-diagram-python" class="level3">
 <h3 class="anchored" data-anchor-id="sankey-diagram-python">Sankey Diagram (Python)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task2/task2_sankey_genre_flow_python.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Task 2 Sankey Diagram — Genre Flow</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO — Klara:</strong> Replace this screenshot after Tableau graph titles and colours are updated.</p>
+</div>
+</div>
 <p>An interactive HTML version of the Sankey diagram is available at <code>images/task2/task2_sankey_genre_flow_python.html</code> — open it in any web browser. A static PNG is embedded on the analysis page.</p>
 <p><strong>How to read it.</strong> The left blue node (“Oceanus Folk → Outward”) represents Oceanus Folk sending influence to other genres. The right purple node (“Inward → Oceanus Folk”) represents other genres sending influence back. Middle nodes are individual genres. Band thickness indicates the strength of the relationship. Orange nodes appear on both sides (bidirectional influence). Light blue nodes only receive influence from Oceanus Folk. Red/pink nodes only give influence to Oceanus Folk.</p>
 <p><strong>How to interact.</strong> Hover over any band to see the exact genre name and connection count. Hover over any node to see the total flow volume. Click and drag any node to reposition it on the canvas for easier reading of overlapping bands.</p>
@@ -235,6 +349,25 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="task-3-rising-star-prediction">Task 3 — Rising Star Prediction</h2>
 <section id="dashboard-1-who-are-the-candidates" class="level3">
 <h3 class="anchored" data-anchor-id="dashboard-1-who-are-the-candidates">Dashboard 1 — Who are the Candidates?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task3/task3_Who_are_candidates_dashboard_2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Task 3 Dashboard 1 — Who are the Candidates?</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO — Klara:</strong> Replace this screenshot after Tableau graph titles and colours are updated.</p>
+</div>
+</div>
 <p>This dashboard combines three charts: OF Artist Ranking (top-left), Genre Mix by Candidate (top-right), and Breakthrough Profile scatter plot (bottom).</p>
 <p><strong>Top-left — Oceanus Folk Artist Ranking.</strong> A horizontal bar chart ranking all 14 Oceanus Folk artists with two or more charted works, sorted by total notable works. This establishes the candidate pool. Hover over any bar for the exact count.</p>
 <p><strong>Top-right — Genre Mix by Candidate.</strong> A stacked bar chart showing the genre composition of each top-five candidate’s notable output. Colour distinguishes Oceanus Folk (dark grey) from other genres (e.g.&nbsp;Lo-Fi Electronica in purple for Ping Meng). This chart helps identify whether a candidate is a dedicated Oceanus Folk artist or a genre-crossover act.</p>
@@ -242,9 +375,50 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="dashboard-2-whos-next" class="level3">
 <h3 class="anchored" data-anchor-id="dashboard-2-whos-next">Dashboard 2 — Who’s Next?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task3/task3_Whos_next_tableau.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Task 3 Dashboard 2 — Who’s Next?</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO — Klara:</strong> Replace this screenshot after Tableau graph titles and colours are updated.</p>
+</div>
+</div>
 <p>This dashboard presents the final predictions: Three Artist Comparison (top-left), Notoriety Timeline (bottom-left), and the radar chart (right).</p>
 <p><strong>Top-left — Three Artist Comparison.</strong> A dot plot showing the three predicted rising stars — Copper Canyon Ghosts, Orla Seabloom, and Beatrice Albright — with one dot per notable work, positioned by notoriety date (X-axis). Each row shows the artist name and work title. This provides a detailed work-by-work timeline for each prediction. The <strong>Artist Name</strong> filter controls which artists appear.</p>
 <p><strong>Bottom-left — Notoriety Timeline.</strong> Same dot-plot structure but showing all 14 candidates for broader context. Each colour represents a different artist. This chart distinguishes between concentrated bursts (clusters of dots in one year) and long careers (dots spread across many years).</p>
+</section>
+<section id="radar-chart-python" class="level3">
+<h3 class="anchored" data-anchor-id="radar-chart-python">Radar Chart (Python)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/task3/task3_radar_chart.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Task 3 Radar Chart — Rising Star Profile</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TODO — Klara:</strong> Replace this screenshot after Tableau graph titles and colours are updated.</p>
+</div>
+</div>
 <p><strong>Right — Rising Star Profile (Radar Chart).</strong> A Python-generated radar chart comparing the top five candidates across five normalised dimensions: Total Notable Works, Quick Breakthrough, Early Breakthrough, Recent Activity, and Genre Diversity. A larger polygon indicates a stronger overall profile. The companion data table shows the raw values. Each artist is colour-coded consistently between the radar chart and the Tableau dashboards.</p>
 
 

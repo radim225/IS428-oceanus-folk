@@ -4,9 +4,22 @@ Shows the full influence chain: collaborators + works + inspired artists.
 Output: images/task1/task1_influence_network.html
 """
 
+import json
 import os
 import pandas as pd
 from pyvis.network import Network
+
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║  PHYSICS CONFIG — change values here, they apply everywhere automatically  ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+PHYSICS = {
+    "gravitationalConstant": -50,   # repulsion between nodes (more negative = further apart)
+    "centralGravity":        0.01,  # pull towards center (higher = tighter ball)
+    "springLength":          120,   # ideal distance between connected nodes (px)
+    "springConstant":        0.06,  # spring stiffness (higher = snap to springLength faster)
+    "damping":               0.9,   # friction (0-1, higher = less bouncy)
+}
+STABILIZATION_ITERATIONS = 600     # how long to settle before showing
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -55,29 +68,28 @@ ROLE_STYLE = {
 
 # ── Build pyvis network ────────────────────────────────────────────────────────
 net = Network(
-    height="700px", width="100%",
+    height="100vh", width="100%",
     bgcolor="white", font_color="#1f2937",
     directed=True,
     notebook=False,
     cdn_resources="in_line",
 )
-net.toggle_physics(True)
-net.set_options("""{
-  "physics": {
-    "forceAtlas2Based": {
-      "gravitationalConstant": -60,
-      "centralGravity": 0.005,
-      "springLength": 150,
-      "springConstant": 0.05
+
+# Build options JSON from the single PHYSICS config
+vis_options = {
+    "physics": {
+        "forceAtlas2Based": PHYSICS,
+        "solver": "forceAtlas2Based",
+        "stabilization": {"iterations": STABILIZATION_ITERATIONS},
+        "maxVelocity": 50,
+        "minVelocity": 0.1,
     },
-    "solver": "forceAtlas2Based",
-    "stabilization": { "iterations": 300 }
-  },
-  "edges": {
-    "arrows": { "to": { "enabled": true, "scaleFactor": 0.5 } },
-    "smooth": { "type": "continuous" }
-  }
-}""")
+    "edges": {
+        "arrows": {"to": {"enabled": True, "scaleFactor": 0.5}},
+        "smooth": {"type": "continuous"},
+    },
+}
+net.set_options(json.dumps(vis_options))
 
 for _, row in subset.iterrows():
     style = ROLE_STYLE.get(row["role"], {"color": "#888888", "size": 12, "shape": "dot"})
@@ -90,7 +102,7 @@ for _, row in subset.iterrows():
         size=style["size"],
         shape=style["shape"],
         title=f'{row["Label"]}<br>Role: {row["role"]}{genre_info}{year_info}',
-        font={"color": "#e0e0e0", "size": 12},
+        font={"color": "#1f2937", "size": 11, "strokeWidth": 3, "strokeColor": "#ffffff"},
         borderWidth=1,
         borderWidthSelected=3,
     )
@@ -104,11 +116,17 @@ for _, row in edges_f.iterrows():
         width=1,
     )
 
-# ── Save & inject title + legend ───────────────────────────────────────────────
+# ── Save & inject title + legend + overrides ──────────────────────────────────
 net.save_graph(OUT_PATH)
 
+style_reset = (
+    '<style>'
+    'html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden; }'
+    '#mynetwork { width:100% !important; height:calc(100vh - 60px) !important; }'
+    '</style>'
+)
 title_html = (
-    '<div style="position:fixed;top:0;left:0;right:0;z-index:999;'
+    '<div style="width:100%;z-index:999;'
     'background:white;padding:10px 0;text-align:center;border-bottom:1px solid #e5e7eb;">'
     '<h2 style="color:#1f2937;font-family:sans-serif;margin:0;font-size:18px;">'
     'Sailor Shift &#8212; Direct and Indirect Influence Network</h2>'
@@ -119,10 +137,59 @@ title_html = (
     '<span style="color:#2ECC71;">&#9632;</span> Ivy Echoes Member &nbsp;'
     '<span style="color:#9B59B6;">&#9632;</span> Inspired By Sailor'
     '</p></div>'
-    '<div style="height:65px;"></div>'
 )
+
+# Override vis.js options AFTER network is created (pyvis sometimes ignores set_options)
+# Also uses the same PHYSICS dict so you only change values in one place
+physics_js = json.dumps(PHYSICS)
+override_script = f"""
+<script>
+window.addEventListener('load', function() {{
+  setTimeout(function() {{
+    if (typeof network !== 'undefined') {{
+      network.setOptions({{
+        physics: {{
+          enabled: true,
+          forceAtlas2Based: {physics_js},
+          solver: "forceAtlas2Based",
+          stabilization: {{ enabled: false }}
+        }}
+      }});
+      // Spread nodes horizontally to use full width
+      network.once('stabilized', function() {{
+        var positions = network.getPositions();
+        var nodeIds = Object.keys(positions);
+        if (nodeIds.length === 0) return;
+        // Find current bounding box
+        var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        nodeIds.forEach(function(id) {{
+          if (positions[id].x < minX) minX = positions[id].x;
+          if (positions[id].x > maxX) maxX = positions[id].x;
+          if (positions[id].y < minY) minY = positions[id].y;
+          if (positions[id].y > maxY) maxY = positions[id].y;
+        }});
+        // Stretch X by 1.8x, compress Y by 0.7x to favor width
+        var cx = (minX + maxX) / 2;
+        var cy = (minY + maxY) / 2;
+        nodeIds.forEach(function(id) {{
+          network.moveNode(id,
+            cx + (positions[id].x - cx) * 1.8,
+            cy + (positions[id].y - cy) * 0.7
+          );
+        }});
+        // Fit to screen
+        network.fit({{ animation: {{ duration: 500, easingFunction: 'easeInOutQuad' }} }});
+      }});
+    }}
+  }}, 100);
+}});
+</script>
+"""
+
 html = open(OUT_PATH, encoding="utf-8").read()
+html = html.replace("<head>", "<head>" + style_reset, 1)
 html = html.replace("<body>", "<body>" + title_html, 1)
+html = html.replace("</body>", override_script + "</body>", 1)
 open(OUT_PATH, "w", encoding="utf-8").write(html)
 
 size_kb = os.path.getsize(OUT_PATH) / 1024
