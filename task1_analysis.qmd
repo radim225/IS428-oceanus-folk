@@ -36,13 +36,7 @@ Sailor Shift's influence reaches 27 distinct entities from a wide range of genre
 
 The scale of influence is limited to what is formally documented, many other artists around the world could have been influenced by her without expressing it directly.
 
-### Interactive Network Graphs
-
-Click any node to highlight its neighbourhood. Hover over nodes for labels and relationship details.
-
-```{=html}
-<iframe src="images/task1/task1_collaboration_network.html" width="100%" height="750px" frameborder="0"></iframe>
-```
+### Interactive Influence Network
 
 Click any node to highlight its neighbourhood. Hover over nodes for labels and relationship details.
 

@@ -51,8 +51,8 @@ allowing reconstruction of each artist's breakthrough trajectory across
 - **Data preparation:** parsing `mc1_edges.csv` and `mc1_nodes.csv` into twelve task-specific CSVs via Python, with NA handling, date normalisation, and name
   resolution across source/target edge endpoints
 - **Task 1 — Sailor Shift Career Profile (Charles):** influence timeline,
-  collaboration network graph, indirect influence tree, and Ivy Echoes
-  bandmate career tracker in Tableau
+  indirect influence tree, and Ivy Echoes bandmate career tracker in Tableau,
+  plus a Python-generated interactive influence network graph
 - **Task 2 — Oceanus Folk Genre Spread (Klara):** Sankey genre flow
   diagram, influence timeline chart, top influenced artists bar chart,
   and genre inspiration heatmap in Tableau

@@ -65,7 +65,7 @@ Finally, two shared lookup files are produced: `lookup_nodes_clean.csv` (17,412 
 
 **Python** was used for three chart types that Tableau does not natively support:
 
-- **Network graphs** (Task 1): Built using `pyvis` (a Python wrapper around vis.js). Two interactive HTML network visualisations — a collaboration network and an influence network — were generated and embedded in the Quarto website via `<iframe>` elements. Pyvis was selected because it produces self-contained HTML files with built-in pan, zoom, and hover interactions, which can be embedded directly in a static website without a server backend.
+- **Influence network graph** (Task 1): Built using `pyvis` (a Python wrapper around vis.js). An interactive HTML network visualisation of Sailor Shift's influence chain was generated and embedded in the Quarto website via an `<iframe>` element. Pyvis was selected because it produces self-contained HTML files with built-in pan, zoom, and hover interactions, which can be embedded directly in a static website without a server backend.
 - **Sankey diagram** (Task 2): Built using `plotly` to show bidirectional genre influence flows. Plotly's Sankey trace type was selected because it handles variable-width flow bands with hover tooltips and node repositioning out of the box. The output was saved as both interactive HTML and a static PNG for embedding.
 - **Radar chart** (Task 3): Built using `matplotlib` to compare five normalised metrics across the top five Oceanus Folk candidates simultaneously. Matplotlib's polar projection was used because it provides precise control over grid lines, label positioning, and overlapping polygon fills — features that Plotly's Scatterpolar lacks at equivalent visual polish. The output was saved as a static PNG at 150 dpi and embedded as an image in the Tableau dashboard.
 
@@ -111,11 +111,9 @@ Dashboard 1 places Outbound Genre Influence and Inbound Genre Influence side by 
 
 Dashboard 1 ("Who are the Candidates?") tiles Oceanus Folk Artist Ranking (top-left), Genre Mix by Candidate (top-right), and Breakthrough Profile (bottom, full width). Dashboard 2 ("Who's Next?") tiles Three Artist Comparison (top-left), Notoriety Timeline (bottom-left), and the Python-generated radar chart PNG (right panel).
 
-## Python Visualisation — Task 1 Network Graphs
+## Python Visualisation — Task 1 Influence Network
 
-Two interactive network graphs were generated using `pyvis` (Python) and embedded in the Quarto website as HTML `<iframe>` elements.
-
-**Collaboration Network** (`Data/task1_network_collaboration.py`): The script loads the processed node and edge CSVs, identifies all Person nodes with roles "Sailor Shift", "Direct Collaborator", or "Ivy Echoes Member", then constructs derived edges by finding collaborators who share work nodes with Sailor. For each collaborator, the edge types (e.g. `PerformerOf`, `ComposerOf`) are aggregated into a tooltip. The network uses a ForceAtlas2 physics layout with gravitational constant −80, spring length 120, and 250 stabilisation iterations. Node colours distinguish Sailor (gold, size 40), Ivy Echoes members (emerald green, size 25), and other collaborators (blue, size 20). A fixed title bar and colour legend were injected into the output HTML.
+One interactive network graph was generated using `pyvis` (Python) and embedded in the Quarto website as an HTML `<iframe>` element.
 
 **Influence Network** (`Data/task1_network_influence.py`): The script includes six node roles: Sailor Shift, Sailor's works, direct collaborators, Ivy Echoes members, artists inspired by Sailor, and artists inspired by Sailor's circle. Directed edges preserve the original edge types. The layout uses ForceAtlas2 with gravitational constant −60, spring length 150, and 300 stabilisation iterations. Sailor is rendered as a gold star (size 50), her works as orange dots, collaborators as blue dots, Ivy Echoes members as green dots, and inspired artists as purple dots.
 

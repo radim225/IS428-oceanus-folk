@@ -3,7 +3,13 @@ Task 1 — Sailor Shift Direct Collaborators Network
 Shows WHO Sailor collaborated with (persons only).
 Edges are derived: collaborator → shared work ← Sailor → collapsed to collaborator—Sailor edge.
 Output: images/task1/task1_collaboration_network.html
+
+NOTE: This chart has been excluded from the final product. Script is kept for
+reference but exits immediately without producing any output.
 """
+
+import sys
+sys.exit(0)
 
 import os
 import pandas as pd
